@@ -1,0 +1,1973 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu all day · KEIK</title>
+<style>html,body{overflow-x:clip}</style>
+<link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Figtree:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#91007D}a:hover{color:#3B0B40}
+.m-root{container-type:inline-size;container-name:mnu}
+.m-wrap{max-width:1240px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
+.m-serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400}
+.m-body{display:grid;grid-template-columns:200px minmax(0,1fr) 340px;gap:40px;align-items:start}
+.m-side{position:sticky;top:112px}
+.m-pass{position:sticky;top:112px}
+.m-flight{position:sticky;top:0;z-index:8;background:rgba(255,255,255,0.96);backdrop-filter:blur(6px);border-bottom:1px solid #ECE3EA}
+.m-track{position:relative;height:64px}
+.m-dot{position:absolute;top:24px;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none}
+.m-dotlabel{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;white-space:nowrap;transition:color .3s ease}
+.m-plane{position:absolute;top:24px;left:16px;transform:translate(-50%,-50%);color:#91007D;transition:left .12s linear;will-change:left}
+.m-plane-in{display:inline-flex;animation:mbob 2.4s ease-in-out infinite}
+.m-row{display:grid;grid-template-columns:112px minmax(0,1fr) auto;gap:20px;align-items:center}
+.m-drinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.m-stamps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.m-bar{display:none}
+.m-add{transition:background-color .2s ease,transform .2s ease}
+.m-add:active{transform:scale(.92)}
+.m-in{animation:min .35s cubic-bezier(.2,.8,.2,1) both}
+@keyframes min{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.m-stamp{animation:mstamp .5s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes mstamp{0%{opacity:0;transform:scale(1.8) rotate(-20deg)}100%{opacity:1;transform:scale(1) rotate(var(--r,-6deg))}}
+.m-sheet{animation:msheet .45s cubic-bezier(.2,.8,.2,1) both}
+@keyframes msheet{from{transform:translateY(100%)}to{transform:none}}
+.m-bob{display:inline-flex;animation:mbob 3s ease-in-out infinite}
+@keyframes mbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-6deg)}}
+@media (prefers-reduced-motion: reduce){.m-in,.m-stamp,.m-sheet,.m-bob{animation:none !important}}
+@container mnu (max-width: 1100px){
+.m-body{grid-template-columns:minmax(0,1fr) 320px !important}
+.m-side{display:none !important}
+}
+@container mnu (max-width: 820px){
+.m-wrap{padding-left:16px !important;padding-right:16px !important}
+.m-body{grid-template-columns:minmax(0,1fr) !important;gap:0 !important}
+.m-pass{display:none !important}
+.m-bar{display:flex !important}
+.m-drinks{grid-template-columns:minmax(0,1fr) !important}
+.m-row{grid-template-columns:84px minmax(0,1fr) auto !important;gap:12px !important;align-items:start !important}
+.m-hide-s{display:none !important}
+.m-catnav{display:flex !important}
+.m-dotlabel{display:none}
+.m-dot-on .m-dotlabel{display:block}
+}
+.m-catnav{display:none}
+</style>
+</head>
+<body>
+<div id="dc-root">
+<div class="m-root" style="font-family: 'Figtree', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0; position: relative">
+
+
+<header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
+<div class="m-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px">
+<a href="#top" aria-label="KEIK – Viaggia col gusto, torna all’inizio" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e.png" alt="Keik – Viaggia col gusto" style="display: block; height: 44px; width: auto"></a>
+<div style="display: flex; gap: 8px; align-items: center">
+<nav aria-label="Lingua" class="m-hide-s" style="display: flex; gap: 2px">
+<button type="button" aria-pressed="true" style="font: 500 12px 'DM Mono', monospace; background: #3B0B40; color: #FFFFFF; border: 0; border-radius: 6px; min-width: 40px; min-height: 36px; cursor: pointer">IT</button>
+<button type="button" aria-pressed="false" style="font: 500 12px 'DM Mono', monospace; background: transparent; color: #3B0B40; border: 0; border-radius: 6px; min-width: 40px; min-height: 36px; cursor: pointer">EN</button>
+<button type="button" aria-pressed="false" style="font: 500 12px 'DM Mono', monospace; background: transparent; color: #3B0B40; border: 0; border-radius: 6px; min-width: 40px; min-height: 36px; cursor: pointer">ES</button>
+<button type="button" aria-pressed="false" style="font: 500 12px 'DM Mono', monospace; background: transparent; color: #3B0B40; border: 0; border-radius: 6px; min-width: 40px; min-height: 36px; cursor: pointer">FR</button>
+</nav>
+
+<a href="https://pnssm.pro/a16isyw" style="display: inline-flex; align-items: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 14px; padding: 0 18px; min-height: 44px; border-radius: 999px">Prenota</a>
+
+
+</div>
+</div>
+</header>
+
+
+<section id="top" style="background: #F7F2F6; padding: 40px 0 28px">
+<div class="m-wrap" style="display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #91007D">MENU ALL DAY · TUTTO, A QUALSIASI ORA</p>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(40px, 6vw, 72px); line-height: 0.98; letter-spacing: -0.035em; color: #3B0B40">Scegli la tua <span class="m-serif" style="color: #91007D">rotta.</span></h1>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4A2350; max-width: 40em">Ogni piatto è una tappa. Tocca <strong style="color: #3B0B40">+</strong> su quello che prenderesti: nasce il tuo itinerario, con un timbro per ogni paese. Poi condividila con chi viene con te, o prenota il tavolo.</p>
+</div>
+</section>
+
+
+<div class="m-flight">
+<div class="m-wrap">
+<nav aria-label="Rotta tra le categorie" class="m-track">
+<div aria-hidden="true" style="position: absolute; left: 16px; right: 16px; top: 24px; border-top: 2px dashed #D9C3DB"></div>
+<div aria-hidden="true" style="position: absolute; left: 16px; top: 23px; height: 4px; width: calc(0% + 0px); border-radius: 2px; background: rgb(145, 0, 125); transition: width 0.12s linear;"></div>
+
+<a href="#pan" class="m-dot m-dot-on" style="left: calc(16px + (100% - 32px) * 0.0000)" aria-label="Vai a Pancakes">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #91007D; background: #91007D; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: #3B0B40">Pancakes</span>
+</a>
+
+<a href="#fus" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.1429)" aria-label="Vai a Street food">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: #8A6E8E">Street food</span>
+</a>
+
+<a href="#toa" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.2857)" aria-label="Vai a Toast">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: #8A6E8E">Toast</span>
+</a>
+
+<a href="#bur" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.4286)" aria-label="Vai a Burger">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: #8A6E8E">Burger</span>
+</a>
+
+<a href="#sha" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.5714)" aria-label="Vai a Da dividere">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: #8A6E8E">Da dividere</span>
+</a>
+
+<a href="#dol" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.7143)" aria-label="Vai a Dolci">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: #8A6E8E">Dolci</span>
+</a>
+
+<a href="#bev" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.8571)" aria-label="Vai a Da bere">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: #8A6E8E">Da bere</span>
+</a>
+
+<a href="#ext" class="m-dot " style="left: calc(16px + (100% - 32px) * 1.0000)" aria-label="Vai a Contorni">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: #8A6E8E">Contorni</span>
+</a>
+
+<span class="m-plane" aria-hidden="true" style="left: calc(0% + 16px);"><span class="m-plane-in"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display: block; transform: rotate(90deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span></span>
+</nav>
+</div>
+<nav class="m-catnav" aria-label="Categorie" style="overflow-x: auto; gap: 6px; padding: 0 16px 10px; white-space: nowrap">
+
+<a href="#pan" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 600">Pancakes</a>
+
+<a href="#fus" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: #F7F2F6; color: #3B0B40; text-decoration: none; font-size: 13px; font-weight: 600">Street food</a>
+
+<a href="#toa" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: #F7F2F6; color: #3B0B40; text-decoration: none; font-size: 13px; font-weight: 600">Toast</a>
+
+<a href="#bur" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: #F7F2F6; color: #3B0B40; text-decoration: none; font-size: 13px; font-weight: 600">Burger</a>
+
+<a href="#sha" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: #F7F2F6; color: #3B0B40; text-decoration: none; font-size: 13px; font-weight: 600">Da dividere</a>
+
+<a href="#dol" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: #F7F2F6; color: #3B0B40; text-decoration: none; font-size: 13px; font-weight: 600">Dolci</a>
+
+<a href="#bev" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: #F7F2F6; color: #3B0B40; text-decoration: none; font-size: 13px; font-weight: 600">Da bere</a>
+
+<a href="#ext" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: #F7F2F6; color: #3B0B40; text-decoration: none; font-size: 13px; font-weight: 600">Contorni</a>
+
+</nav>
+</div>
+
+
+<div class="m-wrap" style="padding-top: 32px; padding-bottom: 120px">
+<div class="m-body">
+
+
+<nav class="m-side" aria-label="Categorie del menu" style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70; margin-bottom: 8px">ROTTE</span>
+
+<a href="#pan" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>Pancakes</span><span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">7</span></a>
+
+<a href="#fus" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>Street food</span><span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">4</span></a>
+
+<a href="#toa" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>Toast</span><span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">4</span></a>
+
+<a href="#bur" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>Burger</span><span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">4</span></a>
+
+<a href="#sha" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>Da dividere</span><span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">2</span></a>
+
+<a href="#dol" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>Dolci</span><span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">6</span></a>
+
+<a href="#bev" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>Da bere</span><span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">11</span></a>
+
+<a href="#ext" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>Contorni</span><span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">5</span></a>
+
+<a href="https://gioco.keik.it" style="margin-top: 20px; display: flex; flex-direction: column; gap: 6px; padding: 16px; border-radius: 16px; background: #2A0830; color: #FFFFFF; text-decoration: none">
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #D99BCF">MENTRE ASPETTI</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 19px; line-height: 1.1">Gioca a Brady's Quest</span>
+<span style="font-size: 13px; color: #DCC8DD">Aiuta Brady a non perdere il volo.</span>
+</a>
+</nav>
+
+
+<main style="display: flex; flex-direction: column; gap: 56px; min-width: 0">
+
+<section id="pan" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; color: #3B0B40">All day pancakes</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right">anche a cena</span>
+</div>
+
+
+
+
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/321bf3c723e0b34ebf438b0e6943728c.webp" alt="UBE lava pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">PHL</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">UBE lava pancakes</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #91007D; color: #91007D">NOVITÀ</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes dal cuore di crema all’ube, frutta fresca, mini marshmallow, granola alle nocciole e Oreo crumble.</p>
+<p style="margin: 0; font-size: 13px; color: #91007D">Abbinalo: Matcha latte +4,50 €</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">11,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi UBE lava pancakes alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/f566b7dbc462fd97b2cd1fdb9d85dc44.webp" alt="La pausa pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">La pausa pancakes</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Con Nutella o crema Bueno, Oreo crumble, granola alle nocciole e fragole fresche.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Medium 9,90 €
+Regular 11,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi La pausa pancakes alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/6e09c26506e7d4b39e303d385c4bc4de.webp" alt="Brady pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">CAN</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Brady pancakes</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Frutta fresca, granola alle nocciole e sciroppo d’acero canadese o Nutella.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7 · 8</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Medium 8,90 €
+Regular 10,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Brady pancakes alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/b48c3877e327120893bcf694065301a1.webp" alt="Biscoff belgian pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">BEL</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Biscoff belgian pancakes</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Crema Biscoff Lotus, frutta fresca, Lotus crumble e panna montata.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">11,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Biscoff belgian pancakes alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/dd5ee3adad759efcc23f5abfbae45380.webp" alt="NYC bacon &amp; eggs" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">NYC bacon &amp; eggs*</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes fatti in casa, bacon croccante e uova strapazzate o fritte. Con sciroppo d’acero +2,50 €.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Medium 10,90 €
+Regular 12,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi NYC bacon &amp; eggs* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/5531886e413b6a2b01cf9aa6fb4535bb.webp" alt="Alaska pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Alaska pancakes</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Salmone affumicato, uova fritte, semi tostati e un fiore edibile.</p>
+<p style="margin: 0; font-size: 13px; color: #91007D">Abbinalo: Sunset &amp; Chill +8,00 €</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 4 · 7 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">15,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Alaska pancakes alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/56567c93ebdfba82c89152277df8eb75.webp" alt="Osaka pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">JPN</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Osaka pancakes*</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #B3261E; color: #B3261E">PICCANTE</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes soffici con pollo croccante glassato alla salsa HoneyKara, cheddar e sesamo nero.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Osaka pancakes* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+
+
+
+<a href="https://gioco.keik.it" style="margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; border-radius: 18px; border: 1.5px dashed #91007D; color: #3B0B40; text-decoration: none">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #91007D">BRADY PANCAKES È ANCHE UN GIOCO</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 19px">Mentre aspetti, gioca a Brady's Quest</span></span>
+<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 20px; color: #91007D">→</span>
+</a>
+
+
+
+</section>
+
+<section id="fus" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; color: #3B0B40">Fusion &amp; street food</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right"></span>
+</div>
+
+
+
+
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/ce68f77c771ce1df418586ca719c120f.webp" alt="Canberra breaky" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">AUS</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Canberra breaky*</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Uova strapazzate, bacon croccante, avocado fresco, semi misti, insalata e fragole.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Canberra breaky* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/0862a7b60fa4d971d73b202557c035d3.webp" alt="Tijuana caesar salad" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MEX</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Tijuana caesar salad*</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Insalata, pollo grigliato, pico de gallo, halloumi grigliato, crostini e salsa caesar. Pollo croccante +1,50 €.</p>
+<p style="margin: 0; font-size: 13px; color: #91007D">Abbinalo: Passion soda +5,90 €</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7 · 9 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Tijuana caesar salad* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/ac3f0a7ba12bb1b67e556969edefce66.webp" alt="Los Roques benedict" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">VEN</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Los Roques benedict</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #91007D; color: #91007D">NOVITÀ</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Tostones croccanti con avocado, formaggio grigliato, insalata, due uova in camicia e salsa olandese.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">11,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Los Roques benedict alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/a8ecb35ebb3968ca3160d685b86904e1.webp" alt="Hummus &amp; falafel" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MED</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Hummus &amp; falafel*</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #2F7D4F; color: #2F7D4F">VEGANO</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Hummus fatto in casa, falafel croccanti, avocado, pomodorini, insalata e olio alla paprika.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €
+Extra falafel 16,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Hummus &amp; falafel* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+
+
+
+
+
+</section>
+
+<section id="toa" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; color: #3B0B40">Avocado &amp; toast</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right"></span>
+</div>
+
+
+
+
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/e498457a1b2610c0c88558ac7574d807.webp" alt="Baja avo toast" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MEX</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Baja avo toast</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Avocado al pesto, pico de gallo, due uova in camicia e semi tostati.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">9,90 €
+Con bacon* 12,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Baja avo toast alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/4d21d77a29a6165cbb42e3ec611e6849.webp" alt="Oslo salmon toast" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">NOR</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Oslo salmon toast</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Salmone affumicato, avocado al pesto, insalata, omelette, semi tostati e spezie affumicate.</p>
+<p style="margin: 0; font-size: 13px; color: #91007D">Abbinalo: Spritz +8,00 €</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 4 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">14,90 €
+Doppio salmone 18,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Oslo salmon toast alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/9d09328b1d500c5e647474aba9b01ba3.webp" alt="L.A. crispy avo toast" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">L.A. crispy avo toast*</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Avocado al pesto, bacon croccante, uova fritte e spezie affumicate.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">10,90 €
+Doppio uovo 12,40 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi L.A. crispy avo toast* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/c8ddea2ebfa0a9bcfb5035d01a58a930.webp" alt="Reggie benedict" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Reggie benedict</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #91007D; color: #91007D">NOVITÀ</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Due uova in camicia, salsa olandese, salmone affumicato, avocado, lattuga e pane semidolce di patate.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 4 · 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">15,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Reggie benedict alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+
+
+
+
+
+</section>
+
+<section id="bur" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; color: #3B0B40">Burger &amp; burritos</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right">patatine +3,00 €</span>
+</div>
+
+
+
+
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/a018e4da20410f427f6029f5301dee48.webp" alt="Kevin cheeseburger" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Kevin cheeseburger*</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Manzo, cheddar, bacon croccante e Keik sauce. Patatine +3,00 €, patate dolci +5,00 €.</p>
+<p style="margin: 0; font-size: 13px; color: #91007D">Abbinalo: La Mi’ Rossa +6,50 €</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 9 · 10</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Singolo 11,90 €
+Doppio 14,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Kevin cheeseburger* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/2b59242278e764972cb5814419a21009.webp" alt="Carlitos burger" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">VEN</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Carlitos burger*</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #B3261E; color: #B3261E">PICCANTE</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Manzo, uovo fritto, cheddar, guacamole, lattuga e salsa chipotle. Bacon +3,00 €.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Singolo 12,90 €
+Doppio 15,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Carlitos burger* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/74ef9e5ac177a5144eb40d7bfe6c055a.webp" alt="Frida burrito" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MEX</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Frida burrito*</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #B3261E; color: #B3261E">PICCANTE</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Burrito di manzo con lattuga, guacamole, pico de gallo, cheddar e salsa chipotle.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €
+Con bacon 16,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Frida burrito* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/de798c5d6feb91ede10f998b8ef10945.webp" alt="Gangnam burrito" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">KOR</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Gangnam burrito*</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pollo grigliato, kimchi, salsa tonkatsu, lattuga e pomodorini.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 6 · 9</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €
+Con avocado 17,40 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Gangnam burrito* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+
+
+
+
+
+</section>
+
+<section id="sha" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; color: #3B0B40">Da condividere</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right">per 2–3 persone</span>
+</div>
+
+
+
+
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/26cef8e9c0978e57162996a6258f71fc.webp" alt="Brunch Traveler" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #6E2A70; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">WLD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Brunch Traveler*</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Per 2–3 persone: pancakes, bacon, uova, mini avocado toast al salmone, frutta fresca e patate dolci fritte.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 4 · 7 · 10 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">32,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Brunch Traveler* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/77cdd4ac11e858e1b0c68012b140357d.webp" alt="Il Turista" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #6E2A70; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">WLD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Il Turista*</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Per 2 persone: tartine al formaggio, tostones con pico de gallo, falafel, patate dolci, nachos con guacamole e olive di Cerignola.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 6 · 7 · 9 · 10 · 11</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">20,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Il Turista* alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+
+
+
+
+<p style="margin: 18px 0 0; padding: 16px 18px; border-radius: 16px; background: #F7F2F6; font-size: 15px; line-height: 1.5; color: #3B0B40"><strong>Tagliere + 2 drink:</strong> ordina un tagliere e con 12,90 € in più aggiungi due drink.</p>
+
+
+</section>
+
+<section id="dol" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; color: #3B0B40">Dolci</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right">fatti a mano</span>
+</div>
+
+
+
+
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/79ef73a26c4dc0b9272f52aeace1a41c.webp" alt="Cupcake Red Velvet" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Cupcake Red Velvet</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Il nostro classico, in carta dal primo giorno.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Cupcake Red Velvet alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/cf35745659ce613a0e679df5fe1ee0cf.webp" alt="Cupcake Biscoff · Bueno · Nutella" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Cupcake Biscoff · Bueno · Nutella</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Con cuore di crema Biscoff, Bueno o Nutella.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Cupcake Biscoff · Bueno · Nutella alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/6fa5bbb208a5c9d089b3ae2d6f8e25b3.webp" alt="Cupcake Oreo" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Cupcake Oreo</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #3B0B40; color: #3B0B40">SENZA LATTOSIO</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Soffice e senza lattosio.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Cupcake Oreo alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/0df9f73cd45d4e98f7251d8a37bc8955.webp" alt="Cupcake Peanut" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Cupcake Peanut</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Al burro di arachidi.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 5 · 7 · 8</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Cupcake Peanut alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/1a7f8effc8ee93783ce0eb4c15c20cda.webp" alt="Brownie" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Brownie</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #3B0B40; color: #3B0B40">SENZA LATTOSIO</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Senza lattosio.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Brownie alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/bafbd90858218327a80fb29dd2fcab8b.webp" alt="Banana bread" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Banana bread</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #2F7D4F; color: #2F7D4F">VEGANO</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Vegano, fatto da noi.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Banana bread alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+
+
+
+
+
+<p style="margin: 14px 0 0; font-size: 14px; color: #6B4A70">Fatti a mano ogni giorno, fino a esaurimento. Chiedi allo staff cosa c'è oggi in vetrina.</p>
+
+</section>
+
+<section id="bev" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; color: #3B0B40">Da bere</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right">americano con refill gratuito</span>
+</div>
+
+
+
+
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/cc1aad15a186a0ff6f4f3b7b1b5fe8ae.webp" alt="UBE latte" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">PHL</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">UBE latte</h3>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #91007D; color: #91007D">NOVITÀ</span>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Latte all’ube, caldo o freddo.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,50 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi UBE latte alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/1f487479e8f411b993c5f4b3f78d96ef.webp" alt="Matcha latte" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">JPN</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Matcha latte</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Classico o al mango.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,50 €
+Mango 5,50 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Matcha latte alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/a8a6da076541fd13399ba2053742dd5e.webp" alt="Chai latte" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">IND</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Chai latte</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Speziato, caldo o freddo.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,50 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Chai latte alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+
+<div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: #3B0B40; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">USA</div>
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Pumpkin spice latte</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Il latte d’autunno.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 7</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">5,00 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Pumpkin spice latte alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+
+<div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: #3B0B40; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">USA</div>
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Americano</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Con refill gratuito, sempre. Vaniglia o nocciola +1,00 €.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI –</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,00 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Americano alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/9c990383cf0c24dfdc95c85acc48c868.webp" alt="Le nostre soda" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Le nostre soda</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Wild berry, passion, mango o pesca.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI –</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">5,90 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Le nostre soda alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/78f2b661852f066a1d514a2868fbac78.webp" alt="Mocktail" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Mocktail</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Sunset &amp; Chill o Fiore del deserto.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI –</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">8,00 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Mocktail alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/bef0568669abbc6962302c86415dd744.webp" alt="Spritz" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">ITA</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Spritz</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Classico, passion fruit, yuzu, lampone o pesca.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 12</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">8,00 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Spritz alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/3cbf56c6a7e8e1a27747baa3edbd3457.webp" alt="Negroni" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">ITA</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Negroni</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Il classico italiano.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 12</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">9,00 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Negroni alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/b9e90e271ca766d46ae5b9fe72103bc0.webp" alt="Mango MIMO · Gin tonic" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Mango MIMO · Gin tonic</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">I cocktail della casa.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 12</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,00 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Mango MIMO · Gin tonic alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+
+<img src="assets/img/0afc22f9a42818996f7fe2b82cf069a8.webp" alt="Birre La Mi’" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">ITA</span>
+
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Birre La Mi’</h3>
+
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">IPA, bionda o rossa.</p>
+
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">6,50 €</span>
+
+<button type="button" class="m-add" aria-label="Aggiungi Birre La Mi’ alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+
+
+</div>
+</article>
+
+
+
+
+
+
+</section>
+
+<section id="ext" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; color: #3B0B40">Contorni ed extra</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right">i tuoi timbri</span>
+</div>
+
+
+<p style="margin: 14px 0 6px; font-size: 15px; color: #4A2350">Ogni contorno è un timbro nel tuo viaggio.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; padding: 8px 0 12px">
+
+<button type="button" aria-label="Aggiungi Patate dolci fritte* alla rotta, 5,90 €" class="m-add" style="width: 128px; height: 128px; border-radius: 999px; border: 2px dashed #B79AB8; background: #FFFFFF; color: #3B0B40; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer; padding: 10px; transform: rotate(-8deg)">
+<img src="assets/img/1496fc17336980e10de59509e37bf3c5.webp" alt="" loading="lazy" style="width: 54px; height: 54px; object-fit: contain">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13px; line-height: 1.1; text-align: center">Patate dolci fritte*</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 12px">5,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #91007D">+ AGGIUNGI</span>
+</button>
+
+<button type="button" aria-label="Aggiungi Patatine crispy* alla rotta, 4,00 €" class="m-add" style="width: 128px; height: 128px; border-radius: 999px; border: 2px dashed #B79AB8; background: #FFFFFF; color: #3B0B40; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer; padding: 10px; transform: rotate(5deg)">
+<img src="assets/img/a120c9bacdaab9dd87ff3bf8990c267a.webp" alt="" loading="lazy" style="width: 54px; height: 54px; object-fit: contain">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13px; line-height: 1.1; text-align: center">Patatine crispy*</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 12px">4,00 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #91007D">+ AGGIUNGI</span>
+</button>
+
+<button type="button" aria-label="Aggiungi Tostones alla rotta, 4,90 €" class="m-add" style="width: 128px; height: 128px; border-radius: 999px; border: 2px dashed #B79AB8; background: #FFFFFF; color: #3B0B40; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer; padding: 10px; transform: rotate(-3deg)">
+<img src="assets/img/0aec7b04b6449163d4470cde51d890b7.webp" alt="" loading="lazy" style="width: 54px; height: 54px; object-fit: contain">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13px; line-height: 1.1; text-align: center">Tostones</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 12px">4,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #91007D">+ AGGIUNGI</span>
+</button>
+
+<button type="button" aria-label="Aggiungi Falafel* alla rotta, 5,90 €" class="m-add" style="width: 128px; height: 128px; border-radius: 999px; border: 2px dashed #B79AB8; background: #FFFFFF; color: #3B0B40; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer; padding: 10px; transform: rotate(7deg)">
+<img src="assets/img/fb130c7b5fa8bf3ac9a36808079af0c0.webp" alt="" loading="lazy" style="width: 54px; height: 54px; object-fit: contain">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13px; line-height: 1.1; text-align: center">Falafel*</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 12px">5,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #91007D">+ AGGIUNGI</span>
+</button>
+
+<button type="button" aria-label="Aggiungi Pollo HoneyKara* alla rotta, 6,90 €" class="m-add" style="width: 128px; height: 128px; border-radius: 999px; border: 2px dashed #B79AB8; background: #FFFFFF; color: #3B0B40; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer; padding: 10px; transform: rotate(-6deg)">
+<img src="assets/img/610cc65d4ff46161395d4e6ab089e922.webp" alt="" loading="lazy" style="width: 54px; height: 54px; object-fit: contain">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13px; line-height: 1.1; text-align: center">Pollo HoneyKara*</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 12px">6,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #91007D">+ AGGIUNGI</span>
+</button>
+
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #6B4A70">Proteine extra: uova strapazzate, bacon* o falafel* +3,00 € · pollo grigliato* +3,50 € · salmone norvegese +4,00 €. Freschi: avocado +3,50 €, fragole o banana +2,50 €. Golosi: Nutella, crema Bueno, pistacchio o sciroppo d'acero +2,50 €.</p>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+<section aria-label="Allergeni e note" style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 20px; background: #F7F2F6; font-size: 14px; line-height: 1.6; color: #4A2350">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Allergeni e note</h2>
+<p style="margin: 0">1 glutine · 2 crostacei · 3 uova · 4 pesce · 5 arachidi · 6 soia · 7 latte · 8 frutta a guscio · 9 sedano · 10 senape · 11 sesamo · 12 solfiti · 13 lupini · 14 molluschi</p>
+<p style="margin: 0">* Prodotto surgelato all'origine. Medium = porzione più piccola, Regular = porzione intera, Doppio = doppia carne o doppio ingrediente principale.</p>
+<p style="margin: 0"><strong style="color: #3B0B40">Senza glutine:</strong> abbiamo un menu dedicato, chiedilo allo staff. I nostri piatti non sono certificati senza glutine e possono contenere tracce per contaminazione crociata.</p>
+</section>
+</main>
+
+
+<aside class="m-pass" aria-label="La tua rotta" style="background: #FFFFFF; border-radius: 22px; box-shadow: 0 24px 60px rgba(42,8,48,0.16); overflow: hidden">
+<div style="background: #2A0830; color: #FFFFFF; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #D99BCF">LA TUA ROTTA</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 15px; letter-spacing: 0.04em; line-height: 1.4">MOD → ?</span>
+</div>
+<span class="m-bob"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+
+<div style="padding: 24px 20px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: #3B0B40">Il tuo passaporto è ancora vuoto.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A2350">Tocca + sui piatti: ogni paese nuovo è un timbro. Non è un ordine, è la tua proposta da mostrare o condividere con chi viene con te.</p>
+</div>
+
+
+<div style="padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 8px">
+
+
+<a href="https://pnssm.pro/a16isyw" style="display: flex; justify-content: center; align-items: center; min-height: 52px; border-radius: 14px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Prenota e parti</a>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<button type="button" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font: 600 13px 'Figtree', sans-serif; cursor: pointer">Condividi</button>
+<button type="button" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font: 600 13px 'Figtree', sans-serif; cursor: pointer">Salva immagine</button>
+<button type="button" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #6B4A70; font: 600 13px 'Figtree', sans-serif; cursor: pointer">Svuota</button>
+</div>
+
+</div>
+</aside>
+</div>
+</div>
+
+
+<div class="m-bar" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 10px 12px 14px; background: #2A0830; color: #FFFFFF; gap: 10px; align-items: center; box-shadow: 0 -10px 30px rgba(42,8,48,0.25)">
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #D99BCF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">MOD → ?</span>
+<span style="font-size: 14px"><strong>0 tappe</strong> · 0 timbri · 0,00 €</span>
+</span>
+<button type="button" aria-label="Condividi la tua rotta come immagine" style="width: 46px; height: 46px; flex: 0 0 46px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.5); background: transparent; color: #FFFFFF; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"></path></svg></button>
+
+
+<a href="https://pnssm.pro/a16isyw" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 18px; border-radius: 999px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 14px; white-space: nowrap">Prenota</a>
+
+</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<template id="dc-tpl">
+<div class="m-root" style="font-family: 'Figtree', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0; position: relative">
+
+<!-- HEADER -->
+<header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
+<div class="m-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px">
+<a href="#top" aria-label="KEIK – Viaggia col gusto, torna all’inizio" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e.png" alt="Keik – Viaggia col gusto" style="display: block; height: 44px; width: auto"></a>
+<div style="display: flex; gap: 8px; align-items: center">
+<nav aria-label="Lingua" class="m-hide-s" style="display: flex; gap: 2px">
+<button type="button" aria-pressed="true" style="font: 500 12px 'DM Mono', monospace; background: #3B0B40; color: #FFFFFF; border: 0; border-radius: 6px; min-width: 40px; min-height: 36px; cursor: pointer">IT</button>
+<button type="button" aria-pressed="false" style="font: 500 12px 'DM Mono', monospace; background: transparent; color: #3B0B40; border: 0; border-radius: 6px; min-width: 40px; min-height: 36px; cursor: pointer">EN</button>
+<button type="button" aria-pressed="false" style="font: 500 12px 'DM Mono', monospace; background: transparent; color: #3B0B40; border: 0; border-radius: 6px; min-width: 40px; min-height: 36px; cursor: pointer">ES</button>
+<button type="button" aria-pressed="false" style="font: 500 12px 'DM Mono', monospace; background: transparent; color: #3B0B40; border: 0; border-radius: 6px; min-width: 40px; min-height: 36px; cursor: pointer">FR</button>
+</nav>
+<sc-if value="{{online}}" hint-placeholder-val="{{ true }}">
+<a href="https://pnssm.pro/a16isyw" style="display: inline-flex; align-items: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 14px; padding: 0 18px; min-height: 44px; border-radius: 999px">Prenota</a>
+</sc-if>
+<sc-if value="{{atTable}}" hint-placeholder-val="{{ false }}">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #3B0B40; border: 1px solid #E6DAE4; border-radius: 999px; padding: 0 14px; min-height: 40px"><span style="width: 8px; height: 8px; border-radius: 999px; background: #91007D"></span>SEI AL TAVOLO</span>
+</sc-if>
+</div>
+</div>
+</header>
+
+<!-- INTRO -->
+<section id="top" style="background: #F7F2F6; padding: 40px 0 28px">
+<div class="m-wrap" style="display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #91007D">MENU ALL DAY · TUTTO, A QUALSIASI ORA</p>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(40px, 6vw, 72px); line-height: 0.98; letter-spacing: -0.035em; color: #3B0B40">Scegli la tua <span class="m-serif" style="color: #91007D">rotta.</span></h1>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4A2350; max-width: 40em">Ogni piatto è una tappa. Tocca <strong style="color: #3B0B40">+</strong> su quello che prenderesti: nasce il tuo itinerario, con un timbro per ogni paese. {{introTail}}</p>
+</div>
+</section>
+
+<!-- Rotta di volo: l'aereo viaggia tra le categorie mentre scorri -->
+<div class="m-flight">
+<div class="m-wrap">
+<nav aria-label="Rotta tra le categorie" class="m-track">
+<div aria-hidden="true" style="position: absolute; left: 16px; right: 16px; top: 24px; border-top: 2px dashed #D9C3DB"></div>
+<div aria-hidden="true" ref="{{trailRef}}" style="position: absolute; left: 16px; top: 23px; height: 4px; width: 0; border-radius: 2px; background: #91007D; transition: width .12s linear"></div>
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="8">
+<a href="#{{c.id}}" class="m-dot {{c.dotClass}}" style="left: {{c.dotLeft}}" aria-label="Vai a {{c.short}}">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid {{c.dotBorder}}; background: {{c.dotFill}}; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: {{c.dotText}}">{{c.short}}</span>
+</a>
+</sc-for>
+<span class="m-plane" aria-hidden="true" ref="{{planeRef}}"><span class="m-plane-in"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display: block; transform: rotate(90deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span></span>
+</nav>
+</div>
+<nav class="m-catnav" aria-label="Categorie" style="overflow-x: auto; gap: 6px; padding: 0 16px 10px; white-space: nowrap">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="8">
+<a href="#{{c.id}}" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: {{c.chipBg}}; color: {{c.chipFg}}; text-decoration: none; font-size: 13px; font-weight: 600">{{c.short}}</a>
+</sc-for>
+</nav>
+</div>
+
+<!-- CORPO: indice · piatti · carta d'imbarco -->
+<div class="m-wrap" style="padding-top: 32px; padding-bottom: 120px">
+<div class="m-body">
+
+<!-- Indice categorie (desktop) -->
+<nav class="m-side" aria-label="Categorie del menu" style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70; margin-bottom: 8px">ROTTE</span>
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="8">
+<a href="#{{c.id}}" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>{{c.short}}</span><span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">{{c.count}}</span></a>
+</sc-for>
+<a href="https://gioco.keik.it" style="margin-top: 20px; display: flex; flex-direction: column; gap: 6px; padding: 16px; border-radius: 16px; background: #2A0830; color: #FFFFFF; text-decoration: none">
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #D99BCF">MENTRE ASPETTI</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 19px; line-height: 1.1">Gioca a Brady's Quest</span>
+<span style="font-size: 13px; color: #DCC8DD">Aiuta Brady a non perdere il volo.</span>
+</a>
+</nav>
+
+<!-- Piatti -->
+<main style="display: flex; flex-direction: column; gap: 56px; min-width: 0">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="3">
+<section id="{{c.id}}" ref="{{c.ref}}" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; color: #3B0B40">{{c.name}}</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right">{{c.note}}</span>
+</div>
+
+<sc-if value="{{c.isStamps}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 14px 0 6px; font-size: 15px; color: #4A2350">Ogni contorno è un timbro nel tuo viaggio.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; padding: 8px 0 12px">
+<sc-for list="{{c.items}}" as="d" hint-placeholder-count="5">
+<button type="button" onClick="{{d.add}}" aria-label="Aggiungi {{d.name}} alla rotta, {{d.prices}}" class="m-add" style="width: 128px; height: 128px; border-radius: 999px; border: 2px dashed {{d.stampColor}}; background: {{d.stampBg}}; color: #3B0B40; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer; padding: 10px; transform: rotate({{d.tilt}})">
+<sc-if value="{{d.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{d.img}}" alt="" loading="lazy" style="width: 54px; height: 54px; object-fit: contain"></sc-if>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13px; line-height: 1.1; text-align: center">{{d.name}}</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 12px">{{d.prices}}</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #91007D">{{d.stampState}}</span>
+</button>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #6B4A70">Proteine extra: uova strapazzate, bacon* o falafel* +3,00 € · pollo grigliato* +3,50 € · salmone norvegese +4,00 €. Freschi: avocado +3,50 €, fragole o banana +2,50 €. Golosi: Nutella, crema Bueno, pistacchio o sciroppo d'acero +2,50 €.</p>
+</sc-if>
+
+<sc-if value="{{c.isList}}" hint-placeholder-val="{{ true }}">
+<sc-for list="{{c.items}}" as="d" hint-placeholder-count="4">
+<article class="m-row" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA">
+<div style="position: relative">
+<sc-if value="{{d.hasImg}}" hint-placeholder-val="{{ true }}">
+<img src="{{d.img}}" alt="{{d.altName}}" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: {{d.codeBg}}; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">{{d.code}}</span>
+</sc-if>
+<sc-if value="{{d.noImg}}" hint-placeholder-val="{{ false }}">
+<div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: {{d.codeBg}}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">{{d.code}}</div>
+</sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">{{d.name}}</h3>
+<sc-for list="{{d.tags}}" as="t" hint-placeholder-count="1"><span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid {{t.color}}; color: {{t.color}}">{{t.label}}</span></sc-for>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">{{d.desc}}</p>
+<sc-if value="{{d.hasPair}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 13px; color: #91007D">Abbinalo: {{d.pair}}</p></sc-if>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI {{d.allergens}}</p>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">{{d.prices}}</span>
+<sc-if value="{{d.notIn}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="m-add" onClick="{{d.add}}" aria-label="Aggiungi {{d.name}} alla rotta" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+</sc-if>
+<sc-if value="{{d.inRoute}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 4px; background: #3B0B40; border-radius: 999px; padding: 2px">
+<button type="button" onClick="{{d.remove}}" aria-label="Togli un {{d.name}}" style="width: 40px; height: 40px; border-radius: 999px; border: 0; background: transparent; color: #FFFFFF; font-size: 20px; cursor: pointer">−</button>
+<span style="min-width: 18px; text-align: center; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 14px">{{d.qty}}</span>
+<button type="button" onClick="{{d.add}}" aria-label="Aggiungi un altro {{d.name}}" style="width: 40px; height: 40px; border-radius: 999px; border: 0; background: transparent; color: #FFFFFF; font-size: 20px; cursor: pointer">+</button>
+</div>
+</sc-if>
+</div>
+</article>
+</sc-for>
+</sc-if>
+
+<sc-if value="{{c.isPancakes}}" hint-placeholder-val="{{ false }}">
+<a href="https://gioco.keik.it" style="margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; border-radius: 18px; border: 1.5px dashed #91007D; color: #3B0B40; text-decoration: none">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #91007D">BRADY PANCAKES È ANCHE UN GIOCO</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 19px">Mentre aspetti, gioca a Brady's Quest</span></span>
+<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 20px; color: #91007D">→</span>
+</a>
+</sc-if>
+<sc-if value="{{c.isShare}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 18px 0 0; padding: 16px 18px; border-radius: 16px; background: #F7F2F6; font-size: 15px; line-height: 1.5; color: #3B0B40"><strong>Tagliere + 2 drink:</strong> ordina un tagliere e con 12,90 € in più aggiungi due drink.</p>
+</sc-if>
+<sc-if value="{{c.isSweets}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 14px 0 0; font-size: 14px; color: #6B4A70">Fatti a mano ogni giorno, fino a esaurimento. Chiedi allo staff cosa c'è oggi in vetrina.</p>
+</sc-if>
+</section>
+</sc-for>
+
+<sc-if value="{{noResults}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 16px; color: #6B4A70">Nessun piatto per questo momento.</p></sc-if>
+
+<!-- Note legali -->
+<section aria-label="Allergeni e note" style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 20px; background: #F7F2F6; font-size: 14px; line-height: 1.6; color: #4A2350">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Allergeni e note</h2>
+<p style="margin: 0">1 glutine · 2 crostacei · 3 uova · 4 pesce · 5 arachidi · 6 soia · 7 latte · 8 frutta a guscio · 9 sedano · 10 senape · 11 sesamo · 12 solfiti · 13 lupini · 14 molluschi</p>
+<p style="margin: 0">* Prodotto surgelato all'origine. Medium = porzione più piccola, Regular = porzione intera, Doppio = doppia carne o doppio ingrediente principale.</p>
+<p style="margin: 0"><strong style="color: #3B0B40">Senza glutine:</strong> abbiamo un menu dedicato, chiedilo allo staff. I nostri piatti non sono certificati senza glutine e possono contenere tracce per contaminazione crociata.</p>
+</section>
+</main>
+
+<!-- CARTA D'IMBARCO / ITINERARIO (desktop) -->
+<aside class="m-pass" aria-label="La tua rotta" style="background: #FFFFFF; border-radius: 22px; box-shadow: 0 24px 60px rgba(42,8,48,0.16); overflow: hidden">
+<div style="background: #2A0830; color: #FFFFFF; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #D99BCF">LA TUA ROTTA</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 15px; letter-spacing: 0.04em; line-height: 1.4">{{chain}}</span>
+</div>
+<span class="m-bob"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<sc-if value="{{empty}}" hint-placeholder-val="{{ true }}">
+<div style="padding: 24px 20px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: #3B0B40">Il tuo passaporto è ancora vuoto.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A2350">Tocca + sui piatti: ogni paese nuovo è un timbro. Non è un ordine, è la tua proposta da mostrare o condividere con chi viene con te.</p>
+</div>
+</sc-if>
+<sc-if value="{{notEmpty}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 16px 20px 0; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">TIMBRI {{stampCount}}/12</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #91007D">{{rank}}</span>
+</div>
+<div class="m-stamps" style="gap: 6px">
+<sc-for list="{{stamps}}" as="s" hint-placeholder-count="3">
+<span class="m-stamp" style="--r: {{s.tilt}}; aspect-ratio: 1; border-radius: 999px; border: 2px solid {{s.color}}; color: {{s.color}}; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500">{{s.code}}</span>
+</sc-for>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; max-height: 260px; overflow-y: auto">
+<sc-for list="{{route}}" as="r" hint-placeholder-count="2">
+<li class="m-in" style="display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px dashed #E6DAE4; font-size: 14px; color: #3B0B40"><span>{{r.qty}} × {{r.name}}</span><span style="font-family: 'DM Mono', monospace; color: #6B4A70">{{r.code}}</span></li>
+</sc-for>
+</ul>
+<p style="margin: 0; display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 13px; color: #6B4A70">Totale indicativo</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px; color: #3B0B40">{{total}}</span></p>
+</div>
+</sc-if>
+<div style="padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 8px">
+<sc-if value="{{atTable}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{openStaff}}" style="min-height: 52px; border-radius: 14px; border: 0; background: #91007D; color: #FFFFFF; font: 600 16px 'Figtree', sans-serif; cursor: pointer">Mostra allo staff</button>
+</sc-if>
+<sc-if value="{{online}}" hint-placeholder-val="{{ true }}">
+<a href="https://pnssm.pro/a16isyw" style="display: flex; justify-content: center; align-items: center; min-height: 52px; border-radius: 14px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Prenota e parti</a>
+</sc-if>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<button type="button" onClick="{{share}}" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font: 600 13px 'Figtree', sans-serif; cursor: pointer">Condividi</button>
+<button type="button" onClick="{{saveImage}}" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font: 600 13px 'Figtree', sans-serif; cursor: pointer">Salva immagine</button>
+<button type="button" onClick="{{clear}}" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #6B4A70; font: 600 13px 'Figtree', sans-serif; cursor: pointer">Svuota</button>
+</div>
+<sc-if value="{{hasMsg}}" hint-placeholder-val="{{ false }}"><p class="m-in" role="status" style="margin: 0; font-size: 13px; color: #91007D; text-align: center">{{msg}}</p></sc-if>
+</div>
+</aside>
+</div>
+</div>
+
+<!-- Barra rotta (telefono) -->
+<div class="m-bar" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 10px 12px 14px; background: #2A0830; color: #FFFFFF; gap: 10px; align-items: center; box-shadow: 0 -10px 30px rgba(42,8,48,0.25)">
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #D99BCF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{chain}}</span>
+<span style="font-size: 14px"><strong>{{itemsLabel}}</strong> · {{stampCount}} timbri · {{total}}</span>
+</span>
+<button type="button" onClick="{{share}}" aria-label="Condividi la tua rotta come immagine" style="width: 46px; height: 46px; flex: 0 0 46px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.5); background: transparent; color: #FFFFFF; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"></path></svg></button>
+<sc-if value="{{atTable}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{openStaff}}" style="min-height: 46px; padding: 0 16px; border-radius: 999px; border: 0; background: #FFFFFF; color: #2A0830; font: 600 14px 'Figtree', sans-serif; cursor: pointer; white-space: nowrap">Mostra allo staff</button>
+</sc-if>
+<sc-if value="{{online}}" hint-placeholder-val="{{ true }}">
+<a href="https://pnssm.pro/a16isyw" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 18px; border-radius: 999px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 14px; white-space: nowrap">Prenota</a>
+</sc-if>
+</div>
+
+<!-- Vista "Mostra allo staff" -->
+<sc-if value="{{staffOpen}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="La tua rotta da mostrare allo staff" style="position: fixed; inset: 0; z-index: 50; background: #2A0830; color: #FFFFFF; overflow-y: auto">
+<div class="m-wrap" style="padding-top: 28px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 20px; max-width: 640px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #D99BCF">DA MOSTRARE ALLO STAFF</span>
+<button type="button" onClick="{{closeStaff}}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.5); background: transparent; color: #FFFFFF; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Chiudi</button>
+</div>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 18px; letter-spacing: 0.04em">{{chain}}</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<sc-for list="{{route}}" as="r" hint-placeholder-count="3">
+<li style="display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.16)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 34px; min-width: 44px">{{r.qty}}×</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.15">{{r.name}}</span></li>
+</sc-for>
+</ul>
+<p style="margin: 0; font-size: 15px; color: #DCC8DD">Ricordati di segnalare allergie o intolleranze a chi prende l'ordine.</p>
+</div>
+</div>
+</sc-if>
+
+<!-- Popup Brady's Quest (al tavolo, dopo 30 secondi) -->
+<sc-if value="{{bradyOpen}}" hint-placeholder-val="{{ false }}">
+<div class="m-sheet" role="dialog" aria-label="Brady's Quest" style="position: fixed; left: 12px; right: 12px; bottom: 84px; z-index: 40; max-width: 420px; margin: 0 auto; background: #FFFFFF; border-radius: 22px; box-shadow: 0 30px 70px rgba(42,8,48,0.35); overflow: hidden">
+<div style="background: #91007D; color: #FFFFFF; padding: 16px 18px; display: flex; justify-content: space-between; align-items: center">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em">IL TUO VIAGGIO È IN PREPARAZIONE</span>
+<button type="button" onClick="{{closeBrady}}" aria-label="Chiudi" style="width: 36px; height: 36px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.18); color: #FFFFFF; font-size: 18px; cursor: pointer">×</button>
+</div>
+<div style="padding: 18px; display: flex; gap: 16px; align-items: center">
+<div aria-hidden="true" style="flex: 0 0 84px; height: 84px; border-radius: 18px; background: #F7F2F6; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 10px; color: #6B4A70; text-align: center">[BRADY]</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.1; color: #3B0B40">Aiuta Brady a non perdere il volo</span>
+<span style="font-size: 14px; line-height: 1.45; color: #4A2350">Un minigioco in aeroporto, mentre la cucina prepara il tuo piatto.</span>
+</div>
+</div>
+<div style="padding: 0 18px 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px">
+<a href="https://gioco.keik.it" style="display: flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 12px; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">Gioca a Brady's Quest</a>
+<button type="button" onClick="{{closeBrady}}" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #6B4A70; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Più tardi</button>
+</div>
+</div>
+</sc-if>
+
+</div>
+</template>
+<script type="text/x-dc" id="dc-code">
+class Component extends DCLogic {
+  componentDidMount() {
+    // Al tavolo il popup di Brady's Quest compare dopo 30 secondi, una volta sola
+    this.bradyTimer = setTimeout(() => {
+      if ((this.props.contesto ?? 'online') === 'tavolo' && !(this.state && this.state.bradySeen)) this.setState({ brady: true, bradySeen: true });
+    }, 30000);
+  }
+  componentWillUnmount() {
+    clearTimeout(this.bradyTimer);
+    clearTimeout(this.msgTimer);
+    if (this.onScroll) { document.removeEventListener('scroll', this.onScroll, true); window.removeEventListener('resize', this.onScroll); }
+    if (this.raf) cancelAnimationFrame(this.raf);
+  }
+  // L'aereo viaggia tra le categorie: la sua posizione segue lo scorrimento della pagina
+  // (ascolta lo scroll di qualsiasi contenitore, così funziona anche dentro la cornice del telefono)
+  startFlight() {
+    if (this.onScroll) return;
+    this.secs = this.secs || {};
+    const update = () => {
+      this.raf = 0;
+      const ids = (this.visibleIds || []).filter((id) => this.secs[id]);
+      if (!ids.length || !this.planeEl) return;
+      const anchor = window.innerHeight * 0.35;
+      let idx = 0, frac = 0;
+      for (let i = 0; i < ids.length; i++) {
+        const r = this.secs[ids.at(i)].getBoundingClientRect();
+        if (r.top <= anchor) { idx = i; frac = Math.max(0, Math.min(1, (anchor - r.top) / Math.max(1, r.height))); }
+      }
+      const n = ids.length;
+      const p = n > 1 ? Math.min(1, (idx + (idx === n - 1 ? 0 : frac)) / (n - 1)) : 0;
+      const pos = 'calc(16px + (100% - 32px) * ' + p.toFixed(4) + ')';
+      this.planeEl.style.left = pos;
+      if (this.trailEl) this.trailEl.style.width = 'calc((100% - 32px) * ' + p.toFixed(4) + ')';
+      const active = ids.at(idx);
+      if (active !== (this.state && this.state.active)) this.setState({ active: active });
+    };
+    this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(update); };
+    document.addEventListener('scroll', this.onScroll, true);
+    window.addEventListener('resize', this.onScroll);
+    this.onScroll();
+  }
+  refsFor() {
+    if (!this._r) {
+      this._r = { sec: {}, plane: (el) => { this.planeEl = el; if (el) this.startFlight(); }, trail: (el) => { this.trailEl = el; } };
+    }
+    return this._r;
+  }
+  secRef(id) {
+    const r = this.refsFor();
+    if (!r.sec[id]) r.sec[id] = (el) => { this.secs = this.secs || {}; if (el) this.secs[id] = el; else delete this.secs[id]; };
+    return r.sec[id];
+  }
+  flash(msg) {
+    this.setState({ msg: msg });
+    clearTimeout(this.msgTimer);
+    this.msgTimer = setTimeout(() => this.setState({ msg: '' }), 3500);
+  }
+  // Disegna la carta d'imbarco della rotta come immagine 1080×1350 (formato post e storie)
+  drawPass(data) {
+    const c = document.createElement('canvas');
+    c.width = 1080; c.height = 1350;
+    const g = c.getContext('2d');
+    g.fillStyle = '#2A0830'; g.fillRect(0, 0, 1080, 1350);
+    g.fillStyle = '#FFFFFF'; g.beginPath(); g.roundRect(60, 60, 960, 1230, 48); g.fill();
+    g.fillStyle = '#2A0830'; g.beginPath(); g.roundRect(60, 60, 960, 250, [48, 48, 0, 0]); g.fill();
+    g.fillStyle = '#D99BCF'; g.font = '500 28px "DM Mono", monospace'; g.fillText('CARTA D’IMBARCO · LA MIA ROTTA KEIK', 110, 140);
+    g.fillStyle = '#FFFFFF'; g.font = '700 54px "Bricolage Grotesque", sans-serif';
+    const chain = data.chain.length > 30 ? data.chain.slice(0, 30) + '…' : data.chain;
+    g.fillText(chain, 110, 230);
+    data.stamps.forEach((s, i) => {
+      const x = 170 + (i % 6) * 150, y = 420 + Math.floor(i / 6) * 150;
+      g.save(); g.translate(x, y); g.rotate((i % 2 ? 6 : -8) * Math.PI / 180);
+      g.strokeStyle = s.color; g.lineWidth = 6; g.beginPath(); g.arc(0, 0, 58, 0, Math.PI * 2); g.stroke();
+      g.fillStyle = s.color; g.font = '500 30px "DM Mono", monospace'; g.textAlign = 'center'; g.fillText(s.code, 0, 11);
+      g.restore();
+    });
+    let y = data.stamps.length > 6 ? 700 : 560;
+    g.textAlign = 'left';
+    data.route.slice(0, 9).forEach((r) => {
+      g.fillStyle = '#3B0B40'; g.font = '600 36px "Figtree", sans-serif'; g.fillText(r.qty + ' × ' + r.name, 110, y);
+      g.fillStyle = '#6B4A70'; g.font = '500 28px "DM Mono", monospace'; g.textAlign = 'right'; g.fillText(r.code, 970, y); g.textAlign = 'left';
+      g.strokeStyle = '#E6DAE4'; g.setLineDash([6, 8]); g.lineWidth = 2; g.beginPath(); g.moveTo(110, y + 24); g.lineTo(970, y + 24); g.stroke(); g.setLineDash([]);
+      y += 66;
+    });
+    g.fillStyle = '#91007D'; g.font = '500 28px "DM Mono", monospace'; g.fillText(data.rank || 'IN PARTENZA', 110, 1150);
+    g.fillStyle = '#3B0B40'; g.font = '700 44px "Bricolage Grotesque", sans-serif'; g.fillText('keik.it · Via Canalino 51, Modena', 110, 1220);
+    return c;
+  }
+  async shareRoute(data, asFileOnly) {
+    if (!data.route.length) { this.flash('Aggiungi almeno un piatto alla rotta.'); return; }
+    const canvas = this.drawPass(data);
+    const blob = await new Promise((res) => canvas.toBlob(res, 'image/png'));
+    const file = blob ? new File([blob], 'la-mia-rotta-keik.png', { type: 'image/png' }) : null;
+    const text = 'La mia rotta da KEIK: ' + data.route.map((r) => r.qty + '× ' + r.name).join(', ') + '. Ci vediamo in Via Canalino 51!';
+    try {
+      if (!asFileOnly && file && navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], title: 'La mia rotta KEIK', text: text }); return; }
+      if (!asFileOnly && navigator.share) { await navigator.share({ title: 'La mia rotta KEIK', text: text }); return; }
+    } catch (e) { return; }
+    if (blob) {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = 'la-mia-rotta-keik.png'; a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+      this.flash('Immagine salvata: condividila su WhatsApp o nelle storie.');
+    }
+  }
+  renderVals() {
+    const st = this.state || {};
+    const ctx = this.props.contesto ?? 'online';
+    const atTable = ctx === 'tavolo';
+    const qtys = st.q || {};
+    const moment = st.moment || 'all';
+    const setQ = (id, n) => { const q = Object.assign({}, (this.state && this.state.q) || {}); if (n <= 0) delete q[id]; else q[id] = n; this.setState({ q: q }); };
+    const D = (id, cat, code, name, desc, prices, base, allergens, mom, extra) => Object.assign({ id, cat, code, name, desc, prices, base, allergens, mom, tags: [], pair: '' }, extra || {});
+    const T = { nuovo: { label: 'NOVITÀ', color: '#91007D' }, vegan: { label: 'VEGANO', color: '#2F7D4F' }, hot: { label: 'PICCANTE', color: '#B3261E' }, lf: { label: 'SENZA LATTOSIO', color: '#3B0B40' } };
+    const all = [
+      D('ube', 'pan', 'PHL', 'UBE lava pancakes', 'Pancakes dal cuore di crema all’ube, frutta fresca, mini marshmallow, granola alle nocciole e Oreo crumble.', '11,90 €', 11.9, '1 · 3 · 6 · 7 · 8', 'me', { tags: [T.nuovo], pair: 'Matcha latte +4,50 €' }),
+      D('pausa', 'pan', 'MOD', 'La pausa pancakes', 'Con Nutella o crema Bueno, Oreo crumble, granola alle nocciole e fragole fresche.', 'Medium 9,90 €\nRegular 11,90 €', 9.9, '1 · 3 · 6 · 7 · 8', 'me'),
+      D('brady', 'pan', 'CAN', 'Brady pancakes', 'Frutta fresca, granola alle nocciole e sciroppo d’acero canadese o Nutella.', 'Medium 8,90 €\nRegular 10,90 €', 8.9, '1 · 3 · 7 · 8', 'me'),
+      D('biscoff', 'pan', 'BEL', 'Biscoff belgian pancakes', 'Crema Biscoff Lotus, frutta fresca, Lotus crumble e panna montata.', '11,90 €', 11.9, '1 · 3 · 6 · 7 · 8', 'me'),
+      D('nyc', 'pan', 'USA', 'NYC bacon & eggs*', 'Pancakes fatti in casa, bacon croccante e uova strapazzate o fritte. Con sciroppo d’acero +2,50 €.', 'Medium 10,90 €\nRegular 12,90 €', 10.9, '1 · 3 · 6 · 7', 'mp'),
+      D('alaska', 'pan', 'USA', 'Alaska pancakes', 'Salmone affumicato, uova fritte, semi tostati e un fiore edibile.', '15,90 €', 15.9, '1 · 3 · 4 · 7 · 11', 'mp', { pair: 'Sunset & Chill +8,00 €' }),
+      D('osaka', 'pan', 'JPN', 'Osaka pancakes*', 'Pancakes soffici con pollo croccante glassato alla salsa HoneyKara, cheddar e sesamo nero.', '12,90 €', 12.9, '1 · 3 · 7 · 11', 'ps', { tags: [T.hot] }),
+      D('canberra', 'fus', 'AUS', 'Canberra breaky*', 'Uova strapazzate, bacon croccante, avocado fresco, semi misti, insalata e fragole.', '13,90 €', 13.9, '1 · 3 · 11', 'mp'),
+      D('tijuana', 'fus', 'MEX', 'Tijuana caesar salad*', 'Insalata, pollo grigliato, pico de gallo, halloumi grigliato, crostini e salsa caesar. Pollo croccante +1,50 €.', '12,90 €', 12.9, '1 · 3 · 7 · 9 · 11', 'p', { pair: 'Passion soda +5,90 €' }),
+      D('losroques', 'fus', 'VEN', 'Los Roques benedict', 'Tostones croccanti con avocado, formaggio grigliato, insalata, due uova in camicia e salsa olandese.', '11,90 €', 11.9, '1 · 3 · 7', 'mp', { tags: [T.nuovo] }),
+      D('hummus', 'fus', 'MED', 'Hummus & falafel*', 'Hummus fatto in casa, falafel croccanti, avocado, pomodorini, insalata e olio alla paprika.', '13,90 €\nExtra falafel 16,90 €', 13.9, '1 · 11', 'ps', { tags: [T.vegan] }),
+      D('baja', 'toa', 'MEX', 'Baja avo toast', 'Avocado al pesto, pico de gallo, due uova in camicia e semi tostati.', '9,90 €\nCon bacon* 12,90 €', 9.9, '1 · 3 · 11', 'mp'),
+      D('oslo', 'toa', 'NOR', 'Oslo salmon toast', 'Salmone affumicato, avocado al pesto, insalata, omelette, semi tostati e spezie affumicate.', '14,90 €\nDoppio salmone 18,90 €', 14.9, '1 · 3 · 4 · 11', 'mp', { pair: 'Spritz +8,00 €' }),
+      D('la', 'toa', 'USA', 'L.A. crispy avo toast*', 'Avocado al pesto, bacon croccante, uova fritte e spezie affumicate.', '10,90 €\nDoppio uovo 12,40 €', 10.9, '1 · 3 · 11', 'mp'),
+      D('reggie', 'toa', 'MOD', 'Reggie benedict', 'Due uova in camicia, salsa olandese, salmone affumicato, avocado, lattuga e pane semidolce di patate.', '15,90 €', 15.9, '1 · 3 · 4 · 7', 'mp', { tags: [T.nuovo] }),
+      D('kevin', 'bur', 'USA', 'Kevin cheeseburger*', 'Manzo, cheddar, bacon croccante e Keik sauce. Patatine +3,00 €, patate dolci +5,00 €.', 'Singolo 11,90 €\nDoppio 14,90 €', 11.9, '1 · 3 · 6 · 7 · 9 · 10', 'ps', { pair: 'La Mi’ Rossa +6,50 €' }),
+      D('carlitos', 'bur', 'VEN', 'Carlitos burger*', 'Manzo, uovo fritto, cheddar, guacamole, lattuga e salsa chipotle. Bacon +3,00 €.', 'Singolo 12,90 €\nDoppio 15,90 €', 12.9, '1 · 3 · 6 · 7', 'ps', { tags: [T.hot] }),
+      D('frida', 'bur', 'MEX', 'Frida burrito*', 'Burrito di manzo con lattuga, guacamole, pico de gallo, cheddar e salsa chipotle.', '13,90 €\nCon bacon 16,90 €', 13.9, '1 · 3 · 6 · 7', 'ps', { tags: [T.hot] }),
+      D('gangnam', 'bur', 'KOR', 'Gangnam burrito*', 'Pollo grigliato, kimchi, salsa tonkatsu, lattuga e pomodorini.', '13,90 €\nCon avocado 17,40 €', 13.9, '1 · 6 · 9', 'ps'),
+      D('traveler', 'sha', 'WLD', 'Brunch Traveler*', 'Per 2–3 persone: pancakes, bacon, uova, mini avocado toast al salmone, frutta fresca e patate dolci fritte.', '32,90 €', 32.9, '1 · 3 · 4 · 7 · 10 · 11', 'mp'),
+      D('turista', 'sha', 'WLD', 'Il Turista*', 'Per 2 persone: tartine al formaggio, tostones con pico de gallo, falafel, patate dolci, nachos con guacamole e olive di Cerignola.', '20,90 €', 20.9, '1 · 6 · 7 · 9 · 10 · 11', 's'),
+      D('redvelvet', 'dol', 'MOD', 'Cupcake Red Velvet', 'Il nostro classico, in carta dal primo giorno.', '4,90 €', 4.9, '1 · 3 · 7', 'e'),
+      D('cbiscoff', 'dol', 'MOD', 'Cupcake Biscoff · Bueno · Nutella', 'Con cuore di crema Biscoff, Bueno o Nutella.', '4,90 €', 4.9, '1 · 3 · 6 · 7 · 8', 'e'),
+      D('oreo', 'dol', 'MOD', 'Cupcake Oreo', 'Soffice e senza lattosio.', '3,90 €', 3.9, '1 · 3 · 6', 'e', { tags: [T.lf] }),
+      D('peanut', 'dol', 'USA', 'Cupcake Peanut', 'Al burro di arachidi.', '3,90 €', 3.9, '1 · 3 · 5 · 7 · 8', 'e'),
+      D('brownie', 'dol', 'USA', 'Brownie', 'Senza lattosio.', '3,90 €', 3.9, '1 · 3', 'e', { tags: [T.lf] }),
+      D('banana', 'dol', 'MOD', 'Banana bread', 'Vegano, fatto da noi.', '3,90 €', 3.9, '1', 'e', { tags: [T.vegan] }),
+      D('ubelatte', 'bev', 'PHL', 'UBE latte', 'Latte all’ube, caldo o freddo.', '4,50 €', 4.5, '7', 'me', { tags: [T.nuovo] }),
+      D('matcha', 'bev', 'JPN', 'Matcha latte', 'Classico o al mango.', '4,50 €\nMango 5,50 €', 4.5, '7', 'me'),
+      D('chai', 'bev', 'IND', 'Chai latte', 'Speziato, caldo o freddo.', '4,50 €', 4.5, '7', 'me'),
+      D('pumpkin', 'bev', 'USA', 'Pumpkin spice latte', 'Il latte d’autunno.', '5,00 €', 5, '7', 'me'),
+      D('americano', 'bev', 'USA', 'Americano', 'Con refill gratuito, sempre. Vaniglia o nocciola +1,00 €.', '3,00 €', 3, '–', 'me'),
+      D('soda', 'bev', 'MOD', 'Le nostre soda', 'Wild berry, passion, mango o pesca.', '5,90 €', 5.9, '–', 'pe'),
+      D('mocktail', 'bev', 'MOD', 'Mocktail', 'Sunset & Chill o Fiore del deserto.', '8,00 €', 8, '–', 'es'),
+      D('spritz', 'bev', 'ITA', 'Spritz', 'Classico, passion fruit, yuzu, lampone o pesca.', '8,00 €', 8, '12', 's'),
+      D('negroni', 'bev', 'ITA', 'Negroni', 'Il classico italiano.', '9,00 €', 9, '12', 's'),
+      D('mimo', 'bev', 'MOD', 'Mango MIMO · Gin tonic', 'I cocktail della casa.', '12,00 €', 12, '12', 's'),
+      D('birre', 'bev', 'ITA', 'Birre La Mi’', 'IPA, bionda o rossa.', '6,50 €', 6.5, '1', 's'),
+      D('sweetfries', 'ext', 'USA', 'Patate dolci fritte*', '', '5,90 €', 5.9, '1 · 3 · 9 · 10', 'ps'),
+      D('fries', 'ext', 'BEL', 'Patatine crispy*', '', '4,00 €', 4, '1 · 3 · 10', 'ps'),
+      D('tostones', 'ext', 'VEN', 'Tostones', '', '4,90 €', 4.9, '1', 'ps'),
+      D('falafel', 'ext', 'MED', 'Falafel*', '', '5,90 €', 5.9, '1 · 11', 'ps'),
+      D('honeykara', 'ext', 'JPN', 'Pollo HoneyKara*', '', '6,90 €', 6.9, '1', 'ps')
+    ];
+    const catDefs = [
+      { id: 'pan', short: 'Pancakes', name: 'All day pancakes', note: 'anche a cena' },
+      { id: 'fus', short: 'Street food', name: 'Fusion & street food', note: '' },
+      { id: 'toa', short: 'Toast', name: 'Avocado & toast', note: '' },
+      { id: 'bur', short: 'Burger', name: 'Burger & burritos', note: 'patatine +3,00 €' },
+      { id: 'sha', short: 'Da dividere', name: 'Da condividere', note: 'per 2–3 persone' },
+      { id: 'dol', short: 'Dolci', name: 'Dolci', note: 'fatti a mano' },
+      { id: 'bev', short: 'Da bere', name: 'Da bere', note: 'americano con refill gratuito' },
+      { id: 'ext', short: 'Contorni', name: 'Contorni ed extra', note: 'i tuoi timbri' }
+    ];
+    const momentKey = { all: '', m: 'm', p: 'p', e: 'e', s: 's' };
+    const visible = (d) => moment === 'all' || d.mom.indexOf(momentKey[moment]) >= 0;
+    const tilts = ['-8deg', '5deg', '-3deg', '7deg', '-6deg', '3deg'];
+    // Foto scontornate dei piatti (prese dal menu attuale su keik.it)
+    const IMG = {
+      alaska: 'assets/img/5531886e413b6a2b01cf9aa6fb4535bb.webp', baja: 'assets/img/e498457a1b2610c0c88558ac7574d807.webp', banana: 'assets/img/bafbd90858218327a80fb29dd2fcab8b.webp',
+      birre: 'assets/img/0afc22f9a42818996f7fe2b82cf069a8.webp', biscoff: 'assets/img/b48c3877e327120893bcf694065301a1.webp', brady: 'assets/img/6e09c26506e7d4b39e303d385c4bc4de.webp',
+      brownie: 'assets/img/1a7f8effc8ee93783ce0eb4c15c20cda.webp', canberra: 'assets/img/ce68f77c771ce1df418586ca719c120f.webp', carlitos: 'assets/img/2b59242278e764972cb5814419a21009.webp',
+      cbiscoff: 'assets/img/cf35745659ce613a0e679df5fe1ee0cf.webp', chai: 'assets/img/a8a6da076541fd13399ba2053742dd5e.webp', falafel: 'assets/img/fb130c7b5fa8bf3ac9a36808079af0c0.webp',
+      frida: 'assets/img/74ef9e5ac177a5144eb40d7bfe6c055a.webp', fries: 'assets/img/a120c9bacdaab9dd87ff3bf8990c267a.webp', gangnam: 'assets/img/de798c5d6feb91ede10f998b8ef10945.webp',
+      honeykara: 'assets/img/610cc65d4ff46161395d4e6ab089e922.webp', hummus: 'assets/img/a8ecb35ebb3968ca3160d685b86904e1.webp', kevin: 'assets/img/a018e4da20410f427f6029f5301dee48.webp',
+      la: 'assets/img/9d09328b1d500c5e647474aba9b01ba3.webp', losroques: 'assets/img/ac3f0a7ba12bb1b67e556969edefce66.webp', matcha: 'assets/img/1f487479e8f411b993c5f4b3f78d96ef.webp',
+      mimo: 'assets/img/b9e90e271ca766d46ae5b9fe72103bc0.webp', mocktail: 'assets/img/78f2b661852f066a1d514a2868fbac78.webp', negroni: 'assets/img/3cbf56c6a7e8e1a27747baa3edbd3457.webp',
+      nyc: 'assets/img/dd5ee3adad759efcc23f5abfbae45380.webp', oreo: 'assets/img/6fa5bbb208a5c9d089b3ae2d6f8e25b3.webp', osaka: 'assets/img/56567c93ebdfba82c89152277df8eb75.webp',
+      oslo: 'assets/img/4d21d77a29a6165cbb42e3ec611e6849.webp', pausa: 'assets/img/f566b7dbc462fd97b2cd1fdb9d85dc44.webp', peanut: 'assets/img/0df9f73cd45d4e98f7251d8a37bc8955.webp',
+      redvelvet: 'assets/img/79ef73a26c4dc0b9272f52aeace1a41c.webp', reggie: 'assets/img/c8ddea2ebfa0a9bcfb5035d01a58a930.webp', soda: 'assets/img/9c990383cf0c24dfdc95c85acc48c868.webp',
+      spritz: 'assets/img/bef0568669abbc6962302c86415dd744.webp', sweetfries: 'assets/img/1496fc17336980e10de59509e37bf3c5.webp', tijuana: 'assets/img/0862a7b60fa4d971d73b202557c035d3.webp',
+      tostones: 'assets/img/0aec7b04b6449163d4470cde51d890b7.webp', traveler: 'assets/img/26cef8e9c0978e57162996a6258f71fc.webp', turista: 'assets/img/77cdd4ac11e858e1b0c68012b140357d.webp',
+      ube: 'assets/img/321bf3c723e0b34ebf438b0e6943728c.webp', ubelatte: 'assets/img/cc1aad15a186a0ff6f4f3b7b1b5fe8ae.webp'
+    };
+    const codeBg = (code) => ({ MOD: '#91007D', WLD: '#6E2A70' })[code] || '#3B0B40';
+    const cats = catDefs.map((c) => {
+      const items = all.filter((d) => d.cat === c.id && visible(d)).map((d, i) => {
+        const qty = qtys[d.id] || 0;
+        const img = IMG[d.id] || '';
+        return Object.assign({}, d, {
+          img: img, hasImg: !!img, noImg: !img, altName: d.name.replace('*', ''),
+          qty: qty, inRoute: qty > 0, notIn: qty === 0, hasPair: !!d.pair, codeBg: codeBg(d.code),
+          tilt: tilts.at(i % tilts.length),
+          stampColor: qty > 0 ? '#91007D' : '#B79AB8', stampBg: qty > 0 ? '#F7E6F3' : '#FFFFFF',
+          stampState: qty > 0 ? ('TIMBRATO ×' + qty) : '+ AGGIUNGI',
+          add: () => setQ(d.id, qty + 1), remove: () => setQ(d.id, qty - 1)
+        });
+      });
+      return Object.assign({}, c, { items: items, count: String(items.length), isStamps: c.id === 'ext', isList: c.id !== 'ext', isPancakes: c.id === 'pan', isShare: c.id === 'sha', isSweets: c.id === 'dol', ref: this.secRef(c.id) });
+    }).filter((c) => c.items.length > 0);
+    this.visibleIds = cats.map((c) => c.id);
+    const activeId = this.visibleIds.indexOf(st.active) >= 0 ? st.active : this.visibleIds.at(0);
+    const activeIdx = Math.max(0, this.visibleIds.indexOf(activeId));
+    cats.forEach((c, i) => {
+      const passed = i <= activeIdx, on = i === activeIdx;
+      c.dotLeft = 'calc(16px + (100% - 32px) * ' + (cats.length > 1 ? (i / (cats.length - 1)).toFixed(4) : '0') + ')';
+      c.dotBorder = passed ? '#91007D' : '#D9C3DB';
+      c.dotFill = on ? '#91007D' : passed ? '#F7E6F3' : '#FFFFFF';
+      c.dotText = on ? '#3B0B40' : '#8A6E8E';
+      c.dotClass = on ? 'm-dot-on' : '';
+      c.chipBg = on ? '#3B0B40' : '#F7F2F6';
+      c.chipFg = on ? '#FFFFFF' : '#3B0B40';
+    });
+    if (this.onScroll) setTimeout(this.onScroll, 0);
+    const route = all.filter((d) => qtys[d.id]).map((d) => ({ name: d.name.replace('*', ''), code: d.code, qty: qtys[d.id], sub: qtys[d.id] * d.base }));
+    const countries = [];
+    route.forEach((r) => { if (r.code !== 'MOD' && r.code !== 'WLD' && countries.indexOf(r.code) < 0) countries.push(r.code); });
+    const stampColors = ['#91007D', '#3B0B40', '#6E2A70'];
+    const stamps = countries.map((code, i) => ({ code: code, tilt: tilts.at(i % tilts.length), color: stampColors.at(i % 3) }));
+    const total = route.reduce((s, r) => s + r.sub, 0);
+    const n = route.reduce((s, r) => s + r.qty, 0);
+    const rank = countries.length >= 6 ? 'GIRAMONDO' : countries.length >= 3 ? 'VIAGGIATORE' : countries.length >= 1 ? 'PRIMO TIMBRO' : '';
+    const momDefs = [['all', 'Tutto il giorno', '10–19:30'], ['m', 'Mattina', 'dalle 10'], ['p', 'Pranzo', '12–15'], ['e', 'Merenda', '15–18'], ['s', 'Sera', 'dalle 18']];
+    const moments = momDefs.map((m) => {
+      const on = m.at(0) === moment;
+      return { label: m.at(1), hours: m.at(2), pressed: on ? 'true' : 'false', bg: on ? '#3B0B40' : '#FFFFFF', fg: on ? '#FFFFFF' : '#3B0B40', border: on ? '#3B0B40' : '#E6DAE4', pick: () => this.setState({ moment: m.at(0) }) };
+    });
+    return {
+      online: !atTable, atTable: atTable,
+      introTail: atTable ? 'Quando hai deciso, mostra la rotta allo staff.' : 'Poi condividila con chi viene con te, o prenota il tavolo.',
+      kitchenHours: '10–19:30 · VEN E SAB FINO ALLE 21:30',
+      moments: moments, cats: cats, noResults: cats.length === 0,
+      route: route, stamps: stamps, stampCount: String(countries.length), rank: rank,
+      empty: route.length === 0, notEmpty: route.length > 0,
+      chain: ['MOD'].concat(countries).join(' → ') + (countries.length ? ' → MOD' : ' → ?'),
+      total: total.toFixed(2).replace('.', ',') + ' €',
+      itemsLabel: n === 1 ? '1 tappa' : n + ' tappe',
+      clear: () => this.setState({ q: {} }),
+      staffOpen: !!st.staff, openStaff: () => this.setState({ staff: true }), closeStaff: () => this.setState({ staff: false }),
+      bradyOpen: !!st.brady || (!!this.props.mostraBrady && !st.bradyClosed),
+      closeBrady: () => this.setState({ brady: false, bradyClosed: true }),
+      planeRef: this.refsFor().plane,
+      trailRef: this.refsFor().trail,
+      msg: st.msg || '', hasMsg: !!st.msg,
+      share: () => this.shareRoute({ route: route, stamps: stamps, rank: rank, chain: ['MOD'].concat(countries).join(' → ') + (countries.length ? ' → MOD' : '') }, false),
+      saveImage: () => this.shareRoute({ route: route, stamps: stamps, rank: rank, chain: ['MOD'].concat(countries).join(' → ') + (countries.length ? ' → MOD' : '') }, true)
+    };
+  }
+}
+</script>
+<script>window.__DC_PROPS__ = {};window.__DC_OVERRIDE__ = {};</script>
+<script src="assets/js/morphdom.min.js"></script>
+<script src="assets/js/keik-dc.js"></script>
+</body>
+</html>

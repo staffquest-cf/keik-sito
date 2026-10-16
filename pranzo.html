@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pranzo a Modena · KEIK</title>
+<style>html,body{overflow-x:clip}</style>
+<link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Figtree:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#91007D}a:hover{color:#3B0B40}
+.p-wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
+.p-serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em}
+.p-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,500px);gap:56px;align-items:center}
+.p-board-row{display:grid;grid-template-columns:52px minmax(0,1fr) auto auto;gap:14px;align-items:center}
+.p-dishes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.p-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.p-why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.p-book{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.p-faq{display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr);gap:64px}
+.p-final{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center}
+.p-nav{display:flex}
+.p-sticky{display:none}
+.p-chip{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.p-card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease}
+.p-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(42,8,48,0.12)}
+.p-flip{display:inline-block;animation:pflip .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pflip{0%{transform:rotateX(90deg);opacity:0}100%{transform:none;opacity:1}}
+.p-blink{animation:pblink 1.6s steps(2,start) infinite}
+@keyframes pblink{to{visibility:hidden}}
+.p-open{animation:popen .35s cubic-bezier(.2,.8,.2,1) both}
+@keyframes popen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.p-flip,.p-blink,.p-open{animation:none !important}.p-card:hover{transform:none}}
+@media (max-width:960px){
+.p-wrap{padding-left:16px !important;padding-right:16px !important}
+.p-hero,.p-feature,.p-faq,.p-final{grid-template-columns:minmax(0,1fr) !important;gap:32px !important}
+.p-dishes{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+.p-why,.p-book{grid-template-columns:minmax(0,1fr) !important}
+.p-board-row{grid-template-columns:44px minmax(0,1fr) auto !important}
+.p-board-row > :nth-child(3){display:none}
+.p-nav{display:none !important}
+.p-sticky{display:flex !important}
+}
+</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="font-family: 'Figtree', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0">
+
+
+<header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
+<div class="p-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
+<a href="#top" aria-label="KEIK – Viaggia col gusto, torna all’inizio" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e.png" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<nav class="p-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
+<a href="#destinazioni" style="color: #3B0B40; text-decoration: none">Le destinazioni</a>
+<a href="#perche" style="color: #3B0B40; text-decoration: none">Pausa pranzo</a>
+<a href="#domande" style="color: #3B0B40; text-decoration: none">Domande</a>
+<a href="#dove" style="color: #3B0B40; text-decoration: none">Dove siamo</a>
+</nav>
+<a href="#prenota" style="display: inline-flex; align-items: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota il pranzo</a>
+</div>
+</header>
+
+
+<section id="top" style="padding: 56px 0 72px; background: #F7F2F6">
+<div class="p-wrap p-hero">
+<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0">
+<nav aria-label="Percorso" style="font-size: 13px; color: #6B4A70"><a href="#top" style="color: #6B4A70">Home</a> / <a href="#top" style="color: #6B4A70">La giornata</a> / <span aria-current="page">Pranzo</span></nav>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Volo KE-12 · Pranzo · Modena centro</p>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(46px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.035em; color: #3B0B40">Il pranzo a Modena, <span class="p-serif" style="color: #91007D; font-size: 1.06em">street food da tutto il mondo.</span></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4A2350; max-width: 31em">Burger, burritos, caesar messicana, hummus e falafel, avocado toast. Una pausa veloce tra un ufficio e l’altro o un pranzo lungo quanto vuoi, a due passi da Piazza Grande. Nessun coperto.</p>
+<div style="position: relative; border-radius: 24px; overflow: hidden">
+<img src="assets/img/f806381e58f7988648526b77f4a5c67e.jpg" alt="Pranzo al tavolo vicino alla vetrina: tacos e un cocktail ai frutti di bosco" style="display: block; width: 100%; height: 260px; object-fit: cover; object-position: center 45%">
+<img src="assets/img/0cf01bf2012f526ef101335443f97535.jpg" alt="Il burger Carlitos con uovo, cheddar e insalata" style="position: absolute; right: 16px; bottom: 16px; width: 150px; height: 120px; object-fit: cover; border-radius: 14px; border: 4px solid #FFFFFF; box-shadow: 0 12px 30px rgba(42,8,48,0.25)">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
+<div style="background: #1E0623; color: #FFFFFF; border-radius: 22px; padding: 22px 22px 18px; box-shadow: 0 30px 70px rgba(42,8,48,0.28)">
+<div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.12)">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #E9C6E6">PARTENZE DI OGGI · PRANZO</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #FAE609"><span class="p-blink" style="width: 7px; height: 7px; border-radius: 99px; background: #FAE609"></span>LIVE</span>
+</div>
+<div style="display: flex; flex-direction: column">
+
+<div class="p-board-row" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08)">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #E9A9DF; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 4px 6px; text-align: center">VEN</span>
+<span style="font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Carlitos burger</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #CDB4CF">12,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; padding: 4px 7px; border-radius: 4px; background: #FAE609; color: #1E0623">IMBARCO</span>
+</div>
+
+<div class="p-board-row" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08)">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #E9A9DF; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 4px 6px; text-align: center">MEX</span>
+<span style="font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Frida burrito</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #CDB4CF">13,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; padding: 4px 7px; border-radius: 4px; background: rgba(255,255,255,0.1); color: #E4D3E5">IN ORARIO</span>
+</div>
+
+<div class="p-board-row" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08)">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #E9A9DF; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 4px 6px; text-align: center">MEX</span>
+<span style="font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Tijuana caesar salad</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #CDB4CF">12,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; padding: 4px 7px; border-radius: 4px; background: rgba(255,255,255,0.1); color: #E4D3E5">IN ORARIO</span>
+</div>
+
+<div class="p-board-row" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08)">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #E9A9DF; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 4px 6px; text-align: center">MED</span>
+<span style="font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Hummus &amp; falafel</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #CDB4CF">13,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; padding: 4px 7px; border-radius: 4px; background: rgba(255,255,255,0.1); color: #E4D3E5">IN ORARIO</span>
+</div>
+
+<div class="p-board-row" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08)">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #E9A9DF; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 4px 6px; text-align: center">NOR</span>
+<span style="font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Oslo salmon toast</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #CDB4CF">14,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; padding: 4px 7px; border-radius: 4px; background: rgba(255,255,255,0.1); color: #E4D3E5">IN ORARIO</span>
+</div>
+
+<div class="p-board-row" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08)">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #E9A9DF; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 4px 6px; text-align: center">KOR</span>
+<span style="font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Gangnam burrito</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #CDB4CF">13,90 €</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; padding: 4px 7px; border-radius: 4px; background: rgba(255,255,255,0.1); color: #E4D3E5">IN ORARIO</span>
+</div>
+
+</div>
+<p style="margin: 12px 0 0; font-size: 13px; color: #B99BBC">Patatine con il burger +3,00 €, patate dolci +5,00 €</p>
+</div>
+<a href="#prenota" style="display: flex; justify-content: center; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; min-height: 56px; border-radius: 14px">Prenota il tavolo per pranzo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</section>
+
+
+<section id="destinazioni" style="padding: 104px 0; background: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Scegli la destinazione</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Dove vola <span class="p-serif" style="color: #91007D">il tuo pranzo oggi?</span></h2>
+</div>
+<div role="group" aria-label="Filtra i piatti" style="display: flex; flex-wrap: wrap; gap: 10px">
+
+<button type="button" class="p-chip" aria-pressed="true" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; font: 600 15px 'Figtree', sans-serif; cursor: pointer">Tutto il mondo <span style="font-family: 'DM Mono', monospace; font-size: 12px; opacity: 0.7">12</span></button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 15px 'Figtree', sans-serif; cursor: pointer">Burger e burritos <span style="font-family: 'DM Mono', monospace; font-size: 12px; opacity: 0.7">4</span></button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 15px 'Figtree', sans-serif; cursor: pointer">Fusion e insalate <span style="font-family: 'DM Mono', monospace; font-size: 12px; opacity: 0.7">4</span></button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 15px 'Figtree', sans-serif; cursor: pointer">Toast e benedict <span style="font-family: 'DM Mono', monospace; font-size: 12px; opacity: 0.7">4</span></button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 15px 'Figtree', sans-serif; cursor: pointer">Piccante <span style="font-family: 'DM Mono', monospace; font-size: 12px; opacity: 0.7">3</span></button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 15px 'Figtree', sans-serif; cursor: pointer">Vegano <span style="font-family: 'DM Mono', monospace; font-size: 12px; opacity: 0.7">1</span></button>
+
+</div>
+<div class="p-dishes" style="gap: 18px">
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/2b59242278e764972cb5814419a21009.webp" alt="Carlitos burger" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → VEN</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+<span style="align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #B3261E; border: 1px solid #B3261E; border-radius: 999px; padding: 3px 8px">PICCANTE</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Carlitos burger</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Manzo, uovo fritto, cheddar, guacamole, lattuga e salsa chipotle.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">Singolo 12,90 €
+Doppio 15,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/a018e4da20410f427f6029f5301dee48.webp" alt="Kevin cheeseburger" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → USA</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Kevin cheeseburger</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Manzo, cheddar, bacon croccante e Keik sauce.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">Singolo 11,90 €
+Doppio 14,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/74ef9e5ac177a5144eb40d7bfe6c055a.webp" alt="Frida burrito" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → MEX</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+<span style="align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #B3261E; border: 1px solid #B3261E; border-radius: 999px; padding: 3px 8px">PICCANTE</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Frida burrito</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Manzo, lattuga, guacamole, pico de gallo, cheddar e salsa chipotle.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">13,90 €
+Con bacon 16,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/de798c5d6feb91ede10f998b8ef10945.webp" alt="Gangnam burrito" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → KOR</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Gangnam burrito</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Pollo grigliato, kimchi, salsa tonkatsu, lattuga e pomodorini.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">13,90 €
+Con avocado 17,40 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/0862a7b60fa4d971d73b202557c035d3.webp" alt="Tijuana caesar salad" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → MEX</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Tijuana caesar salad</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Pollo grigliato, pico de gallo, halloumi, crostini e salsa caesar.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">12,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/a8ecb35ebb3968ca3160d685b86904e1.webp" alt="Hummus &amp; falafel" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → MED</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+<span style="align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #2F7D4F; border: 1px solid #2F7D4F; border-radius: 999px; padding: 3px 8px">VEGANO</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Hummus &amp; falafel</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Hummus fatto in casa, falafel, avocado, pomodorini e olio alla paprika.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">13,90 €
+Extra falafel 16,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/ce68f77c771ce1df418586ca719c120f.webp" alt="Canberra breaky" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → AUS</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Canberra breaky</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Uova strapazzate, bacon, avocado, semi misti, insalata e fragole.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">13,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/56567c93ebdfba82c89152277df8eb75.webp" alt="Osaka pancakes" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → JPN</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+<span style="align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #B3261E; border: 1px solid #B3261E; border-radius: 999px; padding: 3px 8px">PICCANTE</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Osaka pancakes</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Pollo croccante glassato HoneyKara, cheddar e sesamo nero.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">12,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/4d21d77a29a6165cbb42e3ec611e6849.webp" alt="Oslo salmon toast" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → NOR</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Oslo salmon toast</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Salmone affumicato, avocado al pesto, omelette e semi tostati.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">14,90 €
+Doppio salmone 18,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/e498457a1b2610c0c88558ac7574d807.webp" alt="Baja avo toast" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → MEX</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Baja avo toast</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Avocado al pesto, pico de gallo, due uova in camicia e semi.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">9,90 €
+Con bacon 12,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/9d09328b1d500c5e647474aba9b01ba3.webp" alt="L.A. crispy avo toast" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → USA</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">L.A. crispy avo toast</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Avocado al pesto, bacon croccante, uova fritte e spezie affumicate.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">10,90 €</p>
+</div>
+</article>
+
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="assets/img/ac3f0a7ba12bb1b67e556969edefce66.webp" alt="Los Roques benedict" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → VEN</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+<span style="align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #91007D; border: 1px solid #91007D; border-radius: 999px; padding: 3px 8px">NOVITÀ</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Los Roques benedict</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">Tostones con avocado, formaggio grigliato, uova in camicia e olandese.</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">11,90 €</p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+
+<section style="padding: 0 0 104px; background: #FFFFFF">
+<div class="p-wrap p-feature">
+<div style="position: relative; min-width: 0">
+<img src="assets/img/4a649cd7b158f41fcfc728bc15252875.jpg" alt="Il burger Carlitos con uovo all’occhio di bue, tenuto tra le mani" loading="lazy" style="display: block; width: 100%; height: 460px; object-fit: cover; object-position: center 40%; border-radius: 28px">
+<span style="position: absolute; left: 18px; top: 18px; background: #FFFFFF; color: #3B0B40; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; padding: 6px 10px; border-radius: 6px">MOD → VEN · CARACAS</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #91007D">IL BURGER CON IL NOSTRO PASSAPORTO</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(36px, 3.8vw, 54px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Carlitos burger, <span class="p-serif" style="color: #91007D">sapore di Venezuela.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">Manzo, uovo fritto, cheddar, guacamole, lattuga e salsa chipotle. Il burger con l’accento venezuelano, come le radici di KEIK.</p>
+<p style="margin: 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 14px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 38px; color: #3B0B40">12,90 €</span><span style="font-size: 15px; color: #6B4A70">doppio 15,90 € · bacon +3,00 € · patatine +3,00 €</span></p>
+<a href="#prenota" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Prenota e assaggialo</a>
+</div>
+</div>
+</section>
+
+
+<section id="perche" style="padding: 88px 0; background: #F7F2F6">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 36px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">La pausa pranzo <span class="p-serif" style="color: #91007D">che ti fa partire.</span></h2>
+<div class="p-why" style="gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4zM4 11h16"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Nessun coperto</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Paghi solo quello che ordini. Il prezzo in carta è quello che trovi nello scontrino.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14z"></path><path d="M5 19l7-7"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Anche vegano</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Hummus fatto in casa con falafel croccanti, e un menu senza glutine dedicato da chiedere allo staff.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">In pieno centro</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Via Canalino 51, a pochi minuti a piedi da Piazza Grande e dagli uffici del centro storico.</p></div>
+</div>
+</div>
+</section>
+
+
+<section id="prenota" style="padding: 96px 0; background: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #91007D">CARTA D’IMBARCO · VOLO DI MEZZOGIORNO</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Prenota il tavolo <span class="p-serif" style="color: #91007D">per pranzo.</span></h2>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #ECE3EA; border-radius: 26px; box-shadow: 0 24px 60px rgba(42,8,48,0.12); padding: 28px; display: flex; flex-direction: column; gap: 24px">
+<div class="p-book" style="gap: 24px">
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="padding: 0; margin-bottom: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">1 · QUANDO</legend>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+
+<button type="button" class="p-chip" aria-pressed="true" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Oggi</button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Domani</button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Sabato</button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Domenica</button>
+
+</div>
+</fieldset>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="padding: 0; margin-bottom: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">2 · ORARIO</legend>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 14px 'DM Mono', monospace; cursor: pointer">12:00</button>
+
+<button type="button" class="p-chip" aria-pressed="true" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; font: 500 14px 'DM Mono', monospace; cursor: pointer">12:30</button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 14px 'DM Mono', monospace; cursor: pointer">13:00</button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 14px 'DM Mono', monospace; cursor: pointer">13:30</button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 14px 'DM Mono', monospace; cursor: pointer">14:00</button>
+
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 14px 'DM Mono', monospace; cursor: pointer">14:30</button>
+
+</div>
+</fieldset>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">3 · PASSEGGERI</span>
+<div style="display: flex; align-items: center; gap: 6px">
+<button type="button" aria-label="Una persona in meno" style="width: 48px; height: 48px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">−</button>
+<span aria-live="polite" style="min-width: 100px; text-align: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px; color: #3B0B40">2 persone</span>
+<button type="button" aria-label="Una persona in più" style="width: 48px; height: 48px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">+</button>
+</div>
+
+</div>
+</div>
+<div style="border-top: 1.5px dashed #E6DAE4; padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40">Oggi · ore 12:30 · 2 persone</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<a href="https://wa.me/393534732354" style="font-weight: 600; font-size: 15px">Preferisci WhatsApp?</a>
+<a href="https://pnssm.pro/a16isyw" style="display: inline-flex; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; padding: 0 28px; min-height: 56px; border-radius: 14px">Conferma l’imbarco<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="domande" style="padding: 96px 0; background: #F7F2F6">
+<div class="p-wrap p-faq">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #91007D">PRIMA DI PARTIRE</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Le domande <span class="p-serif" style="color: #91007D">sul pranzo.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A2350">Altro da chiedere? Scrivici: rispondiamo noi dello staff.</p>
+<a href="https://wa.me/393534732354" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; color: #3B0B40; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px; border: 1.5px solid #3B0B40">WhatsApp 353 4732354</a>
+</div>
+<div style="display: flex; flex-direction: column">
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="true" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">A che ora si pranza?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">−</span></button>
+
+<p class="p-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">La cucina è aperta tutti i giorni dalle 10 alle 19:30, il venerdì e il sabato fino alle 21:30: il pranzo lo trovi da mezzogiorno in poi, senza fretta di chiusura.</p>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Serve prenotare?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">C’è il coperto?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Avete piatti vegani e senza glutine?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Si può fare un pranzo di lavoro o di gruppo?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Dove si parcheggia?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="dove" style="padding: 96px 0; background: #2A0830; color: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="p-final">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.4vw, 62px); line-height: 1; letter-spacing: -0.03em">A mezzogiorno <span class="p-serif" style="color: #E9A9DF">si decolla da qui.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #DCC8DD">Prenota in un minuto e trovi il tavolo pronto.</p>
+</div>
+<a href="#prenota" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 18px; padding: 0 30px; min-height: 60px; border-radius: 999px; white-space: nowrap">Prenota il pranzo</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 32px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">GATE</span><span style="font-size: 17px; font-weight: 600">Via Canalino 51, Modena</span><a href="https://maps.google.com/?q=Via+Canalino+51+Modena" style="color: #FFFFFF; font-size: 15px">Come arrivare</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CUCINA APERTA</span><span style="font-size: 17px; font-weight: 600">Tutti i giorni 10–19:30</span><span style="font-size: 15px; color: #DCC8DD">venerdì e sabato fino alle 21:30</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">PARCHEGGIO</span><span style="font-size: 17px; font-weight: 600">Sui viali</span><span style="font-size: 15px; color: #DCC8DD">entrando da via Saragozza o via Gallucci</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CONTATTI</span><a href="https://wa.me/393534732354" style="color: #FFFFFF; font-size: 17px; font-weight: 600">WhatsApp 353 4732354</a><a href="tel:+390598396468" style="color: #DCC8DD; font-size: 15px">Telefono 059 8396468</a></div>
+</div>
+<p style="margin: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: #B99BBC">Altri momenti della giornata: <a href="#top" style="color: #FFFFFF">Brunch</a><a href="#top" style="color: #FFFFFF">Merenda</a><a href="#top" style="color: #FFFFFF">Aperitivo</a><a href="#top" style="color: #FFFFFF">Vegano e senza glutine</a></p>
+</div>
+</section>
+
+<footer style="background: #1E0623; color: #B99BBC; padding: 28px 0 96px; font-size: 13px">
+<div class="p-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
+<span>© 2026 Keik di Debbia Elena Karen Edelweiss SNC · P.IVA 03764210369 · Via Canalino 51, 41121 Modena</span>
+<span style="display: flex; gap: 16px"><a href="#top" style="color: #B99BBC">Privacy</a><a href="#top" style="color: #B99BBC">Cookie</a></span>
+</div>
+</footer>
+
+<div class="p-sticky" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 12px 16px 16px; background: #FFFFFF; border-top: 1px solid #ECE3EA; box-shadow: 0 -10px 30px rgba(42,8,48,0.12); gap: 10px; align-items: center">
+<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #6B4A70"><strong style="font-size: 15px; color: #3B0B40">Pranzo dalle 12 · nessun coperto</strong>Via Canalino 51</span>
+<a href="#prenota" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
+</div>
+
+</div>
+</div>
+<template id="dc-tpl">
+<div style="font-family: 'Figtree', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0">
+
+<!-- HEADER -->
+<header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
+<div class="p-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
+<a href="#top" aria-label="KEIK – Viaggia col gusto, torna all’inizio" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e.png" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<nav class="p-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
+<a href="#destinazioni" style="color: #3B0B40; text-decoration: none">Le destinazioni</a>
+<a href="#perche" style="color: #3B0B40; text-decoration: none">Pausa pranzo</a>
+<a href="#domande" style="color: #3B0B40; text-decoration: none">Domande</a>
+<a href="#dove" style="color: #3B0B40; text-decoration: none">Dove siamo</a>
+</nav>
+<a href="#prenota" style="display: inline-flex; align-items: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota il pranzo</a>
+</div>
+</header>
+
+<!-- HERO + TABELLONE PARTENZE -->
+<section id="top" style="padding: 56px 0 72px; background: #F7F2F6">
+<div class="p-wrap p-hero">
+<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0">
+<nav aria-label="Percorso" style="font-size: 13px; color: #6B4A70"><a href="#top" style="color: #6B4A70">Home</a> / <a href="#top" style="color: #6B4A70">La giornata</a> / <span aria-current="page">Pranzo</span></nav>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Volo KE-12 · Pranzo · Modena centro</p>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(46px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.035em; color: #3B0B40">Il pranzo a Modena, <span class="p-serif" style="color: #91007D; font-size: 1.06em">street food da tutto il mondo.</span></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4A2350; max-width: 31em">Burger, burritos, caesar messicana, hummus e falafel, avocado toast. Una pausa veloce tra un ufficio e l’altro o un pranzo lungo quanto vuoi, a due passi da Piazza Grande. Nessun coperto.</p>
+<div style="position: relative; border-radius: 24px; overflow: hidden">
+<img src="assets/img/f806381e58f7988648526b77f4a5c67e.jpg" alt="Pranzo al tavolo vicino alla vetrina: tacos e un cocktail ai frutti di bosco" style="display: block; width: 100%; height: 260px; object-fit: cover; object-position: center 45%">
+<img src="assets/img/0cf01bf2012f526ef101335443f97535.jpg" alt="Il burger Carlitos con uovo, cheddar e insalata" style="position: absolute; right: 16px; bottom: 16px; width: 150px; height: 120px; object-fit: cover; border-radius: 14px; border: 4px solid #FFFFFF; box-shadow: 0 12px 30px rgba(42,8,48,0.25)">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
+<div style="background: #1E0623; color: #FFFFFF; border-radius: 22px; padding: 22px 22px 18px; box-shadow: 0 30px 70px rgba(42,8,48,0.28)">
+<div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.12)">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #E9C6E6">PARTENZE DI OGGI · PRANZO</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #FAE609"><span class="p-blink" style="width: 7px; height: 7px; border-radius: 99px; background: #FAE609"></span>LIVE</span>
+</div>
+<div style="display: flex; flex-direction: column">
+<sc-for list="{{board}}" as="b" hint-placeholder-count="6">
+<div class="p-board-row" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08)">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #E9A9DF; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 4px 6px; text-align: center">{{b.code}}</span>
+<span style="font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{b.name}}</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #CDB4CF">{{b.price}}</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; padding: 4px 7px; border-radius: 4px; background: {{b.statusBg}}; color: {{b.statusFg}}">{{b.status}}</span>
+</div>
+</sc-for>
+</div>
+<p style="margin: 12px 0 0; font-size: 13px; color: #B99BBC">Patatine con il burger +3,00 €, patate dolci +5,00 €</p>
+</div>
+<a href="#prenota" style="display: flex; justify-content: center; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; min-height: 56px; border-radius: 14px">Prenota il tavolo per pranzo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</section>
+
+<!-- DESTINAZIONI (filtro) -->
+<section id="destinazioni" style="padding: 104px 0; background: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Scegli la destinazione</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Dove vola <span class="p-serif" style="color: #91007D">il tuo pranzo oggi?</span></h2>
+</div>
+<div role="group" aria-label="Filtra i piatti" style="display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="6">
+<button type="button" class="p-chip" aria-pressed="{{f.pressed}}" onClick="{{f.pick}}" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1.5px solid {{f.border}}; background: {{f.bg}}; color: {{f.fg}}; font: 600 15px 'Figtree', sans-serif; cursor: pointer">{{f.label}} <span style="font-family: 'DM Mono', monospace; font-size: 12px; opacity: 0.7">{{f.count}}</span></button>
+</sc-for>
+</div>
+<div class="p-dishes" style="gap: 18px">
+<sc-for list="{{dishes}}" as="x" hint-placeholder-count="8">
+<article class="p-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<div style="position: relative; background: #F7F2F6; padding: 14px"><img src="{{x.img}}" alt="{{x.name}}" loading="lazy" style="display: block; width: 100%; height: 170px; object-fit: contain"><span style="position: absolute; left: 12px; top: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → {{x.code}}</span></div>
+<div style="padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1">
+<sc-if value="{{x.hasTag}}" hint-placeholder-val="{{ false }}"><span style="align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: {{x.tagColor}}; border: 1px solid {{x.tagColor}}; border-radius: 999px; padding: 3px 8px">{{x.tag}}</span></sc-if>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">{{x.name}}</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #4A2350; flex-grow: 1">{{x.desc}}</p>
+<p style="margin: 4px 0 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: pre-line">{{x.price}}</p>
+</div>
+</article>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- CARLITOS -->
+<section style="padding: 0 0 104px; background: #FFFFFF">
+<div class="p-wrap p-feature">
+<div style="position: relative; min-width: 0">
+<img src="assets/img/4a649cd7b158f41fcfc728bc15252875.jpg" alt="Il burger Carlitos con uovo all’occhio di bue, tenuto tra le mani" loading="lazy" style="display: block; width: 100%; height: 460px; object-fit: cover; object-position: center 40%; border-radius: 28px">
+<span style="position: absolute; left: 18px; top: 18px; background: #FFFFFF; color: #3B0B40; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; padding: 6px 10px; border-radius: 6px">MOD → VEN · CARACAS</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #91007D">IL BURGER CON IL NOSTRO PASSAPORTO</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(36px, 3.8vw, 54px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Carlitos burger, <span class="p-serif" style="color: #91007D">sapore di Venezuela.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">Manzo, uovo fritto, cheddar, guacamole, lattuga e salsa chipotle. Il burger con l’accento venezuelano, come le radici di KEIK.</p>
+<p style="margin: 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 14px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 38px; color: #3B0B40">12,90 €</span><span style="font-size: 15px; color: #6B4A70">doppio 15,90 € · bacon +3,00 € · patatine +3,00 €</span></p>
+<a href="#prenota" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Prenota e assaggialo</a>
+</div>
+</div>
+</section>
+
+<!-- PERCHÉ IN PAUSA PRANZO -->
+<section id="perche" style="padding: 88px 0; background: #F7F2F6">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 36px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">La pausa pranzo <span class="p-serif" style="color: #91007D">che ti fa partire.</span></h2>
+<div class="p-why" style="gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4zM4 11h16"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Nessun coperto</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Paghi solo quello che ordini. Il prezzo in carta è quello che trovi nello scontrino.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14z"></path><path d="M5 19l7-7"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Anche vegano</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Hummus fatto in casa con falafel croccanti, e un menu senza glutine dedicato da chiedere allo staff.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">In pieno centro</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Via Canalino 51, a pochi minuti a piedi da Piazza Grande e dagli uffici del centro storico.</p></div>
+</div>
+</div>
+</section>
+
+<!-- PRENOTA -->
+<section id="prenota" style="padding: 96px 0; background: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #91007D">CARTA D’IMBARCO · VOLO DI MEZZOGIORNO</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Prenota il tavolo <span class="p-serif" style="color: #91007D">per pranzo.</span></h2>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #ECE3EA; border-radius: 26px; box-shadow: 0 24px 60px rgba(42,8,48,0.12); padding: 28px; display: flex; flex-direction: column; gap: 24px">
+<div class="p-book" style="gap: 24px">
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="padding: 0; margin-bottom: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">1 · QUANDO</legend>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{days}}" as="d" hint-placeholder-count="4">
+<button type="button" class="p-chip" aria-pressed="{{d.pressed}}" onClick="{{d.pick}}" style="min-height: 48px; border-radius: 12px; border: 1.5px solid {{d.border}}; background: {{d.bg}}; color: {{d.fg}}; font: 600 14px 'Figtree', sans-serif; cursor: pointer">{{d.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="padding: 0; margin-bottom: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">2 · ORARIO</legend>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{times}}" as="t" hint-placeholder-count="6">
+<button type="button" class="p-chip" aria-pressed="{{t.pressed}}" onClick="{{t.pick}}" style="min-height: 48px; border-radius: 12px; border: 1.5px solid {{t.border}}; background: {{t.bg}}; color: {{t.fg}}; font: 500 14px 'DM Mono', monospace; cursor: pointer">{{t.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">3 · PASSEGGERI</span>
+<div style="display: flex; align-items: center; gap: 6px">
+<button type="button" onClick="{{lessPax}}" aria-label="Una persona in meno" style="width: 48px; height: 48px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">−</button>
+<span aria-live="polite" style="min-width: 100px; text-align: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px; color: #3B0B40">{{paxLabel}}</span>
+<button type="button" onClick="{{morePax}}" aria-label="Una persona in più" style="width: 48px; height: 48px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">+</button>
+</div>
+<sc-if value="{{bigGroup}}" hint-placeholder-val="{{ false }}"><p class="p-open" style="margin: 0; font-size: 14px; line-height: 1.5; color: #3B0B40">Pranzo di lavoro o di gruppo? Da 7 persone in su scrivici su WhatsApp.</p></sc-if>
+</div>
+</div>
+<div style="border-top: 1.5px dashed #E6DAE4; padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40">{{summaryDay}} · {{summaryTime}} · {{paxLabel}}</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<a href="https://wa.me/393534732354" style="font-weight: 600; font-size: 15px">Preferisci WhatsApp?</a>
+<a href="https://pnssm.pro/a16isyw" style="display: inline-flex; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; padding: 0 28px; min-height: 56px; border-radius: 14px">Conferma l’imbarco<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DOMANDE -->
+<section id="domande" style="padding: 96px 0; background: #F7F2F6">
+<div class="p-wrap p-faq">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #91007D">PRIMA DI PARTIRE</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Le domande <span class="p-serif" style="color: #91007D">sul pranzo.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A2350">Altro da chiedere? Scrivici: rispondiamo noi dello staff.</p>
+<a href="https://wa.me/393534732354" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; color: #3B0B40; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px; border: 1.5px solid #3B0B40">WhatsApp 353 4732354</a>
+</div>
+<div style="display: flex; flex-direction: column">
+<sc-for list="{{faqs}}" as="f" hint-placeholder-count="6">
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" onClick="{{f.toggle}}" aria-expanded="{{f.expanded}}" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">{{f.q}}<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">{{f.sign}}</span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}">
+<p class="p-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">{{f.a}}</p>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- DOVE -->
+<section id="dove" style="padding: 96px 0; background: #2A0830; color: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="p-final">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.4vw, 62px); line-height: 1; letter-spacing: -0.03em">A mezzogiorno <span class="p-serif" style="color: #E9A9DF">si decolla da qui.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #DCC8DD">Prenota in un minuto e trovi il tavolo pronto.</p>
+</div>
+<a href="#prenota" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 18px; padding: 0 30px; min-height: 60px; border-radius: 999px; white-space: nowrap">Prenota il pranzo</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 32px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">GATE</span><span style="font-size: 17px; font-weight: 600">Via Canalino 51, Modena</span><a href="https://maps.google.com/?q=Via+Canalino+51+Modena" style="color: #FFFFFF; font-size: 15px">Come arrivare</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CUCINA APERTA</span><span style="font-size: 17px; font-weight: 600">Tutti i giorni 10–19:30</span><span style="font-size: 15px; color: #DCC8DD">venerdì e sabato fino alle 21:30</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">PARCHEGGIO</span><span style="font-size: 17px; font-weight: 600">Sui viali</span><span style="font-size: 15px; color: #DCC8DD">entrando da via Saragozza o via Gallucci</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CONTATTI</span><a href="https://wa.me/393534732354" style="color: #FFFFFF; font-size: 17px; font-weight: 600">WhatsApp 353 4732354</a><a href="tel:+390598396468" style="color: #DCC8DD; font-size: 15px">Telefono 059 8396468</a></div>
+</div>
+<p style="margin: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: #B99BBC">Altri momenti della giornata: <a href="#top" style="color: #FFFFFF">Brunch</a><a href="#top" style="color: #FFFFFF">Merenda</a><a href="#top" style="color: #FFFFFF">Aperitivo</a><a href="#top" style="color: #FFFFFF">Vegano e senza glutine</a></p>
+</div>
+</section>
+
+<footer style="background: #1E0623; color: #B99BBC; padding: 28px 0 96px; font-size: 13px">
+<div class="p-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
+<span>© 2026 Keik di Debbia Elena Karen Edelweiss SNC · P.IVA 03764210369 · Via Canalino 51, 41121 Modena</span>
+<span style="display: flex; gap: 16px"><a href="#top" style="color: #B99BBC">Privacy</a><a href="#top" style="color: #B99BBC">Cookie</a></span>
+</div>
+</footer>
+
+<div class="p-sticky" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 12px 16px 16px; background: #FFFFFF; border-top: 1px solid #ECE3EA; box-shadow: 0 -10px 30px rgba(42,8,48,0.12); gap: 10px; align-items: center">
+<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #6B4A70"><strong style="font-size: 15px; color: #3B0B40">Pranzo dalle 12 · nessun coperto</strong>Via Canalino 51</span>
+<a href="#prenota" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
+</div>
+
+</div>
+</template>
+<script type="text/x-dc" id="dc-code">
+class Component extends DCLogic {
+  renderVals() {
+    const st = this.state || {};
+    const day = typeof st.day === 'number' ? st.day : 0;
+    const time = typeof st.time === 'number' ? st.time : 1;
+    const pax = typeof st.pax === 'number' ? st.pax : 2;
+    const flt = st.flt || 'all';
+    const faqOpen = typeof st.faq === 'number' ? st.faq : 0;
+    const chip = (on) => on
+      ? { bg: '#3B0B40', fg: '#FFFFFF', border: '#3B0B40', pressed: 'true' }
+      : { bg: '#FFFFFF', fg: '#3B0B40', border: '#E6DAE4', pressed: 'false' };
+    const T = { hot: { tag: 'PICCANTE', tagColor: '#B3261E' }, vegan: { tag: 'VEGANO', tagColor: '#2F7D4F' }, nuovo: { tag: 'NOVITÀ', tagColor: '#91007D' } };
+    const all = [
+      { k: 'bur', code: 'VEN', name: 'Carlitos burger', desc: 'Manzo, uovo fritto, cheddar, guacamole, lattuga e salsa chipotle.', price: 'Singolo 12,90 €\nDoppio 15,90 €', img: 'assets/img/2b59242278e764972cb5814419a21009.webp', t: T.hot, hot: true },
+      { k: 'bur', code: 'USA', name: 'Kevin cheeseburger', desc: 'Manzo, cheddar, bacon croccante e Keik sauce.', price: 'Singolo 11,90 €\nDoppio 14,90 €', img: 'assets/img/a018e4da20410f427f6029f5301dee48.webp' },
+      { k: 'bur', code: 'MEX', name: 'Frida burrito', desc: 'Manzo, lattuga, guacamole, pico de gallo, cheddar e salsa chipotle.', price: '13,90 €\nCon bacon 16,90 €', img: 'assets/img/74ef9e5ac177a5144eb40d7bfe6c055a.webp', t: T.hot, hot: true },
+      { k: 'bur', code: 'KOR', name: 'Gangnam burrito', desc: 'Pollo grigliato, kimchi, salsa tonkatsu, lattuga e pomodorini.', price: '13,90 €\nCon avocado 17,40 €', img: 'assets/img/de798c5d6feb91ede10f998b8ef10945.webp' },
+      { k: 'fus', code: 'MEX', name: 'Tijuana caesar salad', desc: 'Pollo grigliato, pico de gallo, halloumi, crostini e salsa caesar.', price: '12,90 €', img: 'assets/img/0862a7b60fa4d971d73b202557c035d3.webp' },
+      { k: 'fus', code: 'MED', name: 'Hummus & falafel', desc: 'Hummus fatto in casa, falafel, avocado, pomodorini e olio alla paprika.', price: '13,90 €\nExtra falafel 16,90 €', img: 'assets/img/a8ecb35ebb3968ca3160d685b86904e1.webp', t: T.vegan, vegan: true },
+      { k: 'fus', code: 'AUS', name: 'Canberra breaky', desc: 'Uova strapazzate, bacon, avocado, semi misti, insalata e fragole.', price: '13,90 €', img: 'assets/img/ce68f77c771ce1df418586ca719c120f.webp' },
+      { k: 'fus', code: 'JPN', name: 'Osaka pancakes', desc: 'Pollo croccante glassato HoneyKara, cheddar e sesamo nero.', price: '12,90 €', img: 'assets/img/56567c93ebdfba82c89152277df8eb75.webp', t: T.hot, hot: true },
+      { k: 'toa', code: 'NOR', name: 'Oslo salmon toast', desc: 'Salmone affumicato, avocado al pesto, omelette e semi tostati.', price: '14,90 €\nDoppio salmone 18,90 €', img: 'assets/img/4d21d77a29a6165cbb42e3ec611e6849.webp' },
+      { k: 'toa', code: 'MEX', name: 'Baja avo toast', desc: 'Avocado al pesto, pico de gallo, due uova in camicia e semi.', price: '9,90 €\nCon bacon 12,90 €', img: 'assets/img/e498457a1b2610c0c88558ac7574d807.webp' },
+      { k: 'toa', code: 'USA', name: 'L.A. crispy avo toast', desc: 'Avocado al pesto, bacon croccante, uova fritte e spezie affumicate.', price: '10,90 €', img: 'assets/img/9d09328b1d500c5e647474aba9b01ba3.webp' },
+      { k: 'toa', code: 'VEN', name: 'Los Roques benedict', desc: 'Tostones con avocado, formaggio grigliato, uova in camicia e olandese.', price: '11,90 €', img: 'assets/img/ac3f0a7ba12bb1b67e556969edefce66.webp', t: T.nuovo }
+    ];
+    const fdefs = [
+      { id: 'all', label: 'Tutto il mondo', test: () => true },
+      { id: 'bur', label: 'Burger e burritos', test: (d) => d.k === 'bur' },
+      { id: 'fus', label: 'Fusion e insalate', test: (d) => d.k === 'fus' },
+      { id: 'toa', label: 'Toast e benedict', test: (d) => d.k === 'toa' },
+      { id: 'hot', label: 'Piccante', test: (d) => !!d.hot },
+      { id: 'veg', label: 'Vegano', test: (d) => !!d.vegan }
+    ];
+    const active = fdefs.find((f) => f.id === flt) || fdefs[0];
+    const filters = fdefs.map((f) => Object.assign({ label: f.label, count: all.filter(f.test).length, pick: () => this.setState({ flt: f.id }) }, chip(f.id === active.id)));
+    const dishes = all.filter(active.test).map((d) => Object.assign({ code: d.code, name: d.name, desc: d.desc, price: d.price, img: d.img, hasTag: !!d.t }, d.t || { tag: '', tagColor: '#91007D' }));
+    const st8 = [['IMBARCO', '#FAE609', '#1E0623'], ['IN ORARIO', 'rgba(255,255,255,0.1)', '#E4D3E5']];
+    const board = [all[0], all[2], all[4], all[5], all[8], all[3]].map((d, i) => ({
+      code: d.code, name: d.name, price: d.price.split('\n')[0].replace('Singolo ', ''),
+      status: i === 0 ? st8[0][0] : st8[1][0], statusBg: i === 0 ? st8[0][1] : st8[1][1], statusFg: i === 0 ? st8[0][2] : st8[1][2]
+    }));
+    const dayLabels = ['Oggi', 'Domani', 'Sabato', 'Domenica'];
+    const timeLabels = ['12:00', '12:30', '13:00', '13:30', '14:00', '14:30'];
+    const days = dayLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ day: i }) }, chip(i === day)));
+    const times = timeLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ time: i }) }, chip(i === time)));
+    const faqData = [
+      { q: 'A che ora si pranza?', a: 'La cucina è aperta tutti i giorni dalle 10 alle 19:30, il venerdì e il sabato fino alle 21:30: il pranzo lo trovi da mezzogiorno in poi, senza fretta di chiusura.' },
+      { q: 'Serve prenotare?', a: 'Nel weekend e per i gruppi sì. In settimana spesso trovi posto, ma con la prenotazione vai sul sicuro.' },
+      { q: 'C’è il coperto?', a: 'No. Paghi solo quello che ordini.' },
+      { q: 'Avete piatti vegani e senza glutine?', a: 'Hummus e falafel è vegano, e abbiamo un menu senza glutine dedicato da chiedere allo staff. La cucina è condivisa, quindi i piatti possono contenere tracce.' },
+      { q: 'Si può fare un pranzo di lavoro o di gruppo?', a: 'Certo. Da 7 persone in su scrivici su WhatsApp e organizziamo il tavolo insieme.' },
+      { q: 'Dove si parcheggia?', a: 'KEIK è in ZTL. Si parcheggia sui viali, entrando da via Saragozza o da via Gallucci, e da lì si arriva a piedi in Via Canalino 51.' }
+    ];
+    const faqs = faqData.map((f, i) => Object.assign({}, f, {
+      open: i === faqOpen, expanded: i === faqOpen ? 'true' : 'false', sign: i === faqOpen ? '−' : '+',
+      toggle: () => this.setState({ faq: i === faqOpen ? -1 : i })
+    }));
+    return {
+      board, filters, dishes, days, times, faqs,
+      paxLabel: pax + (pax === 1 ? ' persona' : ' persone'),
+      bigGroup: pax >= 7,
+      summaryDay: dayLabels.at(day),
+      summaryTime: 'ore ' + timeLabels.at(time),
+      lessPax: () => this.setState({ pax: Math.max(1, pax - 1) }),
+      morePax: () => this.setState({ pax: Math.min(12, pax + 1) })
+    };
+  }
+}
+</script>
+<script>window.__DC_PROPS__ = {};window.__DC_OVERRIDE__ = {};</script>
+<script src="assets/js/morphdom.min.js"></script>
+<script src="assets/js/keik-dc.js"></script>
+</body>
+</html>

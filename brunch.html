@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brunch a Modena · KEIK</title>
+<style>html,body{overflow-x:clip}</style>
+<link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Figtree:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#91007D}a:hover{color:#3B0B40}
+.b-wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
+.b-serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em}
+.b-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:64px;align-items:center}
+.b-dishes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.b-drinks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.b-why{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.b-reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.b-share{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center}
+.b-faq{display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr);gap:64px}
+.b-final{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center}
+.b-nav{display:flex}
+.b-sticky{display:none}
+.b-chip{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.b-card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease}
+.b-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(42,8,48,0.12)}
+.b-bob{display:inline-flex;animation:bbob 3s ease-in-out infinite}
+@keyframes bbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-6deg)}}
+.b-open{animation:bopen .35s cubic-bezier(.2,.8,.2,1) both}
+@keyframes bopen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.b-pulse{animation:bpulse .45s cubic-bezier(.3,1.4,.5,1)}
+@keyframes bpulse{0%{transform:scale(.96)}100%{transform:scale(1)}}
+@media (prefers-reduced-motion: reduce){.b-bob,.b-open,.b-pulse{animation:none !important}.b-card:hover{transform:none}}
+@media (max-width:960px){
+.b-wrap{padding-left:16px !important;padding-right:16px !important}
+.b-hero,.b-share,.b-faq,.b-final{grid-template-columns:minmax(0,1fr) !important;gap:32px !important}
+.b-dishes,.b-reviews{grid-template-columns:minmax(0,1fr) !important}
+.b-drinks,.b-why{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+.b-nav{display:none !important}
+.b-sticky{display:flex !important}
+}
+</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="font-family: 'Figtree', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0">
+
+
+<header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
+<div class="b-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
+<a href="#top" aria-label="KEIK – Viaggia col gusto, torna all’inizio" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e.png" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<nav class="b-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
+<a href="#menu-brunch" style="color: #3B0B40; text-decoration: none">Il menu brunch</a>
+<a href="#recensioni" style="color: #3B0B40; text-decoration: none">Recensioni</a>
+<a href="#domande" style="color: #3B0B40; text-decoration: none">Domande</a>
+<a href="#dove" style="color: #3B0B40; text-decoration: none">Dove siamo</a>
+</nav>
+<a href="#prenota" style="display: inline-flex; align-items: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota il brunch</a>
+</div>
+</header>
+
+
+<section id="top" style="padding: 56px 0 72px; background: #F7F2F6">
+<div class="b-wrap b-hero">
+<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0">
+<nav aria-label="Percorso" style="font-size: 13px; color: #6B4A70"><a href="#top" style="color: #6B4A70">Home</a> / <a href="#top" style="color: #6B4A70">La giornata</a> / <span aria-current="page">Brunch</span></nav>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Volo KE-10 · Brunch · Modena centro</p>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(46px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.035em; color: #3B0B40">Il brunch a Modena, <span class="b-serif" style="color: #91007D; font-size: 1.06em">fino alle 19:30.</span></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4A2350; max-width: 31em">Pancakes, benedict e avocado toast con ricette da tutto il mondo, ogni giorno dalle 10. Il venerdì e il sabato fino alle 21:30. Nessun coperto, paghi solo quello che ordini.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px">
+<li style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #E6DAE4; border-radius: 999px; padding: 8px 14px; font-size: 14px; color: #3B0B40"><svg width="16" height="16" viewBox="0 0 24 24" fill="#91007D" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"></path></svg><strong style="font-weight: 600">4,4 su Google</strong> · oltre 800 recensioni</li>
+<li style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #E6DAE4; border-radius: 999px; padding: 8px 14px; font-size: 14px; color: #3B0B40"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5v1a3 3 0 0 0 3 3M16 6h3v1a3 3 0 0 1-3 3M12 13v4M8.5 20h7"></path></svg>Travellers' Choice 2024 e 2025</li>
+<li style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #E6DAE4; border-radius: 999px; padding: 8px 14px; font-size: 14px; color: #3B0B40"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>Il primo brunch di Modena, dal 2013</li>
+</ul>
+<div style="position: relative; margin-top: 8px; border-radius: 24px; overflow: hidden">
+<img src="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417.jpg" alt="Una cliente al tavolo con pancakes Bueno e un drink al mango" style="display: block; width: 100%; height: 300px; object-fit: cover; object-position: center 60%">
+<span style="position: absolute; left: 16px; bottom: 16px; background: rgba(42,8,48,0.82); color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; padding: 6px 10px; border-radius: 6px">24.000+ PANCAKES SERVITI NEL 2025</span>
+</div>
+</div>
+
+
+<div id="prenota" class="b-pulse" style="background: #FFFFFF; border-radius: 24px; box-shadow: 0 30px 70px rgba(42,8,48,0.18); overflow: hidden; min-width: 0">
+<div style="background: #2A0830; color: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">CARTA D'IMBARCO</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px">Prenota il tuo brunch</span>
+</div>
+<span class="b-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 20px">
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="padding: 0; margin-bottom: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">1 · QUANDO</legend>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+
+<button type="button" class="b-chip" aria-pressed="false" style="min-height: 52px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Oggi</button>
+
+<button type="button" class="b-chip" aria-pressed="false" style="min-height: 52px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Domani</button>
+
+<button type="button" class="b-chip" aria-pressed="true" style="min-height: 52px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Sabato</button>
+
+<button type="button" class="b-chip" aria-pressed="false" style="min-height: 52px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Domenica</button>
+
+</div>
+</fieldset>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="padding: 0; margin-bottom: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">2 · ORARIO DI PARTENZA</legend>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+
+<button type="button" class="b-chip" aria-pressed="false" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 15px 'DM Mono', monospace; cursor: pointer">10:30</button>
+
+<button type="button" class="b-chip" aria-pressed="true" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; font: 500 15px 'DM Mono', monospace; cursor: pointer">11:30</button>
+
+<button type="button" class="b-chip" aria-pressed="false" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 15px 'DM Mono', monospace; cursor: pointer">12:30</button>
+
+<button type="button" class="b-chip" aria-pressed="false" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 15px 'DM Mono', monospace; cursor: pointer">13:30</button>
+
+<button type="button" class="b-chip" aria-pressed="false" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 15px 'DM Mono', monospace; cursor: pointer">15:00</button>
+
+<button type="button" class="b-chip" aria-pressed="false" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 500 15px 'DM Mono', monospace; cursor: pointer">17:00</button>
+
+</div>
+</fieldset>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">3 · PASSEGGERI</span>
+<div style="display: flex; align-items: center; gap: 6px">
+<button type="button" aria-label="Una persona in meno" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">−</button>
+<span aria-live="polite" style="min-width: 72px; text-align: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">2 persone</span>
+<button type="button" aria-label="Una persona in più" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">+</button>
+</div>
+</div>
+
+<div style="border-top: 1.5px dashed #E6DAE4; padding-top: 18px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; font-family: 'DM Mono', monospace; font-size: 13px; color: #3B0B40"><span>Sabato · ore 11:30</span><span>2 persone</span></p>
+<a href="https://pnssm.pro/a16isyw" style="display: flex; justify-content: center; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; min-height: 56px; border-radius: 14px">Conferma l'imbarco<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<p style="margin: 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70"><span>Confermi data e orario nel modulo</span><a href="https://wa.me/393534732354" style="font-weight: 600">Preferisci WhatsApp?</a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="menu-brunch" style="padding: 104px 0 88px; background: #FFFFFF">
+<div class="b-wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Destinazioni del brunch</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Sei piatti, <span class="b-serif" style="color: #91007D">sei rotte diverse.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">I più ordinati al brunch, con il prezzo che trovi al tavolo.</p>
+</div>
+<a href="#top" style="font-weight: 600; font-size: 16px; min-height: 44px; display: inline-flex; align-items: center; gap: 8px">Tutto il menu<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="b-dishes" style="gap: 20px">
+
+<article class="b-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+
+<div style="position: relative; background: #F7F2F6">
+<img src="assets/img/321bf3c723e0b34ebf438b0e6943728c.webp" alt="UBE lava pancakes" loading="lazy" style="display: block; width: 100%; height: 210px; object-fit: contain; padding: 14px; box-sizing: border-box">
+<span aria-hidden="true" style="position: absolute; left: 14px; top: 14px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → MNL</span>
+</div>
+
+
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">MANILA · FILIPPINE</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #91007D; border: 1px solid #91007D; border-radius: 999px; padding: 3px 8px">NOVITÀ</span>
+</div>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 23px; line-height: 1.1; color: #3B0B40">UBE lava pancakes</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350; flex-grow: 1">Pancakes con cuore di crema all’ube, frutta fresca, mini marshmallow, granola alle nocciole e Oreo.</p>
+<p style="margin: 6px 0 0; font-family: 'DM Mono', monospace; font-size: 15px; color: #91007D">11,90 €</p>
+</div>
+</article>
+
+<article class="b-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+
+<div style="position: relative; background: #F7F2F6">
+<img src="assets/img/dd5ee3adad759efcc23f5abfbae45380.webp" alt="NYC bacon &amp; eggs" loading="lazy" style="display: block; width: 100%; height: 210px; object-fit: contain; padding: 14px; box-sizing: border-box">
+<span aria-hidden="true" style="position: absolute; left: 14px; top: 14px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → JFK</span>
+</div>
+
+
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">NEW YORK · USA</span>
+
+</div>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 23px; line-height: 1.1; color: #3B0B40">NYC bacon &amp; eggs</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350; flex-grow: 1">I nostri pancakes con bacon croccante e uova strapazzate o fritte. Il classico che ci ha resi famosi.</p>
+<p style="margin: 6px 0 0; font-family: 'DM Mono', monospace; font-size: 15px; color: #91007D">10,90 – 12,90 €</p>
+</div>
+</article>
+
+<article class="b-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+
+<div style="position: relative; background: #F7F2F6">
+<img src="assets/img/ac3f0a7ba12bb1b67e556969edefce66.webp" alt="Los Roques benedict" loading="lazy" style="display: block; width: 100%; height: 210px; object-fit: contain; padding: 14px; box-sizing: border-box">
+<span aria-hidden="true" style="position: absolute; left: 14px; top: 14px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → CCS</span>
+</div>
+
+
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">LOS ROQUES · VENEZUELA</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #91007D; border: 1px solid #91007D; border-radius: 999px; padding: 3px 8px">NOVITÀ</span>
+</div>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 23px; line-height: 1.1; color: #3B0B40">Los Roques benedict</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350; flex-grow: 1">Tostones croccanti con avocado, formaggio grigliato, due uova in camicia e salsa olandese.</p>
+<p style="margin: 6px 0 0; font-family: 'DM Mono', monospace; font-size: 15px; color: #91007D">11,90 €</p>
+</div>
+</article>
+
+<article class="b-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+
+<div style="position: relative; background: #F7F2F6">
+<img src="assets/img/c8ddea2ebfa0a9bcfb5035d01a58a930.webp" alt="Reggie benedict" loading="lazy" style="display: block; width: 100%; height: 210px; object-fit: contain; padding: 14px; box-sizing: border-box">
+<span aria-hidden="true" style="position: absolute; left: 14px; top: 14px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → MOD</span>
+</div>
+
+
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">LA RICETTA DI CASA</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #91007D; border: 1px solid #91007D; border-radius: 999px; padding: 3px 8px">NOVITÀ</span>
+</div>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 23px; line-height: 1.1; color: #3B0B40">Reggie benedict</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350; flex-grow: 1">Due uova in camicia, salsa olandese, salmone affumicato e avocado su pane semidolce di patate.</p>
+<p style="margin: 6px 0 0; font-family: 'DM Mono', monospace; font-size: 15px; color: #91007D">15,90 €</p>
+</div>
+</article>
+
+<article class="b-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+
+<div style="position: relative; background: #F7F2F6">
+<img src="assets/img/9d09328b1d500c5e647474aba9b01ba3.webp" alt="L.A. crispy avo toast" loading="lazy" style="display: block; width: 100%; height: 210px; object-fit: contain; padding: 14px; box-sizing: border-box">
+<span aria-hidden="true" style="position: absolute; left: 14px; top: 14px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → LAX</span>
+</div>
+
+
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">LOS ANGELES · USA</span>
+
+</div>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 23px; line-height: 1.1; color: #3B0B40">L.A. crispy avo toast</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350; flex-grow: 1">Avocado al pesto, bacon croccante, uova fritte e spezie affumicate.</p>
+<p style="margin: 6px 0 0; font-family: 'DM Mono', monospace; font-size: 15px; color: #91007D">10,90 €</p>
+</div>
+</article>
+
+<article class="b-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+
+<div style="position: relative; background: #F7F2F6">
+<img src="assets/img/a8ecb35ebb3968ca3160d685b86904e1.webp" alt="Hummus &amp; falafel" loading="lazy" style="display: block; width: 100%; height: 210px; object-fit: contain; padding: 14px; box-sizing: border-box">
+<span aria-hidden="true" style="position: absolute; left: 14px; top: 14px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → MED</span>
+</div>
+
+
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">MEDITERRANEO</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #91007D; border: 1px solid #91007D; border-radius: 999px; padding: 3px 8px">VEGANO</span>
+</div>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 23px; line-height: 1.1; color: #3B0B40">Hummus &amp; falafel</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350; flex-grow: 1">Hummus fatto in casa, falafel croccanti, avocado, pomodorini e insalata, con olio alla paprika.</p>
+<p style="margin: 6px 0 0; font-family: 'DM Mono', monospace; font-size: 15px; color: #91007D">13,90 €</p>
+</div>
+</article>
+
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div class="b-drinks" style="gap: 12px; margin-bottom: 18px">
+
+<figure style="margin: 0; position: relative; border-radius: 18px; overflow: hidden; background: #F7F2F6">
+<img src="assets/img/ee29f5053f89e9bb9c79ef92a5bf9708.jpg" alt="Pancakes Alaska con uovo, salmone e fiori eduli" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover">
+<figcaption style="position: absolute; left: 10px; bottom: 10px; background: rgba(42,8,48,0.82); color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; padding: 5px 9px; border-radius: 6px">ANC · ALASKA</figcaption>
+</figure>
+
+<figure style="margin: 0; position: relative; border-radius: 18px; overflow: hidden; background: #F7F2F6">
+<img src="assets/img/3a17b5e739656d429f00287b92e400c5.jpg" alt="Sciroppo d’acero versato su uova, bacon e avocado" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover">
+<figcaption style="position: absolute; left: 10px; bottom: 10px; background: rgba(42,8,48,0.82); color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; padding: 5px 9px; border-radius: 6px">SCIROPPO A BORDO</figcaption>
+</figure>
+
+<figure style="margin: 0; position: relative; border-radius: 18px; overflow: hidden; background: #F7F2F6">
+<img src="assets/img/2c19900693612ff4769efea4236cbde3.jpg" alt="Pancakes al pistacchio con fragole e mirtilli" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover">
+<figcaption style="position: absolute; left: 10px; bottom: 10px; background: rgba(42,8,48,0.82); color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; padding: 5px 9px; border-radius: 6px">PISTACCHIO</figcaption>
+</figure>
+
+<figure style="margin: 0; position: relative; border-radius: 18px; overflow: hidden; background: #F7F2F6">
+<img src="assets/img/fbe6c0e9f004694684094eb985c56910.jpg" alt="Matcha latte freddo in bicchiere cesellato" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover">
+<figcaption style="position: absolute; left: 10px; bottom: 10px; background: rgba(42,8,48,0.82); color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; padding: 5px 9px; border-radius: 6px">MATCHA LATTE</figcaption>
+</figure>
+
+</div>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #6B4A70">DA BERE, A BORDO</p>
+<div class="b-drinks" style="gap: 12px">
+
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 18px; border-radius: 16px; background: #F7F2F6">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600; font-size: 16px; color: #3B0B40">Americano</span><span style="font-size: 13px; color: #6B4A70">refill gratis</span></span>
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: nowrap">3,00 €</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 18px; border-radius: 16px; background: #F7F2F6">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600; font-size: 16px; color: #3B0B40">Matcha latte</span><span style="font-size: 13px; color: #6B4A70">classico o al mango</span></span>
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: nowrap">4,50 – 5,50 €</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 18px; border-radius: 16px; background: #F7F2F6">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600; font-size: 16px; color: #3B0B40">UBE latte</span><span style="font-size: 13px; color: #6B4A70">novità d’autunno</span></span>
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: nowrap">4,50 €</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 18px; border-radius: 16px; background: #F7F2F6">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600; font-size: 16px; color: #3B0B40">Mango MIMO</span><span style="font-size: 13px; color: #6B4A70">il cocktail del brunch</span></span>
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: nowrap">12,00 €</span>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section style="padding: 0 0 104px; background: #FFFFFF">
+<div class="b-wrap">
+<div class="b-share" style="background: #2A0830; color: #FFFFFF; border-radius: 32px; padding: 40px; box-sizing: border-box">
+<div style="position: relative; min-width: 0">
+<img src="assets/img/66e7a9377661840fe22c87c6e81cd5fd.jpg" alt="Il Brunch Traveler visto dall'alto: pancakes, bacon, uova strapazzate, patate dolci, frutta, avocado toast al salmone e due drink" style="display: block; width: 100%; height: 340px; object-fit: cover; border-radius: 22px">
+<span style="position: absolute; top: 16px; left: 16px; background: #FFFFFF; color: #2A0830; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; padding: 6px 10px; border-radius: 6px">PER 2–3 PERSONE</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #D99BCF">VOLO DI GRUPPO</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em">Brunch Traveler, <span class="b-serif" style="color: #E9A9DF">da dividere.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #DCC8DD">Pancakes, bacon, uova, mini avocado toast al salmone, frutta fresca e patate dolci fritte: tutto il brunch in un solo tagliere, al centro del tavolo.</p>
+<p style="margin: 0; display: flex; align-items: baseline; gap: 12px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 40px">32,90 €</span><span style="font-size: 15px; color: #DCC8DD">per 2–3 persone</span></p>
+<a href="#prenota" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Prenota per 3<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+</section>
+
+
+<section style="padding: 88px 0; background: #F7F2F6">
+<div class="b-wrap" style="display: flex; flex-direction: column; gap: 36px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Quattro cose che <span class="b-serif" style="color: #91007D">non trovi altrove.</span></h2>
+<div class="b-why" style="gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Brunch fino alle 19:30</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Non finisce a mezzogiorno: pancakes anche alle 17. Venerdì e sabato fino alle 21:30.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4zM4 11h16M8 15h3"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Nessun coperto</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Paghi solo quello che ordini, anche nelle serate a tema.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10l-1 13H8zM9 3l3 5M6 8h12"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Americano con refill</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">3,00 € e la tazza si riempie quante volte vuoi, come in un diner americano.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14z"></path><path d="M5 19l7-7"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Vegano e senza lattosio</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Hummus e falafel, banana bread vegano, cupcake e brownie senza lattosio.</p></div>
+</div>
+</div>
+</section>
+
+
+<section id="recensioni" style="padding: 104px 0; background: #FFFFFF">
+<div class="b-wrap" style="display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Chi è già <span class="b-serif" style="color: #91007D">atterrato da noi.</span></h2>
+<p style="margin: 0; display: flex; align-items: center; gap: 12px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 44px; color: #3B0B40">4,4</span><span style="display: flex; flex-direction: column; font-size: 14px; color: #6B4A70"><span style="color: #91007D; letter-spacing: 2px" aria-label="4,4 stelle su 5">★★★★☆</span>oltre 800 recensioni su Google</span></p>
+</div>
+<div class="b-reviews" style="gap: 20px">
+<figure style="margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 28px; border-radius: 22px; background: #F7F2F6"><blockquote style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; line-height: 1.3; color: #3B0B40">“Una merenda o un brunch all'americana? Da KEIK si può. Tutto buonissimo, dal dolce al salato, e fatto artigianalmente.”</blockquote><figcaption style="font-family: 'DM Mono', monospace; font-size: 13px; color: #6B4A70">CHIARA B. · GOOGLE</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 28px; border-radius: 22px; background: #F7F2F6"><blockquote style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; line-height: 1.3; color: #3B0B40">“Personale simpaticissimo e location molto curata.”</blockquote><figcaption style="font-family: 'DM Mono', monospace; font-size: 13px; color: #6B4A70">SALVATORE M. · GOOGLE</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 28px; border-radius: 22px; background: #F7F2F6"><blockquote style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; line-height: 1.3; color: #3B0B40">“Locale molto bello, cibo fantastico e personale gentile e preparato.”</blockquote><figcaption style="font-family: 'DM Mono', monospace; font-size: 13px; color: #6B4A70">SIMONA M. · GOOGLE</figcaption></figure>
+</div>
+</div>
+</section>
+
+
+<section id="domande" style="padding: 96px 0; background: #F7F2F6">
+<div class="b-wrap b-faq">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #91007D">PRIMA DI PARTIRE</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Le domande <span class="b-serif" style="color: #91007D">di chi prenota.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A2350">Altro da chiedere? Scrivici: rispondiamo noi dello staff.</p>
+<a href="https://wa.me/393534732354" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; color: #3B0B40; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px; border: 1.5px solid #3B0B40"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19.2z"></path></svg>WhatsApp 353 4732354</a>
+</div>
+<div style="display: flex; flex-direction: column">
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="true" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Fino a che ora si può fare brunch?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">−</span></button>
+
+<p class="b-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Tutto il giorno: la cucina è aperta dalle 10 alle 19:30, il venerdì e il sabato fino alle 21:30. Pancakes e benedict si ordinano a qualsiasi ora.</p>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Serve prenotare?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">C’è il coperto?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Avete opzioni vegane e senza glutine?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Dove si parcheggia?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Si può venire in gruppo?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="dove" style="padding: 96px 0; background: #2A0830; color: #FFFFFF">
+<div class="b-wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="b-final">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.4vw, 62px); line-height: 1; letter-spacing: -0.03em">Il tuo tavolo per il brunch <span class="b-serif" style="color: #E9A9DF">è a un passo.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #DCC8DD">Nel weekend conviene prenotare: ci vuole un minuto.</p>
+</div>
+<a href="#prenota" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 18px; padding: 0 30px; min-height: 60px; border-radius: 999px; white-space: nowrap">Prenota il brunch<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 32px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">GATE</span><span style="font-size: 17px; font-weight: 600">Via Canalino 51, Modena</span><a href="https://maps.google.com/?q=Via+Canalino+51+Modena" style="color: #FFFFFF; font-size: 15px">Come arrivare</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CUCINA APERTA</span><span style="font-size: 17px; font-weight: 600">Tutti i giorni 10–19:30</span><span style="font-size: 15px; color: #DCC8DD">venerdì e sabato fino alle 21:30</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">PARCHEGGIO</span><span style="font-size: 17px; font-weight: 600">Sui viali</span><span style="font-size: 15px; color: #DCC8DD">entrando da via Saragozza o via Gallucci</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CONTATTI</span><a href="https://wa.me/393534732354" style="color: #FFFFFF; font-size: 17px; font-weight: 600">WhatsApp 353 4732354</a><a href="tel:+390598396468" style="color: #DCC8DD; font-size: 15px">Telefono 059 8396468</a></div>
+</div>
+<p style="margin: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: #B99BBC">Altri momenti della giornata: <a href="#top" style="color: #FFFFFF">Merenda</a><a href="#top" style="color: #FFFFFF">Aperitivo</a><a href="#top" style="color: #FFFFFF">Vegano e senza glutine</a></p>
+</div>
+</section>
+
+<footer style="background: #1E0623; color: #B99BBC; padding: 28px 0 96px; font-size: 13px">
+<div class="b-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
+<span>© 2026 Keik di Debbia Elena Karen Edelweiss SNC · P.IVA 03764210369 · Via Canalino 51, 41121 Modena</span>
+<span style="display: flex; gap: 16px"><a href="#top" style="color: #B99BBC">Privacy</a><a href="#top" style="color: #B99BBC">Cookie</a></span>
+</div>
+</footer>
+
+
+<div class="b-sticky" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 12px 16px 16px; background: #FFFFFF; border-top: 1px solid #ECE3EA; box-shadow: 0 -10px 30px rgba(42,8,48,0.12); gap: 10px; align-items: center">
+<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #6B4A70"><strong style="font-size: 15px; color: #3B0B40">Brunch fino alle 19:30</strong>nessun coperto</span>
+<a href="#prenota" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
+</div>
+
+</div>
+</div>
+<template id="dc-tpl">
+<div style="font-family: 'Figtree', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0">
+
+<!-- HEADER -->
+<header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
+<div class="b-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
+<a href="#top" aria-label="KEIK – Viaggia col gusto, torna all’inizio" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e.png" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<nav class="b-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
+<a href="#menu-brunch" style="color: #3B0B40; text-decoration: none">Il menu brunch</a>
+<a href="#recensioni" style="color: #3B0B40; text-decoration: none">Recensioni</a>
+<a href="#domande" style="color: #3B0B40; text-decoration: none">Domande</a>
+<a href="#dove" style="color: #3B0B40; text-decoration: none">Dove siamo</a>
+</nav>
+<a href="#prenota" style="display: inline-flex; align-items: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota il brunch</a>
+</div>
+</header>
+
+<!-- HERO + CARTA D'IMBARCO -->
+<section id="top" style="padding: 56px 0 72px; background: #F7F2F6">
+<div class="b-wrap b-hero">
+<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0">
+<nav aria-label="Percorso" style="font-size: 13px; color: #6B4A70"><a href="#top" style="color: #6B4A70">Home</a> / <a href="#top" style="color: #6B4A70">La giornata</a> / <span aria-current="page">Brunch</span></nav>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Volo KE-10 · Brunch · Modena centro</p>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(46px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.035em; color: #3B0B40">Il brunch a Modena, <span class="b-serif" style="color: #91007D; font-size: 1.06em">fino alle 19:30.</span></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4A2350; max-width: 31em">Pancakes, benedict e avocado toast con ricette da tutto il mondo, ogni giorno dalle 10. Il venerdì e il sabato fino alle 21:30. Nessun coperto, paghi solo quello che ordini.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px">
+<li style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #E6DAE4; border-radius: 999px; padding: 8px 14px; font-size: 14px; color: #3B0B40"><svg width="16" height="16" viewBox="0 0 24 24" fill="#91007D" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"></path></svg><strong style="font-weight: 600">4,4 su Google</strong> · oltre 800 recensioni</li>
+<li style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #E6DAE4; border-radius: 999px; padding: 8px 14px; font-size: 14px; color: #3B0B40"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5v1a3 3 0 0 0 3 3M16 6h3v1a3 3 0 0 1-3 3M12 13v4M8.5 20h7"></path></svg>Travellers' Choice 2024 e 2025</li>
+<li style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #E6DAE4; border-radius: 999px; padding: 8px 14px; font-size: 14px; color: #3B0B40"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>Il primo brunch di Modena, dal 2013</li>
+</ul>
+<div style="position: relative; margin-top: 8px; border-radius: 24px; overflow: hidden">
+<img src="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417.jpg" alt="Una cliente al tavolo con pancakes Bueno e un drink al mango" style="display: block; width: 100%; height: 300px; object-fit: cover; object-position: center 60%">
+<span style="position: absolute; left: 16px; bottom: 16px; background: rgba(42,8,48,0.82); color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; padding: 6px 10px; border-radius: 6px">24.000+ PANCAKES SERVITI NEL 2025</span>
+</div>
+</div>
+
+<!-- Carta d'imbarco = modulo di prenotazione -->
+<div id="prenota" class="b-pulse" style="background: #FFFFFF; border-radius: 24px; box-shadow: 0 30px 70px rgba(42,8,48,0.18); overflow: hidden; min-width: 0">
+<div style="background: #2A0830; color: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">CARTA D'IMBARCO</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px">Prenota il tuo brunch</span>
+</div>
+<span class="b-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 20px">
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="padding: 0; margin-bottom: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">1 · QUANDO</legend>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{days}}" as="d" hint-placeholder-count="4">
+<button type="button" class="b-chip" aria-pressed="{{d.pressed}}" onClick="{{d.pick}}" style="min-height: 52px; border-radius: 12px; border: 1.5px solid {{d.border}}; background: {{d.bg}}; color: {{d.fg}}; font: 600 14px 'Figtree', sans-serif; cursor: pointer">{{d.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="padding: 0; margin-bottom: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">2 · ORARIO DI PARTENZA</legend>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{times}}" as="t" hint-placeholder-count="6">
+<button type="button" class="b-chip" aria-pressed="{{t.pressed}}" onClick="{{t.pick}}" style="min-height: 46px; border-radius: 12px; border: 1.5px solid {{t.border}}; background: {{t.bg}}; color: {{t.fg}}; font: 500 15px 'DM Mono', monospace; cursor: pointer">{{t.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">3 · PASSEGGERI</span>
+<div style="display: flex; align-items: center; gap: 6px">
+<button type="button" onClick="{{lessPax}}" aria-label="Una persona in meno" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">−</button>
+<span aria-live="polite" style="min-width: 72px; text-align: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">{{paxLabel}}</span>
+<button type="button" onClick="{{morePax}}" aria-label="Una persona in più" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">+</button>
+</div>
+</div>
+<sc-if value="{{bigGroup}}" hint-placeholder-val="{{ false }}">
+<p class="b-open" style="margin: 0; font-size: 14px; line-height: 1.5; color: #3B0B40; background: #F7F2F6; border-radius: 10px; padding: 10px 12px">Per gruppi da 7 persone in su scrivici su WhatsApp: ti prepariamo il tavolo insieme.</p>
+</sc-if>
+<div style="border-top: 1.5px dashed #E6DAE4; padding-top: 18px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; display: flex; justify-content: space-between; gap: 12px; font-family: 'DM Mono', monospace; font-size: 13px; color: #3B0B40"><span>{{summaryDay}} · {{summaryTime}}</span><span>{{paxLabel}}</span></p>
+<a href="https://pnssm.pro/a16isyw" style="display: flex; justify-content: center; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; min-height: 56px; border-radius: 14px">Conferma l'imbarco<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<p style="margin: 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70"><span>Confermi data e orario nel modulo</span><a href="https://wa.me/393534732354" style="font-weight: 600">Preferisci WhatsApp?</a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MENU BRUNCH -->
+<section id="menu-brunch" style="padding: 104px 0 88px; background: #FFFFFF">
+<div class="b-wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Destinazioni del brunch</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Sei piatti, <span class="b-serif" style="color: #91007D">sei rotte diverse.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">I più ordinati al brunch, con il prezzo che trovi al tavolo.</p>
+</div>
+<a href="#top" style="font-weight: 600; font-size: 16px; min-height: 44px; display: inline-flex; align-items: center; gap: 8px">Tutto il menu<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="b-dishes" style="gap: 20px">
+<sc-for list="{{dishes}}" as="x" hint-placeholder-count="6">
+<article class="b-card" style="display: flex; flex-direction: column; border: 1px solid #ECE3EA; border-radius: 22px; overflow: hidden; background: #FFFFFF">
+<sc-if value="{{x.hasPhoto}}" hint-placeholder-val="{{ false }}">
+<div style="position: relative; background: #F7F2F6">
+<img src="{{x.photo}}" alt="{{x.alt}}" loading="lazy" style="display: block; width: 100%; height: 210px; object-fit: contain; padding: 14px; box-sizing: border-box">
+<span aria-hidden="true" style="position: absolute; left: 14px; top: 14px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #FFFFFF; background: #3B0B40; padding: 4px 8px; border-radius: 6px">MOD → {{x.code}}</span>
+</div>
+</sc-if>
+<sc-if value="{{x.noPhoto}}" hint-placeholder-val="{{ true }}">
+<div aria-hidden="true" style="height: 180px; background: {{x.tile}}; display: flex; flex-direction: column; justify-content: space-between; padding: 18px 20px; box-sizing: border-box; color: #FFFFFF">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #E9C6E6">MOD → {{x.code}}</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 64px; line-height: 0.9; letter-spacing: -0.02em">{{x.code}}</span>
+</div>
+</sc-if>
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">{{x.origin}}</span>
+<sc-if value="{{x.hasTag}}" hint-placeholder-val="{{ false }}"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #91007D; border: 1px solid #91007D; border-radius: 999px; padding: 3px 8px">{{x.tag}}</span></sc-if>
+</div>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 23px; line-height: 1.1; color: #3B0B40">{{x.name}}</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350; flex-grow: 1">{{x.desc}}</p>
+<p style="margin: 6px 0 0; font-family: 'DM Mono', monospace; font-size: 15px; color: #91007D">{{x.price}}</p>
+</div>
+</article>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div class="b-drinks" style="gap: 12px; margin-bottom: 18px">
+<sc-for list="{{shots}}" as="p" hint-placeholder-count="4">
+<figure style="margin: 0; position: relative; border-radius: 18px; overflow: hidden; background: #F7F2F6">
+<img src="{{p.src}}" alt="{{p.alt}}" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover">
+<figcaption style="position: absolute; left: 10px; bottom: 10px; background: rgba(42,8,48,0.82); color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; padding: 5px 9px; border-radius: 6px">{{p.cap}}</figcaption>
+</figure>
+</sc-for>
+</div>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #6B4A70">DA BERE, A BORDO</p>
+<div class="b-drinks" style="gap: 12px">
+<sc-for list="{{drinks}}" as="k" hint-placeholder-count="4">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 18px; border-radius: 16px; background: #F7F2F6">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600; font-size: 16px; color: #3B0B40">{{k.name}}</span><span style="font-size: 13px; color: #6B4A70">{{k.note}}</span></span>
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #91007D; white-space: nowrap">{{k.price}}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<!-- BRUNCH TRAVELER -->
+<section style="padding: 0 0 104px; background: #FFFFFF">
+<div class="b-wrap">
+<div class="b-share" style="background: #2A0830; color: #FFFFFF; border-radius: 32px; padding: 40px; box-sizing: border-box">
+<div style="position: relative; min-width: 0">
+<img src="assets/img/66e7a9377661840fe22c87c6e81cd5fd.jpg" alt="Il Brunch Traveler visto dall'alto: pancakes, bacon, uova strapazzate, patate dolci, frutta, avocado toast al salmone e due drink" style="display: block; width: 100%; height: 340px; object-fit: cover; border-radius: 22px">
+<span style="position: absolute; top: 16px; left: 16px; background: #FFFFFF; color: #2A0830; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; padding: 6px 10px; border-radius: 6px">PER 2–3 PERSONE</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #D99BCF">VOLO DI GRUPPO</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em">Brunch Traveler, <span class="b-serif" style="color: #E9A9DF">da dividere.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #DCC8DD">Pancakes, bacon, uova, mini avocado toast al salmone, frutta fresca e patate dolci fritte: tutto il brunch in un solo tagliere, al centro del tavolo.</p>
+<p style="margin: 0; display: flex; align-items: baseline; gap: 12px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 40px">32,90 €</span><span style="font-size: 15px; color: #DCC8DD">per 2–3 persone</span></p>
+<a href="#prenota" onClick="{{bookThree}}" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Prenota per 3<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PERCHÉ DA KEIK -->
+<section style="padding: 88px 0; background: #F7F2F6">
+<div class="b-wrap" style="display: flex; flex-direction: column; gap: 36px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Quattro cose che <span class="b-serif" style="color: #91007D">non trovi altrove.</span></h2>
+<div class="b-why" style="gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Brunch fino alle 19:30</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Non finisce a mezzogiorno: pancakes anche alle 17. Venerdì e sabato fino alle 21:30.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4zM4 11h16M8 15h3"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Nessun coperto</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Paghi solo quello che ordini, anche nelle serate a tema.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10l-1 13H8zM9 3l3 5M6 8h12"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Americano con refill</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">3,00 € e la tazza si riempie quante volte vuoi, come in un diner americano.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px; background: #FFFFFF; border-radius: 20px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14z"></path><path d="M5 19l7-7"></path></svg><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Vegano e senza lattosio</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Hummus e falafel, banana bread vegano, cupcake e brownie senza lattosio.</p></div>
+</div>
+</div>
+</section>
+
+<!-- RECENSIONI -->
+<section id="recensioni" style="padding: 104px 0; background: #FFFFFF">
+<div class="b-wrap" style="display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Chi è già <span class="b-serif" style="color: #91007D">atterrato da noi.</span></h2>
+<p style="margin: 0; display: flex; align-items: center; gap: 12px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 44px; color: #3B0B40">4,4</span><span style="display: flex; flex-direction: column; font-size: 14px; color: #6B4A70"><span style="color: #91007D; letter-spacing: 2px" aria-label="4,4 stelle su 5">★★★★☆</span>oltre 800 recensioni su Google</span></p>
+</div>
+<div class="b-reviews" style="gap: 20px">
+<figure style="margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 28px; border-radius: 22px; background: #F7F2F6"><blockquote style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; line-height: 1.3; color: #3B0B40">“Una merenda o un brunch all'americana? Da KEIK si può. Tutto buonissimo, dal dolce al salato, e fatto artigianalmente.”</blockquote><figcaption style="font-family: 'DM Mono', monospace; font-size: 13px; color: #6B4A70">CHIARA B. · GOOGLE</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 28px; border-radius: 22px; background: #F7F2F6"><blockquote style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; line-height: 1.3; color: #3B0B40">“Personale simpaticissimo e location molto curata.”</blockquote><figcaption style="font-family: 'DM Mono', monospace; font-size: 13px; color: #6B4A70">SALVATORE M. · GOOGLE</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 28px; border-radius: 22px; background: #F7F2F6"><blockquote style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; line-height: 1.3; color: #3B0B40">“Locale molto bello, cibo fantastico e personale gentile e preparato.”</blockquote><figcaption style="font-family: 'DM Mono', monospace; font-size: 13px; color: #6B4A70">SIMONA M. · GOOGLE</figcaption></figure>
+</div>
+</div>
+</section>
+
+<!-- DOMANDE -->
+<section id="domande" style="padding: 96px 0; background: #F7F2F6">
+<div class="b-wrap b-faq">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #91007D">PRIMA DI PARTIRE</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Le domande <span class="b-serif" style="color: #91007D">di chi prenota.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A2350">Altro da chiedere? Scrivici: rispondiamo noi dello staff.</p>
+<a href="https://wa.me/393534732354" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; color: #3B0B40; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px; border: 1.5px solid #3B0B40"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19.2z"></path></svg>WhatsApp 353 4732354</a>
+</div>
+<div style="display: flex; flex-direction: column">
+<sc-for list="{{faqs}}" as="f" hint-placeholder-count="6">
+<div style="border-bottom: 1px solid #E2D4E0">
+<button type="button" onClick="{{f.toggle}}" aria-expanded="{{f.expanded}}" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">{{f.q}}<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">{{f.sign}}</span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}">
+<p class="b-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">{{f.a}}</p>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- CTA FINALE + DOVE -->
+<section id="dove" style="padding: 96px 0; background: #2A0830; color: #FFFFFF">
+<div class="b-wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="b-final">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.4vw, 62px); line-height: 1; letter-spacing: -0.03em">Il tuo tavolo per il brunch <span class="b-serif" style="color: #E9A9DF">è a un passo.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #DCC8DD">Nel weekend conviene prenotare: ci vuole un minuto.</p>
+</div>
+<a href="#prenota" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 18px; padding: 0 30px; min-height: 60px; border-radius: 999px; white-space: nowrap">Prenota il brunch<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 32px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">GATE</span><span style="font-size: 17px; font-weight: 600">Via Canalino 51, Modena</span><a href="https://maps.google.com/?q=Via+Canalino+51+Modena" style="color: #FFFFFF; font-size: 15px">Come arrivare</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CUCINA APERTA</span><span style="font-size: 17px; font-weight: 600">Tutti i giorni 10–19:30</span><span style="font-size: 15px; color: #DCC8DD">venerdì e sabato fino alle 21:30</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">PARCHEGGIO</span><span style="font-size: 17px; font-weight: 600">Sui viali</span><span style="font-size: 15px; color: #DCC8DD">entrando da via Saragozza o via Gallucci</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CONTATTI</span><a href="https://wa.me/393534732354" style="color: #FFFFFF; font-size: 17px; font-weight: 600">WhatsApp 353 4732354</a><a href="tel:+390598396468" style="color: #DCC8DD; font-size: 15px">Telefono 059 8396468</a></div>
+</div>
+<p style="margin: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: #B99BBC">Altri momenti della giornata: <a href="#top" style="color: #FFFFFF">Merenda</a><a href="#top" style="color: #FFFFFF">Aperitivo</a><a href="#top" style="color: #FFFFFF">Vegano e senza glutine</a></p>
+</div>
+</section>
+
+<footer style="background: #1E0623; color: #B99BBC; padding: 28px 0 96px; font-size: 13px">
+<div class="b-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
+<span>© 2026 Keik di Debbia Elena Karen Edelweiss SNC · P.IVA 03764210369 · Via Canalino 51, 41121 Modena</span>
+<span style="display: flex; gap: 16px"><a href="#top" style="color: #B99BBC">Privacy</a><a href="#top" style="color: #B99BBC">Cookie</a></span>
+</div>
+</footer>
+
+<!-- Barra fissa su telefono -->
+<div class="b-sticky" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 12px 16px 16px; background: #FFFFFF; border-top: 1px solid #ECE3EA; box-shadow: 0 -10px 30px rgba(42,8,48,0.12); gap: 10px; align-items: center">
+<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #6B4A70"><strong style="font-size: 15px; color: #3B0B40">Brunch fino alle 19:30</strong>nessun coperto</span>
+<a href="#prenota" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
+</div>
+
+</div>
+</template>
+<script type="text/x-dc" id="dc-code">
+class Component extends DCLogic {
+  renderVals() {
+    const st = this.state || {};
+    const day = typeof st.day === 'number' ? st.day : 2;
+    const time = typeof st.time === 'number' ? st.time : 1;
+    const pax = typeof st.pax === 'number' ? st.pax : 2;
+    const faqOpen = typeof st.faq === 'number' ? st.faq : 0;
+    const chip = (on) => on
+      ? { bg: '#3B0B40', fg: '#FFFFFF', border: '#3B0B40', pressed: 'true' }
+      : { bg: '#FFFFFF', fg: '#3B0B40', border: '#E6DAE4', pressed: 'false' };
+    const dayLabels = ['Oggi', 'Domani', 'Sabato', 'Domenica'];
+    const timeLabels = ['10:30', '11:30', '12:30', '13:30', '15:00', '17:00'];
+    const days = dayLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ day: i }) }, chip(i === day)));
+    const times = timeLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ time: i }) }, chip(i === time)));
+    const dishes = [
+      { code: 'MNL', origin: 'MANILA · FILIPPINE', name: 'UBE lava pancakes', desc: 'Pancakes con cuore di crema all’ube, frutta fresca, mini marshmallow, granola alle nocciole e Oreo.', price: '11,90 €', tag: 'NOVITÀ', hasTag: true, tile: '#6E2A70', hasPhoto: false, noPhoto: true },
+      { code: 'JFK', origin: 'NEW YORK · USA', name: 'NYC bacon & eggs', desc: 'I nostri pancakes con bacon croccante e uova strapazzate o fritte. Il classico che ci ha resi famosi.', price: '10,90 – 12,90 €', tag: '', hasTag: false, photo: 'assets/img/4739076762501efc4121181e9e4bf1ec.jpg', alt: 'Pancakes con frutti rossi', hasPhoto: true, noPhoto: false },
+      { code: 'CCS', origin: 'LOS ROQUES · VENEZUELA', name: 'Los Roques benedict', desc: 'Tostones croccanti con avocado, formaggio grigliato, due uova in camicia e salsa olandese.', price: '11,90 €', tag: 'NOVITÀ', hasTag: true, tile: '#91007D', hasPhoto: false, noPhoto: true },
+      { code: 'MOD', origin: 'LA RICETTA DI CASA', name: 'Reggie benedict', desc: 'Due uova in camicia, salsa olandese, salmone affumicato e avocado su pane semidolce di patate.', price: '15,90 €', tag: 'NOVITÀ', hasTag: true, tile: '#2A0830', hasPhoto: false, noPhoto: true },
+      { code: 'LAX', origin: 'LOS ANGELES · USA', name: 'L.A. crispy avo toast', desc: 'Avocado al pesto, bacon croccante, uova fritte e spezie affumicate.', price: '10,90 €', tag: '', hasTag: false, tile: '#3B0B40', hasPhoto: false, noPhoto: true },
+      { code: 'MED', origin: 'MEDITERRANEO', name: 'Hummus & falafel', desc: 'Hummus fatto in casa, falafel croccanti, avocado, pomodorini e insalata, con olio alla paprika.', price: '13,90 €', tag: 'VEGANO', hasTag: true, tile: '#6E2A70', hasPhoto: false, noPhoto: true }
+    ];
+    // Foto scontornate dei piatti (dal menu attuale su keik.it)
+    const CUT = { MNL: 'assets/img/321bf3c723e0b34ebf438b0e6943728c.webp', JFK: 'assets/img/dd5ee3adad759efcc23f5abfbae45380.webp', CCS: 'assets/img/ac3f0a7ba12bb1b67e556969edefce66.webp', MOD: 'assets/img/c8ddea2ebfa0a9bcfb5035d01a58a930.webp', LAX: 'assets/img/9d09328b1d500c5e647474aba9b01ba3.webp', MED: 'assets/img/a8ecb35ebb3968ca3160d685b86904e1.webp' };
+    const dishesOut = dishes.map((d) => Object.assign({}, d, { photo: CUT[d.code], alt: d.name, hasPhoto: true, noPhoto: false }));
+    const shots = [
+      { src: 'assets/img/ee29f5053f89e9bb9c79ef92a5bf9708.jpg', alt: 'Pancakes Alaska con uovo, salmone e fiori eduli', cap: 'ANC · ALASKA' },
+      { src: 'assets/img/3a17b5e739656d429f00287b92e400c5.jpg', alt: 'Sciroppo d’acero versato su uova, bacon e avocado', cap: 'SCIROPPO A BORDO' },
+      { src: 'assets/img/2c19900693612ff4769efea4236cbde3.jpg', alt: 'Pancakes al pistacchio con fragole e mirtilli', cap: 'PISTACCHIO' },
+      { src: 'assets/img/fbe6c0e9f004694684094eb985c56910.jpg', alt: 'Matcha latte freddo in bicchiere cesellato', cap: 'MATCHA LATTE' }
+    ];
+    const drinks = [
+      { name: 'Americano', note: 'refill gratis', price: '3,00 €' },
+      { name: 'Matcha latte', note: 'classico o al mango', price: '4,50 – 5,50 €' },
+      { name: 'UBE latte', note: 'novità d’autunno', price: '4,50 €' },
+      { name: 'Mango MIMO', note: 'il cocktail del brunch', price: '12,00 €' }
+    ];
+    const faqData = [
+      { q: 'Fino a che ora si può fare brunch?', a: 'Tutto il giorno: la cucina è aperta dalle 10 alle 19:30, il venerdì e il sabato fino alle 21:30. Pancakes e benedict si ordinano a qualsiasi ora.' },
+      { q: 'Serve prenotare?', a: 'Nel weekend te lo consigliamo. Prenoti in un minuto dal modulo o su WhatsApp, e il tavolo è tuo.' },
+      { q: 'C’è il coperto?', a: 'No. Non c’è coperto, né per il brunch né per le serate a tema: paghi solo quello che ordini.' },
+      { q: 'Avete opzioni vegane e senza glutine?', a: 'Sì: hummus e falafel e il banana bread sono vegani, e abbiamo un menu senza glutine dedicato da chiedere allo staff. I piatti naturalmente senza glutine non sono certificati e possono contenere tracce, perché la cucina è condivisa.' },
+      { q: 'Dove si parcheggia?', a: 'KEIK è in ZTL. Si parcheggia sui viali, entrando da via Saragozza o da via Gallucci, e da lì si arriva a piedi in Via Canalino 51.' },
+      { q: 'Si può venire in gruppo?', a: 'Certo. Il Brunch Traveler da 32,90 € è pensato per 2–3 persone. Per gruppi da 7 in su scrivici su WhatsApp e organizziamo il tavolo insieme.' }
+    ];
+    const faqs = faqData.map((f, i) => Object.assign({}, f, {
+      open: i === faqOpen,
+      expanded: i === faqOpen ? 'true' : 'false',
+      sign: i === faqOpen ? '−' : '+',
+      toggle: () => this.setState({ faq: i === faqOpen ? -1 : i })
+    }));
+    return {
+      days, times, dishes: dishesOut, drinks, shots, faqs,
+      paxLabel: pax + (pax === 1 ? ' persona' : ' persone'),
+      bigGroup: pax >= 7,
+      summaryDay: dayLabels.at(day),
+      summaryTime: 'ore ' + timeLabels.at(time),
+      lessPax: () => this.setState({ pax: Math.max(1, pax - 1) }),
+      morePax: () => this.setState({ pax: Math.min(12, pax + 1) }),
+      bookThree: () => this.setState({ pax: 3 })
+    };
+  }
+}
+</script>
+<script>window.__DC_PROPS__ = {};window.__DC_OVERRIDE__ = {};</script>
+<script src="assets/js/morphdom.min.js"></script>
+<script src="assets/js/keik-dc.js"></script>
+</body>
+</html>

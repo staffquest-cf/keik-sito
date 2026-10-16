@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eventi a Modena · KEIK</title>
+<style>html,body{overflow-x:clip}</style>
+<link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Figtree:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#1E0623}
+a{color:#91007D}a:hover{color:#3B0B40}
+.e-wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
+.e-serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em}
+.e-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:56px;align-items:center}
+.e-board{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:28px;align-items:start}
+.e-row{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center}
+.e-rituals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.e-past{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.e-private{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
+.e-final{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center}
+.e-nav{display:flex}
+.e-sticky{display:none}
+.e-pick{transition:background-color .2s ease,border-color .2s ease}
+.e-in{animation:ein .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes ein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.e-blink{animation:eblink 1.6s steps(2,start) infinite}
+@keyframes eblink{to{visibility:hidden}}
+.e-card{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.e-card:hover{transform:translateY(-4px) rotate(-.4deg)}
+@media (prefers-reduced-motion: reduce){.e-in,.e-blink{animation:none !important}.e-card:hover{transform:none}}
+@media (max-width:1100px){.e-rituals{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+@media (max-width:960px){
+.e-wrap{padding-left:16px !important;padding-right:16px !important}
+.e-hero,.e-board,.e-private,.e-final{grid-template-columns:minmax(0,1fr) !important;gap:28px !important}
+.e-rituals{grid-template-columns:minmax(0,1fr) !important}
+.e-past{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+.e-nav{display:none !important}
+.e-sticky{display:flex !important}
+}
+</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="font-family: 'Figtree', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0">
+
+<header style="background: #1E0623; border-bottom: 1px solid rgba(255,255,255,0.08)">
+<div class="e-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
+<a href="#top" aria-label="KEIK – Viaggia col gusto, torna all’inizio" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/4ae9236772f217ad454621f7172ec031.png" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<nav class="e-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
+<a href="#partenze" style="color: #F3E6F2; text-decoration: none">Prossime partenze</a>
+<a href="#rituali" style="color: #F3E6F2; text-decoration: none">I rituali</a>
+<a href="#privati" style="color: #F3E6F2; text-decoration: none">Feste private</a>
+<a href="#dove" style="color: #F3E6F2; text-decoration: none">Dove siamo</a>
+</nav>
+<a href="#partenze" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota un evento</a>
+</div>
+</header>
+
+
+<section id="top" style="padding: 56px 0 72px; background: radial-gradient(110% 90% at 15% 0%, #4A0F52 0%, #2A0830 50%, #1E0623 100%); color: #FFFFFF">
+<div class="e-wrap e-hero">
+<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0">
+<nav aria-label="Percorso" style="font-size: 13px; color: #CDB4CF"><a href="#top" style="color: #CDB4CF">Home</a> / <span aria-current="page" style="color: #FFFFFF">Eventi</span></nav>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #E9A9DF">Destination of the month · Modena centro</p>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(46px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.035em">Gli eventi di KEIK: <span class="e-serif" style="color: #E9A9DF; font-size: 1.06em">ogni mese si parte per un altro paese.</span></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #E4D3E5; max-width: 31em">Serate a tema, laboratori per grandi e piccoli, giochi al tavolo e rituali settimanali. I posti sono pochi: guarda il tabellone e prenota il tuo.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#partenze" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 17px; padding: 0 26px; min-height: 56px; border-radius: 999px">Vedi le prossime partenze</a>
+<a href="https://www.instagram.com/keikmodena/" style="display: inline-flex; align-items: center; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; padding: 0 22px; min-height: 56px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.5)">@keikmodena</a>
+</div>
+</div>
+<div style="position: relative; min-width: 0">
+<img src="assets/img/1052df8078b2425597a48b937cead26a.jpg" alt="Una serata a tema da KEIK: sala piena, lettere appese al soffitto e piatti in arrivo ai tavoli" style="display: block; width: 100%; height: 420px; object-fit: cover; border-radius: 28px">
+<div style="position: absolute; right: -14px; top: 24px; background: #FAE609; color: #1E0623; border-radius: 14px; padding: 10px 14px; box-shadow: 0 16px 36px rgba(0,0,0,0.35); display: flex; flex-direction: column; gap: 2px; transform: rotate(3deg)">
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em">PROSSIMO IMBARCO</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 20px">Mer 21 ottobre</span>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="partenze" style="padding: 96px 0; background: #FFFFFF">
+<div class="e-wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Prossime partenze</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Scegli l’evento, <span class="e-serif" style="color: #91007D">prendi il tuo posto.</span></h2>
+</div>
+<div class="e-board">
+<div style="background: #1E0623; color: #FFFFFF; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 6px 12px; border-bottom: 1px solid rgba(255,255,255,0.12)">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #E9C6E6">PARTENZE · AUTUNNO 2026</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 11px; color: #FAE609"><span class="e-blink" style="width: 7px; height: 7px; border-radius: 99px; background: #FAE609"></span>LIVE</span>
+</div>
+
+<button type="button" class="e-pick e-row" aria-pressed="true" style="padding: 12px 10px; border-radius: 12px; border: 1.5px solid #E9A9DF; background: rgba(233,169,223,0.16); color: #FFFFFF; cursor: pointer; text-align: left">
+<span style="display: flex; flex-direction: column; align-items: center; padding: 6px 0; border-radius: 8px; background: rgba(255,255,255,0.08)"><span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #E9A9DF">MER</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; line-height: 1">21</span><span style="font-family: 'DM Mono', monospace; font-size: 10px; color: #CDB4CF">OTT</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-weight: 600; font-size: 15px; line-height: 1.25">Laboratorio torte di Halloween</span><span style="font-size: 13px; color: #CDB4CF">Turni 17:00 e 18:30 · dai 6 anni</span></span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 4px 7px; border-radius: 4px; background: #FAE609; color: #1E0623; white-space: nowrap">IMBARCO</span>
+</button>
+
+<button type="button" class="e-pick e-row" aria-pressed="false" style="padding: 12px 10px; border-radius: 12px; border: 1.5px solid transparent; background: transparent; color: #FFFFFF; cursor: pointer; text-align: left">
+<span style="display: flex; flex-direction: column; align-items: center; padding: 6px 0; border-radius: 8px; background: rgba(255,255,255,0.08)"><span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #E9A9DF">SAB</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; line-height: 1">31</span><span style="font-family: 'DM Mono', monospace; font-size: 10px; color: #CDB4CF">OTT</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-weight: 600; font-size: 15px; line-height: 1.25">Treat or Trick · apericena</span><span style="font-size: 13px; color: #CDB4CF">Drink mostruosi e burger stregati</span></span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 4px 7px; border-radius: 4px; background: rgba(255,255,255,0.1); color: #E4D3E5; white-space: nowrap">IN ORARIO</span>
+</button>
+
+</div>
+<article class="e-in" style="border-radius: 26px; overflow: hidden; border: 1px solid #ECE3EA; background: #FFFFFF; box-shadow: 0 24px 60px rgba(42,8,48,0.10)">
+<div style="position: relative">
+<img src="assets/img/cc6245ccd849029ff803ebc5c7ba6dc8.jpg" alt="Il kit del laboratorio: mini torta Happy Halloween, sac à poche arancio, verde e nero, codette, mini brownie, cinnamon roll e un drink" style="display: block; width: 100%; height: 280px; object-fit: cover; object-position: center 55%">
+<span style="position: absolute; left: 16px; top: 16px; background: #FFFFFF; color: #3B0B40; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; padding: 6px 10px; border-radius: 6px">LABORATORIO · PER GRANDI E PICCOLI</span>
+</div>
+<div style="padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #91007D">MERCOLEDÌ 21 OTTOBRE · ORE 17:00 O 18:30</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: clamp(28px, 2.8vw, 38px); line-height: 1.05; letter-spacing: -0.02em; color: #3B0B40">Laboratorio torte di Halloween</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A2350">Un pomeriggio per decorare la tua torta di Halloween con il nostro laboratorio di pasticceria. Ti diamo il kit, ti seguiamo passo passo e la torta la porti a casa. La merenda è inclusa.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+
+<li style="display: flex; gap: 10px; align-items: baseline; font-size: 15px; color: #3B0B40"><span style="color: #91007D">✦</span>Due turni: 17:00 e 18:30, 15 posti a turno</li>
+
+<li style="display: flex; gap: 10px; align-items: baseline; font-size: 15px; color: #3B0B40"><span style="color: #91007D">✦</span>Kit incluso: mini set per decorare, sac à poche con colori e codette</li>
+
+<li style="display: flex; gap: 10px; align-items: baseline; font-size: 15px; color: #3B0B40"><span style="color: #91007D">✦</span>Merenda inclusa: mini brownie, mini cinnamon roll e un drink</li>
+
+<li style="display: flex; gap: 10px; align-items: baseline; font-size: 15px; color: #3B0B40"><span style="color: #91007D">✦</span>Dai 6 anni in su · prenotazione entro il 18 ottobre</li>
+
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; border-top: 1.5px dashed #E6DAE4; padding-top: 18px">
+<a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20prenotare%20il%20laboratorio%20torte%20di%20Halloween%20del%2021%20ottobre" style="display: inline-flex; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 14px">Prenota il turno su WhatsApp</a>
+<a href="https://wa.me/393534732354" style="display: inline-flex; align-items: center; color: #3B0B40; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 18px; min-height: 52px">Domande? Scrivici</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+
+<section id="rituali" style="padding: 96px 0; background: #F2F6EF">
+<div class="e-wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F7D4F">Il rituale di ottobre · ogni martedì</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Matcha Tuesday: <span class="e-serif" style="color: #2F7D4F">un gusto segreto a settimana.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">Quattro matcha in edizione speciale, uno per ogni martedì di ottobre. Il gusto resta coperto fino al lunedì mattina: chi ha il Passaporto del Gusto lo scopre per primo.</p>
+</div>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; padding: 6px 12px; border-radius: 999px; border: 1px solid #91007D; color: #91007D">SOLO PASSAPORTO DEL GUSTO</span>
+</div>
+<div class="e-rituals" style="grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+
+<article style="display: flex; flex-direction: column; border-radius: 24px; overflow: hidden; background: #FFFFFF; box-shadow: 0 14px 34px rgba(47,125,79,0.12)">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: baseline; background: #E6ECE5; color: #4F6B58"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em">SETTIMANA 1</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px">mar 6 ott</span></div>
+
+<div class="e-in" style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 26px 18px 28px; text-align: center; min-height: 220px; background: radial-gradient(circle at 50% 40%, #E3EFDF 0%, #FFFFFF 70%)">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #2F7D4F">GIÀ PARTITO</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 32px; line-height: 1.05; color: #3B0B40">Matcha al pistacchio</h3>
+</div>
+
+
+</article>
+
+<article style="display: flex; flex-direction: column; border-radius: 24px; overflow: hidden; background: #FFFFFF; box-shadow: 0 14px 34px rgba(47,125,79,0.12)">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: baseline; background: #E6ECE5; color: #4F6B58"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em">SETTIMANA 2</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px">mar 13 ott</span></div>
+
+<div class="e-in" style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 26px 18px 28px; text-align: center; min-height: 220px; background: radial-gradient(circle at 50% 40%, #E3EFDF 0%, #FFFFFF 70%)">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #2F7D4F">GIÀ PARTITO</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 32px; line-height: 1.05; color: #3B0B40">Matcha Biscoff</h3>
+</div>
+
+
+</article>
+
+<article style="display: flex; flex-direction: column; border-radius: 24px; overflow: hidden; background: #FFFFFF; box-shadow: 0 14px 34px rgba(47,125,79,0.12)">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: baseline; background: #1E0623; color: #E9C6E6"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em">SETTIMANA 3</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px">mar 20 ott</span></div>
+
+
+<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 26px 18px 28px; text-align: center; min-height: 220px; background: repeating-linear-gradient(135deg, #2A0830 0 14px, #34103B 14px 28px); color: #FFFFFF">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E9A9DF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #E9C6E6">GUSTO SEGRETO · SI SVELA TRA</span>
+<span role="timer" aria-live="off" style="display: flex; gap: 6px">
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">02</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">GG</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">11</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">ORE</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">37</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">MIN</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">03</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">SEC</span></span>
+</span>
+<span style="font-size: 13px; color: #CDB4CF">Lunedì mattina alle 8, il giorno prima</span>
+</div>
+
+</article>
+
+<article style="display: flex; flex-direction: column; border-radius: 24px; overflow: hidden; background: #FFFFFF; box-shadow: 0 14px 34px rgba(47,125,79,0.12)">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: baseline; background: #1E0623; color: #E9C6E6"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em">SETTIMANA 4</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px">mar 27 ott</span></div>
+
+
+<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 26px 18px 28px; text-align: center; min-height: 220px; background: repeating-linear-gradient(135deg, #2A0830 0 14px, #34103B 14px 28px); color: #FFFFFF">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E9A9DF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #E9C6E6">GUSTO SEGRETO · SI SVELA TRA</span>
+<span role="timer" aria-live="off" style="display: flex; gap: 6px">
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">09</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">GG</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">12</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">ORE</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">37</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">MIN</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">03</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">SEC</span></span>
+</span>
+<span style="font-size: 13px; color: #CDB4CF">Lunedì mattina alle 8, il giorno prima</span>
+</div>
+
+</article>
+
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20il%20Passaporto%20del%20Gusto%20per%20scoprire%20i%20gusti%20del%20Matcha%20Tuesday" style="display: inline-flex; align-items: center; gap: 10px; background: #2F7D4F; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Voglio il Passaporto del Gusto</a>
+<span style="font-size: 14px; color: #4F6B58">Lo ritiri al banco alla tua prossima visita.</span>
+</div>
+</div>
+</section>
+
+
+<section style="padding: 96px 0; background: #FFFFFF">
+<div class="e-wrap" style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Già partiti</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">I viaggi <span class="e-serif" style="color: #91007D">che abbiamo già fatto.</span></h2>
+</div>
+<div class="e-past" style="gap: 14px">
+
+<article style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #F7F2F6">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #91007D">MEX</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: #3B0B40">Messico</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A2350">All you can nachos, Colora il tuo vaso, Aperitivo in lingua e il torneo di Throw Throw Burrito.</p>
+</article>
+
+<article style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #F7F2F6">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #91007D">KOR</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: #3B0B40">Corea</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A2350">La serie di aperitivi coreani, con piatti e drink a tema.</p>
+</article>
+
+<article style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #F7F2F6">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #91007D">MAG</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: #3B0B40">Scuola di magia</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A2350">La Sfida dell’Alchimista con gli odori misteriosi e il Quiz dei Maghi, per i nostri 13 anni.</p>
+</article>
+
+<article style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #F7F2F6">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #91007D">JPN</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: #3B0B40">Giappone</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A2350">Il mese del Giappone, con la vetrina dipinta a tema.</p>
+</article>
+
+</div>
+</div>
+</section>
+
+
+<section id="privati" style="padding: 0 0 104px; background: #FFFFFF">
+<div class="e-wrap">
+<div class="e-private" style="border-radius: 30px; overflow: hidden; background: #2A0830; color: #FFFFFF">
+<img src="assets/img/b776e134616dd6523cb27a8110cd643c.jpg" alt="Lo staff di KEIK con le felpe del locale davanti a un allestimento di Halloween" loading="lazy" style="display: block; width: 100%; height: 100%; min-height: 380px; object-fit: cover; object-position: center 30%">
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: 44px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #E9C6E6">VOLO PRIVATO</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(32px, 3.4vw, 46px); line-height: 1.02; letter-spacing: -0.03em">Compleanni e feste <span class="e-serif" style="color: #E9A9DF">a bordo di KEIK.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #E4D3E5">Un compleanno, una laurea, una serata con i colleghi: prepariamo tavolo, taglieri e la torta dal nostro laboratorio. Scrivici quante persone siete e che giorno vi serve.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 16px">
+<li style="display: flex; gap: 10px"><span style="color: #F2B8E6">✦</span>Da 7 persone in su organizziamo tutto su WhatsApp</li>
+<li style="display: flex; gap: 10px"><span style="color: #F2B8E6">✦</span>Formula Il Turista + drink a 16,90 € a testa</li>
+<li style="display: flex; gap: 10px"><span style="color: #F2B8E6">✦</span>Torta su ordinazione con almeno 3 giorni di preavviso</li>
+</ul>
+<a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20organizzare%20una%20festa" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Organizza la tua festa</a>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="dove" style="padding: 88px 0; background: #1E0623; color: #FFFFFF">
+<div class="e-wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div class="e-final">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(36px, 4vw, 56px); line-height: 1; letter-spacing: -0.03em">Non perdere <span class="e-serif" style="color: #E9A9DF">la prossima partenza.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #DCC8DD">Annunciamo ogni evento su Instagram e a chi ha il Passaporto del Gusto, prima che finiscano i posti.</p>
+</div>
+<a href="https://www.instagram.com/keikmodena/" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 18px; padding: 0 30px; min-height: 60px; border-radius: 999px; white-space: nowrap">Seguici su Instagram</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 32px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">GATE</span><span style="font-size: 17px; font-weight: 600">Via Canalino 51, Modena</span><a href="https://maps.google.com/?q=Via+Canalino+51+Modena" style="color: #FFFFFF; font-size: 15px">Come arrivare</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">APERTI</span><span style="font-size: 17px; font-weight: 600">Tutti i giorni fino alle 20</span><span style="font-size: 15px; color: #DCC8DD">venerdì e sabato fino alle 22</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CONTATTI</span><a href="https://wa.me/393534732354" style="color: #FFFFFF; font-size: 17px; font-weight: 600">WhatsApp 353 4732354</a><a href="tel:+390598396468" style="color: #DCC8DD; font-size: 15px">Telefono 059 8396468</a></div>
+</div>
+</div>
+</section>
+
+<footer style="background: #160419; color: #B99BBC; padding: 28px 0 96px; font-size: 13px">
+<div class="e-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
+<span>© 2026 Keik di Debbia Elena Karen Edelweiss SNC · P.IVA 03764210369 · Via Canalino 51, 41121 Modena</span>
+<span style="display: flex; gap: 16px"><a href="#top" style="color: #B99BBC">Privacy</a><a href="#top" style="color: #B99BBC">Cookie</a></span>
+</div>
+</footer>
+
+<div class="e-sticky" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 12px 16px 16px; background: #1E0623; border-top: 1px solid rgba(255,255,255,0.12); gap: 10px; align-items: center">
+<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #CDB4CF"><strong style="font-size: 15px; color: #FFFFFF">Prossimo: mer 21 ottobre</strong>laboratorio torte di Halloween</span>
+<a href="#partenze" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
+</div>
+
+</div>
+</div>
+<template id="dc-tpl">
+<div style="font-family: 'Figtree', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0">
+
+<header style="background: #1E0623; border-bottom: 1px solid rgba(255,255,255,0.08)">
+<div class="e-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
+<a href="#top" aria-label="KEIK – Viaggia col gusto, torna all’inizio" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/4ae9236772f217ad454621f7172ec031.png" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<nav class="e-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
+<a href="#partenze" style="color: #F3E6F2; text-decoration: none">Prossime partenze</a>
+<a href="#rituali" style="color: #F3E6F2; text-decoration: none">I rituali</a>
+<a href="#privati" style="color: #F3E6F2; text-decoration: none">Feste private</a>
+<a href="#dove" style="color: #F3E6F2; text-decoration: none">Dove siamo</a>
+</nav>
+<a href="#partenze" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota un evento</a>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="top" style="padding: 56px 0 72px; background: radial-gradient(110% 90% at 15% 0%, #4A0F52 0%, #2A0830 50%, #1E0623 100%); color: #FFFFFF">
+<div class="e-wrap e-hero">
+<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0">
+<nav aria-label="Percorso" style="font-size: 13px; color: #CDB4CF"><a href="#top" style="color: #CDB4CF">Home</a> / <span aria-current="page" style="color: #FFFFFF">Eventi</span></nav>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #E9A9DF">Destination of the month · Modena centro</p>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(46px, 5.6vw, 80px); line-height: 0.98; letter-spacing: -0.035em">Gli eventi di KEIK: <span class="e-serif" style="color: #E9A9DF; font-size: 1.06em">ogni mese si parte per un altro paese.</span></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #E4D3E5; max-width: 31em">Serate a tema, laboratori per grandi e piccoli, giochi al tavolo e rituali settimanali. I posti sono pochi: guarda il tabellone e prenota il tuo.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#partenze" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 17px; padding: 0 26px; min-height: 56px; border-radius: 999px">Vedi le prossime partenze</a>
+<a href="https://www.instagram.com/keikmodena/" style="display: inline-flex; align-items: center; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; padding: 0 22px; min-height: 56px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.5)">@keikmodena</a>
+</div>
+</div>
+<div style="position: relative; min-width: 0">
+<img src="assets/img/1052df8078b2425597a48b937cead26a.jpg" alt="Una serata a tema da KEIK: sala piena, lettere appese al soffitto e piatti in arrivo ai tavoli" style="display: block; width: 100%; height: 420px; object-fit: cover; border-radius: 28px">
+<div style="position: absolute; right: -14px; top: 24px; background: #FAE609; color: #1E0623; border-radius: 14px; padding: 10px 14px; box-shadow: 0 16px 36px rgba(0,0,0,0.35); display: flex; flex-direction: column; gap: 2px; transform: rotate(3deg)">
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em">PROSSIMO IMBARCO</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 20px">Mer 21 ottobre</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TABELLONE PARTENZE -->
+<section id="partenze" style="padding: 96px 0; background: #FFFFFF">
+<div class="e-wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Prossime partenze</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Scegli l’evento, <span class="e-serif" style="color: #91007D">prendi il tuo posto.</span></h2>
+</div>
+<div class="e-board">
+<div style="background: #1E0623; color: #FFFFFF; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 6px 12px; border-bottom: 1px solid rgba(255,255,255,0.12)">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #E9C6E6">PARTENZE · AUTUNNO 2026</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 11px; color: #FAE609"><span class="e-blink" style="width: 7px; height: 7px; border-radius: 99px; background: #FAE609"></span>LIVE</span>
+</div>
+<sc-for list="{{events}}" as="e" hint-placeholder-count="5">
+<button type="button" class="e-pick e-row" aria-pressed="{{e.pressed}}" onClick="{{e.pick}}" style="padding: 12px 10px; border-radius: 12px; border: 1.5px solid {{e.border}}; background: {{e.bg}}; color: #FFFFFF; cursor: pointer; text-align: left">
+<span style="display: flex; flex-direction: column; align-items: center; padding: 6px 0; border-radius: 8px; background: rgba(255,255,255,0.08)"><span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #E9A9DF">{{e.dow}}</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; line-height: 1">{{e.day}}</span><span style="font-family: 'DM Mono', monospace; font-size: 10px; color: #CDB4CF">{{e.mon}}</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-weight: 600; font-size: 15px; line-height: 1.25">{{e.title}}</span><span style="font-size: 13px; color: #CDB4CF">{{e.short}}</span></span>
+<span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 4px 7px; border-radius: 4px; background: {{e.stBg}}; color: {{e.stFg}}; white-space: nowrap">{{e.status}}</span>
+</button>
+</sc-for>
+</div>
+<article class="e-in" style="border-radius: 26px; overflow: hidden; border: 1px solid #ECE3EA; background: #FFFFFF; box-shadow: 0 24px 60px rgba(42,8,48,0.10)">
+<div style="position: relative">
+<img src="{{cur.img}}" alt="{{cur.alt}}" style="display: block; width: 100%; height: 280px; object-fit: cover; object-position: {{cur.pos}}">
+<span style="position: absolute; left: 16px; top: 16px; background: #FFFFFF; color: #3B0B40; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; padding: 6px 10px; border-radius: 6px">{{cur.tag}}</span>
+</div>
+<div style="padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #91007D">{{cur.when}}</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: clamp(28px, 2.8vw, 38px); line-height: 1.05; letter-spacing: -0.02em; color: #3B0B40">{{cur.title}}</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A2350">{{cur.text}}</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{cur.facts}}" as="f" hint-placeholder-count="4">
+<li style="display: flex; gap: 10px; align-items: baseline; font-size: 15px; color: #3B0B40"><span style="color: #91007D">✦</span>{{f.t}}</li>
+</sc-for>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; border-top: 1.5px dashed #E6DAE4; padding-top: 18px">
+<a href="{{cur.href}}" style="display: inline-flex; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 14px">{{cur.cta}}</a>
+<a href="https://wa.me/393534732354" style="display: inline-flex; align-items: center; color: #3B0B40; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 18px; min-height: 52px">Domande? Scrivici</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- RITUALI: MATCHA TUESDAY -->
+<section id="rituali" style="padding: 96px 0; background: #F2F6EF">
+<div class="e-wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F7D4F">Il rituale di ottobre · ogni martedì</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(38px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Matcha Tuesday: <span class="e-serif" style="color: #2F7D4F">un gusto segreto a settimana.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">Quattro matcha in edizione speciale, uno per ogni martedì di ottobre. Il gusto resta coperto fino al lunedì mattina: chi ha il Passaporto del Gusto lo scopre per primo.</p>
+</div>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; padding: 6px 12px; border-radius: 999px; border: 1px solid #91007D; color: #91007D">SOLO PASSAPORTO DEL GUSTO</span>
+</div>
+<div class="e-rituals" style="grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+<sc-for list="{{matcha}}" as="m" hint-placeholder-count="4">
+<article style="display: flex; flex-direction: column; border-radius: 24px; overflow: hidden; background: #FFFFFF; box-shadow: 0 14px 34px rgba(47,125,79,0.12)">
+<div style="padding: 14px 18px; display: flex; justify-content: space-between; align-items: baseline; background: {{m.headBg}}; color: {{m.headFg}}"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em">SETTIMANA {{m.n}}</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px">{{m.date}}</span></div>
+<sc-if value="{{m.open}}" hint-placeholder-val="{{ true }}">
+<div class="e-in" style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 26px 18px 28px; text-align: center; min-height: 220px; background: radial-gradient(circle at 50% 40%, #E3EFDF 0%, #FFFFFF 70%)">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #2F7D4F">{{m.label}}</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 32px; line-height: 1.05; color: #3B0B40">Matcha {{m.flavor}}</h3>
+</div>
+</sc-if>
+<sc-if value="{{m.locked}}" hint-placeholder-val="{{ false }}">
+<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 26px 18px 28px; text-align: center; min-height: 220px; background: repeating-linear-gradient(135deg, #2A0830 0 14px, #34103B 14px 28px); color: #FFFFFF">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E9A9DF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #E9C6E6">GUSTO SEGRETO · SI SVELA TRA</span>
+<span role="timer" aria-live="off" style="display: flex; gap: 6px">
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">{{m.dd}}</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">GG</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">{{m.hh}}</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">ORE</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">{{m.mm}}</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">MIN</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">{{m.ss}}</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">SEC</span></span>
+</span>
+<span style="font-size: 13px; color: #CDB4CF">{{m.revealText}}</span>
+</div>
+</sc-if>
+</article>
+</sc-for>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20il%20Passaporto%20del%20Gusto%20per%20scoprire%20i%20gusti%20del%20Matcha%20Tuesday" style="display: inline-flex; align-items: center; gap: 10px; background: #2F7D4F; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Voglio il Passaporto del Gusto</a>
+<span style="font-size: 14px; color: #4F6B58">Lo ritiri al banco alla tua prossima visita.</span>
+</div>
+</div>
+</section>
+
+<!-- GIA PARTITI -->
+<section style="padding: 96px 0; background: #FFFFFF">
+<div class="e-wrap" style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Già partiti</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.6vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">I viaggi <span class="e-serif" style="color: #91007D">che abbiamo già fatto.</span></h2>
+</div>
+<div class="e-past" style="gap: 14px">
+<sc-for list="{{past}}" as="p" hint-placeholder-count="4">
+<article style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #F7F2F6">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #91007D">{{p.code}}</span>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: #3B0B40">{{p.name}}</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A2350">{{p.text}}</p>
+</article>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- FESTE PRIVATE -->
+<section id="privati" style="padding: 0 0 104px; background: #FFFFFF">
+<div class="e-wrap">
+<div class="e-private" style="border-radius: 30px; overflow: hidden; background: #2A0830; color: #FFFFFF">
+<img src="assets/img/b776e134616dd6523cb27a8110cd643c.jpg" alt="Lo staff di KEIK con le felpe del locale davanti a un allestimento di Halloween" loading="lazy" style="display: block; width: 100%; height: 100%; min-height: 380px; object-fit: cover; object-position: center 30%">
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: 44px">
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #E9C6E6">VOLO PRIVATO</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(32px, 3.4vw, 46px); line-height: 1.02; letter-spacing: -0.03em">Compleanni e feste <span class="e-serif" style="color: #E9A9DF">a bordo di KEIK.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #E4D3E5">Un compleanno, una laurea, una serata con i colleghi: prepariamo tavolo, taglieri e la torta dal nostro laboratorio. Scrivici quante persone siete e che giorno vi serve.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 16px">
+<li style="display: flex; gap: 10px"><span style="color: #F2B8E6">✦</span>Da 7 persone in su organizziamo tutto su WhatsApp</li>
+<li style="display: flex; gap: 10px"><span style="color: #F2B8E6">✦</span>Formula Il Turista + drink a 16,90 € a testa</li>
+<li style="display: flex; gap: 10px"><span style="color: #F2B8E6">✦</span>Torta su ordinazione con almeno 3 giorni di preavviso</li>
+</ul>
+<a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20organizzare%20una%20festa" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Organizza la tua festa</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DOVE -->
+<section id="dove" style="padding: 88px 0; background: #1E0623; color: #FFFFFF">
+<div class="e-wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div class="e-final">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(36px, 4vw, 56px); line-height: 1; letter-spacing: -0.03em">Non perdere <span class="e-serif" style="color: #E9A9DF">la prossima partenza.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #DCC8DD">Annunciamo ogni evento su Instagram e a chi ha il Passaporto del Gusto, prima che finiscano i posti.</p>
+</div>
+<a href="https://www.instagram.com/keikmodena/" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 18px; padding: 0 30px; min-height: 60px; border-radius: 999px; white-space: nowrap">Seguici su Instagram</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 32px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">GATE</span><span style="font-size: 17px; font-weight: 600">Via Canalino 51, Modena</span><a href="https://maps.google.com/?q=Via+Canalino+51+Modena" style="color: #FFFFFF; font-size: 15px">Come arrivare</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">APERTI</span><span style="font-size: 17px; font-weight: 600">Tutti i giorni fino alle 20</span><span style="font-size: 15px; color: #DCC8DD">venerdì e sabato fino alle 22</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CONTATTI</span><a href="https://wa.me/393534732354" style="color: #FFFFFF; font-size: 17px; font-weight: 600">WhatsApp 353 4732354</a><a href="tel:+390598396468" style="color: #DCC8DD; font-size: 15px">Telefono 059 8396468</a></div>
+</div>
+</div>
+</section>
+
+<footer style="background: #160419; color: #B99BBC; padding: 28px 0 96px; font-size: 13px">
+<div class="e-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
+<span>© 2026 Keik di Debbia Elena Karen Edelweiss SNC · P.IVA 03764210369 · Via Canalino 51, 41121 Modena</span>
+<span style="display: flex; gap: 16px"><a href="#top" style="color: #B99BBC">Privacy</a><a href="#top" style="color: #B99BBC">Cookie</a></span>
+</div>
+</footer>
+
+<div class="e-sticky" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 12px 16px 16px; background: #1E0623; border-top: 1px solid rgba(255,255,255,0.12); gap: 10px; align-items: center">
+<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #CDB4CF"><strong style="font-size: 15px; color: #FFFFFF">Prossimo: mer 21 ottobre</strong>laboratorio torte di Halloween</span>
+<a href="#partenze" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
+</div>
+
+</div>
+</template>
+<script type="text/x-dc" id="dc-code">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.clock = setInterval(() => this.setState({ now: Date.now() }), 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.clock);
+  }
+  renderVals() {
+    const st = this.state || {};
+    const sel = typeof st.ev === 'number' ? st.ev : 0;
+    const wa = (t) => 'https://wa.me/393534732354?text=' + encodeURIComponent(t);
+    const data = [
+      { dow: 'MER', day: '21', mon: 'OTT', title: 'Laboratorio torte di Halloween', short: 'Turni 17:00 e 18:30 · dai 6 anni', status: 'IMBARCO', tag: 'LABORATORIO · PER GRANDI E PICCOLI', when: 'MERCOLEDÌ 21 OTTOBRE · ORE 17:00 O 18:30',
+        text: 'Un pomeriggio per decorare la tua torta di Halloween con il nostro laboratorio di pasticceria. Ti diamo il kit, ti seguiamo passo passo e la torta la porti a casa. La merenda è inclusa.',
+        facts: ['Due turni: 17:00 e 18:30, 15 posti a turno', 'Kit incluso: mini set per decorare, sac à poche con colori e codette', 'Merenda inclusa: mini brownie, mini cinnamon roll e un drink', 'Dai 6 anni in su · prenotazione entro il 18 ottobre'],
+        img: 'assets/img/cc6245ccd849029ff803ebc5c7ba6dc8.jpg', alt: 'Il kit del laboratorio: mini torta Happy Halloween, sac à poche arancio, verde e nero, codette, mini brownie, cinnamon roll e un drink', pos: 'center 55%', cta: 'Prenota il turno su WhatsApp', msg: 'Ciao KEIK! Vorrei prenotare il laboratorio torte di Halloween del 21 ottobre' },
+      { dow: 'SAB', day: '31', mon: 'OTT', title: 'Treat or Trick · apericena', short: 'Drink mostruosi e burger stregati', status: 'IN ORARIO', tag: 'SERATA A TEMA · HALLOWEEN', when: 'SABATO 31 OTTOBRE · SERA',
+        text: 'La notte di Halloween la passiamo a bordo: apericena a tema, drink mostruosi e burger stregati, con la sala vestita per l’occasione. Non serve caparra per prenotare.',
+        facts: ['Apericena a tema Halloween', 'Drink speciali a tema mostri', 'Burger stregati in edizione limitata', 'Prenotazione senza caparra'],
+        img: 'assets/img/b776e134616dd6523cb27a8110cd643c.jpg', alt: 'Lo staff di KEIK davanti all’allestimento di Halloween', pos: 'center 35%', cta: 'Prenota il tavolo', href: 'https://pnssm.pro/a16isyw' }
+    ];
+    const events = data.map((e, i) => ({
+      dow: e.dow, day: e.day, mon: e.mon, title: e.title, short: e.short, status: e.status,
+      stBg: e.status === 'IMBARCO' ? '#FAE609' : 'rgba(255,255,255,0.1)', stFg: e.status === 'IMBARCO' ? '#1E0623' : '#E4D3E5',
+      pressed: i === sel ? 'true' : 'false', bg: i === sel ? 'rgba(233,169,223,0.16)' : 'transparent', border: i === sel ? '#E9A9DF' : 'transparent',
+      pick: () => this.setState({ ev: i })
+    }));
+    const c = data.at(sel);
+    const cur = Object.assign({}, c, { facts: c.facts.map((t) => ({ t: t })), href: c.href || wa(c.msg) });
+    const now = typeof st.now === 'number' ? st.now : Date.now();
+    const pad = (n) => String(n).padStart(2, '0');
+    const weeks = [
+      { tue: '6 ott', reveal: '2026-10-05T08:00:00+02:00', flavor: 'al pistacchio' },
+      { tue: '13 ott', reveal: '2026-10-12T08:00:00+02:00', flavor: 'Biscoff' },
+      { tue: '20 ott', reveal: '2026-10-19T08:00:00+02:00', flavor: 'al cioccolato bianco' },
+      { tue: '27 ott', reveal: '2026-10-26T08:00:00+01:00', flavor: 'pumpkin' }
+    ];
+    const tueTime = (w) => new Date(w.reveal).getTime() + 86400000;
+    const matcha = weeks.map((w, i) => {
+      const left = new Date(w.reveal).getTime() - now;
+      const open = left <= 0;
+      const past = now > tueTime(w) + 86400000;
+      const sec = Math.max(0, Math.floor(left / 1000));
+      return {
+        n: i + 1, date: 'mar ' + w.tue, open: open, locked: !open,
+        flavor: open ? w.flavor : '',
+        label: past ? 'GIÀ PARTITO' : (now >= tueTime(w) - 8 * 3600000 ? 'OGGI AL BANCO' : 'SVELATO · MARTEDÌ AL BANCO'),
+        headBg: open ? (past ? '#E6ECE5' : '#2F7D4F') : '#1E0623', headFg: open ? (past ? '#4F6B58' : '#FFFFFF') : '#E9C6E6',
+        dd: pad(Math.floor(sec / 86400)), hh: pad(Math.floor(sec % 86400 / 3600)), mm: pad(Math.floor(sec % 3600 / 60)), ss: pad(sec % 60),
+        revealText: 'Lunedì mattina alle 8, il giorno prima'
+      };
+    });
+    const past = [
+      { code: 'MEX', name: 'Messico', text: 'All you can nachos, Colora il tuo vaso, Aperitivo in lingua e il torneo di Throw Throw Burrito.' },
+      { code: 'KOR', name: 'Corea', text: 'La serie di aperitivi coreani, con piatti e drink a tema.' },
+      { code: 'MAG', name: 'Scuola di magia', text: 'La Sfida dell’Alchimista con gli odori misteriosi e il Quiz dei Maghi, per i nostri 13 anni.' },
+      { code: 'JPN', name: 'Giappone', text: 'Il mese del Giappone, con la vetrina dipinta a tema.' }
+    ];
+    return { events, cur, matcha, past };
+  }
+}
+</script>
+<script>window.__DC_PROPS__ = {};window.__DC_OVERRIDE__ = {};</script>
+<script src="assets/js/morphdom.min.js"></script>
+<script src="assets/js/keik-dc.js"></script>
+</body>
+</html>
