@@ -26,12 +26,39 @@
     return base;
   }
 
-  function str(v) { return v == null || v === false ? (v === false ? 'false' : '') : String(v); }
-  function interp(text, scopes) { return text.replace(HOLE, function (_, e) { return str(lookup(e, scopes)); }); }
+  // --- i18n: dizionario caricato da assets/i18n/<lingua>.js (window.__KI18N__), lingua in window.__KLANG__
+  var LANG = window.__KLANG__ || 'it';
+  var DICT = LANG !== 'it' ? (window.__KI18N__ || null) : null;
+  var TRA = { alt: 1, 'aria-label': 1, placeholder: 1, title: 1 };
+  function norm(s) { return s.replace(/\s+/g, ' ').replace(/'/g, '\u2019').trim(); }
+  function t(s) {
+    if (!DICT || typeof s !== 'string') return s;
+    var k = norm(s);
+    if (!k) return s;
+    var v = DICT[k];
+    if (v == null) {
+      // ripiego: stessa frase con numeri diversi (es. "4 persone" -> "{n} persone")
+      var nums = k.match(/\d+/g);
+      if (!nums || nums.length > 2) return s;
+      v = DICT[k.replace(/\d+/g, '{n}')];
+      if (v == null) return s;
+      var j = 0;
+      v = v.replace(/\{n\}/g, function () { return nums[j++]; });
+    }
+    return /^\s*/.exec(s)[0] + v + /\s*$/.exec(s)[0];
+  }
+  window.KEIK_T = t;
 
-  function Renderer() { this.handlers = []; this.refs = []; }
+  function str(v) { return v == null || v === false ? (v === false ? 'false' : '') : String(v); }
+  function interp(text, scopes, tr) { return text.replace(HOLE, function (_, e) { var v = lookup(e, scopes); return str(tr ? t(v) : v); }); }
+
+  function Renderer() { this.handlers = []; this.refs = []; this.notr = 0; }
   Renderer.prototype.node = function (n, scopes, out) {
-    if (n.nodeType === 3) { out.push(esc(interp(n.nodeValue, scopes)).replace(/&quot;/g, '"')); return; }
+    if (n.nodeType === 3) {
+      var tx = this.notr ? n.nodeValue : t(n.nodeValue);
+      out.push(esc(interp(tx, scopes, !this.notr)).replace(/&quot;/g, '"'));
+      return;
+    }
     if (n.nodeType !== 1) return;
     var tag = n.localName;
     if (tag === 'sc-for') {
@@ -48,6 +75,9 @@
       if (v) this.kids(n, scopes, out);
       return;
     }
+    var nt = n.hasAttribute && n.hasAttribute('data-notr');
+    if (nt) this.notr++;
+    var trA = !this.notr;
     out.push('<' + tag);
     for (var a = 0; a < n.attributes.length; a++) {
       var at = n.attributes[a], name = at.name, val = at.value, lname = name.toLowerCase();
@@ -67,15 +97,18 @@
         var raw = lookup(m[1], scopes);
         if (BOOL[lname]) { if (raw && raw !== 'false') out.push(' ' + name); continue; }
         if (raw == null) continue;
-        out.push(' ' + name + '="' + esc(raw) + '"');
+        out.push(' ' + name + '="' + esc(trA && TRA[lname] ? t(raw) : raw) + '"');
         continue;
       }
-      out.push(' ' + name + '="' + esc(val.indexOf('{{') >= 0 ? interp(val, scopes) : val) + '"');
+      var tv = trA && TRA[lname];
+      if (tv) val = t(val);
+      out.push(' ' + name + '="' + esc(val.indexOf('{{') >= 0 ? interp(val, scopes, tv) : val) + '"');
     }
     out.push('>');
-    if (VOID[tag]) return;
+    if (VOID[tag]) { if (nt) this.notr--; return; }
     if (tag === 'template') { out.push(n.innerHTML); } else { this.kids(n.content || n, scopes, out); }
     out.push('</' + tag + '>');
+    if (nt) this.notr--;
   };
   Renderer.prototype.kids = function (n, scopes, out) {
     for (var c = n.firstChild; c; c = c.nextSibling) this.node(c, scopes, out);
@@ -90,6 +123,31 @@
   };
   DCLogic.prototype.forceUpdate = function () { this.__render(); };
   DCLogic.prototype.renderVals = function () { return {}; };
+  DCLogic.prototype.t = t;
+  DCLogic.prototype.lang = LANG;
+
+  function syncLang() {
+    var b = document.querySelectorAll('[data-lang]');
+    for (var i = 0; i < b.length; i++) b[i].setAttribute('aria-pressed', b[i].getAttribute('data-lang') === LANG ? 'true' : 'false');
+  }
+  document.addEventListener('click', function (ev) {
+    var el = ev.target && ev.target.closest ? ev.target.closest('[data-lang]') : null;
+    if (!el) return;
+    ev.preventDefault();
+    var l = el.getAttribute('data-lang');
+    if (l === LANG) return;
+    var ok = false;
+    try { localStorage.setItem('keik-lang', l); ok = localStorage.getItem('keik-lang') === l; } catch (e) {}
+    var u = new URL(location.href);
+    if (ok) u.searchParams.delete('lang'); else u.searchParams.set('lang', l);
+    location.href = u.toString();
+  });
+  function translateHead() {
+    if (!DICT) return;
+    document.title = t(document.title);
+    var ms = document.querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"]');
+    for (var i = 0; i < ms.length; i++) ms[i].setAttribute('content', t(ms[i].getAttribute('content') || ''));
+  }
   window.DCLogic = DCLogic;
 
   function boot() {
@@ -130,6 +188,7 @@
           return true;
         }
       });
+      syncLang();
       var refEls = root.querySelectorAll('[data-dc-ref]');
       for (var i = 0; i < refEls.length; i++) {
         var fn = current.refs[+refEls[i].getAttribute('data-dc-ref')];
@@ -158,6 +217,7 @@
       }, capture);
     });
     window.addEventListener('pagehide', function () { if (typeof inst.componentWillUnmount === 'function') inst.componentWillUnmount(); });
+    translateHead();
     inst.__render();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();

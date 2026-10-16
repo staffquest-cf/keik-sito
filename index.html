@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<script>(function(){var L=['it','en','es','fr'],l=null,q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1];if(q&&L.indexOf(q)>=0){l=q;try{localStorage.setItem('keik-lang',q)}catch(e){}}if(!l){try{l=localStorage.getItem('keik-lang')}catch(e){}if(L.indexOf(l)<0)l=null;}if(!l&&/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent))l='it';if(!l){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'it'],f=null;for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='it'){f='it';break;}if(!f&&L.indexOf(c)>0)f=c;}l=f||'en';}window.__KLANG__=l;document.documentElement.lang=l;if(l!=='it')document.write('<script src="assets/i18n/'+l+'.js"><\/script>');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KEIK · All Day Kitchen</title>
 <style>html,body{overflow-x:clip}</style>
@@ -73,7 +74,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .k-hide-s{display:none !important}
 .k-foot{grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important}
 }
-/* KK */ .kk-bar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.kk-bar::-webkit-scrollbar{display:none}.kk-bar a{flex-shrink:0;white-space:nowrap}.kk-bar a:hover{background:rgba(255,255,255,0.12) !important}.kk-sitemap{display:grid;grid-template-columns:1.2fr repeat(3,minmax(0,1fr));gap:32px}.kk-sitemap a:hover{color:#FFFFFF !important}@media (max-width:960px){.kk-sitemap{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:24px !important}.kk-inner{padding-left:16px !important;padding-right:16px !important}}
+/* KK */ .kk-bar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.kk-bar::-webkit-scrollbar{display:none}.kk-bar a{flex-shrink:0;white-space:nowrap}.kk-bar a:hover{background:rgba(255,255,255,0.12) !important}.kk-sitemap{display:grid;grid-template-columns:1.2fr repeat(3,minmax(0,1fr));gap:32px}.kk-sitemap a:hover{color:#FFFFFF !important}.kk-lang{display:inline-flex;gap:3px;flex-shrink:0;margin-left:6px}.kk-lang button{font:500 12px "DM Mono",monospace;min-width:36px;min-height:30px;border-radius:6px;border:1px solid rgba(255,255,255,0.28);background:transparent;color:#F1E3F0;cursor:pointer;padding:0 6px}.kk-lang button[aria-pressed="true"],.kk-langm[aria-pressed="true"]{background:#FFFFFF !important;color:#2A0830 !important;border-color:#FFFFFF !important}@media (max-width:960px){.kk-sitemap{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:24px !important}.kk-inner{padding-left:16px !important;padding-right:16px !important}}
 </style>
 </head>
 <body>
@@ -85,11 +86,11 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="background: #2A0830; color: #F3E6F2; font-size: 14px">
 <div class="k-wrap" style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; min-height: 44px">
 <p style="margin: 0; display: flex; gap: 12px; align-items: center"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); padding: 3px 8px; border-radius: 4px">NUOVO MENU</span>Autunno Inverno: Lava Pancakes all'ube ed Eggs Benedict dal tocco venezuelano</p>
-<nav aria-label="Lingua" style="display: flex; gap: 4px">
-<button type="button" aria-pressed="true" style="font: 500 13px 'DM Mono', monospace; background: #FFFFFF; color: #2A0830; border: 0; border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">IT</button>
-<button type="button" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">EN</button>
-<button type="button" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">ES</button>
-<button type="button" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">FR</button>
+<nav aria-label="Lingua" data-notr="" style="display: flex; gap: 4px">
+<button type="button" class="kk-langm" data-lang="it" lang="it" aria-label="Italiano" aria-pressed="true" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">IT</button>
+<button type="button" class="kk-langm" data-lang="en" lang="en" aria-label="English" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">EN</button>
+<button type="button" class="kk-langm" data-lang="es" lang="es" aria-label="Español" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">ES</button>
+<button type="button" class="kk-langm" data-lang="fr" lang="fr" aria-label="Français" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">FR</button>
 </nav>
 </div>
 </div>
@@ -410,7 +411,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 15px; line-height: 1.5; color: #DCC8DD">
 <span style="display: inline-flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14z"></path><path d="M5 19l7-7"></path></svg>Opzioni vegane e senza lattosio</span>
-<span style="display: inline-flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>Menu senza glutine dedicato: chiedilo allo staff. I piatti naturalmente senza glutine possono contenere tracce e non sono certificati per celiaci.</span>
+<span style="display: inline-flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>Per chi evita il glutine c’è un menu dedicato. Non abbiamo prodotti adatti alla celiachia: possono esserci tracce.</span>
 </div>
 </div>
 </section>
@@ -501,14 +502,14 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <path d="M536 96 v10 M529 120 l7-14 7 14 M527 120 h18 v70 h-18 z M527 138 h18 M527 156 h18 M527 174 h18 M533 126 h6" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
 
 <path d="M82 170 C 210 20, 400 20, 516 158" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="3 7" stroke-linecap="round"></path>
-<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="494.88225077967166" opacity="1.000"></path>
+<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="493.84213284114077" opacity="1.000"></path>
 
 <circle cx="82" cy="170" r="4.5" fill="#FAE609"></circle>
 <circle cx="516" cy="158" r="5.00" stroke="#FFFFFF" stroke-width="1.5" opacity="0"></circle>
 <circle cx="516" cy="158" r="4" fill="#FFFFFF"></circle>
 
-<g opacity="0.268" transform="translate(86.01 170.57) rotate(-48.70) scale(0.733)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
-<g transform="translate(85.79 165.62) rotate(-48.70) scale(0.916)" opacity="1.000"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
+<g opacity="0.271" transform="translate(86.74 169.96) rotate(-48.55) scale(0.735)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
+<g transform="translate(86.48 164.84) rotate(-48.55) scale(0.919)" opacity="1.000"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
 
 <text x="34" y="214" fill="#FFFFFF" style="font: 500 12px 'DM Mono', monospace; letter-spacing: 0.08em">CCS · CARACAS</text>
 <text x="566" y="214" fill="#FFFFFF" text-anchor="end" style="font: 500 12px 'DM Mono', monospace; letter-spacing: 0.08em">MOD · MODENA</text>
@@ -630,11 +631,11 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="background: #2A0830; color: #F3E6F2; font-size: 14px">
 <div class="k-wrap" style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; min-height: 44px">
 <p style="margin: 0; display: flex; gap: 12px; align-items: center"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); padding: 3px 8px; border-radius: 4px">NUOVO MENU</span>Autunno Inverno: Lava Pancakes all'ube ed Eggs Benedict dal tocco venezuelano</p>
-<nav aria-label="Lingua" style="display: flex; gap: 4px">
-<button type="button" aria-pressed="true" style="font: 500 13px 'DM Mono', monospace; background: #FFFFFF; color: #2A0830; border: 0; border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">IT</button>
-<button type="button" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">EN</button>
-<button type="button" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">ES</button>
-<button type="button" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">FR</button>
+<nav aria-label="Lingua" data-notr style="display: flex; gap: 4px">
+<button type="button" class="kk-langm" data-lang="it" lang="it" aria-label="Italiano" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">IT</button>
+<button type="button" class="kk-langm" data-lang="en" lang="en" aria-label="English" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">EN</button>
+<button type="button" class="kk-langm" data-lang="es" lang="es" aria-label="Español" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">ES</button>
+<button type="button" class="kk-langm" data-lang="fr" lang="fr" aria-label="Français" aria-pressed="false" style="font: 500 13px 'DM Mono', monospace; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; min-width: 44px; min-height: 32px; cursor: pointer">FR</button>
 </nav>
 </div>
 </div>
@@ -822,7 +823,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 15px; line-height: 1.5; color: #DCC8DD">
 <span style="display: inline-flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14z"></path><path d="M5 19l7-7"></path></svg>Opzioni vegane e senza lattosio</span>
-<span style="display: inline-flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>Menu senza glutine dedicato: chiedilo allo staff. I piatti naturalmente senza glutine possono contenere tracce e non sono certificati per celiaci.</span>
+<span style="display: inline-flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>Per chi evita il glutine c’è un menu dedicato. Non abbiamo prodotti adatti alla celiachia: possono esserci tracce.</span>
 </div>
 </div>
 </section>
