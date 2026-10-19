@@ -5,7 +5,7 @@
 <script>(function(){var L=['it','en','es','fr'],l=null,q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1];if(q&&L.indexOf(q)>=0){l=q;try{localStorage.setItem('keik-lang',q)}catch(e){}}if(!l){try{l=localStorage.getItem('keik-lang')}catch(e){}if(L.indexOf(l)<0)l=null;}if(!l&&/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent))l='it';if(!l){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'it'],f=null;for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='it'){f='it';break;}if(!f&&L.indexOf(c)>0)f=c;}l=f||'en';}window.__KLANG__=l;document.documentElement.lang=l;if(l!=='it')document.write('<script src="assets/i18n/'+l+'.js"><\/script>');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Menu all day · KEIK Modena</title>
-<style>html,body{overflow-x:clip}:where(img[data-kki]){height:auto}@media (max-width:960px){#dc-root a:not([style*="padding"]):not([style*="min-height"]):not(.m-dot){padding-top:14px;padding-bottom:14px;margin-top:-14px;margin-bottom:-14px}.kk-sitemap>div,.k-foot>div{gap:0!important}.kk-sitemap a,.k-foot a{display:flex!important;align-items:center;min-height:44px;padding:0!important;margin:0!important}.kk-bar{padding-top:1px!important;padding-bottom:1px!important}.kk-bar a{min-height:44px!important}.kk-lang button,.kk-langm{min-height:44px!important;min-width:44px!important}.m-catnav a,.m-explore button,.m-row button,.m-bar button{min-height:44px!important}.m-dot::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;transform:translate(-50%,-50%)}input[type=checkbox],input[type=radio]{width:24px!important;height:24px!important;min-width:24px;flex-shrink:0}input[type=range]{min-height:44px}input[type=search],input[type=text],input[type=email],input[type=tel]{min-height:44px;font-size:max(16px,1em)}}</style>
+<style>html,body{overflow-x:clip}:where(img[data-kki]){height:auto}@media (max-width:960px){#dc-root a:not([style*="padding"]):not([style*="min-height"]):not(.m-dot){padding-top:14px;padding-bottom:14px;margin-top:-14px;margin-bottom:-14px}.kk-sitemap>div,.k-foot>div{gap:0!important}.kk-sitemap a,.k-foot a{display:flex!important;align-items:center;min-height:44px;padding:0!important;margin:0!important}.kk-bar{padding-top:1px!important;padding-bottom:1px!important}.kk-bar a{min-height:44px!important}.kk-lang button,.kk-langm{min-height:44px!important;min-width:44px!important}.m-catnav a,.m-explore button,.m-row button,.m-bar button{min-height:44px!important}.m-dot::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;transform:translate(-50%,-50%)}[style*="font-size: 9px"],[style*="font-size: 10px"],[style*="font-size: 11px"],.m-dotlabel{font-size:12px!important}input[type=checkbox],input[type=radio]{width:24px!important;height:24px!important;min-width:24px;flex-shrink:0}input[type=range]{min-height:44px}input[type=search],input[type=text],input[type=email],input[type=tel]{min-height:44px;font-size:max(16px,1em)}}</style>
 <link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Figtree:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
@@ -54,6 +54,8 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .m-catnav{display:flex !important}
 .m-dotlabel{display:none}
 .m-dot-on .m-dotlabel{display:block}
+.m-track .m-dot:first-of-type{transform:translate(-8px,-50%);align-items:flex-start}
+.m-track .m-dot:last-of-type{transform:translate(calc(-100% + 8px),-50%);align-items:flex-end}
 }
 .m-catnav{display:none}
 .m-chips,.m-res{scrollbar-width:none}.m-chips::-webkit-scrollbar,.m-res::-webkit-scrollbar{display:none}
@@ -69,7 +71,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 
 
-<nav aria-label="Pagine del sito" style="position: sticky; top: 0; z-index: 40; background: #2A0830; font-family: 'Figtree', system-ui, sans-serif"><div class="kk-inner kk-bar" style="max-width: 1200px; margin: 0 auto; padding: 6px 40px; box-sizing: border-box; align-items: center"><a href="brunch.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Brunch</a><a href="pranzo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pranzo</a><a href="merenda.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Merenda</a><a href="aperitivo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Aperitivo</a><a href="menu.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #2A0830; background: #FFFFFF">Menu</a><a href="eventi.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Eventi</a><a href="chi-siamo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Chi siamo</a><a href="contatti.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Dove siamo</a><a href="prenota.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; color: #2A0830; background: #F2B8E6; margin-left: auto">Prenota</a><span class="kk-lang" data-notr="" role="group" aria-label="Lingua / Language"><button type="button" data-lang="it" lang="it" aria-label="Italiano" aria-pressed="true">IT</button><button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button><button type="button" data-lang="es" lang="es" aria-label="Español" aria-pressed="false">ES</button><button type="button" data-lang="fr" lang="fr" aria-label="Français" aria-pressed="false">FR</button></span></div></nav>
+<nav aria-label="Pagine del sito" style="position: sticky; top: 0; z-index: 40; background: #2A0830; font-family: 'Figtree', system-ui, sans-serif"><div class="kk-inner kk-bar" style="max-width: 1200px; margin: 0 auto; padding: 6px 40px; box-sizing: border-box; align-items: center"><a href="brunch.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Brunch</a><a href="pranzo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pranzo</a><a href="merenda.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Merenda</a><a href="aperitivo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Aperitivo</a><a href="menu.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #2A0830; background: #FFFFFF">Menu</a><a href="eventi.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Eventi</a><a href="chi-siamo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Chi siamo</a><a href="contatti.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Dove siamo</a><a href="prenota.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; color: #2A0830; background: #F2B8E6; margin-left: auto">Prenota</a><span class="kk-lang" data-notr="" role="group" aria-label="Lingua / Language"><button type="button" data-lang="it" lang="it" aria-label="IT · Italiano" aria-pressed="true">IT</button><button type="button" data-lang="en" lang="en" aria-label="EN · English" aria-pressed="false">EN</button><button type="button" data-lang="es" lang="es" aria-label="ES · Español" aria-pressed="false">ES</button><button type="button" data-lang="fr" lang="fr" aria-label="FR · Français" aria-pressed="false">FR</button></span></div></nav>
 
 <header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
 <div class="m-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px">
@@ -114,7 +116,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <button type="button" aria-pressed="false" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer; white-space: nowrap">🍹 Aperitivo</button>
 
 </div>
-<p aria-live="polite" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.2; color: #3B0B40">Sono le 13:33 a Modena: è l’ora di staccare davvero</p>
+<p aria-live="polite" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.2; color: #3B0B40">Sono le 13:49 a Modena: è l’ora di staccare davvero</p>
 
 
 <div class="m-res" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px">
@@ -182,42 +184,42 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <a href="#pan" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.1250)" aria-label="Pancakes">
 <span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
-<span class="m-dotlabel" style="color: #8A6E8E">Pancakes</span>
+<span class="m-dotlabel" style="color: #6B4A70">Pancakes</span>
 </a>
 
 <a href="#fus" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.2500)" aria-label="Fusion">
 <span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
-<span class="m-dotlabel" style="color: #8A6E8E">Fusion</span>
+<span class="m-dotlabel" style="color: #6B4A70">Fusion</span>
 </a>
 
 <a href="#toa" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.3750)" aria-label="Toast">
 <span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
-<span class="m-dotlabel" style="color: #8A6E8E">Toast</span>
+<span class="m-dotlabel" style="color: #6B4A70">Toast</span>
 </a>
 
 <a href="#bur" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.5000)" aria-label="Burger">
 <span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
-<span class="m-dotlabel" style="color: #8A6E8E">Burger</span>
+<span class="m-dotlabel" style="color: #6B4A70">Burger</span>
 </a>
 
 <a href="#ext" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.6250)" aria-label="Sides &amp; Extras">
 <span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
-<span class="m-dotlabel" style="color: #8A6E8E">Sides &amp; Extras</span>
+<span class="m-dotlabel" style="color: #6B4A70">Sides &amp; Extras</span>
 </a>
 
 <a href="#dol" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.7500)" aria-label="Dolci">
 <span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
-<span class="m-dotlabel" style="color: #8A6E8E">Dolci</span>
+<span class="m-dotlabel" style="color: #6B4A70">Dolci</span>
 </a>
 
 <a href="#caf" class="m-dot " style="left: calc(16px + (100% - 32px) * 0.8750)" aria-label="Caffè">
 <span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
-<span class="m-dotlabel" style="color: #8A6E8E">Caffè</span>
+<span class="m-dotlabel" style="color: #6B4A70">Caffè</span>
 </a>
 
 <a href="#dri" class="m-dot " style="left: calc(16px + (100% - 32px) * 1.0000)" aria-label="Drink">
 <span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid #D9C3DB; background: #FFFFFF; transition: background-color .3s ease, border-color .3s ease"></span>
-<span class="m-dotlabel" style="color: #8A6E8E">Drink</span>
+<span class="m-dotlabel" style="color: #6B4A70">Drink</span>
 </a>
 
 <span class="m-plane" aria-hidden="true" style="left: calc(0% + 16px);"><span class="m-plane-in"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display: block; transform: rotate(90deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span></span>
@@ -313,7 +315,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Ideale per 2-3 persone</p>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 4 · 7 · 10 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 4 · 7 · 10 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">32,90 €</span>
@@ -343,7 +345,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Ideale per 2 persone</p>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 6 · 7 · 9 · 10 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 6 · 7 · 9 · 10 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">20,90 €</span>
@@ -401,7 +403,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <button type="button" aria-expanded="false" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px dashed #91007D; background: #FFFFFF; color: #91007D; font: 600 12px 'Figtree', sans-serif; cursor: pointer">✈ Per i viaggiatori curiosi: Cos’è l’ube?</button>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">11,90 €</span>
@@ -431,7 +433,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Scegli la tua crema: Nutella o Bueno</p>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Medium 9,90 €
@@ -462,7 +464,7 @@ Regular 11,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7 · 8</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7 · 8</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Medium 8,90 €
@@ -493,7 +495,7 @@ Regular 10,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">11,90 €</span>
@@ -523,7 +525,7 @@ Regular 10,90 €</span>
 
 <p style="margin: 0; font-size: 13px; color: #91007D">Assaggialo con sciroppo d’acero +2,50 € →</p>
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Medium 10,90 €
@@ -554,7 +556,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-size: 13px; color: #91007D">Abbinalo a un Sunset &amp; Chill +8,00 € →</p>
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 4 · 7 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 4 · 7 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">15,90 €</span>
@@ -587,7 +589,7 @@ Regular 12,90 €</span>
 <button type="button" aria-expanded="false" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px dashed #91007D; background: #FFFFFF; color: #91007D; font: 600 12px 'Figtree', sans-serif; cursor: pointer">✈ Per i viaggiatori curiosi: Com’è la nostra salsa HoneyKara?</button>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,90 €</span>
@@ -642,7 +644,7 @@ Regular 12,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €</span>
@@ -675,7 +677,7 @@ Regular 12,90 €</span>
 <button type="button" aria-expanded="false" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px dashed #91007D; background: #FFFFFF; color: #91007D; font: 600 12px 'Figtree', sans-serif; cursor: pointer">✈ Per i viaggiatori curiosi: Cos’è il formaggio Halloumi?</button>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7 · 9 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7 · 9 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,90 €</span>
@@ -708,7 +710,7 @@ Regular 12,90 €</span>
 <button type="button" aria-expanded="false" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px dashed #91007D; background: #FFFFFF; color: #91007D; font: 600 12px 'Figtree', sans-serif; cursor: pointer">✈ Per i viaggiatori curiosi: Cosa sono i tostones?</button>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">11,90 €</span>
@@ -738,7 +740,7 @@ Regular 12,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €
@@ -789,7 +791,7 @@ Regular 12,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">9,90 €
@@ -820,7 +822,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-size: 13px; color: #91007D">Abbinalo a uno Spritz +8,00 € →</p>
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 4 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 4 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">14,90 €
@@ -851,7 +853,7 @@ Doppio salmone 18,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 11</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 11</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">10,90 €
@@ -885,7 +887,7 @@ Doppio uovo 12,40 €</span>
 <button type="button" aria-expanded="false" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px dashed #91007D; background: #FFFFFF; color: #91007D; font: 600 12px 'Figtree', sans-serif; cursor: pointer">✈ Per i viaggiatori curiosi: Cos’è la salsa olandese?</button>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 4 · 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 4 · 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">15,90 €</span>
@@ -935,7 +937,7 @@ Doppio uovo 12,40 €</span>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Aggiungi: patatine +3,00 € · Sweet Potato Fries +5,00 €</p>
 <p style="margin: 0; font-size: 13px; color: #91007D">Abbinalo a una Birra La Mi’ +6,50 € →</p>
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 9 · 10</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 9 · 10</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Singolo 11,90 €
@@ -966,7 +968,7 @@ Doppio 14,90 €</span>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Aggiungi: patatine +3,00 € · Sweet Potato Fries +5,00 €</p>
 <p style="margin: 0; font-size: 13px; color: #91007D">Assaggialo con bacon +3,00 € →</p>
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Singolo 12,90 €
@@ -1000,7 +1002,7 @@ Doppio 15,90 €</span>
 <button type="button" aria-expanded="false" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px dashed #91007D; background: #FFFFFF; color: #91007D; font: 600 12px 'Figtree', sans-serif; cursor: pointer">✈ Per i viaggiatori curiosi: Cos’è il chipotle?</button>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €
@@ -1034,7 +1036,7 @@ Doppio 15,90 €</span>
 <button type="button" aria-expanded="false" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px dashed #91007D; background: #FFFFFF; color: #91007D; font: 600 12px 'Figtree', sans-serif; cursor: pointer">✈ Per i viaggiatori curiosi: Cos’è il kimchi?</button>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 6 · 9</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 6 · 9</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €
@@ -1180,7 +1182,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
@@ -1210,7 +1212,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
@@ -1240,7 +1242,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
@@ -1269,7 +1271,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
@@ -1298,7 +1300,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
@@ -1328,7 +1330,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3 · 5 · 7 · 8</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 5 · 7 · 8</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
@@ -1358,7 +1360,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1 · 3</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
@@ -1388,7 +1390,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
@@ -1437,7 +1439,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">5,00 €</span>
@@ -1467,7 +1469,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,50 €</span>
@@ -1497,7 +1499,7 @@ Doppio 15,90 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Classico 4,50 €
@@ -1528,7 +1530,7 @@ Al mango 5,50 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,50 €</span>
@@ -1557,7 +1559,7 @@ Al mango 5,50 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 7</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,50 €</span>
@@ -1586,7 +1588,7 @@ Al mango 5,50 €</span>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Assaggialo freddo. Aromatizzabile con vaniglia o nocciola +1,00 €</p>
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI –</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI –</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,00 €</span>
@@ -1664,7 +1666,7 @@ Al mango 5,50 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI –</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI –</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">5,90 €</span>
@@ -1694,7 +1696,7 @@ Al mango 5,50 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI –</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI –</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">8,00 €</span>
@@ -1724,7 +1726,7 @@ Al mango 5,50 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 12</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 12</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,00 €</span>
@@ -1754,7 +1756,7 @@ Al mango 5,50 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 12</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 12</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">8,00 €</span>
@@ -1783,7 +1785,7 @@ Al mango 5,50 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 12</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 12</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,00 €</span>
@@ -1813,7 +1815,7 @@ Al mango 5,50 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 12</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 12</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">9,00 €</span>
@@ -1843,7 +1845,7 @@ Al mango 5,50 €</span>
 
 
 
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI 1</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">6,50 €</span>
@@ -1974,7 +1976,7 @@ Al mango 5,50 €</span>
 
 <!-- HEADER -->
 <!-- KK-SITEBAR -->
-<nav aria-label="Pagine del sito" style="position: sticky; top: 0; z-index: 40; background: #2A0830; font-family: 'Figtree', system-ui, sans-serif"><div class="kk-inner kk-bar" style="max-width: 1200px; margin: 0 auto; padding: 6px 40px; box-sizing: border-box; align-items: center"><a href="brunch.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Brunch</a><a href="pranzo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pranzo</a><a href="merenda.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Merenda</a><a href="aperitivo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Aperitivo</a><a href="menu.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #2A0830; background: #FFFFFF">Menu</a><a href="eventi.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Eventi</a><a href="chi-siamo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Chi siamo</a><a href="contatti.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Dove siamo</a><a href="prenota.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; color: #2A0830; background: #F2B8E6; margin-left: auto">Prenota</a><span class="kk-lang" data-notr role="group" aria-label="Lingua / Language"><button type="button" data-lang="it" lang="it" aria-label="Italiano">IT</button><button type="button" data-lang="en" lang="en" aria-label="English">EN</button><button type="button" data-lang="es" lang="es" aria-label="Español">ES</button><button type="button" data-lang="fr" lang="fr" aria-label="Français">FR</button></span></div></nav>
+<nav aria-label="Pagine del sito" style="position: sticky; top: 0; z-index: 40; background: #2A0830; font-family: 'Figtree', system-ui, sans-serif"><div class="kk-inner kk-bar" style="max-width: 1200px; margin: 0 auto; padding: 6px 40px; box-sizing: border-box; align-items: center"><a href="brunch.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Brunch</a><a href="pranzo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pranzo</a><a href="merenda.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Merenda</a><a href="aperitivo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Aperitivo</a><a href="menu.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #2A0830; background: #FFFFFF">Menu</a><a href="eventi.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Eventi</a><a href="chi-siamo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Chi siamo</a><a href="contatti.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Dove siamo</a><a href="prenota.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; color: #2A0830; background: #F2B8E6; margin-left: auto">Prenota</a><span class="kk-lang" data-notr role="group" aria-label="Lingua / Language"><button type="button" data-lang="it" lang="it" aria-label="IT · Italiano">IT</button><button type="button" data-lang="en" lang="en" aria-label="EN · English">EN</button><button type="button" data-lang="es" lang="es" aria-label="ES · Español">ES</button><button type="button" data-lang="fr" lang="fr" aria-label="FR · Français">FR</button></span></div></nav>
 <!-- /KK-SITEBAR -->
 <header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
 <div class="m-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px">
@@ -2128,7 +2130,7 @@ Al mango 5,50 €</span>
 <button type="button" onClick="{{d.toggleFaq}}" aria-expanded="{{d.faqExp}}" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px dashed #91007D; background: #FFFFFF; color: #91007D; font: 600 12px 'Figtree', sans-serif; cursor: pointer">✈ Per i viaggiatori curiosi: {{d.faqQ}}</button>
 <sc-if value="{{d.faqOpen}}" hint-placeholder-val="{{ false }}"><p class="m-in" style="margin: 0; padding: 10px 12px; border-radius: 12px; background: #F7F2F6; font-size: 14px; line-height: 1.5; color: #3B0B40">{{d.faqA}}</p></sc-if>
 </sc-if>
-<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #8A6E8E">ALLERGENI {{d.allergens}}</p>
+<p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI {{d.allergens}}</p>
 </div>
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">{{d.prices}}</span>
@@ -2741,7 +2743,7 @@ class Component extends DCLogic {
       c.dotLeft = 'calc(16px + (100% - 32px) * ' + (cats.length > 1 ? (i / (cats.length - 1)).toFixed(4) : '0') + ')';
       c.dotBorder = passed ? '#91007D' : '#D9C3DB';
       c.dotFill = on ? '#91007D' : passed ? '#F7E6F3' : '#FFFFFF';
-      c.dotText = on ? '#3B0B40' : '#8A6E8E';
+      c.dotText = on ? '#3B0B40' : '#6B4A70';
       c.dotClass = on ? 'm-dot-on' : '';
       c.chipBg = on ? '#3B0B40' : '#F7F2F6';
       c.chipFg = on ? '#FFFFFF' : '#3B0B40';
