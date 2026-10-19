@@ -238,6 +238,7 @@
             to.value = from.value;
           }
           if (from.tagName === 'IFRAME' && from.getAttribute('src') === to.getAttribute('src')) return false;
+          if (from.tagName === 'DETAILS' && mounted) { if (from.open) to.setAttribute('open', ''); else to.removeAttribute('open'); }
           return true;
         }
       });

@@ -17,7 +17,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<style>html,body{overflow-x:clip}:where(img[data-kki]){height:auto}body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}@media (max-width:960px){body:has([class$="-sticky"]),body:has(.m-bar){padding-bottom:calc(80px + env(safe-area-inset-bottom))}#dc-root a:not([style*="padding"]):not([style*="min-height"]):not(.m-dot){padding-top:14px;padding-bottom:14px;margin-top:-14px;margin-bottom:-14px}.kk-sitemap>div,.k-foot>div{gap:0!important}.kk-sitemap a,.k-foot a{display:flex!important;align-items:center;min-height:44px;padding:0!important;margin:0!important}.kk-bar{padding-top:1px!important;padding-bottom:1px!important}.kk-bar a{min-height:44px!important}.kk-lang button,.kk-langm{min-height:44px!important;min-width:44px!important}.m-catnav a,.m-explore button,.m-row button,.m-bar button{min-height:44px!important}.m-dot::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;transform:translate(-50%,-50%)}[style*="font-size: 9px"],[style*="font-size: 10px"],[style*="font-size: 11px"],.m-dotlabel{font-size:12px!important}input[type=checkbox],input[type=radio]{width:24px!important;height:24px!important;min-width:24px;flex-shrink:0}input[type=range]{min-height:44px}input[type=search],input[type=text],input[type=email],input[type=tel]{min-height:44px;font-size:max(16px,1em)}}</style>
+<style>html,body{overflow-x:clip}summary{cursor:pointer}summary::-webkit-details-marker{display:none}details[open]>summary .kk-s1,details:not([open])>summary .kk-s2{display:none}:where(img[data-kki]){height:auto}body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}@media (max-width:960px){body:has([class$="-sticky"]),body:has(.m-bar){padding-bottom:calc(80px + env(safe-area-inset-bottom))}#dc-root a:not([style*="padding"]):not([style*="min-height"]):not(.m-dot){padding-top:14px;padding-bottom:14px;margin-top:-14px;margin-bottom:-14px}.kk-sitemap>div,.k-foot>div{gap:0!important}.kk-sitemap a,.k-foot a{display:flex!important;align-items:center;min-height:44px;padding:0!important;margin:0!important}.kk-bar{padding-top:1px!important;padding-bottom:1px!important}.kk-bar a{min-height:44px!important}.kk-lang button,.kk-langm{min-height:44px!important;min-width:44px!important}.m-catnav a,.m-explore button,.m-row button,.m-bar button{min-height:44px!important}.m-dot::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;transform:translate(-50%,-50%)}[style*="font-size: 9px"],[style*="font-size: 10px"],[style*="font-size: 11px"],.m-dotlabel{font-size:12px!important}input[type=checkbox],input[type=radio]{width:24px!important;height:24px!important;min-width:24px;flex-shrink:0}input[type=range]{min-height:44px}input[type=search],input[type=text],input[type=email],input[type=tel]{min-height:44px;font-size:max(16px,1em)}}</style>
 <link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
 <meta name="description" content="Il menu di KEIK al tavolo: scegli i piatti e mostrali allo staff.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,58 +122,58 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <button type="button" aria-pressed="false" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer; white-space: nowrap">🥞 Brunch</button>
 
-<button type="button" aria-pressed="true" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; font: 600 14px 'Figtree', sans-serif; cursor: pointer; white-space: nowrap">🍔 Pausa pranzo · adesso</button>
+<button type="button" aria-pressed="false" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer; white-space: nowrap">🍔 Pausa pranzo</button>
 
-<button type="button" aria-pressed="false" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer; white-space: nowrap">🧁 Merenda</button>
+<button type="button" aria-pressed="true" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; font: 600 14px 'Figtree', sans-serif; cursor: pointer; white-space: nowrap">🧁 Merenda · adesso</button>
 
 <button type="button" aria-pressed="false" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer; white-space: nowrap">🍹 Aperitivo</button>
 
 </div>
-<p aria-live="polite" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.2; color: #3B0B40">Sono le 14:56 a Modena: è l’ora di staccare davvero</p>
+<p aria-live="polite" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.2; color: #3B0B40">Sono le 15:11 a Modena: è l’ora della merenda</p>
 
 
 <div class="m-res" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px">
 
-<a href="#d-carlitos" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
-<img src="assets/img/2b59242278e764972cb5814419a21009-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/2b59242278e764972cb5814419a21009-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" fetchpriority="high" data-kki="">
-<small style="font-size: 12px; color: #6B4A70">🇻🇪 Venezuela</small>
-<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Carlitos burger</b>
-<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">Singolo 12,90 €</i>
+<a href="#d-redvelvet" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
+<img src="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" fetchpriority="high" data-kki="">
+<small style="font-size: 12px; color: #6B4A70">🌍 KEIK</small>
+<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Cupcake Red Velvet</b>
+<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">4,90 €</i>
 </a>
 
-<a href="#d-tijuana" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
-<img src="assets/img/0862a7b60fa4d971d73b202557c035d3-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/0862a7b60fa4d971d73b202557c035d3-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
-<small style="font-size: 12px; color: #6B4A70">🇲🇽 Messico</small>
-<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Tijuana caesar salad</b>
-<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">12,90 €</i>
+<a href="#d-brownie" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
+<img src="assets/img/1a7f8effc8ee93783ce0eb4c15c20cda-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/1a7f8effc8ee93783ce0eb4c15c20cda-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
+<small style="font-size: 12px; color: #6B4A70">🌍 KEIK</small>
+<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Brownie</b>
+<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">3,90 €</i>
 </a>
 
-<a href="#d-hummus" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
-<img src="assets/img/a8ecb35ebb3968ca3160d685b86904e1-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/a8ecb35ebb3968ca3160d685b86904e1-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
-<small style="font-size: 12px; color: #6B4A70">🫒 Mediterraneo</small>
-<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Hummus &amp; falafel</b>
-<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">13,90 €</i>
+<a href="#d-banana" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
+<img src="assets/img/bafbd90858218327a80fb29dd2fcab8b-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/bafbd90858218327a80fb29dd2fcab8b-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
+<small style="font-size: 12px; color: #6B4A70">🌍 KEIK</small>
+<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Banana bread</b>
+<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">3,90 €</i>
 </a>
 
-<a href="#d-gangnam" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
-<img src="assets/img/de798c5d6feb91ede10f998b8ef10945-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/de798c5d6feb91ede10f998b8ef10945-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
-<small style="font-size: 12px; color: #6B4A70">🇰🇷 Corea</small>
-<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Gangnam burrito</b>
-<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">13,90 €</i>
+<a href="#d-ube" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
+<img src="assets/img/321bf3c723e0b34ebf438b0e6943728c-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/321bf3c723e0b34ebf438b0e6943728c-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
+<small style="font-size: 12px; color: #6B4A70">🇵🇭 Filippine</small>
+<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">UBE lava pancakes</b>
+<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">11,90 €</i>
 </a>
 
-<a href="#d-oslo" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
-<img src="assets/img/4d21d77a29a6165cbb42e3ec611e6849-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/4d21d77a29a6165cbb42e3ec611e6849-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
-<small style="font-size: 12px; color: #6B4A70">🇳🇴 Norvegia</small>
-<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Oslo salmon toast</b>
-<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">14,90 €</i>
+<a href="#d-pumpkin" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
+
+<small style="font-size: 12px; color: #6B4A70">🌍 KEIK</small>
+<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Pumpkin Spice Latte</b>
+<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">5,00 €</i>
 </a>
 
-<a href="#d-frida" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
-<img src="assets/img/74ef9e5ac177a5144eb40d7bfe6c055a-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/74ef9e5ac177a5144eb40d7bfe6c055a-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
-<small style="font-size: 12px; color: #6B4A70">🇲🇽 Messico</small>
-<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Frida burrito</b>
-<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">13,90 €</i>
+<a href="#d-chai" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
+<img src="assets/img/a8a6da076541fd13399ba2053742dd5e-420.webp" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain" srcset="assets/img/a8a6da076541fd13399ba2053742dd5e-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
+<small style="font-size: 12px; color: #6B4A70">🇮🇳 India</small>
+<b style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; line-height: 1.15">Chai Latte</b>
+<i style="font-style: normal; font-family: 'DM Mono', monospace; font-size: 12px; color: #91007D">4,50 €</i>
 </a>
 
 
@@ -965,7 +965,7 @@ Doppio 14,90 €</span>
 <article id="d-carlitos" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
 <div style="position: relative">
 
-<img src="assets/img/2b59242278e764972cb5814419a21009-420.webp" alt="Carlitos burger" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/2b59242278e764972cb5814419a21009-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" fetchpriority="high" data-kki="">
+<img src="assets/img/2b59242278e764972cb5814419a21009-420.webp" alt="Carlitos burger" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/2b59242278e764972cb5814419a21009-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">VEN</span>
 
 
@@ -1179,7 +1179,7 @@ Doppio 15,90 €</span>
 <article id="d-redvelvet" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
 <div style="position: relative">
 
-<img src="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp" alt="Cupcake Red Velvet" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
+<img src="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp" alt="Cupcake Red Velvet" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" fetchpriority="high" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
@@ -2817,7 +2817,7 @@ class Component extends DCLogic {
 </script>
 <script>window.__DC_PROPS__ = {};window.__DC_OVERRIDE__ = {"contesto": "tavolo"};</script>
 <script src="assets/js/morphdom.min.js"></script>
-<script>window.__KEAGER__=["2b59242278e764972cb5814419a21009","0862a7b60fa4d971d73b202557c035d3","a8ecb35ebb3968ca3160d685b86904e1","de798c5d6feb91ede10f998b8ef10945","4d21d77a29a6165cbb42e3ec611e6849","74ef9e5ac177a5144eb40d7bfe6c055a","cea731796bb98fc55bef3bb8e7c4505e"];</script>
+<script>window.__KEAGER__=["79ef73a26c4dc0b9272f52aeace1a41c","1a7f8effc8ee93783ce0eb4c15c20cda","bafbd90858218327a80fb29dd2fcab8b","321bf3c723e0b34ebf438b0e6943728c","a8a6da076541fd13399ba2053742dd5e","cea731796bb98fc55bef3bb8e7c4505e"];</script>
 <script src="assets/js/kimg.js"></script>
 <script src="assets/js/keik-dc.js"></script>
 </body>

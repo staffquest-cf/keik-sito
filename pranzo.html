@@ -16,7 +16,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<style>html,body{overflow-x:clip}:where(img[data-kki]){height:auto}body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}@media (max-width:960px){body:has([class$="-sticky"]),body:has(.m-bar){padding-bottom:calc(80px + env(safe-area-inset-bottom))}#dc-root a:not([style*="padding"]):not([style*="min-height"]):not(.m-dot){padding-top:14px;padding-bottom:14px;margin-top:-14px;margin-bottom:-14px}.kk-sitemap>div,.k-foot>div{gap:0!important}.kk-sitemap a,.k-foot a{display:flex!important;align-items:center;min-height:44px;padding:0!important;margin:0!important}.kk-bar{padding-top:1px!important;padding-bottom:1px!important}.kk-bar a{min-height:44px!important}.kk-lang button,.kk-langm{min-height:44px!important;min-width:44px!important}.m-catnav a,.m-explore button,.m-row button,.m-bar button{min-height:44px!important}.m-dot::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;transform:translate(-50%,-50%)}[style*="font-size: 9px"],[style*="font-size: 10px"],[style*="font-size: 11px"],.m-dotlabel{font-size:12px!important}input[type=checkbox],input[type=radio]{width:24px!important;height:24px!important;min-width:24px;flex-shrink:0}input[type=range]{min-height:44px}input[type=search],input[type=text],input[type=email],input[type=tel]{min-height:44px;font-size:max(16px,1em)}}</style>
+<style>html,body{overflow-x:clip}summary{cursor:pointer}summary::-webkit-details-marker{display:none}details[open]>summary .kk-s1,details:not([open])>summary .kk-s2{display:none}:where(img[data-kki]){height:auto}body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}@media (max-width:960px){body:has([class$="-sticky"]),body:has(.m-bar){padding-bottom:calc(80px + env(safe-area-inset-bottom))}#dc-root a:not([style*="padding"]):not([style*="min-height"]):not(.m-dot){padding-top:14px;padding-bottom:14px;margin-top:-14px;margin-bottom:-14px}.kk-sitemap>div,.k-foot>div{gap:0!important}.kk-sitemap a,.k-foot a{display:flex!important;align-items:center;min-height:44px;padding:0!important;margin:0!important}.kk-bar{padding-top:1px!important;padding-bottom:1px!important}.kk-bar a{min-height:44px!important}.kk-lang button,.kk-langm{min-height:44px!important;min-width:44px!important}.m-catnav a,.m-explore button,.m-row button,.m-bar button{min-height:44px!important}.m-dot::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;transform:translate(-50%,-50%)}[style*="font-size: 9px"],[style*="font-size: 10px"],[style*="font-size: 11px"],.m-dotlabel{font-size:12px!important}input[type=checkbox],input[type=radio]{width:24px!important;height:24px!important;min-width:24px;flex-shrink:0}input[type=range]{min-height:44px}input[type=search],input[type=text],input[type=email],input[type=tel]{min-height:44px;font-size:max(16px,1em)}}</style>
 <link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
 <meta name="description" content="Street food dal mondo a due passi da Piazza Grande: Carlitos burger, burrito, caesar messicana, hummus e falafel. Cucina aperta il pomeriggio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -408,37 +408,35 @@ Con bacon 12,90 €</p>
 </div>
 <div style="display: flex; flex-direction: column">
 
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="true" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">A che ora si pranza?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">−</span></button>
-
+<details class="kk-faq" open="" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">A che ora si pranza?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
 <p class="p-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">La cucina è aperta tutti i giorni dalle 10 alle 19:30, il venerdì e il sabato fino alle 21:30: il pranzo lo trovi da mezzogiorno in poi, senza fretta di chiusura.</p>
+</details>
 
-</div>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">Serve prenotare?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="p-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Nel weekend e per i gruppi sì. In settimana spesso trovi posto, ma con la prenotazione vai sul sicuro.</p>
+</details>
 
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Serve prenotare?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">C’è il coperto?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="p-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">No. Paghi solo quello che ordini.</p>
+</details>
 
-</div>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">Avete piatti vegani e senza glutine?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="p-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Hummus e falafel è vegano, e per chi evita il glutine c’è un menu dedicato da chiedere allo staff. Non è adatto ai celiaci: la cucina è condivisa e possono esserci tracce.</p>
+</details>
 
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">C’è il coperto?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">Si può fare un pranzo di lavoro o di gruppo?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="p-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Certo. Da 7 persone in su scrivici su WhatsApp e organizziamo il tavolo insieme.</p>
+</details>
 
-</div>
-
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Avete piatti vegani e senza glutine?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
-
-</div>
-
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Si può fare un pranzo di lavoro o di gruppo?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
-
-</div>
-
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Dove si parcheggia?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
-
-</div>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">Dove si parcheggia?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="p-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">KEIK è in ZTL. Si parcheggia sui viali, entrando da via Saragozza o da via Gallucci, e da lì si arriva a piedi in Via Canalino 51.</p>
+</details>
 
 </div>
 </div>
@@ -651,12 +649,10 @@ Con bacon 12,90 €</p>
 </div>
 <div style="display: flex; flex-direction: column">
 <sc-for list="{{faqs}}" as="f" hint-placeholder-count="6">
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" onClick="{{f.toggle}}" aria-expanded="{{f.expanded}}" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">{{f.q}}<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">{{f.sign}}</span></button>
-<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}">
+<details class="kk-faq" open="{{f.open}}" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">{{f.q}}<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
 <p class="p-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">{{f.a}}</p>
-</sc-if>
-</div>
+</details>
 </sc-for>
 </div>
 </div>

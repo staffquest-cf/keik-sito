@@ -16,7 +16,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<style>html,body{overflow-x:clip}:where(img[data-kki]){height:auto}body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}@media (max-width:960px){body:has([class$="-sticky"]),body:has(.m-bar){padding-bottom:calc(80px + env(safe-area-inset-bottom))}#dc-root a:not([style*="padding"]):not([style*="min-height"]):not(.m-dot){padding-top:14px;padding-bottom:14px;margin-top:-14px;margin-bottom:-14px}.kk-sitemap>div,.k-foot>div{gap:0!important}.kk-sitemap a,.k-foot a{display:flex!important;align-items:center;min-height:44px;padding:0!important;margin:0!important}.kk-bar{padding-top:1px!important;padding-bottom:1px!important}.kk-bar a{min-height:44px!important}.kk-lang button,.kk-langm{min-height:44px!important;min-width:44px!important}.m-catnav a,.m-explore button,.m-row button,.m-bar button{min-height:44px!important}.m-dot::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;transform:translate(-50%,-50%)}[style*="font-size: 9px"],[style*="font-size: 10px"],[style*="font-size: 11px"],.m-dotlabel{font-size:12px!important}input[type=checkbox],input[type=radio]{width:24px!important;height:24px!important;min-width:24px;flex-shrink:0}input[type=range]{min-height:44px}input[type=search],input[type=text],input[type=email],input[type=tel]{min-height:44px;font-size:max(16px,1em)}}</style>
+<style>html,body{overflow-x:clip}summary{cursor:pointer}summary::-webkit-details-marker{display:none}details[open]>summary .kk-s1,details:not([open])>summary .kk-s2{display:none}:where(img[data-kki]){height:auto}body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}@media (max-width:960px){body:has([class$="-sticky"]),body:has(.m-bar){padding-bottom:calc(80px + env(safe-area-inset-bottom))}#dc-root a:not([style*="padding"]):not([style*="min-height"]):not(.m-dot){padding-top:14px;padding-bottom:14px;margin-top:-14px;margin-bottom:-14px}.kk-sitemap>div,.k-foot>div{gap:0!important}.kk-sitemap a,.k-foot a{display:flex!important;align-items:center;min-height:44px;padding:0!important;margin:0!important}.kk-bar{padding-top:1px!important;padding-bottom:1px!important}.kk-bar a{min-height:44px!important}.kk-lang button,.kk-langm{min-height:44px!important;min-width:44px!important}.m-catnav a,.m-explore button,.m-row button,.m-bar button{min-height:44px!important}.m-dot::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;transform:translate(-50%,-50%)}[style*="font-size: 9px"],[style*="font-size: 10px"],[style*="font-size: 11px"],.m-dotlabel{font-size:12px!important}input[type=checkbox],input[type=radio]{width:24px!important;height:24px!important;min-width:24px;flex-shrink:0}input[type=range]{min-height:44px}input[type=search],input[type=text],input[type=email],input[type=tel]{min-height:44px;font-size:max(16px,1em)}}</style>
 <link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
 <meta name="description" content="Il Turista: tagliere da sei paesi + un drink a 16,90 € a testa. Spritz, cocktail e mocktail in centro, ven e sab fino alle 22. Nessun coperto.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -379,42 +379,40 @@ Aggiungo una porzione di patate dolci fritte per tagliere (5,90 €)
 </div>
 <div style="display: flex; flex-direction: column">
 
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="true" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">A che ora si fa l’aperitivo?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">−</span></button>
-
+<details class="kk-faq" open="" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">A che ora si fa l’aperitivo?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
 <p class="a-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Dal tardo pomeriggio: tutti i giorni fino alle 20, il venerdì e il sabato fino alle 22. La cucina chiude alle 19:30, e alle 21:30 il venerdì e il sabato.</p>
+</details>
 
-</div>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">Serve prenotare?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="a-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Il venerdì e il sabato sì, i tavoli finiscono presto. Negli altri giorni di solito trovi posto, ma con la prenotazione vai sul sicuro.</p>
+</details>
 
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Serve prenotare?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">C’è il coperto?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="a-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">No. Paghi solo quello che ordini, anche nelle serate a tema.</p>
+</details>
 
-</div>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">Quali drink sono compresi nella formula?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="a-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Tutti quelli in carta: spritz, negroni, cocktail della casa, birre, mocktail e soda. Il Turista con un drink a testa costa 16,90 € a persona, da 2 persone in su.</p>
+</details>
 
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">C’è il coperto?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">Avete drink analcolici?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="a-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Sì: due mocktail della casa e le nostre soda artigianali, oltre a matcha e chai freddi.</p>
+</details>
 
-</div>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">Il Turista è vegano?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="a-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Falafel, tostones, patate dolci, nachos e olive sono vegetali; le tartine hanno il formaggio. Chiedi allo staff e lo adattiamo.</p>
+</details>
 
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Quali drink sono compresi nella formula?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
-
-</div>
-
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Avete drink analcolici?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
-
-</div>
-
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Il Turista è vegano?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
-
-</div>
-
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">Si può festeggiare un compleanno?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">+</span></button>
-
-</div>
+<details class="kk-faq" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">Si può festeggiare un compleanno?<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
+<p class="a-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">Certo. Da 7 persone in su scrivici su WhatsApp: prepariamo tavolo e taglieri. Per una torta su ordinazione servono almeno 3 giorni di preavviso.</p>
+</details>
 
 </div>
 </div>
@@ -694,12 +692,10 @@ Aggiungo una porzione di patate dolci fritte per tagliere (5,90 €)
 </div>
 <div style="display: flex; flex-direction: column">
 <sc-for list="{{faqs}}" as="f" hint-placeholder-count="6">
-<div style="border-bottom: 1px solid #E2D4E0">
-<button type="button" onClick="{{f.toggle}}" aria-expanded="{{f.expanded}}" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40">{{f.q}}<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D">{{f.sign}}</span></button>
-<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}">
+<details class="kk-faq" open="{{f.open}}" style="border-bottom: 1px solid #E2D4E0">
+<summary style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font: 600 18px 'Figtree', sans-serif; color: #3B0B40; list-style: none">{{f.q}}<span aria-hidden="true" style="font-family: 'DM Mono', monospace; font-size: 22px; color: #91007D"><span class="kk-s1">+</span><span class="kk-s2">−</span></span></summary>
 <p class="a-open" style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #4A2350; max-width: 40em">{{f.a}}</p>
-</sc-if>
-</div>
+</details>
 </sc-for>
 </div>
 </div>
