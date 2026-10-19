@@ -36,7 +36,8 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .m-dotlabel{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;white-space:nowrap;transition:color .3s ease}
 .m-plane{position:absolute;top:24px;left:16px;transform:translate(-50%,-50%);color:#91007D;transition:left .12s linear;will-change:left}
 .m-plane-in{display:inline-flex;animation:mbob 2.4s ease-in-out infinite}
-.m-row{display:grid;grid-template-columns:112px minmax(0,1fr) auto;gap:20px;align-items:center}
+.m-row{display:grid;grid-template-columns:112px minmax(0,1fr) auto;grid-template-areas:"img head price" "img body price";grid-template-rows:auto 1fr;gap:6px 20px;align-items:start}
+.m-img{grid-area:img}.m-head{grid-area:head;align-self:end}.m-body{grid-area:body}.m-price{grid-area:price}
 .m-drinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 .m-stamps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
 .m-bar{display:none}
@@ -61,7 +62,8 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .m-pass{display:none !important}
 .m-bar{display:flex !important}
 .m-drinks{grid-template-columns:minmax(0,1fr) !important}
-.m-row{grid-template-columns:84px minmax(0,1fr) auto !important;gap:12px !important;align-items:start !important}
+.m-row{grid-template-columns:84px minmax(0,1fr) auto !important;grid-template-areas:"img head price" "body body body" !important;gap:10px 12px !important;align-items:start !important}
+.m-head{align-self:center !important}
 .m-hide-s{display:none !important}
 .m-catnav{display:flex !important}
 .m-dotlabel{display:none}
@@ -128,7 +130,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <button type="button" aria-pressed="false" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer; white-space: nowrap">🍹 Aperitivo</button>
 
 </div>
-<p aria-live="polite" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.2; color: #3B0B40">Sono le 15:25 a Modena: è l’ora della merenda</p>
+<p aria-live="polite" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.2; color: #3B0B40">Sono le 15:33 a Modena: è l’ora della merenda</p>
 
 
 <div class="m-res" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px">
@@ -309,19 +311,21 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 
 <article id="d-traveler" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/26cef8e9c0978e57162996a6258f71fc-420.webp" alt="Brunch Traveler" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/26cef8e9c0978e57162996a6258f71fc-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #6E2A70; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">WLD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Brunch Traveler*</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes, bacon, uova, mini avo toast e salmone, frutta fresca, Sweet Potato Fries.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Ideale per 2-3 persone</p>
@@ -329,7 +333,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 4 · 7 · 10 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">32,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Brunch Traveler*" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -339,19 +343,21 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </article>
 
 <article id="d-turista" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/77cdd4ac11e858e1b0c68012b140357d-420.webp" alt="Il Turista" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/77cdd4ac11e858e1b0c68012b140357d-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #6E2A70; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">WLD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Il Turista*</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Mix di tapas dal mondo: tartine con formaggio alla piastra e pomodorini alla paprika, tostones con pico de gallo, falafel, sweet potatoes, nachos con guacamole e olive di Cerignola.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Ideale per 2 persone</p>
@@ -359,7 +365,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 6 · 7 · 9 · 10 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">20,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Il Turista*" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -394,19 +400,21 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 
 <article id="d-ube" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/321bf3c723e0b34ebf438b0e6943728c-420.webp" alt="UBE lava pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/321bf3c723e0b34ebf438b0e6943728c-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">PHL</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇵🇭 Filippine</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">UBE lava pancakes</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #91007D; color: #91007D; background: #FFFFFF">NOVITÀ</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes lava con crema all’Ube, frutta fresca, mini marshmallow, granella di nocciola e crumble di Oreo.</p>
 
@@ -417,7 +425,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">11,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi UBE lava pancakes" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -427,19 +435,21 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </article>
 
 <article id="d-pausa" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/f566b7dbc462fd97b2cd1fdb9d85dc44-420.webp" alt="La pausa pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/f566b7dbc462fd97b2cd1fdb9d85dc44-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">La pausa pancakes</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #FFFFFF; color: #FFFFFF; background: #3B0B40">CHILL ★ ICON</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes con crema a scelta, crumble di Oreo, granella di nocciola e fragole fresche.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Scegli la tua crema: Nutella o Bueno</p>
@@ -447,7 +457,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Medium 9,90 €
 Regular 11,90 €</span>
 
@@ -458,19 +468,21 @@ Regular 11,90 €</span>
 </article>
 
 <article id="d-brady" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/6e09c26506e7d4b39e303d385c4bc4de-420.webp" alt="Brady pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/6e09c26506e7d4b39e303d385c4bc4de-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">CAN</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇨🇦 Canada</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Brady pancakes</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes con frutta fresca, granella di nocciola e autentico sciroppo d’acero canadese o Nutella.</p>
 
@@ -478,7 +490,7 @@ Regular 11,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7 · 8</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Medium 8,90 €
 Regular 10,90 €</span>
 
@@ -489,19 +501,21 @@ Regular 10,90 €</span>
 </article>
 
 <article id="d-biscoff" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/b48c3877e327120893bcf694065301a1-420.webp" alt="Biscoff belgian pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/b48c3877e327120893bcf694065301a1-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">BEL</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇧🇪 Belgio</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Biscoff belgian pancakes</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes con crema Biscoff Lotus, frutta fresca, crumble di Lotus e panna montata.</p>
 
@@ -509,7 +523,7 @@ Regular 10,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">11,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Biscoff belgian pancakes" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -519,19 +533,21 @@ Regular 10,90 €</span>
 </article>
 
 <article id="d-nyc" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/dd5ee3adad759efcc23f5abfbae45380-420.webp" alt="NYC bacon &amp; eggs" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/dd5ee3adad759efcc23f5abfbae45380-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇺🇸 USA</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">NYC bacon &amp; eggs*</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #FFFFFF; color: #FFFFFF; background: #3B0B40">ALL DAY ★ ICON</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes fatti in casa, bacon croccante, uova (strapazzate o all’occhio di bue).</p>
 
@@ -539,7 +555,7 @@ Regular 10,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Medium 10,90 €
 Regular 12,90 €</span>
 
@@ -550,19 +566,21 @@ Regular 12,90 €</span>
 </article>
 
 <article id="d-alaska" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/5531886e413b6a2b01cf9aa6fb4535bb-420.webp" alt="Alaska pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/5531886e413b6a2b01cf9aa6fb4535bb-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇺🇸 USA</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Alaska pancakes</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pancakes con salmone affumicato, uova all’occhio di bue, semi tostati e fiore edule.</p>
 
@@ -570,7 +588,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 4 · 7 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">15,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Alaska pancakes" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -580,19 +598,21 @@ Regular 12,90 €</span>
 </article>
 
 <article id="d-osaka" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/56567c93ebdfba82c89152277df8eb75-420.webp" alt="Osaka pancakes" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/56567c93ebdfba82c89152277df8eb75-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">JPN</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇯🇵 Giappone</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Osaka pancakes*</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #B3261E; color: #B3261E; background: #FFFFFF">🌶 PICCANTE</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Soffici pancakes con filetti di pollo croccante glassati con la nostra salsa HoneyKara, formaggio cheddar e semi di sesamo nero.</p>
 
@@ -603,7 +623,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Osaka pancakes*" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -638,19 +658,21 @@ Regular 12,90 €</span>
 
 
 <article id="d-canberra" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/ce68f77c771ce1df418586ca719c120f-420.webp" alt="Canberra breaky" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/ce68f77c771ce1df418586ca719c120f-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">AUS</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇦🇺 Australia</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Canberra breaky*</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Uova strapazzate, bacon croccante, avocado fresco, semi misti tostati, insalata mista e fragole fresche.</p>
 
@@ -658,7 +680,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Canberra breaky*" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -668,19 +690,21 @@ Regular 12,90 €</span>
 </article>
 
 <article id="d-tijuana" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/0862a7b60fa4d971d73b202557c035d3-420.webp" alt="Tijuana caesar salad" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/0862a7b60fa4d971d73b202557c035d3-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MEX</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇲🇽 Messico</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Tijuana caesar salad*</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Insalata, pollo grigliato, pico de gallo, halloumi alla piastra, crostini e salsa caesar.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Con pollo croccante +1,50 €</p>
@@ -691,7 +715,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7 · 9 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Tijuana caesar salad*" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -701,19 +725,21 @@ Regular 12,90 €</span>
 </article>
 
 <article id="d-losroques" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/ac3f0a7ba12bb1b67e556969edefce66-420.webp" alt="Los Roques benedict" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/ac3f0a7ba12bb1b67e556969edefce66-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">VEN</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇻🇪 Venezuela</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Los Roques benedict</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #91007D; color: #91007D; background: #FFFFFF">NOVITÀ</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Letto di tostones croccanti con avocado fresco, formaggio alla piastra, insalata mista, 2 uova in camicia e salsa olandese.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Con tostones venezuelani</p>
@@ -724,7 +750,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">11,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Los Roques benedict" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -734,19 +760,21 @@ Regular 12,90 €</span>
 </article>
 
 <article id="d-hummus" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/a8ecb35ebb3968ca3160d685b86904e1-420.webp" alt="Hummus &amp; falafel" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/a8ecb35ebb3968ca3160d685b86904e1-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MED</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🫒 Mediterraneo</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Hummus &amp; falafel*</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #FFFFFF; color: #FFFFFF; background: #3B0B40">VEGAN ★ ICON</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 18px; color: #91007D">Equilibrio mediterraneo. Zero stress</p>
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Hummus fatto in casa, falafel croccanti, avocado, datterini, misticanza e olio alla paprika.</p>
 
@@ -754,7 +782,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €
 + Falafel 16,90 €</span>
 
@@ -785,19 +813,21 @@ Regular 12,90 €</span>
 
 
 <article id="d-baja" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/e498457a1b2610c0c88558ac7574d807-420.webp" alt="Baja avo toast" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/e498457a1b2610c0c88558ac7574d807-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MEX</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇲🇽 Messico</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Baja avo toast</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Toast con avocado pestato, pico de gallo, due uova in camicia e semi tostati.</p>
 
@@ -805,7 +835,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">9,90 €
 + Bacon* 12,90 €</span>
 
@@ -816,19 +846,21 @@ Regular 12,90 €</span>
 </article>
 
 <article id="d-oslo" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/4d21d77a29a6165cbb42e3ec611e6849-420.webp" alt="Oslo salmon toast" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/4d21d77a29a6165cbb42e3ec611e6849-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">NOR</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇳🇴 Norvegia</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Oslo salmon toast</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #FFFFFF; color: #FFFFFF; background: #3B0B40">COMFORT ★ ICON</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Salmone affumicato, avocado pestato, misticanza, omelette, semi misti tostati e spezie affumicate.</p>
 
@@ -836,7 +868,7 @@ Regular 12,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 4 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">14,90 €
 Doppio salmone 18,90 €</span>
 
@@ -847,19 +879,21 @@ Doppio salmone 18,90 €</span>
 </article>
 
 <article id="d-la" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/9d09328b1d500c5e647474aba9b01ba3-420.webp" alt="L.A. crispy avo toast" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/9d09328b1d500c5e647474aba9b01ba3-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇺🇸 USA</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">L.A. crispy avo toast*</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Avocado pestato, bacon croccante, uova all’occhio di bue e spezie affumicate.</p>
 
@@ -867,7 +901,7 @@ Doppio salmone 18,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 11</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">10,90 €
 Doppio uovo 12,40 €</span>
 
@@ -878,19 +912,21 @@ Doppio uovo 12,40 €</span>
 </article>
 
 <article id="d-reggie" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/c8ddea2ebfa0a9bcfb5035d01a58a930-420.webp" alt="Reggie benedict" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/c8ddea2ebfa0a9bcfb5035d01a58a930-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Reggie benedict</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #91007D; color: #91007D; background: #FFFFFF">NOVITÀ</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Due uova in camicia con salsa olandese, salmone affumicato, avocado fresco su un letto di insalata fresca e morbido pane di patate semidolce.</p>
 
@@ -901,7 +937,7 @@ Doppio uovo 12,40 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 4 · 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">15,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Reggie benedict" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -931,19 +967,21 @@ Doppio uovo 12,40 €</span>
 
 
 <article id="d-kevin" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/a018e4da20410f427f6029f5301dee48-420.webp" alt="Kevin cheeseburger" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/a018e4da20410f427f6029f5301dee48-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">USA</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇺🇸 USA</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Kevin cheeseburger*</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Manzo, cheddar, bacon croccante e salsa Keik.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Aggiungi: patatine +3,00 € · Sweet Potato Fries +5,00 €</p>
@@ -951,7 +989,7 @@ Doppio uovo 12,40 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 9 · 10</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Singolo 11,90 €
 Doppio 14,90 €</span>
 
@@ -962,19 +1000,21 @@ Doppio 14,90 €</span>
 </article>
 
 <article id="d-carlitos" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/2b59242278e764972cb5814419a21009-420.webp" alt="Carlitos burger" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/2b59242278e764972cb5814419a21009-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">VEN</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇻🇪 Venezuela</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Carlitos burger*</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #FFFFFF; color: #FFFFFF; background: #3B0B40">TRAVEL ★ ICON</span><span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #B3261E; color: #B3261E; background: #FFFFFF">🌶 PICCANTE</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Manzo, uovo all’occhio di bue, cheddar, guacamole, lattuga, salsa chipotle.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Aggiungi: patatine +3,00 € · Sweet Potato Fries +5,00 €</p>
@@ -982,7 +1022,7 @@ Doppio 14,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Singolo 12,90 €
 Doppio 15,90 €</span>
 
@@ -993,19 +1033,21 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-frida" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/74ef9e5ac177a5144eb40d7bfe6c055a-420.webp" alt="Frida burrito" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/74ef9e5ac177a5144eb40d7bfe6c055a-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MEX</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇲🇽 Messico</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Frida burrito*</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #B3261E; color: #B3261E; background: #FFFFFF">🌶 PICCANTE</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Burrito di carne con lattuga, guacamole, pico de gallo, cheddar e salsa chipotle.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Aggiungi: patatine +3,00 € · Sweet Potato Fries +5,00 €</p>
@@ -1016,7 +1058,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €
 + Bacon 16,90 €</span>
 
@@ -1027,19 +1069,21 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-gangnam" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/de798c5d6feb91ede10f998b8ef10945-420.webp" alt="Gangnam burrito" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/de798c5d6feb91ede10f998b8ef10945-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">KOR</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇰🇷 Corea</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Gangnam burrito*</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Pollo grigliato, kimchi, salsa tonkatsu, lattuga e pomodori datterini.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Con vero kimchi coreano</p>
@@ -1050,7 +1094,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 6 · 9</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">13,90 €
 + Avocado 17,40 €</span>
 
@@ -1176,19 +1220,21 @@ Doppio 15,90 €</span>
 
 
 <article id="d-redvelvet" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp" alt="Cupcake Red Velvet" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" fetchpriority="high" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Cupcake Red Velvet</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">La nostra regina dal 2013.</p>
 
@@ -1196,7 +1242,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Cupcake Red Velvet" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1206,19 +1252,21 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-oreo" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/6fa5bbb208a5c9d089b3ae2d6f8e25b3-420.webp" alt="Cupcake Oreo" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/6fa5bbb208a5c9d089b3ae2d6f8e25b3-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Cupcake Oreo</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #3B0B40; color: #3B0B40; background: #FFFFFF">LACTOSE FREE</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Un classico intramontabile.</p>
 
@@ -1226,7 +1274,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Cupcake Oreo" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1236,19 +1284,21 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-cbiscoff" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/cf35745659ce613a0e679df5fe1ee0cf-420.webp" alt="Cupcake Biscoff" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/cf35745659ce613a0e679df5fe1ee0cf-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Cupcake Biscoff</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">La golosità in formato cupcake, con cuore di crema Biscoff.</p>
 
@@ -1256,7 +1306,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Cupcake Biscoff" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1266,18 +1316,20 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-chebueno" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 
 <div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: #91007D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">MOD</div>
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Che Bueno</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Non ha bisogno di presentazione: con cuore di crema Bueno.</p>
 
@@ -1285,7 +1337,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Che Bueno" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1295,18 +1347,20 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-cnutella" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 
 <div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: #3B0B40; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">ITA</div>
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇮🇹 Italia</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Cupcake Nutella</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Il gusto della merenda italiana, con cuore di Nutella.</p>
 
@@ -1314,7 +1368,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 6 · 7 · 8</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Cupcake Nutella" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1324,19 +1378,21 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-peanut" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/0df9f73cd45d4e98f7251d8a37bc8955-420.webp" alt="Cupcake Peanut" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/0df9f73cd45d4e98f7251d8a37bc8955-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Cupcake Peanut</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Al burro d’arachidi.</p>
 
@@ -1344,7 +1400,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3 · 5 · 7 · 8</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Cupcake Peanut" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1354,19 +1410,21 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-brownie" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/1a7f8effc8ee93783ce0eb4c15c20cda-420.webp" alt="Brownie" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/1a7f8effc8ee93783ce0eb4c15c20cda-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Brownie</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #3B0B40; color: #3B0B40; background: #FFFFFF">LACTOSE FREE</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Uno tira l’altro.</p>
 
@@ -1374,7 +1432,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1 · 3</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Brownie" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1384,19 +1442,21 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-banana" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/bafbd90858218327a80fb29dd2fcab8b-420.webp" alt="Banana bread" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/bafbd90858218327a80fb29dd2fcab8b-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Banana bread</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #2F7D4F; color: #2F7D4F; background: #FFFFFF">VEGAN</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Gustoso e vegano.</p>
 
@@ -1404,7 +1464,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Banana bread" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1434,18 +1494,20 @@ Doppio 15,90 €</span>
 
 
 <article id="d-pumpkin" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 
 <div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: #91007D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">MOD</div>
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Pumpkin Spice Latte</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #FFFFFF; color: #FFFFFF; background: #91007D">IL PIÙ SCELTO</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Il latte d’autunno.</p>
 
@@ -1453,7 +1515,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">5,00 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Pumpkin Spice Latte" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1463,19 +1525,21 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-ubelatte" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/cc1aad15a186a0ff6f4f3b7b1b5fe8ae-420.webp" alt="UBE Latte" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/cc1aad15a186a0ff6f4f3b7b1b5fe8ae-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">PHL</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇵🇭 Filippine</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">UBE Latte</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #91007D; color: #91007D; background: #FFFFFF">NOVITÀ</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Gusto esotico vanigliato.</p>
 
@@ -1483,7 +1547,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,50 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi UBE Latte" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1493,19 +1557,21 @@ Doppio 15,90 €</span>
 </article>
 
 <article id="d-matcha" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/1f487479e8f411b993c5f4b3f78d96ef-420.webp" alt="Matcha Latte" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/1f487479e8f411b993c5f4b3f78d96ef-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">JPN</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇯🇵 Giappone</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Matcha Latte</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Classico o al mango.</p>
 
@@ -1513,7 +1579,7 @@ Doppio 15,90 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">Classico 4,50 €
 Al mango 5,50 €</span>
 
@@ -1524,19 +1590,21 @@ Al mango 5,50 €</span>
 </article>
 
 <article id="d-chai" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/a8a6da076541fd13399ba2053742dd5e-420.webp" alt="Chai Latte" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/a8a6da076541fd13399ba2053742dd5e-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">IND</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇮🇳 India</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Chai Latte</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Tè nero speziato e avvolgente.</p>
 
@@ -1544,7 +1612,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,50 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Chai Latte" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1554,18 +1622,20 @@ Al mango 5,50 €</span>
 </article>
 
 <article id="d-caramel" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 
 <div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: #91007D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">MOD</div>
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Caramel Latte</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Classico o al cioccolato.</p>
 
@@ -1573,7 +1643,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 7</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">4,50 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Caramel Latte" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1583,18 +1653,20 @@ Al mango 5,50 €</span>
 </article>
 
 <article id="d-americano" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 
 <div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: #91007D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">MOD</div>
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Americano</h3>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid #FFFFFF; color: #FFFFFF; background: #3B0B40">COMFORT ★ ICON</span>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Americano con refill gratuito. Sempre.</p>
 <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">Assaggialo freddo. Aromatizzabile con vaniglia o nocciola +1,00 €</p>
@@ -1602,7 +1674,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI –</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">3,00 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Americano" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1660,19 +1732,21 @@ Al mango 5,50 €</span>
 
 
 <article id="d-soda" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/9c990383cf0c24dfdc95c85acc48c868-420.webp" alt="Le nostre soda" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/9c990383cf0c24dfdc95c85acc48c868-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Le nostre soda</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Wild Berry ai frutti di bosco, Passion al frutto della passione, Mango con polpa di mango 100% e lime fresco, Peach alla pesca e lime.</p>
 
@@ -1680,7 +1754,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI –</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">5,90 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Le nostre soda" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1690,19 +1764,21 @@ Al mango 5,50 €</span>
 </article>
 
 <article id="d-mocktail" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/78f2b661852f066a1d514a2868fbac78-420.webp" alt="Mocktail" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/78f2b661852f066a1d514a2868fbac78-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Mocktail</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Analcolici, ma con carattere: Sunset &amp; Chill (agrumi e lampone) o Fiore del deserto (passion fruit, yuzu e tonica).</p>
 
@@ -1710,7 +1786,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI –</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">8,00 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Mocktail" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1720,19 +1796,21 @@ Al mango 5,50 €</span>
 </article>
 
 <article id="d-mimo" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/b9e90e271ca766d46ae5b9fe72103bc0-420.webp" alt="Mango MIMO" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/b9e90e271ca766d46ae5b9fe72103bc0-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Mango MIMO</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Mimosa mojito al mango, rum e prosecco.</p>
 
@@ -1740,7 +1818,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 12</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,00 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Mango MIMO" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1750,19 +1828,21 @@ Al mango 5,50 €</span>
 </article>
 
 <article id="d-spritz" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/bef0568669abbc6962302c86415dd744-420.webp" alt="Spritz" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/bef0568669abbc6962302c86415dd744-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">ITA</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇮🇹 Italia</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Spritz</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Classico, passion fruit, yuzu, lampone o pesca.</p>
 
@@ -1770,7 +1850,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 12</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">8,00 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Spritz" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1780,18 +1860,20 @@ Al mango 5,50 €</span>
 </article>
 
 <article id="d-gin" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 
 <div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: #91007D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">MOD</div>
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Gin tonic</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">La nostra selezione di gin, servito come si deve.</p>
 
@@ -1799,7 +1881,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 12</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">12,00 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Gin tonic" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1809,19 +1891,21 @@ Al mango 5,50 €</span>
 </article>
 
 <article id="d-negroni" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/3cbf56c6a7e8e1a27747baa3edbd3457-420.webp" alt="Negroni" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/3cbf56c6a7e8e1a27747baa3edbd3457-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #3B0B40; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">ITA</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <span style="font-size: 13px; color: #6B4A70">🇮🇹 Italia</span>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Negroni</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Il classico italiano.</p>
 
@@ -1829,7 +1913,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 12</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">9,00 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Negroni" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -1839,19 +1923,21 @@ Al mango 5,50 €</span>
 </article>
 
 <article id="d-birre" class="m-row " style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 
 <img src="assets/img/0afc22f9a42818996f7fe2b82cf069a8-420.webp" alt="Birre La Mi’" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6" srcset="assets/img/0afc22f9a42818996f7fe2b82cf069a8-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: #91007D; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">MOD</span>
 
 
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">Birre La Mi’</h3>
 
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Birre artigianali al femminile: Tipa (IPA non filtrata), Bionda (chiara, cruda, non filtrata), Rossa (red ale cruda, non filtrata).</p>
 
@@ -1859,7 +1945,7 @@ Al mango 5,50 €</span>
 
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI 1</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">6,50 €</span>
 
 <button type="button" class="m-add" aria-label="Aggiungi Birre La Mi’" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
@@ -2119,7 +2205,7 @@ Al mango 5,50 €</span>
 <sc-if value="{{c.isList}}" hint-placeholder-val="{{ true }}">
 <sc-for list="{{c.items}}" as="d" hint-placeholder-count="4">
 <article id="d-{{d.id}}" class="m-row {{d.flash}}" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
-<div style="position: relative">
+<div class="m-img" style="position: relative">
 <sc-if value="{{d.hasImg}}" hint-placeholder-val="{{ true }}">
 <img src="{{d.img}}" alt="{{d.altName}}" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
 <span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: {{d.codeBg}}; color: #FFFFFF; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">{{d.code}}</span>
@@ -2128,12 +2214,14 @@ Al mango 5,50 €</span>
 <div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: {{d.codeBg}}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.06em">{{d.code}}</div>
 </sc-if>
 </div>
-<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div class="m-head" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <sc-if value="{{d.hasCountry}}" hint-placeholder-val="{{ true }}"><span style="font-size: 13px; color: #6B4A70">{{d.flag}} {{d.country}}</span></sc-if>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; line-height: 1.15; color: #3B0B40">{{d.name}}</h3>
 <sc-for list="{{d.tags}}" as="t" hint-placeholder-count="1"><span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid {{t.color}}; color: {{t.color}}; background: {{t.bg}}">{{t.label}}</span></sc-for>
 </div>
+</div>
+<div class="m-body" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
 <sc-if value="{{d.hasTagline}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 18px; color: #91007D">{{d.tagline}}</p></sc-if>
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">{{d.desc}}</p>
 <sc-if value="{{d.hasNote}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">{{d.note}}</p></sc-if>
@@ -2144,7 +2232,7 @@ Al mango 5,50 €</span>
 </sc-if>
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 11px; color: #6B4A70">ALLERGENI {{d.allergens}}</p>
 </div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<div class="m-price" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
 <span style="font-family: 'DM Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">{{d.prices}}</span>
 <sc-if value="{{d.notIn}}" hint-placeholder-val="{{ true }}">
 <button type="button" class="m-add" onClick="{{d.add}}" aria-label="Aggiungi {{d.name}}" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
