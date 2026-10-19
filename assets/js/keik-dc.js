@@ -174,6 +174,27 @@
     if (ok) u.searchParams.delete('lang'); else u.searchParams.set('lang', l);
     location.href = u.toString();
   });
+  // A: barra pagine scorrevole: sfumatura dove continua, voce attiva sempre visibile
+  function kkBar(first) {
+    var bar = document.querySelector('.kk-bar');
+    if (!bar) return;
+    var upd = function () {
+      var more = bar.scrollWidth - bar.clientWidth - bar.scrollLeft > 4;
+      var less = bar.scrollLeft > 4;
+      if (more) bar.setAttribute('data-more', ''); else bar.removeAttribute('data-more');
+      if (less) bar.setAttribute('data-less', ''); else bar.removeAttribute('data-less');
+    };
+    if (first) {
+      var cur = bar.querySelector('[aria-current="page"]');
+      if (cur && bar.scrollWidth > bar.clientWidth) {
+        var x = cur.offsetLeft - (bar.clientWidth - cur.offsetWidth) / 2;
+        bar.scrollLeft = Math.max(0, x);
+      }
+      bar.addEventListener('scroll', upd, { passive: true });
+      window.addEventListener('resize', upd);
+    }
+    upd();
+  }
   function translateHead() {
     if (!DICT) return;
     document.title = t(document.title);
@@ -221,6 +242,7 @@
         }
       });
       syncLang();
+      kkBar(!mounted);
       var refEls = root.querySelectorAll('[data-dc-ref]');
       for (var i = 0; i < refEls.length; i++) {
         var fn = current.refs[+refEls[i].getAttribute('data-dc-ref')];
