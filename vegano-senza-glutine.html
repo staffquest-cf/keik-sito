@@ -30,6 +30,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .v-tool{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:32px;align-items:start}
 .v-al{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 .v-res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (min-width:961px){.v-morebtn{display:none !important}}
 .v-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .v-gf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
 .v-faq{display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr);gap:64px}
@@ -48,6 +49,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .v-hero,.v-tool,.v-gf,.v-faq,.v-final{grid-template-columns:minmax(0,1fr) !important;gap:32px !important}
 .v-panel{position:static}
 .v-res{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+.v-res:not(.v-all) .v-x{display:none !important}
 .v-three{grid-template-columns:minmax(0,1fr) !important}
 .v-nav{display:none !important}
 .v-sticky{display:flex !important}
@@ -152,9 +154,9 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
 <p aria-live="polite" style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 44px; color: #3B0B40">43</span><span style="font-size: 17px; color: #4A2350">tra piatti e drink adatti a te</span></p>
 
-<div class="v-res" style="gap: 14px">
+<div class="v-res " style="gap: 14px">
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card " style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/321bf3c723e0b34ebf438b0e6943728c-420.webp" alt="UBE lava pancakes" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/321bf3c723e0b34ebf438b0e6943728c-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -167,7 +169,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card " style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/f566b7dbc462fd97b2cd1fdb9d85dc44-420.webp" alt="La pausa pancakes" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/f566b7dbc462fd97b2cd1fdb9d85dc44-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -180,7 +182,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card " style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/6e09c26506e7d4b39e303d385c4bc4de-420.webp" alt="Brady pancakes" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/6e09c26506e7d4b39e303d385c4bc4de-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -193,7 +195,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card " style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/b48c3877e327120893bcf694065301a1-420.webp" alt="Biscoff belgian pancakes" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/b48c3877e327120893bcf694065301a1-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -206,7 +208,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card " style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/dd5ee3adad759efcc23f5abfbae45380-420.webp" alt="NYC bacon &amp; eggs" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/dd5ee3adad759efcc23f5abfbae45380-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -219,7 +221,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card " style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/5531886e413b6a2b01cf9aa6fb4535bb-420.webp" alt="Alaska pancakes" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/5531886e413b6a2b01cf9aa6fb4535bb-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -232,7 +234,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/56567c93ebdfba82c89152277df8eb75-420.webp" alt="Osaka pancakes" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/56567c93ebdfba82c89152277df8eb75-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -245,7 +247,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/ce68f77c771ce1df418586ca719c120f-420.webp" alt="Canberra breaky" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/ce68f77c771ce1df418586ca719c120f-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -258,7 +260,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/0862a7b60fa4d971d73b202557c035d3-420.webp" alt="Tijuana caesar salad" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/0862a7b60fa4d971d73b202557c035d3-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -271,7 +273,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/ac3f0a7ba12bb1b67e556969edefce66-420.webp" alt="Los Roques benedict" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/ac3f0a7ba12bb1b67e556969edefce66-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -284,7 +286,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/a8ecb35ebb3968ca3160d685b86904e1-420.webp" alt="Hummus &amp; falafel" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/a8ecb35ebb3968ca3160d685b86904e1-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -297,7 +299,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/e498457a1b2610c0c88558ac7574d807-420.webp" alt="Baja avo toast" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/e498457a1b2610c0c88558ac7574d807-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -310,7 +312,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/4d21d77a29a6165cbb42e3ec611e6849-420.webp" alt="Oslo salmon toast" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/4d21d77a29a6165cbb42e3ec611e6849-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -323,7 +325,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/9d09328b1d500c5e647474aba9b01ba3-420.webp" alt="L.A. crispy avo toast" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/9d09328b1d500c5e647474aba9b01ba3-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -336,7 +338,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/c8ddea2ebfa0a9bcfb5035d01a58a930-420.webp" alt="Reggie benedict" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/c8ddea2ebfa0a9bcfb5035d01a58a930-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -349,7 +351,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/a018e4da20410f427f6029f5301dee48-420.webp" alt="Kevin cheeseburger" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/a018e4da20410f427f6029f5301dee48-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -362,7 +364,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/2b59242278e764972cb5814419a21009-420.webp" alt="Carlitos burger" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/2b59242278e764972cb5814419a21009-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -375,7 +377,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/74ef9e5ac177a5144eb40d7bfe6c055a-420.webp" alt="Frida burrito" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/74ef9e5ac177a5144eb40d7bfe6c055a-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -388,7 +390,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/de798c5d6feb91ede10f998b8ef10945-420.webp" alt="Gangnam burrito" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/de798c5d6feb91ede10f998b8ef10945-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -401,7 +403,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/26cef8e9c0978e57162996a6258f71fc-420.webp" alt="Brunch Traveler" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/26cef8e9c0978e57162996a6258f71fc-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -414,7 +416,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/77cdd4ac11e858e1b0c68012b140357d-420.webp" alt="Il Turista" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/77cdd4ac11e858e1b0c68012b140357d-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -427,7 +429,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp" alt="Cupcake Red Velvet" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/79ef73a26c4dc0b9272f52aeace1a41c-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -440,7 +442,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/cf35745659ce613a0e679df5fe1ee0cf-420.webp" alt="Cupcake Biscoff · Bueno · Nutella" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/cf35745659ce613a0e679df5fe1ee0cf-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -453,7 +455,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/6fa5bbb208a5c9d089b3ae2d6f8e25b3-420.webp" alt="Cupcake Oreo" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/6fa5bbb208a5c9d089b3ae2d6f8e25b3-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -466,7 +468,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/0df9f73cd45d4e98f7251d8a37bc8955-420.webp" alt="Cupcake Peanut" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/0df9f73cd45d4e98f7251d8a37bc8955-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -479,7 +481,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/1a7f8effc8ee93783ce0eb4c15c20cda-420.webp" alt="Brownie" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/1a7f8effc8ee93783ce0eb4c15c20cda-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -492,7 +494,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/bafbd90858218327a80fb29dd2fcab8b-420.webp" alt="Banana bread" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/bafbd90858218327a80fb29dd2fcab8b-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -505,7 +507,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/cc1aad15a186a0ff6f4f3b7b1b5fe8ae-420.webp" alt="UBE latte" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/cc1aad15a186a0ff6f4f3b7b1b5fe8ae-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -518,7 +520,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/1f487479e8f411b993c5f4b3f78d96ef-420.webp" alt="Matcha latte" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/1f487479e8f411b993c5f4b3f78d96ef-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -531,7 +533,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/a8a6da076541fd13399ba2053742dd5e-420.webp" alt="Chai latte" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/a8a6da076541fd13399ba2053742dd5e-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -544,7 +546,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 
 <span aria-hidden="true" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; color: #6F8C77">USA</span>
@@ -557,7 +559,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 
 <span aria-hidden="true" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; color: #6F8C77">USA</span>
@@ -570,7 +572,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/9c990383cf0c24dfdc95c85acc48c868-420.webp" alt="Le nostre soda" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/9c990383cf0c24dfdc95c85acc48c868-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -583,7 +585,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/78f2b661852f066a1d514a2868fbac78-420.webp" alt="Mocktail" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/78f2b661852f066a1d514a2868fbac78-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -596,7 +598,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/bef0568669abbc6962302c86415dd744-420.webp" alt="Spritz" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/bef0568669abbc6962302c86415dd744-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -609,7 +611,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/3cbf56c6a7e8e1a27747baa3edbd3457-420.webp" alt="Negroni" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/3cbf56c6a7e8e1a27747baa3edbd3457-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -622,7 +624,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/b9e90e271ca766d46ae5b9fe72103bc0-420.webp" alt="Mango MIMO · Gin tonic" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/b9e90e271ca766d46ae5b9fe72103bc0-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -635,7 +637,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/0afc22f9a42818996f7fe2b82cf069a8-420.webp" alt="Birre La Mi’" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/0afc22f9a42818996f7fe2b82cf069a8-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -648,7 +650,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/1496fc17336980e10de59509e37bf3c5-420.webp" alt="Patate dolci fritte" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/1496fc17336980e10de59509e37bf3c5-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -661,7 +663,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/a120c9bacdaab9dd87ff3bf8990c267a-420.webp" alt="Patatine crispy" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/a120c9bacdaab9dd87ff3bf8990c267a-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -674,7 +676,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/0aec7b04b6449163d4470cde51d890b7-420.webp" alt="Tostones" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/0aec7b04b6449163d4470cde51d890b7-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -687,7 +689,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/fb130c7b5fa8bf3ac9a36808079af0c0-420.webp" alt="Falafel" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/fb130c7b5fa8bf3ac9a36808079af0c0-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -700,7 +702,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </article>
 
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card v-x" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <img src="assets/img/610cc65d4ff46161395d4e6ab089e922-420.webp" alt="Pollo HoneyKara" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain" srcset="assets/img/610cc65d4ff46161395d4e6ab089e922-420.webp 420w" sizes="(max-width: 700px) 100vw, 50vw" width="420" height="210" decoding="async" data-kki="">
 
@@ -714,6 +716,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </article>
 
 </div>
+<button type="button" class="v-morebtn" style="align-self: stretch; min-height: 48px; border-radius: 999px; border: 1.5px solid #2F7D4F; background: #FFFFFF; color: #2F7D4F; font: 600 15px 'Figtree', sans-serif; cursor: pointer">Mostra tutti i 43</button>
 <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6B4A70">Numeri degli allergeni secondo il Reg. UE 1169/2011. L’elenco è indicativo e può cambiare con le forniture: fa fede quello che ti dice lo staff al tavolo.</p>
 </div>
 </div>
@@ -725,7 +728,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div class="v-wrap v-three" style="gap: 16px">
 <div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #F3F7F2; border-radius: 20px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #2F7D4F">VEGANO</span><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Hummus &amp; falafel e banana bread</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">L’hummus lo facciamo in casa, il banana bread esce dal nostro laboratorio.</p></div>
 <div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #F7F2F6; border-radius: 20px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #91007D">SENZA LATTOSIO</span><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Piatti salati, Oreo e brownie</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Molti piatti salati non contengono latte, e in vetrina ci sono il cupcake Oreo e il brownie. Il filtro qui sopra te li mostra tutti.</p></div>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFF7D6; border-radius: 20px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8A6D00">SENZA GLUTINE</span><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Sì, ma non per celiaci</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Un menu dedicato da chiedere allo staff. Non è adatto alla celiachia: possono esserci tracce.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFF7D6; border-radius: 20px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8A6D00">SENZA GLUTINE</span><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Sì, ma non per celiaci</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Chiedi allo staff il menu dedicato. Qui sotto ti spieghiamo perché.</p></div>
 </div>
 </section>
 
@@ -902,9 +905,9 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <sc-if value="{{glutenNote}}" hint-placeholder-val="{{ false }}">
 <div class="v-open" style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border-radius: 16px; background: #FFF7D6; color: #3B0B40"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A6D00" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex: none; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg><p style="margin: 0; font-size: 15px; line-height: 1.55">Quasi tutto il menu in carta contiene glutine. Per chi lo evita abbiamo un <strong style="font-weight: 600">menu senza glutine dedicato</strong>, ma non è adatto ai celiaci: possono esserci tracce. <a href="#glutine">Come funziona</a></p></div>
 </sc-if>
-<div class="v-res" style="gap: 14px">
+<div class="v-res {{resCls}}" style="gap: 14px">
 <sc-for list="{{results}}" as="r" hint-placeholder-count="9">
-<article class="v-card" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<article class="v-card {{r.x}}" style="display: flex; flex-direction: column; border: 1px solid #E6ECE5; border-radius: 18px; overflow: hidden; background: #FFFFFF">
 <div style="height: 120px; background: #F7F9F6; display: flex; align-items: center; justify-content: center; padding: 10px">
 <sc-if value="{{r.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{r.i}}" alt="{{r.n}}" loading="lazy" style="max-width: 100%; height: 100px; object-fit: contain"></sc-if>
 <sc-if value="{{r.noImg}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; color: #6F8C77">{{r.c}}</span></sc-if>
@@ -918,6 +921,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </article>
 </sc-for>
 </div>
+<sc-if value="{{moreBtn}}" hint-placeholder-val="{{ true }}"><button type="button" class="v-morebtn" onClick="{{showAll}}" style="align-self: stretch; min-height: 48px; border-radius: 999px; border: 1.5px solid #2F7D4F; background: #FFFFFF; color: #2F7D4F; font: 600 15px 'Figtree', sans-serif; cursor: pointer">{{moreLabel}}</button></sc-if>
 <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6B4A70">Numeri degli allergeni secondo il Reg. UE 1169/2011. L’elenco è indicativo e può cambiare con le forniture: fa fede quello che ti dice lo staff al tavolo.</p>
 </div>
 </div>
@@ -929,7 +933,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div class="v-wrap v-three" style="gap: 16px">
 <div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #F3F7F2; border-radius: 20px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #2F7D4F">VEGANO</span><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Hummus & falafel e banana bread</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">L’hummus lo facciamo in casa, il banana bread esce dal nostro laboratorio.</p></div>
 <div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #F7F2F6; border-radius: 20px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #91007D">SENZA LATTOSIO</span><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Piatti salati, Oreo e brownie</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Molti piatti salati non contengono latte, e in vetrina ci sono il cupcake Oreo e il brownie. Il filtro qui sopra te li mostra tutti.</p></div>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFF7D6; border-radius: 20px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8A6D00">SENZA GLUTINE</span><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Sì, ma non per celiaci</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Un menu dedicato da chiedere allo staff. Non è adatto alla celiachia: possono esserci tracce.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFF7D6; border-radius: 20px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #8A6D00">SENZA GLUTINE</span><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 22px; color: #3B0B40">Sì, ma non per celiaci</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Chiedi allo staff il menu dedicato. Qui sotto ti spieghiamo perché.</p></div>
 </div>
 </section>
 
@@ -1028,8 +1032,9 @@ class Component extends DCLogic {
     const toggle = (n) => { const cur = (this.state && this.state.ex) || []; this.setState({ ex: cur.includes(n) ? cur.filter((x) => x !== n) : cur.concat([n]) }); };
     const allergens = AL.map((a) => Object.assign({ num: a[0], label: 'Senza ' + a[1].toLowerCase(), pick: () => toggle(a[0]) }, on(ex.includes(a[0]))));
     const diets = [{ id: 'v', label: 'Solo vegano' }, { id: 'l', label: 'Solo senza lattosio' }].map((d) => Object.assign({ label: d.label, pick: () => this.setState({ diet: diet === d.id ? '' : d.id }) }, on(diet === d.id)));
+    const st_all = !!(this.state && this.state.all);
     const res = MENU.filter((m) => !m.a.some((x) => ex.includes(x)) && (diet !== 'v' || m.v) && (diet !== 'l' || !m.a.includes(7)));
-    const results = res.map((m) => ({ n: m.n, c: m.c, k: m.k, p: m.p, i: m.i, hasImg: !!m.i, noImg: !m.i, alText: m.a.length ? 'Contiene: ' + m.a.map((x) => name[x] ? name[x].toLowerCase() : x).join(', ') : 'Nessun allergene indicato' }));
+    const results = res.map((m, idx) => ({ x: idx >= 6 ? 'v-x' : '', n: m.n, c: m.c, k: m.k, p: m.p, i: m.i, hasImg: !!m.i, noImg: !m.i, alText: m.a.length ? 'Contiene: ' + m.a.map((x) => name[x] ? name[x].toLowerCase() : x).join(', ') : 'Nessun allergene indicato' }));
     const faqData = [
       { q: 'Avete un menu senza glutine?', a: 'Sì, per chi evita il glutine abbiamo un menu dedicato, da chiedere allo staff. Non è adatto ai celiaci: in cucina lavoriamo glutine ogni giorno e non possiamo garantire l’assenza di tracce.' },
       { q: 'Posso venire se sono celiaco?', a: 'Ci dispiace davvero, ma non abbiamo prodotti adatti alla celiachia. In cucina e in laboratorio lavoriamo farine ogni giorno e non possiamo garantire l’assenza di tracce, nemmeno nei piatti senza glutine tra gli ingredienti. Preferiamo dirtelo con sincerità.' },
@@ -1046,7 +1051,8 @@ class Component extends DCLogic {
       count: results.length,
       countLabel: results.length === 1 ? 'piatto o drink adatto a te' : 'tra piatti e drink adatti a te',
       glutenNote: ex.includes(1),
-      reset: () => this.setState({ ex: [], diet: '' })
+      resCls: st_all ? 'v-all' : '', moreBtn: !st_all && results.length > 6, moreLabel: ((typeof this.t === 'function') ? this.t('Mostra tutti i {n}') : 'Mostra tutti i {n}').replace('{n}', results.length), showAll: () => this.setState({ all: true }),
+      reset: () => this.setState({ ex: [], diet: '', all: false })
     };
   }
 }
