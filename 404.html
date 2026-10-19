@@ -6,7 +6,7 @@
 <script>(function(){var L=['it','en','es','fr'],l=null,q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1];if(q&&L.indexOf(q)>=0){l=q;try{localStorage.setItem('keik-lang',q)}catch(e){}}if(!l){try{l=localStorage.getItem('keik-lang')}catch(e){}if(L.indexOf(l)<0)l=null;}if(!l&&/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent))l='it';if(!l){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'it'],f=null;for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='it'){f='it';break;}if(!f&&L.indexOf(c)>0)f=c;}l=f||'en';}window.__KLANG__=l;document.documentElement.lang=l;if(l!=='it')document.write('<script src="assets/i18n/'+l+'.js"><\/script>');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pagina non trovata · KEIK Modena</title>
-<style>html,body{overflow-x:clip}</style>
+<style>html,body{overflow-x:clip}:where(img[data-kki]){height:auto}</style>
 <link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@ body{margin:0;background:#2A0830}
 
 <header style="border-bottom: 1px solid rgba(255,255,255,0.12)">
 <div class="x-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
-<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/4ae9236772f217ad454621f7172ec031.png" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/4ae9236772f217ad454621f7172ec031-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto" srcset="assets/img/4ae9236772f217ad454621f7172ec031-480.webp 480w" sizes="85px" width="680" height="401" decoding="async" loading="eager" data-kki=""></a>
 <a href="prenota.html" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota un tavolo</a>
 </div>
 </header>
@@ -61,7 +61,7 @@ body{margin:0;background:#2A0830}
 </div>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; min-width: 0">
-<img class="x-brady" src="assets/img/990367cb4270e3318ae52408c3436fc1.webp" alt="Brady, il bradipo di KEIK, con l’aria un po’ persa" style="width: 320px; height: auto">
+<img class="x-brady" src="assets/img/990367cb4270e3318ae52408c3436fc1-480.webp" alt="Brady, il bradipo di KEIK, con l’aria un po’ persa" style="width: 320px; height: auto" srcset="assets/img/990367cb4270e3318ae52408c3436fc1-480.webp 480w" sizes="(max-width: 700px) 100vw, 50vw" width="565" height="600" decoding="async" loading="eager" fetchpriority="high" data-kki="">
 </div>
 </div>
 
@@ -150,6 +150,8 @@ class Component extends DCLogic {
 </script>
 <script>window.__DC_PROPS__ = {};window.__DC_OVERRIDE__ = {};</script>
 <script src="assets/js/morphdom.min.js"></script>
+<script>window.__KEAGER__=["990367cb4270e3318ae52408c3436fc1","4ae9236772f217ad454621f7172ec031"];</script>
+<script src="assets/js/kimg.js"></script>
 <script src="assets/js/keik-dc.js"></script>
 </body>
 </html>

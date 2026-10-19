@@ -52,6 +52,36 @@
   function str(v) { return v == null || v === false ? (v === false ? 'false' : '') : String(v); }
   function interp(text, scopes, tr) { return text.replace(HOLE, function (_, e) { var v = lookup(e, scopes); return str(tr ? t(v) : v); }); }
 
+  // --- M1 immagini: srcset WebP, dimensioni, lazy (manifest in assets/js/kimg.js, primi elementi visibili in __KEAGER__)
+  var KIMG = window.__KIMG__ || {};
+  var KEAGER = window.__KEAGER__ || [];
+  var IMGRX = /^(.*?assets\/img\/)([0-9a-f]{32})\.(jpe?g|png|webp)$/;
+  function imgEnhance(out, start) {
+    var html = out.slice(start).join('');
+    var m = / src="([^"]*)"/.exec(html);
+    if (!m) return;
+    var mm = IMGRX.exec(m[1]);
+    if (!mm || !KIMG[mm[2]]) return;
+    var info = KIMG[mm[2]], base = mm[1] + mm[2] + '-';
+    var mid = info.v.filter(function (w) { return w <= 960; }).pop() || info.v[0];
+    html = html.replace(' src="' + m[1] + '"', ' src="' + base + mid + '.webp"');
+    var add = ' srcset="' + info.v.map(function (w) { return base + w + '.webp ' + w + 'w'; }).join(', ') + '"';
+    var sw = /style="[^"]*?(?:^|[;\s])width:\s*(\d+)px/.exec(html);
+    var sh = /style="[^"]*?(?:^|[;\s])height:\s*(\d+)px/.exec(html);
+    var sz = '(max-width: 700px) 100vw, 50vw';
+    if (sw && +sw[1] <= 600) sz = sw[1] + 'px';
+    else if (sh && +sh[1] <= 300 && !sw && !/width:\s*[\d.]+%/.test(html)) sz = Math.round(+sh[1] * info.w / info.h) + 'px';
+    add += ' sizes="' + sz + '"';
+    if (!/ width="/.test(html)) add += ' width="' + info.w + '"';
+    if (!/ height="/.test(html)) add += ' height="' + info.h + '"';
+    if (!/ decoding="/.test(html)) add += ' decoding="async"';
+    var ei = KEAGER.indexOf(mm[2]);
+    if (!/ loading="/.test(html)) add += ei >= 0 ? ' loading="eager"' : ' loading="lazy"';
+    if (ei === 0 && !/ fetchpriority="/.test(html)) add += ' fetchpriority="high"';
+    add += ' data-kki';
+    out.splice(start, out.length - start, html + add);
+  }
+
   function Renderer() { this.handlers = []; this.refs = []; this.notr = 0; }
   Renderer.prototype.node = function (n, scopes, out) {
     if (n.nodeType === 3) {
@@ -78,6 +108,7 @@
     var nt = n.hasAttribute && n.hasAttribute('data-notr');
     if (nt) this.notr++;
     var trA = !this.notr;
+    var start = out.length;
     out.push('<' + tag);
     for (var a = 0; a < n.attributes.length; a++) {
       var at = n.attributes[a], name = at.name, val = at.value, lname = name.toLowerCase();
@@ -104,6 +135,7 @@
       if (tv) val = t(val);
       out.push(' ' + name + '="' + esc(val.indexOf('{{') >= 0 ? interp(val, scopes, tv) : val) + '"');
     }
+    if (tag === 'img') imgEnhance(out, start);
     out.push('>');
     if (VOID[tag]) { if (nt) this.notr--; return; }
     if (tag === 'template') { out.push(n.innerHTML); } else { this.kids(n.content || n, scopes, out); }

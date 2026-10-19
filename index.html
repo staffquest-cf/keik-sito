@@ -5,7 +5,7 @@
 <script>(function(){var L=['it','en','es','fr'],l=null,q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1];if(q&&L.indexOf(q)>=0){l=q;try{localStorage.setItem('keik-lang',q)}catch(e){}}if(!l){try{l=localStorage.getItem('keik-lang')}catch(e){}if(L.indexOf(l)<0)l=null;}if(!l&&/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent))l='it';if(!l){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'it'],f=null;for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='it'){f='it';break;}if(!f&&L.indexOf(c)>0)f=c;}l=f||'en';}window.__KLANG__=l;document.documentElement.lang=l;if(l!=='it')document.write('<script src="assets/i18n/'+l+'.js"><\/script>');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KEIK · All Day Kitchen</title>
-<style>html,body{overflow-x:clip}</style>
+<style>html,body{overflow-x:clip}:where(img[data-kki]){height:auto}</style>
 <link rel="icon" type="image/png" href="assets/img/cab2c85a72f518cbd8df0064e68be490.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Figtree:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
@@ -98,7 +98,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <header style="position: sticky; top: 0; z-index: 40; border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
 <div class="k-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 80px">
-<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e.png" alt="Keik – Viaggia col gusto" style="display: block; height: 56px; width: auto"></a>
+<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 56px; width: auto" srcset="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp 480w" sizes="95px" width="680" height="401" decoding="async" loading="eager" data-kki=""></a>
 <nav class="k-nav-links" aria-label="Principale" style="gap: 32px; font-weight: 600; font-size: 15px">
 <a href="#giornata" style="color: #3B0B40; text-decoration: none">La giornata</a>
 <a href="menu.html" style="color: #3B0B40; text-decoration: none">Menu</a>
@@ -136,12 +136,12 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 
 <div style="position: relative; min-width: 0">
-<img src="assets/img/86adea1531601bc433411af201ed1692.jpg" alt="La sala di KEIK piena, con i festoni colorati del mese a tema" style="display: block; width: 100%; height: 400px; object-fit: cover; object-position: center 45%; border-radius: 28px">
+<img src="assets/img/86adea1531601bc433411af201ed1692-960.webp" alt="La sala di KEIK piena, con i festoni colorati del mese a tema" style="display: block; width: 100%; height: 400px; object-fit: cover; object-position: center 45%; border-radius: 28px" srcset="assets/img/86adea1531601bc433411af201ed1692-480.webp 480w, assets/img/86adea1531601bc433411af201ed1692-960.webp 960w, assets/img/86adea1531601bc433411af201ed1692-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 50vw" width="1600" height="1512" decoding="async" loading="eager" fetchpriority="high" data-kki="">
 
 
 
 <div class="k-pop" style="position: absolute; top: -22px; right: -14px; width: 150px; display: flex; flex-direction: column; background: #FFFFFF; border-radius: 18px; padding: 6px 6px 10px; box-shadow: 0 18px 36px rgba(42,8,48,0.25)">
-<img src="assets/img/c617c2475df4e4b73d5f59449773bb64.jpg" alt="Pancakes con crema Biscoff e fragole" style="display: block; width: 100%; height: 132px; object-fit: cover; border-radius: 13px">
+<img src="assets/img/c617c2475df4e4b73d5f59449773bb64-960.webp" alt="Pancakes con crema Biscoff e fragole" style="display: block; width: 100%; height: 132px; object-fit: cover; border-radius: 13px" srcset="assets/img/c617c2475df4e4b73d5f59449773bb64-480.webp 480w, assets/img/c617c2475df4e4b73d5f59449773bb64-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1200" height="1600" decoding="async" loading="eager" data-kki="">
 <span style="display: flex; gap: 6px; align-items: center; padding: 8px 4px 0; font-family: 'DM Mono', monospace; font-size: 13px; color: #3B0B40"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18M6.5 14.5a5.5 5.5 0 0 1 11 0M12 4v3M4.9 7.9l2.1 2.1M19.1 7.9 17 10"></path></svg>10:00</span>
 <span style="padding: 2px 4px 0; font-size: 13px; line-height: 1.3; color: #4A2350">pancakes e latte al matcha</span>
 </div>
@@ -296,10 +296,10 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div class="k-day" role="tabpanel" aria-label="Brunch" style="background: #F7F2F6; border-radius: 32px; padding: 32px">
 <div style="position: relative; min-width: 0">
 <div style="overflow: hidden; border-radius: 22px">
-<img class="k-zoom" src="assets/img/66e7a9377661840fe22c87c6e81cd5fd.jpg" alt="Il Brunch Traveler con pancakes, bacon, uova, avocado toast al salmone e due drink" style="display: block; width: 100%; height: 460px; object-fit: cover">
+<img class="k-zoom" src="assets/img/66e7a9377661840fe22c87c6e81cd5fd-960.webp" alt="Il Brunch Traveler con pancakes, bacon, uova, avocado toast al salmone e due drink" style="display: block; width: 100%; height: 460px; object-fit: cover" srcset="assets/img/66e7a9377661840fe22c87c6e81cd5fd-480.webp 480w, assets/img/66e7a9377661840fe22c87c6e81cd5fd-960.webp 960w, assets/img/66e7a9377661840fe22c87c6e81cd5fd-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 50vw" width="1600" height="900" decoding="async" loading="lazy" data-kki="">
 </div>
 
-<img class="k-pop" src="assets/img/2c19900693612ff4769efea4236cbde3.jpg" alt="Pancakes al pistacchio con fragole e mirtilli" style="position: absolute; right: -14px; bottom: -18px; width: 160px; height: 188px; object-fit: cover; border-radius: 18px; border: 6px solid #FFFFFF; box-shadow: 0 12px 28px rgba(42,8,48,0.22)">
+<img class="k-pop" src="assets/img/2c19900693612ff4769efea4236cbde3-960.webp" alt="Pancakes al pistacchio con fragole e mirtilli" style="position: absolute; right: -14px; bottom: -18px; width: 160px; height: 188px; object-fit: cover; border-radius: 18px; border: 6px solid #FFFFFF; box-shadow: 0 12px 28px rgba(42,8,48,0.22)" srcset="assets/img/2c19900693612ff4769efea4236cbde3-480.webp 480w, assets/img/2c19900693612ff4769efea4236cbde3-960.webp 960w, assets/img/2c19900693612ff4769efea4236cbde3-1600.webp 1600w" sizes="160px" width="1600" height="1600" decoding="async" loading="lazy" data-kki="">
 
 </div>
 <div class="k-panel" style="display: flex; flex-direction: column; gap: 20px; min-width: 0">
@@ -422,7 +422,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Destination of the month</p>
 <h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(40px, 4.4vw, 62px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Ogni mese la vetrina parte <span class="k-serif" style="color: #91007D">per un altro posto.</span></h2>
 <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">La dipingiamo a mano sul vetro, e per un mese Via Canalino diventa un altro mondo. Intorno al tema ci sono i piatti speciali e le serate che accompagnano il menu.</p>
-<img src="assets/img/1052df8078b2425597a48b937cead26a.jpg" alt="Serata a tema da KEIK: sala piena, lettere appese al soffitto e piatti in arrivo ai tavoli" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 55%; border-radius: 22px">
+<img src="assets/img/1052df8078b2425597a48b937cead26a-960.webp" alt="Serata a tema da KEIK: sala piena, lettere appese al soffitto e piatti in arrivo ai tavoli" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 55%; border-radius: 22px" srcset="assets/img/1052df8078b2425597a48b937cead26a-480.webp 480w, assets/img/1052df8078b2425597a48b937cead26a-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1066" height="800" decoding="async" loading="lazy" data-kki="">
 <div style="display: flex; align-items: center; gap: 16px; padding: 18px 20px; border-radius: 18px; border: 1.5px dashed #91007D">
 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#91007D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16l20-6-4-2-6 2-6-5-2 1 4 5-4 1-2-2-1 1 3 4z"></path></svg>
 <div style="display: flex; flex-direction: column; gap: 2px">
@@ -438,20 +438,20 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #6B4A70">ALCUNI DEI VIAGGI CHE LA VETRINA HA GIÀ FATTO</p>
 <div class="k-passport" style="position: relative; border-radius: 18px; padding: 22px 22px 26px; background-color: #F4ECDD; background-image: repeating-radial-gradient(circle at 30% 120%, rgba(145,0,125,0.05) 0 1px, transparent 1px 9px), repeating-linear-gradient(115deg, rgba(59,11,64,0.035) 0 1px, transparent 1px 7px); box-shadow: inset 0 0 0 1px #E2D3BC, inset 18px 0 30px -18px rgba(59,11,64,0.25), 0 24px 50px rgba(42,8,48,0.14); box-sizing: border-box">
-<div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px; margin-bottom: 8px; border-bottom: 1px dashed #CDB99A; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #8A7258"><span>VISTI · VISAS · VISADOS</span><span style="display: inline-flex; align-items: center; gap: 8px"><img src="assets/img/cab2c85a72f518cbd8df0064e68be490.png" alt="" style="height: 18px; width: auto; opacity: 0.85">CHILLAX REPUBLIC OF KEIK · P. 07</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px; margin-bottom: 8px; border-bottom: 1px dashed #CDB99A; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #8A7258"><span>VISTI · VISAS · VISADOS</span><span style="display: inline-flex; align-items: center; gap: 8px"><img src="assets/img/cab2c85a72f518cbd8df0064e68be490-142.webp" alt="" style="height: 18px; width: auto; opacity: 0.85" srcset="assets/img/cab2c85a72f518cbd8df0064e68be490-142.webp 142w" sizes="(max-width: 700px) 100vw, 50vw" width="142" height="159" decoding="async" loading="lazy" data-kki="">CHILLAX REPUBLIC OF KEIK · P. 07</span></div>
 <div class="k-cards" style="gap: 6px 10px">
 
-<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(-8deg) translate(0px, 4px); opacity: 0.92"><img src="assets/img/b688b0ebc55b8c2ca31765c81c1995a1.webp" alt="Timbro Giappone, TOKYO · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply"></div>
+<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(-8deg) translate(0px, 4px); opacity: 0.92"><img src="assets/img/b688b0ebc55b8c2ca31765c81c1995a1-440.webp" alt="Timbro Giappone, TOKYO · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply" srcset="assets/img/b688b0ebc55b8c2ca31765c81c1995a1-440.webp 440w" sizes="(max-width: 700px) 100vw, 50vw" width="440" height="439" decoding="async" data-kki=""></div>
 
-<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(6deg) translate(0px, -4px); opacity: 0.92"><img src="assets/img/257c2b30b5296fd9c352adacc89951b9.webp" alt="Timbro Messico, CDMX · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply"></div>
+<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(6deg) translate(0px, -4px); opacity: 0.92"><img src="assets/img/257c2b30b5296fd9c352adacc89951b9-377.webp" alt="Timbro Messico, CDMX · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply" srcset="assets/img/257c2b30b5296fd9c352adacc89951b9-377.webp 377w" sizes="(max-width: 700px) 100vw, 50vw" width="377" height="440" decoding="async" data-kki=""></div>
 
-<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(-14deg) translate(-4px, 8px); opacity: 0.92"><img src="assets/img/2c8ce4573dae897cc70370aa0bfdb580.webp" alt="Timbro Hawaii, HONOLULU · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply"></div>
+<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(-14deg) translate(-4px, 8px); opacity: 0.92"><img src="assets/img/2c8ce4573dae897cc70370aa0bfdb580-440.webp" alt="Timbro Hawaii, HONOLULU · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply" srcset="assets/img/2c8ce4573dae897cc70370aa0bfdb580-440.webp 440w" sizes="(max-width: 700px) 100vw, 50vw" width="440" height="354" decoding="async" data-kki=""></div>
 
-<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(-4deg) translate(4px, 0px); opacity: 0.92"><img src="assets/img/4e59c45a2ef73607feb2dc8d9a2acb74.webp" alt="Timbro Magia, BINARIO 9¾ · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply"></div>
+<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(-4deg) translate(4px, 0px); opacity: 0.92"><img src="assets/img/4e59c45a2ef73607feb2dc8d9a2acb74-440.webp" alt="Timbro Magia, BINARIO 9¾ · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply" srcset="assets/img/4e59c45a2ef73607feb2dc8d9a2acb74-440.webp 440w" sizes="(max-width: 700px) 100vw, 50vw" width="440" height="398" decoding="async" data-kki=""></div>
 
-<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(10deg) translate(0px, -6px); opacity: 0.92"><img src="assets/img/3d77815301e811d9f0d90e24af6381e2.webp" alt="Timbro Corea, SEOUL · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply"></div>
+<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(10deg) translate(0px, -6px); opacity: 0.92"><img src="assets/img/3d77815301e811d9f0d90e24af6381e2-440.webp" alt="Timbro Corea, SEOUL · VISITATO" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply" srcset="assets/img/3d77815301e811d9f0d90e24af6381e2-440.webp 440w" sizes="(max-width: 700px) 100vw, 50vw" width="440" height="440" decoding="async" data-kki=""></div>
 
-<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(-3deg) translate(0px, 2px); opacity: 0.8"><img src="assets/img/b24c74633fd69c5f8cf11d07dac0813e.webp" alt="Timbro Stati Uniti, NOVEMBRE · PROSSIMA FERMATA" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply"></div>
+<div class="k-stamp" style="display: flex; align-items: center; justify-content: center; padding: 8px; transform: rotate(-3deg) translate(0px, 2px); opacity: 0.8"><img src="assets/img/b24c74633fd69c5f8cf11d07dac0813e-439.webp" alt="Timbro Stati Uniti, NOVEMBRE · PROSSIMA FERMATA" loading="lazy" style="display: block; width: 100%; max-width: 210px; height: auto; mix-blend-mode: multiply" srcset="assets/img/b24c74633fd69c5f8cf11d07dac0813e-439.webp 439w" sizes="(max-width: 700px) 100vw, 50vw" width="439" height="440" decoding="async" data-kki=""></div>
 
 </div>
 </div>
@@ -464,7 +464,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div class="k-wrap k-two">
 <div style="display: flex; justify-content: center; min-width: 0">
 <div style="position: relative; width: 100%; max-width: 480px">
-<img src="assets/img/d20ebb438cec213379bad0a538195500.jpg" alt="Il Passaporto del Gusto, la fidelity di KEIK, consegnato al banco" style="display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 28px; box-shadow: 0 30px 60px rgba(42,8,48,0.22)">
+<img src="assets/img/d20ebb438cec213379bad0a538195500-960.webp" alt="Il Passaporto del Gusto, la fidelity di KEIK, consegnato al banco" style="display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 28px; box-shadow: 0 30px 60px rgba(42,8,48,0.22)" srcset="assets/img/d20ebb438cec213379bad0a538195500-480.webp 480w, assets/img/d20ebb438cec213379bad0a538195500-960.webp 960w, assets/img/d20ebb438cec213379bad0a538195500-1600.webp 1600w" sizes="(max-width: 700px) 100vw, 50vw" width="1600" height="1600" decoding="async" loading="lazy" data-kki="">
 <span style="position: absolute; left: 18px; bottom: 18px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; background: #FFFFFF; color: #3B0B40; padding: 8px 12px; border-radius: 8px">1 € = 1 MIGLIO</span>
 </div>
 </div>
@@ -502,14 +502,14 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <path d="M536 96 v10 M529 120 l7-14 7 14 M527 120 h18 v70 h-18 z M527 138 h18 M527 156 h18 M527 174 h18 M533 126 h6" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
 
 <path d="M82 170 C 210 20, 400 20, 516 158" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="3 7" stroke-linecap="round"></path>
-<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="493.84213284114077" opacity="1.000"></path>
+<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="494.8822901172991" opacity="1.000"></path>
 
 <circle cx="82" cy="170" r="4.5" fill="#FAE609"></circle>
 <circle cx="516" cy="158" r="5.00" stroke="#FFFFFF" stroke-width="1.5" opacity="0"></circle>
 <circle cx="516" cy="158" r="4" fill="#FFFFFF"></circle>
 
-<g opacity="0.271" transform="translate(86.74 169.96) rotate(-48.55) scale(0.735)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
-<g transform="translate(86.48 164.84) rotate(-48.55) scale(0.919)" opacity="1.000"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
+<g opacity="0.268" transform="translate(86.01 170.57) rotate(-48.70) scale(0.733)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
+<g transform="translate(85.79 165.62) rotate(-48.70) scale(0.916)" opacity="1.000"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
 
 <text x="34" y="214" fill="#FFFFFF" style="font: 500 12px 'DM Mono', monospace; letter-spacing: 0.08em">CCS · CARACAS</text>
 <text x="566" y="214" fill="#FFFFFF" text-anchor="end" style="font: 500 12px 'DM Mono', monospace; letter-spacing: 0.08em">MOD · MODENA</text>
@@ -523,8 +523,8 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </ul>
 </div>
 <div style="position: relative; min-width: 0">
-<img src="assets/img/664dd3c879354378328827845ca679d6.jpg" alt="Una barista di KEIK al banco con la maglietta Viaggia col gusto" style="display: block; width: 100%; height: 560px; object-fit: cover; border-radius: 28px">
-<img src="assets/img/f2a9db2908478dc5ef2d29e7168e8702.jpg" alt="Un cupcake Red Velvet tenuto tra le mani" style="position: absolute; left: -28px; bottom: -28px; width: 190px; height: 210px; object-fit: cover; border-radius: 18px; border: 6px solid #FFFFFF; box-shadow: 0 16px 32px rgba(42,8,48,0.22); transform: rotate(-3deg)">
+<img src="assets/img/664dd3c879354378328827845ca679d6-960.webp" alt="Una barista di KEIK al banco con la maglietta Viaggia col gusto" style="display: block; width: 100%; height: 560px; object-fit: cover; border-radius: 28px" srcset="assets/img/664dd3c879354378328827845ca679d6-480.webp 480w, assets/img/664dd3c879354378328827845ca679d6-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1066" height="1600" decoding="async" loading="lazy" data-kki="">
+<img src="assets/img/f2a9db2908478dc5ef2d29e7168e8702-960.webp" alt="Un cupcake Red Velvet tenuto tra le mani" style="position: absolute; left: -28px; bottom: -28px; width: 190px; height: 210px; object-fit: cover; border-radius: 18px; border: 6px solid #FFFFFF; box-shadow: 0 16px 32px rgba(42,8,48,0.22); transform: rotate(-3deg)" srcset="assets/img/f2a9db2908478dc5ef2d29e7168e8702-480.webp 480w, assets/img/f2a9db2908478dc5ef2d29e7168e8702-960.webp 960w" sizes="190px" width="1068" height="1600" decoding="async" loading="lazy" data-kki="">
 </div>
 </div>
 </section>
@@ -556,9 +556,9 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="background: #FFFFFF; color: #3B0B40; border-radius: 24px; display: flex; flex-direction: column; overflow: hidden; min-width: 0">
 <div style="display: flex; justify-content: space-between; align-items: center; padding: 18px 26px; border-bottom: 1px solid #ECE3EA">
 <span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #6B4A70">CARTA D'IMBARCO</span>
-<img src="assets/img/cab2c85a72f518cbd8df0064e68be490.png" alt="Keik" style="display: block; height: 34px; width: auto">
+<img src="assets/img/cab2c85a72f518cbd8df0064e68be490-142.webp" alt="Keik" style="display: block; height: 34px; width: auto" srcset="assets/img/cab2c85a72f518cbd8df0064e68be490-142.webp 142w" sizes="30px" width="142" height="159" decoding="async" loading="lazy" data-kki="">
 </div>
-<img src="assets/img/014cc06cc350cb1119c88cd75c057cb9.jpg" alt="L'ingresso di KEIK in Via Canalino 51 con l'insegna viola" style="display: block; width: 100%; height: 260px; object-fit: cover; object-position: center 14%">
+<img src="assets/img/014cc06cc350cb1119c88cd75c057cb9-960.webp" alt="L'ingresso di KEIK in Via Canalino 51 con l'insegna viola" style="display: block; width: 100%; height: 260px; object-fit: cover; object-position: center 14%" srcset="assets/img/014cc06cc350cb1119c88cd75c057cb9-480.webp 480w, assets/img/014cc06cc350cb1119c88cd75c057cb9-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1170" height="1170" decoding="async" loading="lazy" data-kki="">
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 26px">
 <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">GATE</span><span style="font-weight: 600; font-size: 18px">Via Canalino 51</span><span style="font-size: 15px; color: #4A2350">41121 Modena, a due passi dalle piazze del centro</span></div>
 <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70">ORARI</span><span style="font-weight: 600; font-size: 18px">Tutti i giorni 10–20</span><span style="font-size: 15px; color: #4A2350">venerdì e sabato fino alle 22</span></div>
@@ -584,7 +584,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div class="k-wrap" style="display: flex; flex-direction: column; gap: 44px">
 <div class="k-foot">
 <div style="display: flex; flex-direction: column; gap: 12px">
-<img src="assets/img/4ae9236772f217ad454621f7172ec031.png" alt="Keik – Viaggia col gusto" style="display: block; height: 96px; width: auto; align-self: flex-start">
+<img src="assets/img/4ae9236772f217ad454621f7172ec031-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 96px; width: auto; align-self: flex-start" srcset="assets/img/4ae9236772f217ad454621f7172ec031-480.webp 480w" sizes="163px" width="680" height="401" decoding="async" loading="lazy" data-kki="">
 <p style="margin: 0; font-size: 16px; line-height: 1.55; max-width: 26em">Brunch a qualsiasi ora, nel centro di Modena dal 2013. Pranzo, merenda e aperitivo da tutto il mondo.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
@@ -1270,6 +1270,8 @@ class Component extends DCLogic {
 </script>
 <script>window.__DC_PROPS__ = {};window.__DC_OVERRIDE__ = {};</script>
 <script src="assets/js/morphdom.min.js"></script>
+<script>window.__KEAGER__=["86adea1531601bc433411af201ed1692","c617c2475df4e4b73d5f59449773bb64","cea731796bb98fc55bef3bb8e7c4505e"];</script>
+<script src="assets/js/kimg.js"></script>
 <script src="assets/js/keik-dc.js"></script>
 </body>
 </html>
