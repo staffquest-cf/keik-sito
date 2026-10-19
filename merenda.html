@@ -326,9 +326,9 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <button type="button" class="r-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Domani</button>
 
-<button type="button" class="r-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Sabato</button>
+<button type="button" class="r-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Sab 24/10</button>
 
-<button type="button" class="r-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Domenica</button>
+<button type="button" class="r-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Dom 25/10</button>
 
 </div>
 </fieldset>
@@ -773,7 +773,12 @@ class Component extends DCLogic {
       { name: 'Brady pancakes', desc: 'Frutta fresca, granella di nocciola e sciroppo d’acero canadese o Nutella.', price: '8,90 – 10,90 €', img: I.brady },
       { name: 'Biscoff belgian', desc: 'Crema Biscoff Lotus, frutta fresca, Lotus crumble e panna.', price: '11,90 €', img: I.biscoff }
     ];
-    const dayLabels = ['Oggi', 'Domani', 'Sabato', 'Domenica'];
+    const now = new Date();
+    const wd = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+    const nextOf = (t) => { const x = (t - now.getDay() + 7) % 7; return x < 2 ? x + 7 : x; };
+    const offs = [0, 1, nextOf(6), nextOf(0)];
+    const dateOf = (o) => new Date(now.getFullYear(), now.getMonth(), now.getDate() + o);
+    const dayLabels = offs.map((o, i) => i === 0 ? 'Oggi' : i === 1 ? 'Domani' : wd[dateOf(o).getDay()] + ' ' + dateOf(o).getDate() + '/' + (dateOf(o).getMonth() + 1));
     const timeLabels = ['15:00', '15:30', '16:00', '16:30', '17:00', '18:00'];
     const days = dayLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ day: i }) }, chip(i === day)));
     const times = timeLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ time: i }) }, chip(i === time)));

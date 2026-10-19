@@ -340,9 +340,9 @@ Con bacon 12,90 €</p>
 
 <button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Domani</button>
 
-<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Sabato</button>
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Sab 24/10</button>
 
-<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Domenica</button>
+<button type="button" class="p-chip" aria-pressed="false" style="min-height: 48px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Dom 25/10</button>
 
 </div>
 </fieldset>
@@ -730,7 +730,12 @@ class Component extends DCLogic {
       code: d.code, name: d.name, price: d.price.split('\n')[0].replace('Singolo ', ''),
       status: i === 0 ? st8[0][0] : st8[1][0], statusBg: i === 0 ? st8[0][1] : st8[1][1], statusFg: i === 0 ? st8[0][2] : st8[1][2]
     }));
-    const dayLabels = ['Oggi', 'Domani', 'Sabato', 'Domenica'];
+    const now = new Date();
+    const wd = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+    const nextOf = (t) => { const x = (t - now.getDay() + 7) % 7; return x < 2 ? x + 7 : x; };
+    const offs = [0, 1, nextOf(6), nextOf(0)];
+    const dateOf = (o) => new Date(now.getFullYear(), now.getMonth(), now.getDate() + o);
+    const dayLabels = offs.map((o, i) => i === 0 ? 'Oggi' : i === 1 ? 'Domani' : wd[dateOf(o).getDay()] + ' ' + dateOf(o).getDate() + '/' + (dateOf(o).getMonth() + 1));
     const timeLabels = ['12:00', '12:30', '13:00', '13:30', '14:00', '14:30'];
     const days = dayLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ day: i }) }, chip(i === day)));
     const times = timeLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ time: i }) }, chip(i === time)));
