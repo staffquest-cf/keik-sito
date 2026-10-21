@@ -32,6 +32,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .n-good{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .n-nav{display:flex}
 .n-sticky{display:none}
+.n-tipcard{grid-template-columns:minmax(0,320px) minmax(0,1fr)}
 .n-chip{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
 .n-pop{animation:npop .4s cubic-bezier(.3,1.4,.5,1)}
 @keyframes npop{0%{transform:scale(.98);opacity:.6}100%{transform:none;opacity:1}}
@@ -40,6 +41,8 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .n-wrap{padding-left:16px !important;padding-right:16px !important}
 .n-hero{grid-template-columns:minmax(0,1fr) !important;gap:28px !important}
 .n-moments{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+.n-tipcard{grid-template-columns:minmax(0,1fr) !important}
+.n-tipcard img{height:170px !important;min-height:0 !important}
 .n-good{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
 .n-nav{display:none !important}
 .n-sticky{display:flex !important}
@@ -53,7 +56,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
 <div class="n-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
-<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto" srcset="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp 480w" sizes="85px" width="680" height="401" decoding="async" loading="eager" data-kki=""></a>
+<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto" srcset="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp 480w" sizes="85px" width="680" height="401" decoding="async" loading="eager" fetchpriority="high" data-kki=""></a>
 <nav class="n-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
 <a href="menu.html" style="color: #3B0B40; text-decoration: none">Menu</a>
 <a href="faq.html" style="color: #3B0B40; text-decoration: none">Domande</a>
@@ -72,7 +75,23 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <nav aria-label="Percorso" style="font-size: 13px; color: #6B4A70"><a href="index.html" style="color: #6B4A70">Home</a> / <span aria-current="page">Prenota</span></nav>
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Check-in · Via Canalino 51, Modena</p>
 <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(44px, 5.4vw, 76px); line-height: 0.98; letter-spacing: -0.035em; color: #3B0B40">Prenota il tuo tavolo, <span class="n-serif" style="color: #91007D; font-size: 1.06em">scegli il tuo viaggio.</span></h1>
-<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4A2350; max-width: 30em">Brunch, pranzo, merenda o aperitivo: scegli il momento e quanti siete. Ti diciamo gli orari giusti e confermi in un minuto.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4A2350; max-width: 30em">Scegli giorno, orario e quanti siete: confermi in un minuto, senza uscire dal sito. Nelle note puoi scrivere allergie e richieste.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Da 7 persone in su <a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20prenotare%20per%20un%20gruppo." style="color: #91007D; font-weight: 600">scrivici su WhatsApp</a></p>
+</div>
+
+<div id="modulo" style="display: flex; flex-direction: column; gap: 12px; min-width: 0; scroll-margin-top: 64px">
+<div style="border-radius: 24px; overflow: hidden; background: #FFFFFF; border: 1px solid #ECE3EA; box-shadow: 0 28px 70px rgba(42,8,48,0.16)">
+
+<iframe id="pns-form" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=MbjDTW" title="Prenota un tavolo da KEIK" style="width: 100%; height: 700px; border: 0; display: block"></iframe>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #6B4A70; text-align: center">Il modulo non si apre? <a href="https://pnssm.pro/a16isyw" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></p>
+</div>
+</div>
+</section>
+
+<section style="padding: 80px 0 0; background: #FFFFFF">
+<div class="n-wrap" style="display: flex; flex-direction: column; gap: 22px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.8vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Non sai quando venire? <span class="n-serif" style="color: #91007D">Scegli il momento.</span></h2>
 <div class="n-moments" style="gap: 10px">
 
 <button type="button" class="n-chip" aria-pressed="true" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left; min-height: 76px; padding: 14px 16px; border-radius: 16px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; cursor: pointer; font-family: 'Figtree', sans-serif">
@@ -106,42 +125,14 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </button>
 
 </div>
-</div>
-
-<div class="n-pop" style="display: flex; flex-direction: column; border-radius: 28px; overflow: hidden; background: #FFFFFF; border: 1px solid #ECE3EA; box-shadow: 0 28px 70px rgba(42,8,48,0.16); position: sticky; top: 24px">
-<div style="position: relative; height: 170px">
-<img src="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-960.webp" alt="Pancakes del brunch KEIK" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center" srcset="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-480.webp 480w, assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1200" height="1600" decoding="async" loading="eager" fetchpriority="high" data-kki="">
-<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,8,48,0) 30%, rgba(42,8,48,0.85))"></div>
-<div style="position: absolute; left: 22px; right: 22px; bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end; color: #FFFFFF"><strong style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px">Brunch</strong><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em">DALLE 10:00</span></div>
-</div>
-<div style="padding: 22px; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">QUANDO</span>
-<div class="n-days" style="gap: 6px">
-
-<button type="button" class="n-chip" aria-pressed="true" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Oggi</button>
-
-<button type="button" class="n-chip" aria-pressed="false" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #E2D4E0; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Domani</button>
-
-<button type="button" class="n-chip" aria-pressed="false" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #E2D4E0; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Venerdì</button>
-
-<button type="button" class="n-chip" aria-pressed="false" style="min-height: 46px; border-radius: 12px; border: 1.5px solid #E2D4E0; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Figtree', sans-serif; cursor: pointer">Sabato</button>
-
-</div>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
-<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">PASSEGGERI</span>
-<div style="display: flex; align-items: center; gap: 6px">
-<button type="button" aria-label="Una persona in meno" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #D9C6D7; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">−</button>
-<span aria-live="polite" style="min-width: 48px; text-align: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px; color: #3B0B40">2</span>
-<button type="button" aria-label="Una persona in più" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #D9C6D7; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">+</button>
-</div>
-</div>
-<p style="margin: 0; padding: 12px 14px; border-radius: 12px; background: #F7F2F6; font-size: 14px; line-height: 1.5; color: #4A2350">Pancakes e benedict a qualsiasi ora. Nel weekend il brunch è il momento più pieno: prenota con qualche giorno di anticipo.</p>
+<div class="n-pop n-tipcard" style="display: grid; border-radius: 22px; overflow: hidden; background: #F7F2F6">
+<img src="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-960.webp" alt="Pancakes del brunch KEIK" loading="lazy" style="display: block; width: 100%; height: 100%; min-height: 160px; object-fit: cover; object-position: center" srcset="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-480.webp 480w, assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1200" height="1600" decoding="async" data-kki="">
+<div style="padding: 22px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+<strong style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 26px; color: #3B0B40">Brunch <span style="font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #6B4A70">DALLE 10:00</span></strong>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A2350">Pancakes e benedict a qualsiasi ora. Nel weekend il brunch è il momento più pieno: prenota con qualche giorno di anticipo.</p>
 
 
-<a href="https://pnssm.pro/a16isyw" style="display: flex; justify-content: center; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; min-height: 56px; border-radius: 16px">Conferma il tavolo per 2</a>
-<span style="font-size: 13px; line-height: 1.5; color: #6B4A70; text-align: center">Si apre il nostro modulo di prenotazione: scegli l’orario e lascia nelle note eventuali allergie.</span>
+<a href="#modulo" style="align-self: flex-start; font-weight: 600; font-size: 15px; color: #91007D; min-height: 44px; display: inline-flex; align-items: center">Prenota con il modulo ↑</a>
 
 </div>
 </div>
@@ -172,8 +163,8 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </footer>
 
 <div class="n-sticky" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 12px 16px 16px; padding-bottom: calc(16px + env(safe-area-inset-bottom)); background: #FFFFFF; border-top: 1px solid #ECE3EA; box-shadow: 0 -10px 30px rgba(42,8,48,0.12); gap: 10px; align-items: center">
-<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #6B4A70"><strong style="font-size: 15px; color: #3B0B40">Brunch · 2 pers.</strong>Mer 21/10</span>
-<a href="https://pnssm.pro/a16isyw" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
+<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #6B4A70"><strong style="font-size: 15px; color: #3B0B40">Prenota online</strong>Conferma in un minuto</span>
+<a href="#modulo" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
 </div>
 
 </div>
@@ -202,7 +193,23 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <nav aria-label="Percorso" style="font-size: 13px; color: #6B4A70"><a href="index.html" style="color: #6B4A70">Home</a> / <span aria-current="page">Prenota</span></nav>
 <p style="margin: 0; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Check-in · Via Canalino 51, Modena</p>
 <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(44px, 5.4vw, 76px); line-height: 0.98; letter-spacing: -0.035em; color: #3B0B40">Prenota il tuo tavolo, <span class="n-serif" style="color: #91007D; font-size: 1.06em">scegli il tuo viaggio.</span></h1>
-<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4A2350; max-width: 30em">Brunch, pranzo, merenda o aperitivo: scegli il momento e quanti siete. Ti diciamo gli orari giusti e confermi in un minuto.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #4A2350; max-width: 30em">Scegli giorno, orario e quanti siete: confermi in un minuto, senza uscire dal sito. Nelle note puoi scrivere allergie e richieste.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Da 7 persone in su <a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20prenotare%20per%20un%20gruppo." style="color: #91007D; font-weight: 600">scrivici su WhatsApp</a></p>
+</div>
+
+<div id="modulo" style="display: flex; flex-direction: column; gap: 12px; min-width: 0; scroll-margin-top: 64px">
+<div style="border-radius: 24px; overflow: hidden; background: #FFFFFF; border: 1px solid #ECE3EA; box-shadow: 0 28px 70px rgba(42,8,48,0.16)">
+<!-- Form prenotazioni Pienissimo (altezza adattata dallo script in componentDidMount) -->
+<iframe id="pns-form" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW" title="Prenota un tavolo da KEIK" style="width: 100%; height: {{pnsH}}px; border: 0; display: block"></iframe>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #6B4A70; text-align: center">Il modulo non si apre? <a href="https://pnssm.pro/a16isyw" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></p>
+</div>
+</div>
+</section>
+
+<section style="padding: 80px 0 0; background: #FFFFFF">
+<div class="n-wrap" style="display: flex; flex-direction: column; gap: 22px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 85%; font-size: clamp(34px, 3.8vw, 50px); line-height: 1; letter-spacing: -0.03em; color: #3B0B40">Non sai quando venire? <span class="n-serif" style="color: #91007D">Scegli il momento.</span></h2>
 <div class="n-moments" style="gap: 10px">
 <sc-for list="{{moments}}" as="m" hint-placeholder-count="6">
 <button type="button" class="n-chip" aria-pressed="{{m.pressed}}" onClick="{{m.pick}}" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left; min-height: 76px; padding: 14px 16px; border-radius: 16px; border: 1.5px solid {{m.border}}; background: {{m.bg}}; color: {{m.fg}}; cursor: pointer; font-family: 'Figtree', sans-serif">
@@ -211,39 +218,16 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </button>
 </sc-for>
 </div>
-</div>
-
-<div class="n-pop" style="display: flex; flex-direction: column; border-radius: 28px; overflow: hidden; background: #FFFFFF; border: 1px solid #ECE3EA; box-shadow: 0 28px 70px rgba(42,8,48,0.16); position: sticky; top: 24px">
-<div style="position: relative; height: 170px">
-<img src="{{cur.img}}" alt="{{cur.alt}}" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: {{cur.pos}}">
-<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,8,48,0) 30%, rgba(42,8,48,0.85))"></div>
-<div style="position: absolute; left: 22px; right: 22px; bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end; color: #FFFFFF"><strong style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px">{{cur.label}}</strong><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em">{{cur.time}}</span></div>
-</div>
-<div style="padding: 22px; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">QUANDO</span>
-<div class="n-days" style="gap: 6px">
-<sc-for list="{{days}}" as="d" hint-placeholder-count="4">
-<button type="button" class="n-chip" aria-pressed="{{d.pressed}}" onClick="{{d.pick}}" style="min-height: 46px; border-radius: 12px; border: 1.5px solid {{d.border}}; background: {{d.bg}}; color: {{d.fg}}; font: 600 14px 'Figtree', sans-serif; cursor: pointer">{{d.label}}</button>
-</sc-for>
-</div>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
-<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70">PASSEGGERI</span>
-<div style="display: flex; align-items: center; gap: 6px">
-<button type="button" onClick="{{less}}" aria-label="Una persona in meno" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #D9C6D7; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">−</button>
-<span aria-live="polite" style="min-width: 48px; text-align: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px; color: #3B0B40">{{pax}}</span>
-<button type="button" onClick="{{more}}" aria-label="Una persona in più" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #D9C6D7; background: #FFFFFF; color: #3B0B40; font-size: 22px; cursor: pointer">+</button>
-</div>
-</div>
-<p style="margin: 0; padding: 12px 14px; border-radius: 12px; background: #F7F2F6; font-size: 14px; line-height: 1.5; color: #4A2350">{{tip}}</p>
+<div class="n-pop n-tipcard" style="display: grid; border-radius: 22px; overflow: hidden; background: #F7F2F6">
+<img src="{{cur.img}}" alt="{{cur.alt}}" loading="lazy" style="display: block; width: 100%; height: 100%; min-height: 160px; object-fit: cover; object-position: {{cur.pos}}">
+<div style="padding: 22px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+<strong style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 26px; color: #3B0B40">{{cur.label}} <span style="font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #6B4A70">{{cur.time}}</span></strong>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A2350">{{tip}}</p>
 <sc-if value="{{isGroup}}" hint-placeholder-val="{{ false }}">
-<a href="{{waHref}}" style="display: flex; justify-content: center; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; min-height: 56px; border-radius: 16px">Organizziamo su WhatsApp</a>
-<span style="font-size: 13px; line-height: 1.5; color: #6B4A70; text-align: center">Da 7 persone in su prepariamo il tavolo insieme a te.</span>
+<a href="{{waHref}}" style="align-self: flex-start; display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Organizziamo su WhatsApp</a>
 </sc-if>
-<sc-if value="{{isSmall}}" hint-placeholder-val="{{ true }}">
-<a href="https://pnssm.pro/a16isyw" style="display: flex; justify-content: center; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; min-height: 56px; border-radius: 16px">Conferma il tavolo per {{pax}}</a>
-<span style="font-size: 13px; line-height: 1.5; color: #6B4A70; text-align: center">Si apre il nostro modulo di prenotazione: scegli l’orario e lascia nelle note eventuali allergie.</span>
+<sc-if value="{{isBook}}" hint-placeholder-val="{{ true }}">
+<a href="#modulo" style="align-self: flex-start; font-weight: 600; font-size: 15px; color: #91007D; min-height: 44px; display: inline-flex; align-items: center">Prenota con il modulo ↑</a>
 </sc-if>
 </div>
 </div>
@@ -274,8 +258,8 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </footer>
 
 <div class="n-sticky" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 12px 16px 16px; padding-bottom: calc(16px + env(safe-area-inset-bottom)); background: #FFFFFF; border-top: 1px solid #ECE3EA; box-shadow: 0 -10px 30px rgba(42,8,48,0.12); gap: 10px; align-items: center">
-<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #6B4A70"><strong style="font-size: 15px; color: #3B0B40">{{cur.label}} · {{pax}} pers.</strong>{{dayLabel}}</span>
-<a href="{{ctaHref}}" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
+<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #6B4A70"><strong style="font-size: 15px; color: #3B0B40">Prenota online</strong>Conferma in un minuto</span>
+<a href="#modulo" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Prenota</a>
 </div>
 
 </div>
@@ -285,8 +269,6 @@ class Component extends DCLogic {
   renderVals() {
     const st = this.state || {};
     const m = typeof st.m === 'number' ? st.m : 0;
-    const d = typeof st.d === 'number' ? st.d : 0;
-    const pax = typeof st.pax === 'number' ? st.pax : 2;
     const chip = (on) => on
       ? { bg: '#3B0B40', fg: '#FFFFFF', border: '#3B0B40', pressed: 'true' }
       : { bg: '#FFFFFF', fg: '#3B0B40', border: '#E2D4E0', pressed: 'false' };
@@ -299,35 +281,32 @@ class Component extends DCLogic {
       { label: 'Serata a tema', time: 'VEDI EVENTI', img: 'assets/img/557e0ef074bddc77568571679a6abb8c.jpg', alt: 'Brindisi a una serata KEIK', pos: 'center', tip: 'Le serate del viaggio del mese si riempiono in fretta: controlla gli eventi e prenota il tuo posto.' }
     ];
     const cur = defs.at(m);
-    const moments = defs.map((x, i) => Object.assign({ label: x.label, time: x.time, pick: () => this.setState({ m: i, pax: i === 4 ? Math.max(7, pax) : pax }) }, chip(i === m)));
-    const now = new Date();
-    const wd = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
-    const nextOf = (target) => { const x = (target - now.getDay() + 7) % 7; return x === 0 ? 7 : x; };
-    const dayDefs = [
-      { label: 'Oggi', off: 0 },
-      { label: 'Domani', off: 1 },
-      { label: 'Venerdì', off: nextOf(5) },
-      { label: 'Sabato', off: nextOf(6) }
-    ];
-    const days = dayDefs.map((x, i) => Object.assign({ label: x.label, pick: () => this.setState({ d: i }) }, chip(i === d)));
-    const dt = new Date(now.getTime() + dayDefs.at(d).off * 86400000);
-    const dayLabel = wd.at(dt.getDay()) + ' ' + dt.getDate() + '/' + (dt.getMonth() + 1);
-    const isGroup = pax >= 7;
-    const msg = 'Ciao KEIK! Vorrei prenotare per ' + pax + ' persone, ' + cur.label.toLowerCase() + ', ' + dayLabel + '.';
-    const waHref = 'https://wa.me/393534732354?text=' + encodeURIComponent(msg);
+    const moments = defs.map((x, i) => Object.assign({ label: x.label, time: x.time, pick: () => this.setState({ m: i }) }, chip(i === m)));
+    const isGroup = m === 4;
+    const waHref = 'https://wa.me/393534732354?text=' + encodeURIComponent('Ciao KEIK! Vorrei prenotare per un gruppo.');
     return {
-      moments, days, cur, pax, dayLabel, isGroup, isSmall: !isGroup,
-      tip: cur.tip, waHref,
-      ctaHref: isGroup ? waHref : 'https://pnssm.pro/a16isyw',
-      less: () => this.setState({ pax: Math.max(1, pax - 1) }),
-      more: () => this.setState({ pax: Math.min(40, pax + 1) })
+      moments, cur, tip: cur.tip, isGroup, isBook: !isGroup, waHref,
+      pnsH: typeof st.pnsH === 'number' ? st.pnsH : 700
     };
   }
+  componentDidMount() {
+    // Script di auto-resize di Pienissimo: l'iframe prende l'altezza del form, così la pagina scorre tutta anche col dito sopra il modulo
+    this._pns = (e) => {
+      const fr = document.getElementById('pns-form');
+      if (!fr || e.source !== fr.contentWindow) return;
+      const data = e.data;
+      if (!data || data.type !== 'pns-iframe-height') return;
+      const h = Math.ceil(Number(data.height) || 0);
+      if (h > 0 && h !== (this.state || {}).pnsH) { fr.style.height = h + 'px'; this.setState({ pnsH: h }); }
+    };
+    window.addEventListener('message', this._pns);
+  }
+  componentWillUnmount() { window.removeEventListener('message', this._pns); }
 }
 </script>
 <script>window.__DC_PROPS__ = {};window.__DC_OVERRIDE__ = {};</script>
 <script src="assets/js/morphdom.min.js"></script>
-<script>window.__KEAGER__=["b4cd9c3d951f1b3a35a25dc3a2cb5417","cea731796bb98fc55bef3bb8e7c4505e"];</script>
+<script>window.__KEAGER__=["cea731796bb98fc55bef3bb8e7c4505e"];</script>
 <script src="assets/js/kimg.js"></script>
 <script src="assets/js/keik-dc.js"></script>
 </body>
