@@ -32,11 +32,13 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .n-good{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .n-nav{display:flex}
 .n-sticky{display:none}
+.n-bob{display:inline-flex;animation:nbob 3.2s ease-in-out infinite}
+@keyframes nbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 .n-tipcard{grid-template-columns:minmax(0,320px) minmax(0,1fr)}
 .n-chip{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
 .n-pop{animation:npop .4s cubic-bezier(.3,1.4,.5,1)}
 @keyframes npop{0%{transform:scale(.98);opacity:.6}100%{transform:none;opacity:1}}
-@media (prefers-reduced-motion: reduce){.n-pop{animation:none !important}}
+@media (prefers-reduced-motion: reduce){.n-pop,.n-bob{animation:none !important}}
 @media (max-width:960px){
 .n-wrap{padding-left:16px !important;padding-right:16px !important}
 .n-hero{grid-template-columns:minmax(0,1fr) !important;gap:28px !important}
@@ -79,12 +81,24 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Da 7 persone in su <a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20prenotare%20per%20un%20gruppo." style="color: #91007D; font-weight: 600">scrivici su WhatsApp</a></p>
 </div>
 
-<div id="modulo" style="display: flex; flex-direction: column; gap: 12px; min-width: 0; scroll-margin-top: 64px">
-<div style="border-radius: 24px; overflow: hidden; background: #FFFFFF; border: 1px solid #ECE3EA; box-shadow: 0 28px 70px rgba(42,8,48,0.16)">
+<div id="modulo" style="min-width: 0; scroll-margin-top: 64px">
+
+<div style="background: #FFFFFF; border-radius: 24px; box-shadow: 0 30px 70px rgba(42,8,48,0.18); overflow: hidden">
+<div style="background: #2A0830; color: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">CARTA D'IMBARCO</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px">Prenota il tuo tavolo</span>
+</div>
+<span class="n-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>GATE · VIA CANALINO 51</span><span>MOD · MODENA</span></div>
 
 <iframe id="pns-form" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=MbjDTW" title="Prenota un tavolo da KEIK" style="width: 100%; height: 700px; border: 0; display: block"></iframe>
+<div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
+<span>Il modulo non si apre? <a href="https://pnssm.pro/a16isyw" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
+<a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
 </div>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #6B4A70; text-align: center">Il modulo non si apre? <a href="https://pnssm.pro/a16isyw" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></p>
+</div>
 </div>
 </div>
 </section>
@@ -197,12 +211,24 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Da 7 persone in su <a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20prenotare%20per%20un%20gruppo." style="color: #91007D; font-weight: 600">scrivici su WhatsApp</a></p>
 </div>
 
-<div id="modulo" style="display: flex; flex-direction: column; gap: 12px; min-width: 0; scroll-margin-top: 64px">
-<div style="border-radius: 24px; overflow: hidden; background: #FFFFFF; border: 1px solid #ECE3EA; box-shadow: 0 28px 70px rgba(42,8,48,0.16)">
+<div id="modulo" style="min-width: 0; scroll-margin-top: 64px">
+<!-- Carta d'imbarco con dentro il modulo Pienissimo -->
+<div style="background: #FFFFFF; border-radius: 24px; box-shadow: 0 30px 70px rgba(42,8,48,0.18); overflow: hidden">
+<div style="background: #2A0830; color: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">CARTA D'IMBARCO</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px">Prenota il tuo tavolo</span>
+</div>
+<span class="n-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>GATE · VIA CANALINO 51</span><span>MOD · MODENA</span></div>
 <!-- Form prenotazioni Pienissimo (altezza adattata dallo script in componentDidMount) -->
 <iframe id="pns-form" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW" title="Prenota un tavolo da KEIK" style="width: 100%; height: {{pnsH}}px; border: 0; display: block"></iframe>
+<div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
+<span>Il modulo non si apre? <a href="https://pnssm.pro/a16isyw" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
+<a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
 </div>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #6B4A70; text-align: center">Il modulo non si apre? <a href="https://pnssm.pro/a16isyw" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></p>
+</div>
 </div>
 </div>
 </section>
