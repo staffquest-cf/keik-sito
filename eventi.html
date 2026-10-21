@@ -22,6 +22,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Figtree:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
 <style>
+.kp-bob{display:inline-flex;animation:kpbob 3.2s ease-in-out infinite}
+@keyframes kpbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media (prefers-reduced-motion: reduce){.kp-bob{animation:none !important}}
 body{margin:0;background:#1E0623}
 a{color:#91007D}a:hover{color:#3B0B40}
 .e-wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
@@ -120,13 +123,13 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <button type="button" class="e-pick e-row" aria-pressed="false" style="padding: 12px 10px; border-radius: 12px; border: 1.5px solid transparent; background: transparent; color: #FFFFFF; cursor: pointer; text-align: left">
 <span style="display: flex; flex-direction: column; align-items: center; padding: 6px 0; border-radius: 8px; background: rgba(255,255,255,0.08)"><span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #E9A9DF">SAB</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; line-height: 1">31</span><span style="font-family: 'DM Mono', monospace; font-size: 10px; color: #CDB4CF">OTT</span></span>
-<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-weight: 600; font-size: 15px; line-height: 1.25">Merenda Dolcetto &amp; Scherzetto</span><span style="font-size: 13px; color: #CDB4CF">Pomeriggio · per bambini e famiglie</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-weight: 600; font-size: 15px; line-height: 1.25">Merenda Dolcetto &amp; Scherzetto</span><span style="font-size: 13px; color: #CDB4CF">17:00 – 19:00 · per bambini e famiglie</span></span>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 4px 7px; border-radius: 4px; background: rgba(255,255,255,0.1); color: #E4D3E5; white-space: nowrap">IN ORARIO</span>
 </button>
 
 <button type="button" class="e-pick e-row" aria-pressed="false" style="padding: 12px 10px; border-radius: 12px; border: 1.5px solid transparent; background: transparent; color: #FFFFFF; cursor: pointer; text-align: left">
 <span style="display: flex; flex-direction: column; align-items: center; padding: 6px 0; border-radius: 8px; background: rgba(255,255,255,0.08)"><span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #E9A9DF">SAB</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; line-height: 1">31</span><span style="font-family: 'DM Mono', monospace; font-size: 10px; color: #CDB4CF">OTT</span></span>
-<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-weight: 600; font-size: 15px; line-height: 1.25">Apericena di Halloween</span><span style="font-size: 13px; color: #CDB4CF">Sera · drink mostruosi e burger stregati</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-weight: 600; font-size: 15px; line-height: 1.25">Apericena di Halloween</span><span style="font-size: 13px; color: #CDB4CF">20:00 – 22:00 · burger mostruosi e drink a tema</span></span>
 <span style="font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 4px 7px; border-radius: 4px; background: rgba(255,255,255,0.1); color: #E4D3E5; white-space: nowrap">IN ORARIO</span>
 </button>
 
@@ -152,11 +155,29 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 </ul>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; border-top: 1.5px dashed #E6DAE4; padding-top: 18px">
-<a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20prenotare%20il%20laboratorio%20torte%20di%20Halloween%20del%2021%20ottobre" style="display: inline-flex; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 14px">Prenota il turno su WhatsApp</a>
+<a href="#prenota-evento" style="display: inline-flex; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 14px">Prenotazioni chiuse: scrivici</a>
 <a href="https://wa.me/393534732354" style="display: inline-flex; align-items: center; color: #3B0B40; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 18px; min-height: 52px">Domande? Scrivici</a>
 </div>
 </div>
 </article>
+</div>
+<div id="prenota-evento" style="background: #FFFFFF; border-radius: 24px; box-shadow: 0 24px 60px rgba(42,8,48,0.14); overflow: hidden; width: 100%; max-width: 760px; align-self: center; scroll-margin-top: 64px">
+<div style="background: #2A0830; color: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">CARTA D'IMBARCO</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px">Laboratorio torte di Halloween</span>
+</div>
+<span class="kp-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>MERCOLEDÌ 21 OTTOBRE · ORE 17:00 O 18:30</span></div>
+
+
+<p style="margin: 0; padding: 24px; font-size: 16px; line-height: 1.55; color: #3B0B40">Le prenotazioni online per questo evento sono chiuse. Scrivici su WhatsApp: se c’è ancora posto, te lo teniamo.</p>
+
+<div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
+<span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=tv489s" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
+<a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20prenotare%20il%20laboratorio%20torte%20di%20Halloween%20del%2021%20ottobre" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
+</div>
 </div>
 </div>
 </section>
@@ -217,8 +238,8 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <span role="timer" aria-live="off" style="display: flex; gap: 6px">
 <span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">04</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">GG</span></span>
 <span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">20</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">ORE</span></span>
-<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">31</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">MIN</span></span>
-<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">47</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">SEC</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">16</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">MIN</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; line-height: 1">10</span><span style="font-family: 'DM Mono', monospace; font-size: 9px; color: #CDB4CF">SEC</span></span>
 </span>
 <span style="font-size: 13px; color: #CDB4CF">Lunedì mattina alle 8, il giorno prima</span>
 </div>
@@ -229,6 +250,24 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
 <a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #2F7D4F; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Voglio il Passaporto del Gusto</a>
 <span style="font-size: 14px; color: #4F6B58">Ti iscrivi online in un minuto, gratis.</span>
+</div>
+<div id="prenota-matcha" style="background: #FFFFFF; border-radius: 24px; box-shadow: 0 24px 60px rgba(42,8,48,0.14); overflow: hidden; width: 100%; max-width: 760px; align-self: center; scroll-margin-top: 64px">
+<div style="background: #2A0830; color: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">CARTA D'IMBARCO · MATCHA TUESDAY</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px">Prenota il tuo martedì matcha</span>
+</div>
+<span class="kp-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>OGNI MARTEDÌ DI OTTOBRE</span></div>
+
+<iframe id="prenota-matcha-form" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=17mLIN" title="Prenota da KEIK" style="width: 100%; height: 700px; border: 0; display: block"></iframe>
+
+
+<div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
+<span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=17mLIN" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
+<a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
+</div>
 </div>
 </div>
 </section>
@@ -403,11 +442,31 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </sc-for>
 </ul>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; border-top: 1.5px dashed #E6DAE4; padding-top: 18px">
-<a href="{{cur.href}}" style="display: inline-flex; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 14px">{{cur.cta}}</a>
+<a href="#prenota-evento" style="display: inline-flex; align-items: center; gap: 10px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 14px">{{cur.cta}}</a>
 <a href="https://wa.me/393534732354" style="display: inline-flex; align-items: center; color: #3B0B40; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 18px; min-height: 52px">Domande? Scrivici</a>
 </div>
 </div>
 </article>
+</div>
+<div id="prenota-evento" style="background: #FFFFFF; border-radius: 24px; box-shadow: 0 24px 60px rgba(42,8,48,0.14); overflow: hidden; width: 100%; max-width: 760px; align-self: center; scroll-margin-top: 64px">
+<div style="background: #2A0830; color: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">CARTA D'IMBARCO</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px">{{cur.title}}</span>
+</div>
+<span class="kp-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>{{cur.when}}</span></div>
+<sc-if value="{{cur.isOpen}}" hint-placeholder-val="{{ true }}">
+<iframe id="prenota-evento-form" src="{{cur.form}}" title="Prenota da KEIK" style="width: 100%; height: {{evH}}px; border: 0; display: block"></iframe>
+</sc-if>
+<sc-if value="{{cur.isClosed}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; padding: 24px; font-size: 16px; line-height: 1.55; color: #3B0B40">Le prenotazioni online per questo evento sono chiuse. Scrivici su WhatsApp: se c’è ancora posto, te lo teniamo.</p>
+</sc-if>
+<div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
+<span>Il modulo non si apre? <a href="{{cur.form}}" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
+<a href="{{cur.wa}}" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
+</div>
 </div>
 </div>
 </section>
@@ -452,6 +511,26 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
 <a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #2F7D4F; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Voglio il Passaporto del Gusto</a>
 <span style="font-size: 14px; color: #4F6B58">Ti iscrivi online in un minuto, gratis.</span>
+</div>
+<div id="prenota-matcha" style="background: #FFFFFF; border-radius: 24px; box-shadow: 0 24px 60px rgba(42,8,48,0.14); overflow: hidden; width: 100%; max-width: 760px; align-self: center; scroll-margin-top: 64px">
+<div style="background: #2A0830; color: #FFFFFF; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">CARTA D'IMBARCO · MATCHA TUESDAY</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 24px">Prenota il tuo martedì matcha</span>
+</div>
+<span class="kp-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>OGNI MARTEDÌ DI OTTOBRE</span></div>
+<sc-if value="{{mtOpen}}" hint-placeholder-val="{{ true }}">
+<iframe id="prenota-matcha-form" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=17mLIN" title="Prenota da KEIK" style="width: 100%; height: {{mtH}}px; border: 0; display: block"></iframe>
+</sc-if>
+<sc-if value="{{mtClosed}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; padding: 24px; font-size: 16px; line-height: 1.55; color: #3B0B40">Le prenotazioni online per questo evento sono chiuse. Scrivici su WhatsApp: se c’è ancora posto, te lo teniamo.</p>
+</sc-if>
+<div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
+<span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=17mLIN" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
+<a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
+</div>
 </div>
 </div>
 </section>
@@ -534,6 +613,18 @@ a{color:#91007D}a:hover{color:#3B0B40}
 class Component extends DCLogic {
   componentDidMount() {
     this.clock = setInterval(() => this.setState({ now: Date.now() }), 1000);
+    // Script di auto-resize di Pienissimo per i due moduli della pagina (evento scelto e Matcha Tuesday)
+    this._pns = (e) => {
+      const data = e.data;
+      if (!data || data.type !== 'pns-iframe-height') return;
+      const h = Math.ceil(Number(data.height) || 0);
+      if (h <= 0) return;
+      [['prenota-evento-form', 'evH'], ['prenota-matcha-form', 'mtH']].forEach((x) => {
+        const fr = document.getElementById(x[0]);
+        if (fr && e.source === fr.contentWindow) { fr.style.height = h + 'px'; const o = {}; o[x[1]] = h; this.setState(o); }
+      });
+    };
+    window.addEventListener('message', this._pns);
   }
   componentWillUnmount() {
     clearInterval(this.clock);
@@ -546,15 +637,15 @@ class Component extends DCLogic {
       { dow: 'MER', day: '21', mon: 'OTT', title: 'Laboratorio torte di Halloween', short: 'Turni 17:00 e 18:30 · dai 6 anni', status: 'IMBARCO', tag: 'LABORATORIO · PER GRANDI E PICCOLI', when: 'MERCOLEDÌ 21 OTTOBRE · ORE 17:00 O 18:30',
         text: 'Un pomeriggio per decorare la tua torta di Halloween con il nostro laboratorio di pasticceria. Ti diamo il kit, ti seguiamo passo passo e la torta la porti a casa. La merenda è inclusa.',
         facts: ['Due turni: 17:00 e 18:30, 15 posti a turno', 'Kit incluso: mini set per decorare, sac à poche con colori e codette', 'Merenda inclusa: mini brownie, mini cinnamon roll e un drink', 'Dai 6 anni in su · prenotazione entro il 18 ottobre'],
-        img: 'assets/img/cc6245ccd849029ff803ebc5c7ba6dc8.jpg', alt: 'Il kit del laboratorio: mini torta Happy Halloween, sac à poche arancio, verde e nero, codette, mini brownie, cinnamon roll e un drink', pos: 'center 55%', cta: 'Prenota il turno su WhatsApp', msg: 'Ciao KEIK! Vorrei prenotare il laboratorio torte di Halloween del 21 ottobre' },
-      { dow: 'SAB', day: '31', mon: 'OTT', title: 'Merenda Dolcetto & Scherzetto', short: 'Pomeriggio · per bambini e famiglie', status: 'IN ORARIO', tag: 'MERENDA · PER GRANDI E PICCOLI', when: 'SABATO 31 OTTOBRE · POMERIGGIO',
+        img: 'assets/img/cc6245ccd849029ff803ebc5c7ba6dc8.jpg', alt: 'Il kit del laboratorio: mini torta Happy Halloween, sac à poche arancio, verde e nero, codette, mini brownie, cinnamon roll e un drink', pos: 'center 55%', cta: 'Prenota il turno', form: 'https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=tv489s', close: '2026-10-18', msg: 'Ciao KEIK! Vorrei prenotare il laboratorio torte di Halloween del 21 ottobre' },
+      { dow: 'SAB', day: '31', mon: 'OTT', title: 'Merenda Dolcetto & Scherzetto', short: '17:00 – 19:00 · per bambini e famiglie', status: 'IN ORARIO', tag: 'MERENDA · PER GRANDI E PICCOLI', when: 'SABATO 31 OTTOBRE · 17:00 – 19:00',
         text: 'Trick or treat da KEIK: una merenda di Halloween da fare in famiglia, con i nostri cinnamon roll vestiti a festa e tanti dolcetti dal laboratorio. Vieni in maschera, i più piccoli sono i benvenuti.',
-        facts: ['Merenda a tema Halloween, nel pomeriggio', 'Cinnamon roll con caramello o glassa al matcha', 'Pensata per bambini e famiglie', 'Vieni in maschera!'],
-        img: 'assets/img/8ce82f2a5be6ed5b73bdb8bcbd03e81e.jpg', alt: 'Un piatto di cinnamon roll di Halloween con caramello e glassa verde, con la scritta Merenda di Dolcetto e Scherzetto', pos: 'center 64%', cta: 'Prenota la merenda su WhatsApp', msg: 'Ciao KEIK! Vorrei prenotare la Merenda Dolcetto & Scherzetto di sabato 31 ottobre' },
-      { dow: 'SAB', day: '31', mon: 'OTT', title: 'Apericena di Halloween', short: 'Sera · drink mostruosi e burger stregati', status: 'IN ORARIO', tag: 'SERATA A TEMA · HALLOWEEN', when: 'SABATO 31 OTTOBRE · SERA',
+        facts: ['Dalle 17:00 alle 19:00', 'Mix di mini cinnamon roll: pistacchio, classico e caramello', '8,90 € a persona, bevande escluse', 'Vieni in maschera!'],
+        img: 'assets/img/8ce82f2a5be6ed5b73bdb8bcbd03e81e.jpg', alt: 'Un piatto di cinnamon roll di Halloween con caramello e glassa verde, con la scritta Merenda di Dolcetto e Scherzetto', pos: 'center 64%', cta: 'Prenota la merenda', form: 'https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=jVEpfa', close: '2026-10-31', msg: 'Ciao KEIK! Vorrei prenotare la Merenda Dolcetto & Scherzetto di sabato 31 ottobre' },
+      { dow: 'SAB', day: '31', mon: 'OTT', title: 'Apericena di Halloween', short: '20:00 – 22:00 · burger mostruosi e drink a tema', status: 'IN ORARIO', tag: 'SERATA A TEMA · HALLOWEEN', when: 'SABATO 31 OTTOBRE · 20:00 – 22:00',
         text: 'La notte di Halloween la passiamo a bordo: apericena a tema, drink mostruosi e burger stregati, con la sala vestita per l’occasione. Non serve caparra per prenotare.',
-        facts: ['Apericena a tema Halloween', 'Drink speciali a tema mostri', 'Burger stregati in edizione limitata', 'Prenotazione senza caparra'],
-        img: 'assets/img/d156657d4c76877b12be5d563687f8c2.jpg', alt: 'Il burger stregato di Halloween con le corna di peperoncino, doppio manzo, cheddar e pico de gallo', pos: 'center 52%', cta: 'Prenota il tavolo', href: 'https://pnssm.pro/a16isyw' }
+        facts: ['Dalle 20:00 alle 22:00', 'Burger mostruosi: Black Devil o Pollo Diablo, con patatine', 'Un drink a tema a scelta: Sangue di Dracula, Monster Mash o Eclissi', '18,90 € il menù completo · prenotazione senza caparra'],
+        img: 'assets/img/d156657d4c76877b12be5d563687f8c2.jpg', alt: 'Il burger stregato di Halloween con le corna di peperoncino, doppio manzo, cheddar e pico de gallo', pos: 'center 52%', cta: 'Prenota la cena', form: 'https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=0iUEn0', close: '2026-10-31', msg: 'Ciao KEIK! Vorrei prenotare la cena di Halloween di sabato 31 ottobre' }
     ];
     const events = data.map((e, i) => ({
       dow: e.dow, day: e.day, mon: e.mon, title: e.title, short: e.short, status: e.status,
@@ -563,8 +654,11 @@ class Component extends DCLogic {
       pick: () => this.setState({ ev: i })
     }));
     const c = data.at(sel);
-    const cur = Object.assign({}, c, { facts: c.facts.map((t) => ({ t: t })), href: c.href || wa(c.msg) });
     const now = typeof st.now === 'number' ? st.now : Date.now();
+    const isOpenTill = (d) => now < new Date(d + 'T23:59:59+01:00').getTime();
+    const evOpen = isOpenTill(c.close);
+    const cur = Object.assign({}, c, { facts: c.facts.map((t) => ({ t: t })), wa: wa(c.msg), isOpen: evOpen, isClosed: !evOpen, cta: evOpen ? c.cta : 'Prenotazioni chiuse: scrivici' });
+    const mtOpen = isOpenTill('2026-10-27');
     const pad = (n) => String(n).padStart(2, '0');
     const weeks = [
       { tue: '6 ott', reveal: '2026-10-05T08:00:00+02:00', flavor: 'al pistacchio' },
@@ -593,7 +687,7 @@ class Component extends DCLogic {
       { code: 'MAG', name: 'Scuola di magia', text: 'La Sfida dell’Alchimista con gli odori misteriosi e il Quiz dei Maghi, per i nostri 13 anni.' },
       { code: 'JPN', name: 'Giappone', text: 'Il mese del Giappone, con la vetrina dipinta a tema.' }
     ];
-    return { events, cur, matcha, past };
+    return { events, cur, matcha, past, mtOpen, mtClosed: !mtOpen, evH: typeof st.evH === 'number' ? st.evH : 700, mtH: typeof st.mtH === 'number' ? st.mtH : 700 };
   }
 }
 </script>
