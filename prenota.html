@@ -34,7 +34,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .n-sticky{display:none}
 .n-bob{display:inline-flex;animation:nbob 3.2s ease-in-out infinite}
 @keyframes nbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-.n-tipcard{grid-template-columns:minmax(0,320px) minmax(0,1fr)}
+.n-tipcard{grid-template-columns:minmax(0,400px) minmax(0,1fr)}
 .n-chip{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
 .n-pop{animation:npop .4s cubic-bezier(.3,1.4,.5,1)}
 @keyframes npop{0%{transform:scale(.98);opacity:.6}100%{transform:none;opacity:1}}
@@ -44,7 +44,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .n-hero{grid-template-columns:minmax(0,1fr) !important;gap:28px !important}
 .n-moments{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
 .n-tipcard{grid-template-columns:minmax(0,1fr) !important}
-.n-tipcard img{height:170px !important;min-height:0 !important}
+.n-tipcard img{height:230px !important;min-height:0 !important}
 .n-good{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
 .n-nav{display:none !important}
 .n-sticky{display:flex !important}
@@ -148,7 +148,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 </div>
 <div class="n-pop n-tipcard" style="display: grid; border-radius: 22px; overflow: hidden; background: #F7F2F6">
-<img src="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-960.webp" alt="Pancakes del brunch KEIK" loading="lazy" style="display: block; width: 100%; height: 100%; min-height: 160px; object-fit: cover; object-position: center" srcset="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-480.webp 480w, assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1200" height="1600" decoding="async" data-kki="">
+<img src="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-960.webp" alt="Pancakes del brunch KEIK" loading="lazy" style="display: block; width: 100%; height: 100%; min-height: 260px; object-fit: cover; object-position: center" srcset="assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-480.webp 480w, assets/img/b4cd9c3d951f1b3a35a25dc3a2cb5417-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1200" height="1600" decoding="async" data-kki="">
 <div style="padding: 22px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
 <strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 30px; color: #3B0B40">Brunch <span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #6B4A70">DALLE 10:00</span></strong>
 <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A2350">Pancakes e benedict a qualsiasi ora. Nel weekend il brunch è il momento più pieno: prenota con qualche giorno di anticipo.</p>
@@ -258,7 +258,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </sc-for>
 </div>
 <div class="n-pop n-tipcard" style="display: grid; border-radius: 22px; overflow: hidden; background: #F7F2F6">
-<img src="{{cur.img}}" alt="{{cur.alt}}" loading="lazy" style="display: block; width: 100%; height: 100%; min-height: 160px; object-fit: cover; object-position: {{cur.pos}}">
+<img src="{{cur.img}}" alt="{{cur.alt}}" loading="lazy" style="display: block; width: 100%; height: 100%; min-height: 260px; object-fit: cover; object-position: {{cur.pos}}">
 <div style="padding: 22px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
 <strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 30px; color: #3B0B40">{{cur.label}} <span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: #6B4A70">{{cur.time}}</span></strong>
 <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A2350">{{tip}}</p>
@@ -316,7 +316,7 @@ class Component extends DCLogic {
       { label: 'Pranzo', time: 'DALLE 12:00', img: 'assets/img/0cf01bf2012f526ef101335443f97535.jpg', alt: 'Burger di KEIK', pos: 'center', tip: 'Burger, burritos e piatti fusion. In settimana spesso trovi posto, ma con la prenotazione vai sul sicuro.' },
       { label: 'Merenda', time: '15:00–18:00', img: 'assets/img/ae07fe15b3d7db1011a605ea4ef07374.jpg', alt: 'Pancakes e matcha per la merenda', pos: 'center', tip: 'Cupcake, pancakes e matcha. Il pomeriggio è il momento più tranquillo: perfetto per due chiacchiere.' },
       { label: 'Aperitivo', time: '17:30–20:00 · VEN-SAB 22:00', img: 'assets/img/359f4d959c83c2411afa0664bed325d1.jpg', alt: 'Il tagliere Il Turista', pos: 'center', tip: 'Il Turista con un drink a testa: 16,90 € a persona, da 2 persone. Dopo le 20 solo il venerdì e il sabato.' },
-      { label: 'Gruppo o festa', time: 'DA 7 PERSONE', img: 'assets/img/86adea1531601bc433411af201ed1692.jpg', alt: 'La sala di KEIK piena di gente', pos: 'center', tip: 'Compleanni, pranzi di lavoro e feste: ti prepariamo tavolo e taglieri. Per una torta servono 3 giorni di preavviso.' },
+      { label: 'Gruppo o festa', time: 'DA 7 PERSONE', img: 'assets/img/86adea1531601bc433411af201ed1692.jpg', alt: 'La sala di KEIK piena di gente', pos: 'center 28%', tip: 'Compleanni, pranzi di lavoro e feste: ti prepariamo tavolo e taglieri. Per una torta servono 3 giorni di preavviso.' },
       { label: 'Serata a tema', time: 'VEDI EVENTI', img: 'assets/img/557e0ef074bddc77568571679a6abb8c.jpg', alt: 'Brindisi a una serata KEIK', pos: 'center', tip: 'Le serate del viaggio del mese si riempiono in fretta: controlla gli eventi e prenota il tuo posto.' }
     ];
     const cur = defs.at(m);
