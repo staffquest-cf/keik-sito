@@ -58,6 +58,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 /* KK */ .kk-bar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.kk-bar::-webkit-scrollbar{display:none}.kk-bar a{flex-shrink:0;white-space:nowrap}[id]{scroll-margin-top:56px}.kk-bar a[aria-current="page"]::before{content:"";position:absolute;left:50%;top:calc(50% - 16px);width:5px;height:5px;border-radius:50%;background:#F2B8E6;transform:translateX(-50%)}.kk-bar[data-more]{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 56px),transparent)}.kk-bar[data-less]{-webkit-mask-image:linear-gradient(to right,transparent,#000 40px);mask-image:linear-gradient(to right,transparent,#000 40px)}.kk-bar[data-more][data-less]{-webkit-mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 56px),transparent)}.kk-bar a:hover{background:rgba(255,255,255,0.12) !important}.kk-sitemap{display:grid;grid-template-columns:1.2fr repeat(3,minmax(0,1fr));gap:32px}.kk-sitemap a:hover{color:#FFFFFF !important}.kk-lang{display:inline-flex;gap:3px;flex-shrink:0;margin-left:6px}.kk-lang button{font:500 12px "Space Mono",monospace;min-width:36px;min-height:30px;border-radius:6px;border:1px solid rgba(255,255,255,0.28);background:transparent;color:#F1E3F0;cursor:pointer;padding:0 6px}.kk-lang button[aria-pressed="true"],.kk-langm[aria-pressed="true"]{background:#FFFFFF !important;color:#2A0830 !important;border-color:#FFFFFF !important}@media (max-width:960px){.kk-sitemap{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:24px !important}.kk-inner{padding-left:16px !important;padding-right:16px !important}}
 
 /* FONT-VIAGGIO */ [style*="Big Shoulders"]{font-weight:800 !important}h1,h2{text-transform:uppercase;letter-spacing:0 !important;line-height:0.95 !important;font-weight:900 !important}
+/* KP */ .kp-body:not(.is-open){display:none}.kp-body.is-open{animation:kpdrop .45s cubic-bezier(.2,.8,.2,1) both}@keyframes kpdrop{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion: reduce){.kp-body.is-open{animation:none}}
 </style>
 </head>
 <body>
@@ -171,6 +172,10 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 <span class="kp-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
 </div>
+
+<button type="button" class="kp-open" style="display: flex; justify-content: center; align-items: center; gap: 10px; width: calc(100% - 48px); margin: 20px 24px 22px; min-height: 54px; border: 0; border-radius: 14px; background: #91007D; color: #FFFFFF; font: 600 17px 'Montserrat', sans-serif; cursor: pointer">Prenota il tuo posto <span aria-hidden="true">↓</span></button>
+
+<div class="kp-body ">
 <div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>MERCOLEDÌ 21 OTTOBRE · ORE 17:00 O 18:30</span></div>
 
 
@@ -179,6 +184,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
 <span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=tv489s" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
 <a href="https://wa.me/393534732354?text=Ciao%20KEIK!%20Vorrei%20prenotare%20il%20laboratorio%20torte%20di%20Halloween%20del%2021%20ottobre" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
+</div>
 </div>
 </div>
 </div>
@@ -240,8 +246,8 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <span role="timer" aria-live="off" style="display: flex; gap: 6px">
 <span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 28px; line-height: 1">03</span><span style="font-family: 'Space Mono', monospace; font-size: 9px; color: #CDB4CF">GG</span></span>
 <span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 28px; line-height: 1">11</span><span style="font-family: 'Space Mono', monospace; font-size: 9px; color: #CDB4CF">ORE</span></span>
-<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 28px; line-height: 1">17</span><span style="font-family: 'Space Mono', monospace; font-size: 9px; color: #CDB4CF">MIN</span></span>
-<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 28px; line-height: 1">29</span><span style="font-family: 'Space Mono', monospace; font-size: 9px; color: #CDB4CF">SEC</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 28px; line-height: 1">10</span><span style="font-family: 'Space Mono', monospace; font-size: 9px; color: #CDB4CF">MIN</span></span>
+<span style="display: flex; flex-direction: column; align-items: center; min-width: 44px; padding: 6px 4px; border-radius: 8px; background: rgba(255,255,255,0.1)"><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 28px; line-height: 1">20</span><span style="font-family: 'Space Mono', monospace; font-size: 9px; color: #CDB4CF">SEC</span></span>
 </span>
 <span style="font-size: 13px; color: #CDB4CF">Lunedì mattina alle 8, il giorno prima</span>
 </div>
@@ -261,14 +267,19 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 <span class="kp-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
 </div>
+
+<button type="button" class="kp-open" style="display: flex; justify-content: center; align-items: center; gap: 10px; width: calc(100% - 48px); margin: 20px 24px 22px; min-height: 54px; border: 0; border-radius: 14px; background: #91007D; color: #FFFFFF; font: 600 17px 'Montserrat', sans-serif; cursor: pointer">Prenota il tuo posto <span aria-hidden="true">↓</span></button>
+
+<div class="kp-body ">
 <div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>OGNI MARTEDÌ DI OTTOBRE</span></div>
 
-<iframe id="prenota-matcha-form" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=17mLIN" title="Prenota da KEIK" style="width: 100%; height: 700px; border: 0; display: block"></iframe>
+<iframe id="prenota-matcha-form" loading="lazy" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=17mLIN" title="Prenota da KEIK" style="width: 100%; height: 700px; border: 0; display: block"></iframe>
 
 
 <div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
 <span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=17mLIN" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
 <a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
+</div>
 </div>
 </div>
 </div>
@@ -458,9 +469,13 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 <span class="kp-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
 </div>
+<sc-if value="{{kpEvClosed}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="kp-open" onClick="{{openEv}}" style="display: flex; justify-content: center; align-items: center; gap: 10px; width: calc(100% - 48px); margin: 20px 24px 22px; min-height: 54px; border: 0; border-radius: 14px; background: #91007D; color: #FFFFFF; font: 600 17px 'Montserrat', sans-serif; cursor: pointer">Prenota il tuo posto <span aria-hidden="true">↓</span></button>
+</sc-if>
+<div class="kp-body {{kpEvCls}}">
 <div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>{{cur.when}}</span></div>
 <sc-if value="{{cur.isOpen}}" hint-placeholder-val="{{ true }}">
-<iframe id="prenota-evento-form" src="{{cur.form}}" title="Prenota da KEIK" style="width: 100%; height: {{evH}}px; border: 0; display: block"></iframe>
+<iframe id="prenota-evento-form" loading="lazy" src="{{cur.form}}" title="Prenota da KEIK" style="width: 100%; height: {{evH}}px; border: 0; display: block"></iframe>
 </sc-if>
 <sc-if value="{{cur.isClosed}}" hint-placeholder-val="{{ false }}">
 <p style="margin: 0; padding: 24px; font-size: 16px; line-height: 1.55; color: #3B0B40">Le prenotazioni online per questo evento sono chiuse. Scrivici su WhatsApp: se c’è ancora posto, te lo teniamo.</p>
@@ -468,6 +483,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
 <span>Il modulo non si apre? <a href="{{cur.form}}" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
 <a href="{{cur.wa}}" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
+</div>
 </div>
 </div>
 </div>
@@ -522,9 +538,13 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 <span class="kp-bob" style="color: #FFFFFF"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
 </div>
+<sc-if value="{{kpMtClosed}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="kp-open" onClick="{{openMt}}" style="display: flex; justify-content: center; align-items: center; gap: 10px; width: calc(100% - 48px); margin: 20px 24px 22px; min-height: 54px; border: 0; border-radius: 14px; background: #91007D; color: #FFFFFF; font: 600 17px 'Montserrat', sans-serif; cursor: pointer">Prenota il tuo posto <span aria-hidden="true">↓</span></button>
+</sc-if>
+<div class="kp-body {{kpMtCls}}">
 <div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>OGNI MARTEDÌ DI OTTOBRE</span></div>
 <sc-if value="{{mtOpen}}" hint-placeholder-val="{{ true }}">
-<iframe id="prenota-matcha-form" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=17mLIN" title="Prenota da KEIK" style="width: 100%; height: {{mtH}}px; border: 0; display: block"></iframe>
+<iframe id="prenota-matcha-form" loading="lazy" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=17mLIN" title="Prenota da KEIK" style="width: 100%; height: {{mtH}}px; border: 0; display: block"></iframe>
 </sc-if>
 <sc-if value="{{mtClosed}}" hint-placeholder-val="{{ false }}">
 <p style="margin: 0; padding: 24px; font-size: 16px; line-height: 1.55; color: #3B0B40">Le prenotazioni online per questo evento sono chiuse. Scrivici su WhatsApp: se c’è ancora posto, te lo teniamo.</p>
@@ -532,6 +552,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
 <span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=17mLIN" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
 <a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
+</div>
 </div>
 </div>
 </div>
@@ -627,6 +648,10 @@ class Component extends DCLogic {
       });
     };
     window.addEventListener('message', this._pns);
+    // I link di prenotazione aprono il modulo a tendina
+    this._kp = (e) => { const t = e.target.closest ? e.target : null; if (!t) return; if (t.closest('a[href="#prenota-evento"]')) this.setState({ kpEv: true }); if (t.closest('a[href="#prenota-matcha"]')) this.setState({ kpMt: true }); };
+    document.addEventListener('click', this._kp);
+    if ('a[href="#prenota-evento"]'.indexOf('"' + location.hash + '"') >= 0 && location.hash) this.setState({ kpEv: true }); if ('a[href="#prenota-matcha"]'.indexOf('"' + location.hash + '"') >= 0 && location.hash) this.setState({ kpMt: true });
   }
   componentWillUnmount() {
     clearInterval(this.clock);
@@ -689,7 +714,8 @@ class Component extends DCLogic {
       { code: 'MAG', name: 'Scuola di magia', text: 'La Sfida dell’Alchimista con gli odori misteriosi e il Quiz dei Maghi, per i nostri 13 anni.' },
       { code: 'JPN', name: 'Giappone', text: 'Il mese del Giappone, con la vetrina dipinta a tema.' }
     ];
-    return { events, cur, matcha, past, mtOpen, mtClosed: !mtOpen, evH: typeof st.evH === 'number' ? st.evH : 700, mtH: typeof st.mtH === 'number' ? st.mtH : 700 };
+    const kps = this.state || {};
+    return { kpEvCls: kps.kpEv ? 'is-open' : '', kpEvClosed: !kps.kpEv, openEv: () => this.setState({ kpEv: true }), kpMtCls: kps.kpMt ? 'is-open' : '', kpMtClosed: !kps.kpMt, openMt: () => this.setState({ kpMt: true }), events, cur, matcha, past, mtOpen, mtClosed: !mtOpen, evH: typeof st.evH === 'number' ? st.evH : 700, mtH: typeof st.mtH === 'number' ? st.mtH : 700 };
   }
 }
 </script>
