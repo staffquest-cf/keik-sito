@@ -29,7 +29,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 .k-nav-links{display:flex}
 .k-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:center}
 .k-proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
-.k-board-row{display:grid;grid-template-columns:64px 104px minmax(0,1fr) 150px 98px;gap:14px;align-items:center;transition:background-color .35s ease}
+.k-board-row{display:grid;grid-template-columns:64px minmax(0,1fr) 150px 98px;gap:14px;align-items:center;transition:background-color .35s ease}
 .k-day{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center}
 .k-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .k-menu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -175,32 +175,32 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <button type="button" aria-label="Mostra Brunch: NEW YORK, IMBARCO" class="k-board-row" style="width: 100%; text-align: left; background: rgba(255,255,255,0.07); color: #FFFFFF; border: 0; border-top: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 12px 6px; min-height: 52px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 15px">
 <span style="color: #FFFFFF; font-weight: 500">10:00</span>
-<span class="k-hide-s" style="font-weight: 500; letter-spacing: 0.06em; color: #E2CFE3">BRUNCH</span>
-<span class="k-bd-l" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Pancakes · avocado toast · matcha</span><span class="k-bd-s" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Pancakes</span>
+<span style="display: none">BRUNCH</span>
+<span class="k-bd-l" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Pancakes</span><span class="k-bd-s" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Pancakes</span>
 <span class="k-hide-s" aria-hidden="true" style="letter-spacing: 0.04em; font-size: 14px; white-space: nowrap; overflow: hidden">NEW YORK</span>
 <span aria-hidden="true" class="k-blink" style="justify-self: end; font-size: 11px; letter-spacing: 0.08em; padding: 5px 8px; border-radius: 4px; white-space: nowrap; background: #FAE609; color: #2A0830">IMBARCO</span>
 </button>
 
 <button type="button" aria-label="Mostra Pranzo: CIUDAD DE MÉXICO, IN ORARIO" class="k-board-row" style="width: 100%; text-align: left; background: transparent; color: #FFFFFF; border: 0; border-top: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 12px 6px; min-height: 52px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 15px">
 <span style="color: #FFFFFF; font-weight: 500">12:30</span>
-<span class="k-hide-s" style="font-weight: 500; letter-spacing: 0.06em; color: #E2CFE3">LUNCH</span>
-<span class="k-bd-l" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Burger · burrito · caesar messicana</span><span class="k-bd-s" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Burger</span>
+<span style="display: none">LUNCH</span>
+<span class="k-bd-l" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Burgers</span><span class="k-bd-s" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Burgers</span>
 <span class="k-hide-s" aria-hidden="true" style="letter-spacing: 0.04em; font-size: 14px; white-space: nowrap; overflow: hidden">CIUDAD DE MÉXICO</span>
 <span aria-hidden="true" class="" style="justify-self: end; font-size: 11px; letter-spacing: 0.08em; padding: 5px 8px; border-radius: 4px; white-space: nowrap; background: rgba(255,255,255,0.10); color: #E9DAEA">IN ORARIO</span>
 </button>
 
 <button type="button" aria-label="Mostra Merenda: TOKYO, IN ORARIO" class="k-board-row" style="width: 100%; text-align: left; background: transparent; color: #FFFFFF; border: 0; border-top: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 12px 6px; min-height: 52px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 15px">
 <span style="color: #FFFFFF; font-weight: 500">15:00</span>
-<span class="k-hide-s" style="font-weight: 500; letter-spacing: 0.06em; color: #E2CFE3">SNACK</span>
-<span class="k-bd-l" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Merenda Social Club</span><span class="k-bd-s" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Social Club</span>
+<span style="display: none">SNACK</span>
+<span class="k-bd-l" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Matcha Lattes</span><span class="k-bd-s" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Matcha Lattes</span>
 <span class="k-hide-s" aria-hidden="true" style="letter-spacing: 0.04em; font-size: 14px; white-space: nowrap; overflow: hidden">TOKYO</span>
 <span aria-hidden="true" class="" style="justify-self: end; font-size: 11px; letter-spacing: 0.08em; padding: 5px 8px; border-radius: 4px; white-space: nowrap; background: rgba(255,255,255,0.10); color: #E9DAEA">IN ORARIO</span>
 </button>
 
 <button type="button" aria-label="Mostra Sera: MODENA, IN ORARIO" class="k-board-row" style="width: 100%; text-align: left; background: transparent; color: #FFFFFF; border: 0; border-top: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 12px 6px; min-height: 52px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 15px">
 <span style="color: #FFFFFF; font-weight: 500">18:00</span>
-<span class="k-hide-s" style="font-weight: 500; letter-spacing: 0.06em; color: #E2CFE3">APERITIVO</span>
-<span class="k-bd-l" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Spritz · cocktail · taglieri</span><span class="k-bd-s" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Spritz</span>
+<span style="display: none">APERITIVO</span>
+<span class="k-bd-l" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Spritz &amp; Co.</span><span class="k-bd-s" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Spritz &amp; Co.</span>
 <span class="k-hide-s" aria-hidden="true" style="letter-spacing: 0.04em; font-size: 14px; white-space: nowrap; overflow: hidden">MODENA</span>
 <span aria-hidden="true" class="" style="justify-self: end; font-size: 11px; letter-spacing: 0.08em; padding: 5px 8px; border-radius: 4px; white-space: nowrap; background: rgba(255,255,255,0.10); color: #E9DAEA">IN ORARIO</span>
 </button>
@@ -524,14 +524,14 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <path d="M536 96 v10 M529 120 l7-14 7 14 M527 120 h18 v70 h-18 z M527 138 h18 M527 156 h18 M527 174 h18 M533 126 h6" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
 
 <path d="M82 170 C 210 20, 400 20, 516 158" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="3 7" stroke-linecap="round"></path>
-<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="494.88032301769664" opacity="1.000"></path>
+<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="496.095338877934" opacity="1.000"></path>
 
 <circle cx="82" cy="170" r="4.5" fill="#FAE609"></circle>
 <circle cx="516" cy="158" r="5.00" stroke="#FFFFFF" stroke-width="1.5" opacity="0"></circle>
 <circle cx="516" cy="158" r="4" fill="#FFFFFF"></circle>
 
-<g opacity="0.268" transform="translate(86.01 170.57) rotate(-48.70) scale(0.733)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
-<g transform="translate(85.79 165.62) rotate(-48.70) scale(0.916)" opacity="1.000"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
+<g opacity="0.264" transform="translate(85.16 171.28) rotate(-48.87) scale(0.730)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
+<g transform="translate(84.99 166.53) rotate(-48.87) scale(0.913)" opacity="1.000"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
 
 <text x="34" y="214" fill="#FFFFFF" style="font: 500 12px 'Space Mono', monospace; letter-spacing: 0.08em">CCS · CARACAS</text>
 <text x="566" y="214" fill="#FFFFFF" text-anchor="end" style="font: 500 12px 'Space Mono', monospace; letter-spacing: 0.08em">MOD · MODENA</text>
@@ -711,7 +711,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <sc-for list="{{moments}}" as="m" hint-placeholder-count="4">
 <button type="button" onClick="{{m.pick}}" aria-label="Mostra {{m.label}}: {{m.dest}}, {{m.status}}" class="k-board-row" style="width: 100%; text-align: left; background: {{m.rowBg}}; color: #FFFFFF; border: 0; border-top: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 12px 6px; min-height: 52px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 15px">
 <span style="color: #FFFFFF; font-weight: 500">{{m.time}}</span>
-<span class="k-hide-s" style="font-weight: 500; letter-spacing: 0.06em; color: #E2CFE3">{{m.code}}</span>
+<span style="display: none">{{m.code}}</span>
 <span class="k-bd-l" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{m.board}}</span><span class="k-bd-s" style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #E9DAEA; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{m.boardS}}</span>
 <span class="k-hide-s" aria-hidden="true" style="letter-spacing: 0.04em; font-size: 14px; white-space: nowrap; overflow: hidden">{{m.destShow}}</span>
 <span aria-hidden="true" class="{{m.statusClass}}" style="justify-self: end; font-size: 11px; letter-spacing: 0.08em; padding: 5px 8px; border-radius: 4px; white-space: nowrap; background: {{m.statusBg}}; color: {{m.statusFg}}">{{m.statusShow}}</span>
@@ -1151,7 +1151,7 @@ class Component extends DCLogic {
     const changed = st.changed || [];
     const navOpen = !!st.navOpen;
     const data = [
-      { label: 'Brunch', code: 'BRUNCH', time: '10:00', hours: '10:00 – 19:30', board: 'Pancakes · avocado toast · matcha', boardS: 'Pancakes', dest: 'NEW YORK',
+      { label: 'Brunch', code: 'BRUNCH', time: '10:00', hours: '10:00 – 19:30', board: 'Pancakes', boardS: 'Pancakes', dest: 'NEW YORK',
         icon: 'M3 18h18M6.5 14.5a5.5 5.5 0 0 1 11 0M12 4v3M4.9 7.9l2.1 2.1M19.1 7.9 17 10',
         now: 'pancakes e latte al matcha', inset: 'assets/img/c617c2475df4e4b73d5f59449773bb64.jpg', insetAlt: 'Pancakes con crema Biscoff e fragole',
         title: 'Brunch, quando vuoi tu.',
@@ -1164,7 +1164,7 @@ class Component extends DCLogic {
           { name: 'Avocado e toast', note: 'avocado toast e toast del brunch', price: '9,90 – 18,90 €' },
           { name: 'Eggs Benedict', note: 'Los Roques con tostones, o Reggie con salmone e avocado', price: '11,90 – 15,90 €' }
         ] },
-      { label: 'Pranzo', code: 'LUNCH', time: '12:30', hours: 'Dalle 12:00', board: 'Burger · burrito · caesar messicana', boardS: 'Burger', dest: 'CIUDAD DE MÉXICO',
+      { label: 'Pranzo', code: 'LUNCH', time: '12:30', hours: 'Dalle 12:00', board: 'Burgers', boardS: 'Burgers', dest: 'CIUDAD DE MÉXICO',
         icon: 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4',
         now: 'un burger e patatine', inset: 'assets/img/0cf01bf2012f526ef101335443f97535.jpg', insetAlt: 'Il burger Carlitos con uovo, cheddar e insalata',
         title: 'Pranzo senza orari.',
@@ -1177,7 +1177,7 @@ class Component extends DCLogic {
           { name: 'Burger', note: 'Carlitos o Kevin, patatine +3 €', price: '11,90 – 15,90 €' },
           { name: 'Avocado e toast', note: 'per chi vuole restare leggero', price: '9,90 – 18,90 €' }
         ] },
-      { label: 'Merenda', code: 'SNACK', time: '15:00', hours: '15:00 – 18:00', board: 'Merenda Social Club', boardS: 'Social Club', dest: 'TOKYO',
+      { label: 'Merenda', code: 'SNACK', time: '15:00', hours: '15:00 – 18:00', board: 'Matcha Lattes', boardS: 'Matcha Lattes', dest: 'TOKYO',
         icon: 'M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3',
         now: 'un cupcake Red Velvet', inset: 'assets/img/60b268bc1f28b060767f94b14fd81e5d.jpg', insetAlt: 'Matcha freddo e cupcake Red Velvet sul tavolo in marmo',
         title: 'Merenda Social Club.',
@@ -1190,7 +1190,7 @@ class Component extends DCLogic {
           { name: 'Cupcake Red Velvet', note: 'in carta dal primo giorno', price: '3,90 – 4,90 €' },
           { name: 'Matcha e chai latte', note: 'anche ube iced latte e matcha mango', price: 'da 1,50 €' }
         ] },
-      { label: 'Sera', code: 'APERITIVO', time: '18:00', hours: '18:00 – 20/22', board: 'Spritz · cocktail · taglieri', boardS: 'Spritz', dest: 'MODENA',
+      { label: 'Sera', code: 'APERITIVO', time: '18:00', hours: '18:00 – 20/22', board: 'Spritz & Co.', boardS: 'Spritz & Co.', dest: 'MODENA',
         icon: 'M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z',
         now: 'uno spritz e un tagliere', inset: 'assets/img/57103a8f53b78dcff242c97e78234f35.jpg', insetAlt: 'Spritz, sangria e cocktail alla frutta al banco',
         title: 'Aperitivo, e il mondo in tavola.',
