@@ -139,7 +139,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <button type="button" aria-pressed="false" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Montserrat', sans-serif; cursor: pointer; white-space: nowrap">🍹 Aperitivo</button>
 
 </div>
-<p aria-live="polite" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2; color: #3B0B40">Sono le 14:42 a Modena: è l’ora di staccare davvero</p>
+<p aria-live="polite" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2; color: #3B0B40">Sono le 14:50 a Modena: è l’ora di staccare davvero</p>
 
 
 <div class="m-res" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px">
@@ -2665,21 +2665,29 @@ class Component extends DCLogic {
       if (showExit(a.href)) e.preventDefault();
     };
     document.addEventListener('click', this.onExitClick, true);
-    // Tasto indietro: una tappa in più nella cronologia, da subito e di nuovo al primo tocco
+    // Tasto indietro. Safari e Chrome saltano le tappe aggiunte senza un tocco dell'utente:
+    // ne aggiungiamo una subito (browser che non le saltano) e un'altra al primo tocco (Safari, Chrome).
+    this.exitTop = 0;
     this.pushExit = () => {
-      if (this.exitPushed || this.exitDone || !window.history || !window.history.pushState) return;
-      this.exitPushed = true;
-      try { if (!(window.history.state && window.history.state.kkbq)) window.history.pushState({ kkbq: 1 }, ''); } catch (e) {}
+      if (this.exitDone || !window.history || !window.history.pushState || this.exitTop >= 2) return;
+      this.exitTop += 1;
+      try { window.history.pushState({ kkbq: this.exitTop }, ''); } catch (e) {}
     };
-    this.pushExit();
-    this.onExitTouch = () => { this.exitPushed = false; this.pushExit(); document.removeEventListener('pointerup', this.onExitTouch, true); document.removeEventListener('keydown', this.onExitTouch, true); };
+    if (!(window.history.state && window.history.state.kkbq)) this.pushExit(); else this.exitTop = window.history.state.kkbq;
+    this.onExitTouch = () => {
+      document.removeEventListener('pointerup', this.onExitTouch, true);
+      document.removeEventListener('touchend', this.onExitTouch, true);
+      document.removeEventListener('keydown', this.onExitTouch, true);
+      this.pushExit();
+    };
     document.addEventListener('pointerup', this.onExitTouch, true);
+    document.addEventListener('touchend', this.onExitTouch, true);
     document.addEventListener('keydown', this.onExitTouch, true);
     this.onExitPop = (e) => {
-      if (e.state && e.state.kkbq) return;
-      if (!this.exitPushed) return;
-      this.exitPushed = false;
-      if (!showExit('__back__')) window.history.back();
+      const lvl = (e.state && e.state.kkbq) || 0;
+      if (lvl >= this.exitTop) return;
+      this.exitBackSteps = lvl + 1;
+      if (!showExit('__back__')) window.history.go(-this.exitBackSteps);
     };
     window.addEventListener('popstate', this.onExitPop);
   }
@@ -2688,6 +2696,7 @@ class Component extends DCLogic {
     document.removeEventListener('mouseout', this.onExitOut);
     document.removeEventListener('click', this.onExitClick, true);
     document.removeEventListener('pointerup', this.onExitTouch, true);
+    document.removeEventListener('touchend', this.onExitTouch, true);
     document.removeEventListener('keydown', this.onExitTouch, true);
     window.removeEventListener('popstate', this.onExitPop);
     clearTimeout(this.bradyTimer);
@@ -3125,7 +3134,7 @@ class Component extends DCLogic {
       exitOpen: !!st.exit,
       closeExit: () => { document.documentElement.classList.remove('kk-modal'); this.setState({ exit: false }); },
       exitSecond: st.exitHref ? tr('Continua senza giocare') : tr('Torna al menu'),
-      exitGo: () => { const h = st.exitHref; document.documentElement.classList.remove('kk-modal'); this.setState({ exit: false }); if (h === '__back__') window.history.back(); else if (h) window.location.href = h; },
+      exitGo: () => { const h = st.exitHref; document.documentElement.classList.remove('kk-modal'); this.setState({ exit: false }); if (h === '__back__') window.history.go(-(this.exitBackSteps || 1)); else if (h) window.location.href = h; },
       zoomOpen: !!(zd && IMG[zd.id]), zoomImg: zd ? (IMG[zd.id] || '') : '', zoomName: zd ? clean(zd.name) : '',
       zoomCountry: zcc ? zcc.at(0) + ' ' + tr(zcc.at(1)) : '',
       closeZoom: () => this.setState({ zoom: null }),
