@@ -139,7 +139,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <button type="button" aria-pressed="false" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #3B0B40; font: 600 14px 'Montserrat', sans-serif; cursor: pointer; white-space: nowrap">🍹 Aperitivo</button>
 
 </div>
-<p aria-live="polite" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2; color: #3B0B40">Sono le 14:23 a Modena: è l’ora di staccare davvero</p>
+<p aria-live="polite" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2; color: #3B0B40">Sono le 14:42 a Modena: è l’ora di staccare davvero</p>
 
 
 <div class="m-res" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px">
@@ -2639,39 +2639,45 @@ class Component extends DCLogic {
     this.onKey = (e) => { if (e.key === 'Escape' && this.state && this.state.zoom) this.setState({ zoom: null }); };
     document.addEventListener('keydown', this.onKey);
     // Popup "Gioca a Brady's Quest" quando si lascia la pagina del menu (una volta per sessione)
-    try { this.exitDone = !!window.sessionStorage.getItem('kk-bq-exit'); } catch (e) { this.exitDone = false; }
+    // Una volta per ogni apertura della pagina del menu
+    this.exitDone = false;
     const showExit = (href) => {
       const s = this.state || {};
       if (this.exitDone || s.brady || s.sheet || s.staff || s.zoom) return false;
       this.exitDone = true;
-      try { window.sessionStorage.setItem('kk-bq-exit', '1'); } catch (e) {}
       document.documentElement.classList.add('kk-modal');
       this.setState({ exit: true, exitHref: href || '' });
       return true;
     };
-    this.exitArm = setTimeout(() => { this.exitArmed = true; }, 8000);
+    this.exitArm = setTimeout(() => { this.exitArmed = true; }, 2000);
+    // Computer: il mouse esce dalla pagina verso le schede o la barra dell'indirizzo
     this.onExitOut = (e) => { if (this.exitArmed && !e.relatedTarget && e.clientY <= 0) showExit(''); };
     document.addEventListener('mouseout', this.onExitOut);
+    // Qualsiasi link verso un'altra pagina o sezione del sito
     this.onExitClick = (e) => {
-      if (!this.exitArmed || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
       const a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
       if (!a || a.target === '_blank') return;
       const h = a.getAttribute('href') || '';
-      if (!h || h.charAt(0) === '#' || /^(tel:|mailto:|https:\/\/wa\.me|https:\/\/gioco\.keik\.it)/.test(h)) return;
+      if (!h || h.charAt(0) === '#' || /^(tel:|mailto:|javascript:)/.test(h)) return;
       if (a.hostname && a.hostname !== window.location.hostname) return;
       if (a.pathname === window.location.pathname) return;
       if (showExit(a.href)) e.preventDefault();
     };
     document.addEventListener('click', this.onExitClick, true);
-    this.onExitScroll = () => {
-      if (!this.exitArmed || this.exitPushed || this.exitDone || !window.history || !window.history.pushState) return;
+    // Tasto indietro: una tappa in più nella cronologia, da subito e di nuovo al primo tocco
+    this.pushExit = () => {
+      if (this.exitPushed || this.exitDone || !window.history || !window.history.pushState) return;
       this.exitPushed = true;
-      try { window.history.pushState({ kkbq: 1 }, ''); } catch (e) {}
+      try { if (!(window.history.state && window.history.state.kkbq)) window.history.pushState({ kkbq: 1 }, ''); } catch (e) {}
     };
-    document.addEventListener('scroll', this.onExitScroll, { capture: true, passive: true });
-    document.addEventListener('pointerdown', this.onExitScroll, { capture: true, passive: true });
+    this.pushExit();
+    this.onExitTouch = () => { this.exitPushed = false; this.pushExit(); document.removeEventListener('pointerup', this.onExitTouch, true); document.removeEventListener('keydown', this.onExitTouch, true); };
+    document.addEventListener('pointerup', this.onExitTouch, true);
+    document.addEventListener('keydown', this.onExitTouch, true);
     this.onExitPop = (e) => {
-      if (!this.exitPushed || (e.state && e.state.kkbq)) return;
+      if (e.state && e.state.kkbq) return;
+      if (!this.exitPushed) return;
       this.exitPushed = false;
       if (!showExit('__back__')) window.history.back();
     };
@@ -2681,8 +2687,8 @@ class Component extends DCLogic {
     clearTimeout(this.exitArm);
     document.removeEventListener('mouseout', this.onExitOut);
     document.removeEventListener('click', this.onExitClick, true);
-    document.removeEventListener('scroll', this.onExitScroll, true);
-    document.removeEventListener('pointerdown', this.onExitScroll, true);
+    document.removeEventListener('pointerup', this.onExitTouch, true);
+    document.removeEventListener('keydown', this.onExitTouch, true);
     window.removeEventListener('popstate', this.onExitPop);
     clearTimeout(this.bradyTimer);
     clearTimeout(this.msgTimer);
