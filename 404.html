@@ -11,7 +11,87 @@
 <meta name="robots" content="noindex">
 <link rel="preload" href="assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="preload" href="assets/fonts/space-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(assets/fonts/big-shoulders-display-latin-ext-wght-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(assets/fonts/big-shoulders-display-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(assets/fonts/montserrat-latin-ext-wght-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(assets/fonts/montserrat-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400 700;
+  src: url(assets/fonts/caveat-latin-ext-wght-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400 700;
+  src: url(assets/fonts/caveat-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(assets/fonts/space-mono-latin-ext-400-normal.woff2) format('woff2'), url(space-mono-latin-ext-400-normal.woff) format('woff');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(assets/fonts/space-mono-latin-400-normal.woff2) format('woff2'), url(space-mono-latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(assets/fonts/space-mono-latin-ext-700-normal.woff2) format('woff2'), url(space-mono-latin-ext-700-normal.woff) format('woff');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(assets/fonts/space-mono-latin-700-normal.woff2) format('woff2'), url(space-mono-latin-700-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}</style>
 <style>
 body{margin:0;background:#2A0830}
 .x-wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
@@ -43,7 +123,7 @@ body{margin:0;background:#2A0830}
 
 <header style="border-bottom: 1px solid rgba(255,255,255,0.12)">
 <div class="x-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
-<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/4ae9236772f217ad454621f7172ec031-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto" srcset="assets/img/4ae9236772f217ad454621f7172ec031-480.webp 480w" sizes="85px" width="680" height="401" decoding="async" loading="eager" data-kki=""></a>
+<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/4ae9236772f217ad454621f7172ec031-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto" srcset="assets/img/4ae9236772f217ad454621f7172ec031-240.webp 240w, assets/img/4ae9236772f217ad454621f7172ec031-480.webp 480w" sizes="85px" width="680" height="401" decoding="async" loading="eager" data-kki=""></a>
 <a href="prenota.html" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota un tavolo</a>
 </div>
 </header>
@@ -64,7 +144,7 @@ body{margin:0;background:#2A0830}
 </div>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; min-width: 0">
-<img class="x-brady" src="assets/img/990367cb4270e3318ae52408c3436fc1-480.webp" alt="Brady, il bradipo di KEIK, con l’aria un po’ persa" style="width: 320px; height: auto" srcset="assets/img/990367cb4270e3318ae52408c3436fc1-480.webp 480w" sizes="(max-width: 700px) 100vw, 50vw" width="565" height="600" decoding="async" loading="eager" fetchpriority="high" data-kki="">
+<img class="x-brady" src="assets/img/990367cb4270e3318ae52408c3436fc1-480.webp" alt="Brady, il bradipo di KEIK, con l’aria un po’ persa" style="width: 320px; height: auto" srcset="assets/img/990367cb4270e3318ae52408c3436fc1-240.webp 240w, assets/img/990367cb4270e3318ae52408c3436fc1-480.webp 480w" sizes="(max-width: 700px) 100vw, 50vw" width="565" height="600" decoding="async" loading="eager" fetchpriority="high" data-kki="">
 </div>
 </div>
 
