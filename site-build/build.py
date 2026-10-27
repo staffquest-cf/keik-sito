@@ -65,7 +65,7 @@ open(OUT + '/assets/js/kimg.js', 'w').write('window.__KIMG__=' + json.dumps(_man
 
 def rewrite(t):
     t = re.sub(r'/_blob/([0-9a-f]{32})', lambda m: blobmap.get(m.group(1), m.group(0)), t)
-    t = re.sub(r'\b(\w+)\.dc\.html', lambda m: (PAGES[m.group(1)] + '.html') if m.group(1) in PAGES else m.group(0), t)
+    t = re.sub(r'\b(\w+)\.dc\.html', lambda m: ('./' if m.group(1) == 'Main' else PAGES[m.group(1)] + '.html') if m.group(1) in PAGES else m.group(0), t)
     t = t.replace('menutelefono.html', 'menu-tavolo.html')
     return t
 
@@ -108,6 +108,18 @@ def build(name, slug, override=None):
               f'<meta property="og:image" content="{SITE}/assets/img/og/{_img}.jpg">\n'
               '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
               '<meta name="twitter:card" content="summary_large_image">\n')
+    # Indirizzo ufficiale di ogni pagina (evita doppioni come / e /index.html)
+    if slug not in ('404', 'menu-tavolo', 'eventi-ottobre'):
+        OG += '<link rel="canonical" href="' + SITE + ('/' if slug == 'index' else '/' + slug + '.html') + '">\n'
+    # Scheda "organizzazione" per Google e assistenti IA (solo home)
+    if slug == 'index':
+        _r = json.load(open(SCR + '/site-build/restaurant_ld.json', encoding='utf-8'))
+        _org = {'@context': 'https://schema.org', '@type': 'Organization', '@id': SITE + '/#organization', 'name': 'KEIK S.N.C.',
+                'alternateName': 'KEIK', 'url': SITE + '/', 'logo': _r['logo'], 'foundingDate': _r['foundingDate'], 'email': _r['email'],
+                'telephone': _r['telephone'], 'address': _r['address'], 'sameAs': _r['sameAs'],
+                'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': _r['telephone'],
+                                 'email': _r['email'], 'availableLanguage': ['Italian', 'English', 'Spanish']}}
+        OG += '<script type="application/ld+json">' + json.dumps(_org, ensure_ascii=False) + '</script>\n'
     # B4 schema Restaurant
     if slug in ('index', 'contatti', 'menu'):
         OG += '<script type="application/ld+json">' + json.dumps(json.load(open(SCR + '/site-build/restaurant_ld.json', encoding='utf-8')), ensure_ascii=False) + '</script>\n'
@@ -142,7 +154,7 @@ def build(name, slug, override=None):
 </head>
 <body>
 <div id="dc-root"></div>
-<template id="dc-tpl">{rewrite(body)}</template>
+<script type="text/x-dc-tpl" id="dc-tpl">{rewrite(body).replace("</script", "<\\/script")}</script>
 <script type="text/x-dc" id="dc-code">{rewrite(code)}</script>
 <script>window.__DC_PROPS__ = {json.dumps(props, ensure_ascii=False)};window.__DC_OVERRIDE__ = {json.dumps(override or {}, ensure_ascii=False)};</script>
 <script src="assets/js/morphdom.min.js"></script>

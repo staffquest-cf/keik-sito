@@ -68,5 +68,8 @@
   "Tripadvisor Travellers’ Choice 2024",
   "Tripadvisor Travellers’ Choice 2025",
   "Tripadvisor Travellers’ Choice 2026"
- ]
+ ],
+ "parentOrganization": {
+  "@id": "https://keik.it/#organization"
+ }
 }
