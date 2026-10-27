@@ -123,12 +123,12 @@ body{margin:0;background:#2A0830}
 </head>
 <body>
 <div id="dc-root"></div>
-<template id="dc-tpl">
+<script type="text/x-dc-tpl" id="dc-tpl">
 <div style="font-family: 'Montserrat', system-ui, sans-serif; color: #FFFFFF; background: #2A0830; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; min-width: 0">
 
 <header style="border-bottom: 1px solid rgba(255,255,255,0.12)">
 <div class="x-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
-<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/4ae9236772f217ad454621f7172ec031.png" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<a href="./" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/4ae9236772f217ad454621f7172ec031.png" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
 <a href="prenota.html" style="display: inline-flex; align-items: center; background: #FFFFFF; color: #2A0830; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota un tavolo</a>
 </div>
 </header>
@@ -144,7 +144,7 @@ body{margin:0;background:#2A0830}
 <h1 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(51px, 6.9vw, 101px); line-height: 0.96; ">Ops, questo volo <span class="x-serif" style="color: #E9A9DF; font-size: 1.06em">è partito senza di te.</span></h1>
 <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #DCC8DD; max-width: 30em">La pagina che cerchi non esiste più o ha cambiato gate. Anche Brady si è perso in aeroporto: ti riportiamo noi dove si mangia bene.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="index.html" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; padding: 0 26px; min-height: 56px; border-radius: 999px">Torna alla home</a>
+<a href="./" style="display: inline-flex; align-items: center; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; padding: 0 26px; min-height: 56px; border-radius: 999px">Torna alla home</a>
 <a href="https://wa.me/393534732354" style="display: inline-flex; align-items: center; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; padding: 0 22px; min-height: 56px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.6)">Chiedi a noi su WhatsApp</a>
 </div>
 </div>
@@ -176,7 +176,7 @@ body{margin:0;background:#2A0830}
 </footer>
 
 </div>
-</template>
+</script>
 <script type="text/x-dc" id="dc-code">
 class Component extends DCLogic {
   renderVals() { return {}; }
