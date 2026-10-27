@@ -225,7 +225,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <button type="button" aria-pressed="true" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #3B0B40; color: #FFFFFF; font: 600 14px 'Montserrat', sans-serif; cursor: pointer; white-space: nowrap">🍹 Aperitivo · adesso</button>
 
 </div>
-<p aria-live="polite" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2; color: #3B0B40">Sono le 21:41 a Modena: è l’ora dell’aperitivo</p>
+<p aria-live="polite" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2; color: #3B0B40">Sono le 21:59 a Modena: è l’ora dell’aperitivo</p>
 
 
 <div class="m-res" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px">
@@ -2785,9 +2785,9 @@ class Component extends DCLogic {
       const saved = JSON.parse(window.localStorage.getItem('keik-itinerario-v2') || '{}');
       if (saved && typeof saved === 'object' && Object.keys(saved).length) this.setState({ q: saved });
     } catch (e) {}
-    // Al tavolo il popup di Brady's Quest compare dopo 30 secondi, una volta sola
+    // Al tavolo il popup di Brady's Quest (quello grande, con la schermata del gioco) compare dopo 30 secondi, una volta sola
     this.bradyTimer = setTimeout(() => {
-      if ((this.props.contesto ?? 'online') === 'tavolo' && !(this.state && this.state.bradySeen)) this.setState({ brady: true, bradySeen: true });
+      if ((this.props.contesto ?? 'online') === 'tavolo' && this.showExit) this.showExit('');
     }, 30000);
     this.clock = setInterval(() => this.setState({ now: Date.now() }), 60000);
     this.onKey = (e) => { if (e.key === 'Escape' && this.state && this.state.zoom) this.setState({ zoom: null }); };
@@ -2803,6 +2803,7 @@ class Component extends DCLogic {
       this.setState({ exit: true, exitHref: href || '' });
       return true;
     };
+    this.showExit = showExit;
     this.exitArm = setTimeout(() => { this.exitArmed = true; }, 2000);
     // Computer: il mouse esce dalla pagina verso le schede o la barra dell'indirizzo
     this.onExitOut = (e) => { if (this.exitArmed && !e.relatedTarget && e.clientY <= 0) showExit(''); };
