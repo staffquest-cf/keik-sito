@@ -24,7 +24,87 @@
 <meta name="description" content="Nel 2013 una coppia venezuelana porta il brunch a Modena. Cucina dal mondo, dolci dal nostro laboratorio e una vetrina dipinta ogni mese.">
 <link rel="preload" href="assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="preload" href="assets/fonts/space-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(assets/fonts/big-shoulders-display-latin-ext-wght-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(assets/fonts/big-shoulders-display-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(assets/fonts/montserrat-latin-ext-wght-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(assets/fonts/montserrat-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400 700;
+  src: url(assets/fonts/caveat-latin-ext-wght-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400 700;
+  src: url(assets/fonts/caveat-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(assets/fonts/space-mono-latin-ext-400-normal.woff2) format('woff2'), url(space-mono-latin-ext-400-normal.woff) format('woff');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(assets/fonts/space-mono-latin-400-normal.woff2) format('woff2'), url(space-mono-latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(assets/fonts/space-mono-latin-ext-700-normal.woff2) format('woff2'), url(space-mono-latin-ext-700-normal.woff) format('woff');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(assets/fonts/space-mono-latin-700-normal.woff2) format('woff2'), url(space-mono-latin-700-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}</style>
 <style>
 html{background:#1E0623}body{margin:0;background:#FFFFFF}
 a{color:#91007D}a:hover{color:#3B0B40}
@@ -72,7 +152,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
 <div class="c-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
-<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto" srcset="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp 480w" sizes="85px" width="680" height="401" decoding="async" loading="eager" data-kki=""></a>
+<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto" srcset="assets/img/cea731796bb98fc55bef3bb8e7c4505e-240.webp 240w, assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp 480w" sizes="85px" width="680" height="401" decoding="async" loading="eager" data-kki=""></a>
 <nav class="c-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
 <a href="#rotta" style="color: #3B0B40; text-decoration: none">La nostra rotta</a>
 <a href="#equipaggio" style="color: #3B0B40; text-decoration: none">L’equipaggio</a>
@@ -85,6 +165,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <nav aria-label="Pagine del sito" style="position: sticky; top: 0; z-index: 40; background: #2A0830; font-family: 'Montserrat', system-ui, sans-serif"><div class="kk-inner kk-bar" style="max-width: 1200px; margin: 0 auto; padding: 6px 40px; box-sizing: border-box; align-items: center"><a href="menu.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Menu</a><a href="brunch.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Brunch</a><a href="pranzo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pranzo</a><a href="merenda.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pomeriggio</a><a href="aperitivo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Aperitivo</a><a href="eventi.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Eventi</a><a href="contatti.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Dove siamo</a><a href="chi-siamo.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: transparent; position: relative; font-weight: 700">Chi siamo</a><a href="prenota.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; color: #2A0830; background: #F2B8E6; margin-left: auto">Prenota</a><span class="kk-lang" data-notr="" role="group" aria-label="Lingua / Language"><button type="button" data-lang="it" lang="it" aria-label="IT · Italiano" aria-pressed="true">IT</button><button type="button" data-lang="en" lang="en" aria-label="EN · English" aria-pressed="false">EN</button><button type="button" data-lang="es" lang="es" aria-label="ES · Español" aria-pressed="false">ES</button><button type="button" data-lang="fr" lang="fr" aria-label="FR · Français" aria-pressed="false">FR</button></span></div></nav>
 
+<main id="contenuto">
 
 
 <section id="top" style="padding: 56px 0 80px; background: #F7F2F6">
@@ -100,7 +181,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </div>
 <div style="position: relative; min-width: 0">
-<img src="assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-960.webp" alt="Il dehors di KEIK in Via Canalino pieno di persone, con l’insegna viola Keik handmade taste e la lavagna Brunch, Merenda, Aperitivo, Cena" style="display: block; width: 100%; height: 520px; object-fit: cover; object-position: 80% 50%; border-radius: 30px" srcset="assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-480.webp 480w, assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1400" height="933" decoding="async" loading="eager" fetchpriority="high" data-kki="">
+<img src="assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-960.webp" alt="Il dehors di KEIK in Via Canalino pieno di persone, con l’insegna viola Keik handmade taste e la lavagna Brunch, Merenda, Aperitivo, Cena" style="display: block; width: 100%; height: 520px; object-fit: cover; object-position: 80% 50%; border-radius: 30px" srcset="assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-240.webp 240w, assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-480.webp 480w, assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-720.webp 720w, assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1400" height="933" decoding="async" loading="eager" fetchpriority="high" data-kki="">
 <div style="position: absolute; left: -22px; bottom: 28px; background: #FFFFFF; border-radius: 18px; padding: 14px 18px; box-shadow: 0 18px 40px rgba(42,8,48,0.2); display: flex; align-items: center; gap: 12px">
 <img src="assets/img/cab2c85a72f518cbd8df0064e68be490-142.webp" alt="" style="height: 40px; width: auto" srcset="assets/img/cab2c85a72f518cbd8df0064e68be490-142.webp 142w" sizes="(max-width: 700px) 100vw, 50vw" width="142" height="159" decoding="async" loading="eager" data-kki="">
 <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #6B4A70">GATE</span><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 21px; color: #3B0B40">Via Canalino 51</span></span>
@@ -138,7 +219,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 </div>
 <div class="c-route c-in" role="tabpanel" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 26px; padding: 28px">
-<img src="assets/img/014cc06cc350cb1119c88cd75c057cb9-960.webp" alt="L’ingresso di KEIK in Via Canalino 51" style="display: block; width: 100%; height: 320px; object-fit: cover; object-position: center 20%; border-radius: 20px" srcset="assets/img/014cc06cc350cb1119c88cd75c057cb9-480.webp 480w, assets/img/014cc06cc350cb1119c88cd75c057cb9-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1170" height="1170" decoding="async" loading="lazy" data-kki="">
+<img src="assets/img/014cc06cc350cb1119c88cd75c057cb9-960.webp" alt="L’ingresso di KEIK in Via Canalino 51" style="display: block; width: 100%; height: 320px; object-fit: cover; object-position: center 20%; border-radius: 20px" srcset="assets/img/014cc06cc350cb1119c88cd75c057cb9-240.webp 240w, assets/img/014cc06cc350cb1119c88cd75c057cb9-480.webp 480w, assets/img/014cc06cc350cb1119c88cd75c057cb9-720.webp 720w, assets/img/014cc06cc350cb1119c88cd75c057cb9-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1170" height="1170" decoding="async" loading="lazy" data-kki="">
 <div style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
 <span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #E9A9DF">SCALO 01 · 2013</span>
 <h3 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(32px, 3.22vw, 46px); line-height: 1.05; ">Si parte: apre KEIK in Via Canalino</h3>
@@ -173,9 +254,9 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <a href="lavora-con-noi.html" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 16px; min-height: 44px">Lavora con noi<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 <div class="c-team">
-<img src="assets/img/b776e134616dd6523cb27a8110cd643c-960.webp" alt="Due persone dello staff KEIK con le felpe del locale" style="grid-row: 1 / 3; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; border-radius: 26px" srcset="assets/img/b776e134616dd6523cb27a8110cd643c-480.webp 480w, assets/img/b776e134616dd6523cb27a8110cd643c-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1066" height="1600" decoding="async" loading="lazy" data-kki="">
-<img class="c-t2" src="assets/img/664dd3c879354378328827845ca679d6-960.webp" alt="Una barista di KEIK al banco con la maglietta Viaggia col gusto" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; border-radius: 22px" srcset="assets/img/664dd3c879354378328827845ca679d6-480.webp 480w, assets/img/664dd3c879354378328827845ca679d6-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1066" height="1600" decoding="async" loading="lazy" data-kki="">
-<img class="c-t3" src="assets/img/84d32245179a250201228bc94d7d8e0a-960.webp" alt="Un tavolo di KEIK la sera, con la lampada accesa, la tazza Let’s Brunch e la sala piena sullo sfondo" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; border-radius: 22px" srcset="assets/img/84d32245179a250201228bc94d7d8e0a-480.webp 480w, assets/img/84d32245179a250201228bc94d7d8e0a-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1000" height="1500" decoding="async" loading="lazy" data-kki="">
+<img src="assets/img/b776e134616dd6523cb27a8110cd643c-960.webp" alt="Due persone dello staff KEIK con le felpe del locale" style="grid-row: 1 / 3; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; border-radius: 26px" srcset="assets/img/b776e134616dd6523cb27a8110cd643c-240.webp 240w, assets/img/b776e134616dd6523cb27a8110cd643c-480.webp 480w, assets/img/b776e134616dd6523cb27a8110cd643c-720.webp 720w, assets/img/b776e134616dd6523cb27a8110cd643c-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1066" height="1600" decoding="async" loading="lazy" data-kki="">
+<img class="c-t2" src="assets/img/664dd3c879354378328827845ca679d6-960.webp" alt="Una barista di KEIK al banco con la maglietta Viaggia col gusto" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; border-radius: 22px" srcset="assets/img/664dd3c879354378328827845ca679d6-240.webp 240w, assets/img/664dd3c879354378328827845ca679d6-480.webp 480w, assets/img/664dd3c879354378328827845ca679d6-720.webp 720w, assets/img/664dd3c879354378328827845ca679d6-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1066" height="1600" decoding="async" loading="lazy" data-kki="">
+<img class="c-t3" src="assets/img/84d32245179a250201228bc94d7d8e0a-960.webp" alt="Un tavolo di KEIK la sera, con la lampada accesa, la tazza Let’s Brunch e la sala piena sullo sfondo" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; border-radius: 22px" srcset="assets/img/84d32245179a250201228bc94d7d8e0a-240.webp 240w, assets/img/84d32245179a250201228bc94d7d8e0a-480.webp 480w, assets/img/84d32245179a250201228bc94d7d8e0a-720.webp 720w, assets/img/84d32245179a250201228bc94d7d8e0a-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1000" height="1500" decoding="async" loading="lazy" data-kki="">
 </div>
 </div>
 </section>
@@ -194,7 +275,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <section id="brady" style="padding: 104px 0; background: #FFFFFF">
 <div class="c-wrap">
 <div class="c-brady" style="padding: 36px 40px; border-radius: 30px; background: #FFF9DB; border: 1.5px solid #F2E4A0">
-<img class="c-bob" src="assets/img/edc45f5c564648d4837f9724b431c355-480.webp" alt="Brady, il bradipo aviatore di KEIK, con cuffia, occhialoni e sciarpa viola, che saluta" style="display: block; width: 114px; height: auto; flex: none" srcset="assets/img/edc45f5c564648d4837f9724b431c355-480.webp 480w" sizes="114px" width="590" height="640" decoding="async" loading="lazy" data-kki="">
+<img class="c-bob" src="assets/img/edc45f5c564648d4837f9724b431c355-480.webp" alt="Brady, il bradipo aviatore di KEIK, con cuffia, occhialoni e sciarpa viola, che saluta" style="display: block; width: 114px; height: auto; flex: none" srcset="assets/img/edc45f5c564648d4837f9724b431c355-240.webp 240w, assets/img/edc45f5c564648d4837f9724b431c355-480.webp 480w" sizes="114px" width="590" height="640" decoding="async" loading="lazy" data-kki="">
 <div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
 <p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #8A6D00">IL NOSTRO PASSEGGERO PIÙ LENTO</p>
 <h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(34px, 3.68vw, 51px); line-height: 1.02; color: #3B0B40">Conosci Brady, <span class="c-serif" style="color: #91007D">il bradipo di KEIK.</span></h2>
@@ -224,8 +305,9 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </section>
 
+</main>
 
-<nav aria-label="Mappa del sito" style="background: #1E0623; color: #FFFFFF; font-family: 'Montserrat', system-ui, sans-serif; border-bottom: 1px solid rgba(255,255,255,0.12)"><div class="kk-inner kk-sitemap" style="max-width: 1200px; margin: 0 auto; padding: 56px 40px 40px; box-sizing: border-box"><div style="display: flex; flex-direction: column; gap: 12px"><a href="index.html" aria-label="KEIK, vai alla home" style="line-height: 0; display: block; margin-bottom: 10px"><img src="assets/img/4ae9236772f217ad454621f7172ec031-480.webp" alt="Keik – Viaggia col gusto" style="height: 64px; width: auto" srcset="assets/img/4ae9236772f217ad454621f7172ec031-480.webp 480w" sizes="(max-width: 700px) 100vw, 50vw" width="680" height="401" decoding="async" loading="lazy" data-kki=""></a><span style="font-size: 15px; line-height: 1.55; color: #D9C3DB">All day kitchen nel centro di Modena dal 2013. Via Canalino 51 · tutti i giorni dalle 10.</span></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">I MOMENTI</span><a href="brunch.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Brunch</a><a href="pranzo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pranzo</a><a href="merenda.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pomeriggio</a><a href="aperitivo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aperitivo e Il Turista</a><a href="vegano-senza-glutine.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Vegano e senza glutine</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">SCOPRI KEIK</span><a href="menu.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Il menu</a><a href="eventi.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Eventi del mese</a><a href="chi-siamo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Chi siamo</a><a href="faq.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Domande frequenti</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">PER TE</span><a href="prenota.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Prenota un tavolo</a><a href="buoni-regalo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Buoni regalo</a><a href="aziende.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aziende e locali</a><a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Passaporto del Gusto</a><a href="lavora-con-noi.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Lavora con noi</a><a href="contatti.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Contatti e orari</a></div></div></nav>
+<nav aria-label="Mappa del sito" style="background: #1E0623; color: #FFFFFF; font-family: 'Montserrat', system-ui, sans-serif; border-bottom: 1px solid rgba(255,255,255,0.12)"><div class="kk-inner kk-sitemap" style="max-width: 1200px; margin: 0 auto; padding: 56px 40px 40px; box-sizing: border-box"><div style="display: flex; flex-direction: column; gap: 12px"><a href="index.html" aria-label="KEIK, vai alla home" style="line-height: 0; display: block; margin-bottom: 10px"><img src="assets/img/4ae9236772f217ad454621f7172ec031-480.webp" alt="Keik – Viaggia col gusto" style="height: 64px; width: auto" srcset="assets/img/4ae9236772f217ad454621f7172ec031-240.webp 240w, assets/img/4ae9236772f217ad454621f7172ec031-480.webp 480w" sizes="(max-width: 700px) 100vw, 50vw" width="680" height="401" decoding="async" loading="lazy" data-kki=""></a><span style="font-size: 15px; line-height: 1.55; color: #D9C3DB">All day kitchen nel centro di Modena dal 2013. Via Canalino 51 · tutti i giorni dalle 10.</span></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">I MOMENTI</span><a href="brunch.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Brunch</a><a href="pranzo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pranzo</a><a href="merenda.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pomeriggio</a><a href="aperitivo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aperitivo e Il Turista</a><a href="vegano-senza-glutine.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Vegano e senza glutine</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">SCOPRI KEIK</span><a href="menu.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Il menu</a><a href="eventi.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Eventi del mese</a><a href="chi-siamo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Chi siamo</a><a href="faq.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Domande frequenti</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">PER TE</span><a href="prenota.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Prenota un tavolo</a><a href="buoni-regalo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Buoni regalo</a><a href="aziende.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aziende e locali</a><a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Passaporto del Gusto</a><a href="lavora-con-noi.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Lavora con noi</a><a href="contatti.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Contatti e orari</a></div></div></nav>
 
 <footer style="background: #1E0623; color: #B99BBC; padding: 28px 0 96px; font-size: 13px">
 <div class="c-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
@@ -259,6 +341,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <!-- KK-SITEBAR -->
 <nav aria-label="Pagine del sito" style="position: sticky; top: 0; z-index: 40; background: #2A0830; font-family: 'Montserrat', system-ui, sans-serif"><div class="kk-inner kk-bar" style="max-width: 1200px; margin: 0 auto; padding: 6px 40px; box-sizing: border-box; align-items: center"><a href="menu.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Menu</a><a href="brunch.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Brunch</a><a href="pranzo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pranzo</a><a href="merenda.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pomeriggio</a><a href="aperitivo.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Aperitivo</a><a href="eventi.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Eventi</a><a href="contatti.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Dove siamo</a><a href="chi-siamo.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: transparent; position: relative; font-weight: 700">Chi siamo</a><a href="prenota.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; color: #2A0830; background: #F2B8E6; margin-left: auto">Prenota</a><span class="kk-lang" data-notr role="group" aria-label="Lingua / Language"><button type="button" data-lang="it" lang="it" aria-label="IT · Italiano">IT</button><button type="button" data-lang="en" lang="en" aria-label="EN · English">EN</button><button type="button" data-lang="es" lang="es" aria-label="ES · Español">ES</button><button type="button" data-lang="fr" lang="fr" aria-label="FR · Français">FR</button></span></div></nav>
 <!-- /KK-SITEBAR -->
+<main id="contenuto">
 
 <!-- HERO -->
 <section id="top" style="padding: 56px 0 80px; background: #F7F2F6">
@@ -388,6 +471,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </section>
 
+</main>
 <!-- KK-SITEMAP -->
 <nav aria-label="Mappa del sito" style="background: #1E0623; color: #FFFFFF; font-family: 'Montserrat', system-ui, sans-serif; border-bottom: 1px solid rgba(255,255,255,0.12)"><div class="kk-inner kk-sitemap" style="max-width: 1200px; margin: 0 auto; padding: 56px 40px 40px; box-sizing: border-box"><div style="display: flex; flex-direction: column; gap: 12px"><a href="index.html" aria-label="KEIK, vai alla home" style="line-height: 0; display: block; margin-bottom: 10px"><img src="assets/img/4ae9236772f217ad454621f7172ec031.png" alt="Keik – Viaggia col gusto" style="height: 64px; width: auto"></a><span style="font-size: 15px; line-height: 1.55; color: #D9C3DB">All day kitchen nel centro di Modena dal 2013. Via Canalino 51 · tutti i giorni dalle 10.</span></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">I MOMENTI</span><a href="brunch.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Brunch</a><a href="pranzo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pranzo</a><a href="merenda.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pomeriggio</a><a href="aperitivo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aperitivo e Il Turista</a><a href="vegano-senza-glutine.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Vegano e senza glutine</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">SCOPRI KEIK</span><a href="menu.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Il menu</a><a href="eventi.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Eventi del mese</a><a href="chi-siamo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Chi siamo</a><a href="faq.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Domande frequenti</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">PER TE</span><a href="prenota.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Prenota un tavolo</a><a href="buoni-regalo.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Buoni regalo</a><a href="aziende.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aziende e locali</a><a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Passaporto del Gusto</a><a href="lavora-con-noi.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Lavora con noi</a><a href="contatti.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Contatti e orari</a></div></div></nav>
 <!-- /KK-SITEMAP -->
