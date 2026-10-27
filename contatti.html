@@ -61,7 +61,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
 <div class="t-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
-<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto" srcset="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp 480w" sizes="85px" width="680" height="401" decoding="async" loading="eager" fetchpriority="high" data-kki=""></a>
+<a href="index.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto" srcset="assets/img/cea731796bb98fc55bef3bb8e7c4505e-480.webp 480w" sizes="85px" width="680" height="401" decoding="async" loading="eager" data-kki=""></a>
 <nav class="t-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
 <a href="contatti.html" style="color: #3B0B40; text-decoration: none">Dove siamo</a>
 <a href="#orari" style="color: #3B0B40; text-decoration: none">Orari</a>
@@ -99,7 +99,18 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </div>
 <div style="position: relative; min-width: 0; border-radius: 26px; overflow: hidden; background: #E9E1E8; box-shadow: 0 24px 60px rgba(42,8,48,0.14)">
-<iframe class="t-map" title="Mappa: KEIK in Via Canalino 51, Modena" src="https://maps.google.com/maps?q=KEIK%20Via%20Canalino%2051%2C%2041121%20Modena&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="display: block; width: 100%; height: 100%; min-height: 460px; border: 0"></iframe>
+
+
+<div style="position: relative; width: 100%; height: 100%; min-height: 460px; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<img src="assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-960.webp" alt="La facciata di KEIK in Via Canalino 51" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" srcset="assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-480.webp 480w, assets/img/5e87ff8d0b98e0d3497dd39dd5717f83-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" width="1400" height="933" decoding="async" fetchpriority="high" data-kki="">
+<div style="position: absolute; inset: 0; background: rgba(42,8,48,0.55)"></div>
+<div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 20px; text-align: center; color: #FFFFFF">
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.05">Via Canalino 51, Modena</strong>
+<button type="button" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 0; background: #FFFFFF; color: #2A0830; font: 700 15px 'Montserrat', sans-serif; cursor: pointer">Mostra la mappa</button>
+<span style="max-width: 26em; font-size: 12px; line-height: 1.45; color: #F0DDF0">La mappa è di Google Maps: caricandola, Google può usare i suoi cookie.</span>
+</div>
+</div>
+
 </div>
 </div>
 </div>
@@ -294,7 +305,18 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </div>
 <div style="position: relative; min-width: 0; border-radius: 26px; overflow: hidden; background: #E9E1E8; box-shadow: 0 24px 60px rgba(42,8,48,0.14)">
-<iframe class="t-map" title="Mappa: KEIK in Via Canalino 51, Modena" src="https://maps.google.com/maps?q=KEIK%20Via%20Canalino%2051%2C%2041121%20Modena&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="display: block; width: 100%; height: 100%; min-height: 460px; border: 0"></iframe>
+<sc-if value="{{mapOn}}" hint-placeholder-val="{{ false }}"><iframe class="t-map" title="Mappa: KEIK in Via Canalino 51, Modena" src="https://maps.google.com/maps?q=KEIK%20Via%20Canalino%2051%2C%2041121%20Modena&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="display: block; width: 100%; height: 100%; min-height: 460px; border: 0"></iframe></sc-if>
+<sc-if value="{{mapOff}}" hint-placeholder-val="{{ true }}">
+<div style="position: relative; width: 100%; height: 100%; min-height: 460px; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<img src="assets/img/5e87ff8d0b98e0d3497dd39dd5717f83.jpg" alt="La facciata di KEIK in Via Canalino 51" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; inset: 0; background: rgba(42,8,48,0.55)"></div>
+<div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 20px; text-align: center; color: #FFFFFF">
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.05">Via Canalino 51, Modena</strong>
+<button type="button" onClick="{{showMap}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 0; background: #FFFFFF; color: #2A0830; font: 700 15px 'Montserrat', sans-serif; cursor: pointer">Mostra la mappa</button>
+<span style="max-width: 26em; font-size: 12px; line-height: 1.45; color: #F0DDF0">La mappa è di Google Maps: caricandola, Google può usare i suoi cookie.</span>
+</div>
+</div>
+</sc-if>
 </div>
 </div>
 </div>
@@ -412,13 +434,14 @@ class Component extends DCLogic {
       { tag: 'REGALI', t: 'Regalare un buono', d: 'Un viaggio col gusto da regalare, arriva via email.', cta: 'Crea il buono', href: 'buoni-regalo.html' },
       { tag: 'LAVORO', t: 'Lavorare con noi', d: 'Sala, banco, cucina e laboratorio: le candidature sono sempre aperte.', cta: 'Candidati', href: 'lavora-con-noi.html' }
     ];
-    return { statusTitle, statusSub, statusBg, statusDot, days, needs };
+    const mapOn = !!(this.state && this.state.mapOn);
+    return { statusTitle, statusSub, statusBg, statusDot, days, needs, mapOn, mapOff: !mapOn, showMap: () => this.setState({ mapOn: true }) };
   }
 }
 </script>
 <script>window.__DC_PROPS__ = {};window.__DC_OVERRIDE__ = {};</script>
 <script src="assets/js/morphdom.min.js"></script>
-<script>window.__KEAGER__=["cea731796bb98fc55bef3bb8e7c4505e"];</script>
+<script>window.__KEAGER__=["5e87ff8d0b98e0d3497dd39dd5717f83","cea731796bb98fc55bef3bb8e7c4505e"];</script>
 <script src="assets/js/kimg.js"></script>
 <script src="assets/js/keik-dc.js"></script>
 <script>/* KK-HIDE: su iPhone la barra Prenota si nasconde scorrendo giù (Safari 26 la copre) e riappare scorrendo su */(function(){var y=0,d=document.documentElement;addEventListener("scroll",function(){var n=scrollY;if(Math.abs(n-y)<8)return;d.classList.toggle("kk-down",n>y&&n>160);y=n;},{passive:true});})();</script>
