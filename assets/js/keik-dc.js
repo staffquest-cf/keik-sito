@@ -208,6 +208,12 @@
     var codeEl = document.getElementById('dc-code');
     var root = document.getElementById('dc-root');
     if (!tpl || !root) return;
+    // Il modello della pagina è in uno <script> (così i motori di ricerca non leggono i segnaposto {{...}} come link)
+    if (tpl.tagName === 'SCRIPT') {
+      var te = document.createElement('template');
+      te.innerHTML = tpl.textContent.replace(/<\\\/script/gi, '</script');
+      tpl = te;
+    }
     var props = {};
     var defs = window.__DC_PROPS__ || {};
     Object.keys(defs).forEach(function (k) { if (k.charAt(0) !== '$') props[k] = defs[k] && typeof defs[k] === 'object' && 'default' in defs[k] ? defs[k].default : defs[k]; });
