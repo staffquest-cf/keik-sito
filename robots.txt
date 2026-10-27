@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /menu-tavolo.html
+Disallow: /eventi-ottobre.html
+
+Sitemap: https://keik.it/sitemap.xml
