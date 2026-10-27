@@ -200,6 +200,13 @@ for _h in glob.glob(OUT + '/*.html'):
     _t = open(_h, encoding='utf-8').read()
     _t = _t.replace('<link rel="stylesheet" href="assets/fonts/fonts.css">',
                     '<link rel="preload" href="assets/fonts/space-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>\n' + _inl)
+    # Versione dei file JavaScript nell'indirizzo: dopo ogni aggiornamento il browser scarica quelli nuovi (niente copie vecchie in memoria)
+    import hashlib as _hl
+    for _js in ('morphdom.min.js', 'kimg.js', 'keik-dc.js'):
+        _v = _hl.md5(open(OUT + '/assets/js/' + _js, 'rb').read()).hexdigest()[:8]
+        _t = _t.replace('src="assets/js/' + _js + '"', 'src="assets/js/' + _js + '?v=' + _v + '"')
+    _vi = _hl.md5(b''.join(open(OUT + '/assets/i18n/' + _l + '.js', 'rb').read() for _l in ('en', 'es', 'fr'))).hexdigest()[:8]
+    _t = _t.replace("'+l+'.js", "'+l+'.js?v=" + _vi)
     open(_h, 'w', encoding='utf-8').write(_t)
 shutil.copy(SCR + '/site-build/README.md', OUT + '/README.md')
 print('ok', len(os.listdir(OUT)))
