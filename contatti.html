@@ -393,8 +393,15 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </template>
 <script type="text/x-dc" id="dc-code">
 class Component extends DCLogic {
-  componentDidMount() { this.clock = setInterval(() => this.setState({ now: Date.now() }), 60000); }
-  componentWillUnmount() { clearInterval(this.clock); }
+  componentDidMount() {
+    this.clock = setInterval(() => this.setState({ now: Date.now() }), 60000);
+    // Mappa Google diretta se il visitatore ha accettato i cookie nel banner iubenda
+    this.kkMap = (p) => { if (p && (p.consent === true || (p.purposes && (p.purposes[3] || p.purposes['3'])))) this.setState({ mapOn: true }); };
+    this.kkMapEv = (e) => this.kkMap(e.detail);
+    this.kkMap(window.__kkConsent);
+    document.addEventListener('kk-consent', this.kkMapEv);
+  }
+  componentWillUnmount() { clearInterval(this.clock); document.removeEventListener('kk-consent', this.kkMapEv); }
   renderVals() {
     const now = new Date((this.state && this.state.now) || Date.now());
     const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Rome', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(now);
