@@ -182,5 +182,12 @@ for _fam, _pkg, _css_files in [('Big Shoulders Display', '@fontsource-variable/b
             _blk = _blk.replace('./files/', '').replace("format('woff2-variations')", "format('woff2')")
             _css.append(_blk)
 open(OUT + '/assets/fonts/fonts.css', 'w').write('\n'.join(_css) + '\n')
+# Velocità: i caratteri dentro la pagina (niente richiesta che blocca) + precarico di Space Mono (tabellone)
+_inl = '<style>' + re.sub(r'url\(([^)/]+\.woff2)\)', r'url(assets/fonts/\1)', '\n'.join(_css)) + '</style>'
+for _h in glob.glob(OUT + '/*.html'):
+    _t = open(_h, encoding='utf-8').read()
+    _t = _t.replace('<link rel="stylesheet" href="assets/fonts/fonts.css">',
+                    '<link rel="preload" href="assets/fonts/space-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>\n' + _inl)
+    open(_h, 'w', encoding='utf-8').write(_t)
 shutil.copy(SCR + '/site-build/README.md', OUT + '/README.md')
 print('ok', len(os.listdir(OUT)))
