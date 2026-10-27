@@ -68,7 +68,7 @@
     var add = ' srcset="' + info.v.map(function (w) { return base + w + '.webp ' + w + 'w'; }).join(', ') + '"';
     var sw = /style="[^"]*?(?:^|[;\s])width:\s*(\d+)px/.exec(html);
     var sh = /style="[^"]*?(?:^|[;\s])height:\s*(\d+)px/.exec(html);
-    var sz = '(max-width: 700px) 100vw, 50vw';
+    var sz = '(max-width: 700px) calc(100vw - 32px), 50vw';
     if (sw && +sw[1] <= 600) sz = sw[1] + 'px';
     else if (sh && +sh[1] <= 300 && !sw && !/width:\s*[\d.]+%/.test(html)) sz = Math.round(+sh[1] * info.w / info.h) + 'px';
     add += ' sizes="' + sz + '"';
