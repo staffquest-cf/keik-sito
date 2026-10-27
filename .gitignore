@@ -1,0 +1,5 @@
+node_modules/
+site-build/dist/
+keikit/
+prod/
+gitbak/

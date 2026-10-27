@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Menu KEIK Modena: prezzi e allergeni</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Il menu completo con prezzi e allergeni: pancakes, benedict, avocado toast, burger, burrito, taglieri, cupcake e drink. Cucina aperta dalle 10.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500..900&amp;family=Montserrat:wght@400..700&amp;family=Space+Mono:wght@400;700&amp;family=Caveat:wght@500..700&amp;display=swap">
+<style>
+html{background:#1E0623}body{margin:0;background:#FFFFFF}
+a{color:#91007D}a:hover{color:#3B0B40}
+.m-root{container-type:inline-size;container-name:mnu}
+.m-wrap{max-width:1240px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
+.m-serif{font-family:inherit;font-style:normal;font-weight:inherit}
+.m-body{display:grid;grid-template-columns:200px minmax(0,1fr) 340px;gap:40px;align-items:start}
+.m-side{position:sticky;top:158px}
+.m-pass{position:sticky;top:158px}
+.m-flight{position:sticky;top:46px;z-index:8;background:rgba(255,255,255,0.96);backdrop-filter:blur(6px);border-bottom:1px solid #ECE3EA}
+.m-track{position:relative;height:64px}
+.m-dot{position:absolute;top:24px;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none}
+.m-dotlabel{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.08em;white-space:nowrap;transition:color .3s ease}
+.m-plane{position:absolute;top:24px;left:16px;transform:translate(-50%,-50%);color:#91007D;transition:left .12s linear;will-change:left}
+.m-plane-in{display:inline-flex;animation:mbob 2.4s ease-in-out infinite}
+.m-row{display:grid;grid-template-columns:112px minmax(0,1fr) auto;grid-template-areas:"img head price" "img body price";grid-template-rows:auto 1fr;gap:6px 20px;align-items:start}
+.m-dimg{grid-area:img}.m-dhead{grid-area:head;align-self:end}.m-dbody{grid-area:body}.m-dprice{grid-area:price}
+.m-zoom{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;border-radius:16px;position:relative}
+.m-zoom-ic{position:absolute;right:6px;top:6px;width:24px;height:24px;border-radius:999px;background:rgba(255,255,255,0.92);color:#3B0B40;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(42,8,48,0.18)}
+.m-drinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.m-stamps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.m-bar{display:none}
+.m-add{transition:background-color .2s ease,transform .2s ease}
+.m-add:active{transform:scale(.92)}
+.m-in{animation:min .35s cubic-bezier(.2,.8,.2,1) both}
+@keyframes min{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.m-stamp{animation:mstamp .5s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes mstamp{0%{opacity:0;transform:scale(1.8) rotate(-20deg)}100%{opacity:1;transform:scale(1) rotate(var(--r,-6deg))}}
+.m-sheet{animation:msheet .45s cubic-bezier(.2,.8,.2,1) both}
+@keyframes msheet{from{transform:translateY(100%)}to{transform:none}}
+.m-bob{display:inline-flex;animation:mbob 3s ease-in-out infinite}
+@keyframes mbob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-6deg)}}
+/* BQ-BANNER */ html.kk-modal .m-bar{visibility:hidden}.m-bq-brady{animation:mbqb 3.2s ease-in-out infinite;transform-origin:50% 90%}@keyframes mbqb{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-6px) rotate(3deg)}}.m-pop{animation:mpop .4s cubic-bezier(.2,.9,.3,1.2) both}@keyframes mpop{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}@media (max-width:600px){.m-bqban{grid-template-columns:84px minmax(0,1fr) !important;gap:14px !important;padding:16px !important}.m-bqban img{width:84px !important}}
+@media (prefers-reduced-motion: reduce){.m-in,.m-stamp,.m-sheet,.m-bob,.m-bq-brady,.m-pop{animation:none !important}}
+@container mnu (max-width: 1100px){
+.m-body{grid-template-columns:minmax(0,1fr) 320px !important}
+.m-side{display:none !important}
+}
+@container mnu (max-width: 820px){
+.m-wrap{padding-left:16px !important;padding-right:16px !important}
+.m-body{grid-template-columns:minmax(0,1fr) !important;gap:0 !important}
+.m-pass{display:none !important}
+.m-bar{display:flex !important}
+.m-drinks{grid-template-columns:minmax(0,1fr) !important}
+.m-row{grid-template-columns:96px minmax(0,1fr) !important;grid-template-areas:"img head" "img price" "body body" !important;grid-template-rows:auto 1fr auto !important;gap:6px 14px !important;align-items:start !important}
+.m-dhead{align-self:end !important}
+.m-dhead h3{font-size:18px !important}
+.m-dprice{flex-direction:row !important;justify-content:space-between !important;align-items:center !important;align-self:start}
+.m-dprice>span{text-align:left !important;font-size:13px !important}
+.m-dbody{padding-top:4px}
+.m-hide-s{display:none !important}
+.m-catnav{display:flex !important}
+.m-dotlabel{display:none}
+.m-dot-on .m-dotlabel{display:block}
+.m-track .m-dot:first-of-type{transform:translate(-8px,-50%);align-items:flex-start}
+.m-track .m-dot:last-of-type{transform:translate(calc(-100% + 8px),-50%);align-items:flex-end}
+}
+.m-catnav{display:none}
+.m-chips,.m-res{scrollbar-width:none}.m-chips::-webkit-scrollbar,.m-res::-webkit-scrollbar{display:none}
+.m-flash{animation:mflash 1.6s ease}
+@keyframes mflash{0%,40%{background:#F7E6F3}100%{background:transparent}}
+.m-res a{transition:transform .25s ease}.m-res a:hover{transform:translateY(-3px)}
+/* KK */ .kk-bar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.kk-bar::-webkit-scrollbar{display:none}.kk-bar a{flex-shrink:0;white-space:nowrap}[id]{scroll-margin-top:56px}.kk-bar a[aria-current="page"]::before{content:"";position:absolute;left:50%;top:calc(50% - 16px);width:5px;height:5px;border-radius:50%;background:#F2B8E6;transform:translateX(-50%)}.kk-bar[data-more]{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 56px),transparent)}.kk-bar[data-less]{-webkit-mask-image:linear-gradient(to right,transparent,#000 40px);mask-image:linear-gradient(to right,transparent,#000 40px)}.kk-bar[data-more][data-less]{-webkit-mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 56px),transparent)}.kk-bar a:hover{background:rgba(255,255,255,0.12) !important}.kk-sitemap{display:grid;grid-template-columns:1.2fr repeat(3,minmax(0,1fr));gap:32px}.kk-sitemap a:hover{color:#FFFFFF !important}.kk-lang{display:inline-flex;gap:3px;flex-shrink:0;margin-left:6px}.kk-lang button{font:500 12px "Space Mono",monospace;min-width:36px;min-height:30px;border-radius:6px;border:1px solid rgba(255,255,255,0.28);background:transparent;color:#F1E3F0;cursor:pointer;padding:0 6px}.kk-lang button[aria-pressed="true"],.kk-langm[aria-pressed="true"]{background:#FFFFFF !important;color:#2A0830 !important;border-color:#FFFFFF !important}@media (max-width:960px){.kk-sitemap{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:24px !important}.kk-inner{padding-left:16px !important;padding-right:16px !important}}
+
+/* FONT-VIAGGIO */ [style*="Big Shoulders"]{font-weight:800 !important}h1,h2{text-transform:uppercase;letter-spacing:0 !important;line-height:0.95 !important;font-weight:900 !important}
+</style>
+</helmet>
+<div class="m-root" style="font-family: 'Montserrat', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0; position: relative">
+
+<!-- HEADER -->
+<header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
+<div class="m-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px">
+<a href="Main.dc.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; text-decoration: none; line-height: 0"><img src="/_blob/cea731796bb98fc55bef3bb8e7c4505e" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<div style="display: flex; gap: 8px; align-items: center">
+<span class="m-hide-s" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #6B4A70">CUCINA {{kitchenHours}}</span>
+<sc-if value="{{online}}" hint-placeholder-val="{{ true }}">
+<a href="https://pnssm.pro/a16isyw" style="display: inline-flex; align-items: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Prenota un tavolo</a>
+</sc-if>
+<sc-if value="{{atTable}}" hint-placeholder-val="{{ false }}">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #3B0B40; border: 1px solid #E6DAE4; border-radius: 999px; padding: 0 14px; min-height: 40px"><span style="width: 8px; height: 8px; border-radius: 999px; background: #91007D"></span>SEI AL TAVOLO</span>
+</sc-if>
+</div>
+</div>
+</header>
+<!-- KK-SITEBAR -->
+<nav aria-label="Pagine del sito" style="position: sticky; top: 0; z-index: 40; background: #2A0830; font-family: 'Montserrat', system-ui, sans-serif"><div class="kk-inner kk-bar" style="max-width: 1200px; margin: 0 auto; padding: 6px 40px; box-sizing: border-box; align-items: center"><a href="Menu.dc.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: transparent; position: relative; font-weight: 700">Menu</a><a href="Brunch.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Brunch</a><a href="Pranzo.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pranzo</a><a href="Merenda.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pomeriggio</a><a href="Aperitivo.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Aperitivo</a><a href="Eventi.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Eventi</a><a href="Contatti.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Dove siamo</a><a href="ChiSiamo.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Chi siamo</a><a href="Prenota.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; color: #2A0830; background: #F2B8E6; margin-left: auto">Prenota</a><span class="kk-lang" data-notr role="group" aria-label="Lingua / Language"><button type="button" data-lang="it" lang="it" aria-label="IT · Italiano">IT</button><button type="button" data-lang="en" lang="en" aria-label="EN · English">EN</button><button type="button" data-lang="es" lang="es" aria-label="ES · Español">ES</button><button type="button" data-lang="fr" lang="fr" aria-label="FR · Français">FR</button></span></div></nav>
+<!-- /KK-SITEBAR -->
+
+<!-- INTRO + DOVE TI PORTA IL GUSTO OGGI -->
+<section id="top" style="background: #F7F2F6; padding: 40px 0 32px">
+<div class="m-wrap" style="display: flex; flex-direction: column; gap: 18px">
+<h1 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(46px, 6.9vw, 83px); line-height: 0.98; color: #3B0B40"><span style="display: block; margin-bottom: 18px; font-family: 'Space Mono', monospace; font-weight: 400; font-size: 12px; line-height: 1.5; letter-spacing: 0.16em; color: #91007D">Menu di KEIK · all day kitchen a Modena · rituali chill tutto il giorno</span>Dove ti porta il gusto <span class="m-serif" style="color: #91007D">oggi?</span></h1>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4A2350; max-width: 42em">Scegli la tua rotta: parti dal momento della giornata o da una destinazione. Tocca <strong style="color: #3B0B40">+</strong> su quello che prenderesti: nasce il tuo itinerario, da condividere con chi viene da noi insieme a te.</p>
+
+<div class="m-explore" style="display: flex; flex-direction: column; gap: 14px; padding: 18px; border-radius: 22px; background: #FFFFFF; box-shadow: 0 16px 40px rgba(42,8,48,0.08)">
+<div role="tablist" aria-label="Scegli la tua rotta" style="display: flex; gap: 6px; flex-wrap: wrap">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="3">
+<button type="button" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="min-height: 40px; padding: 0 16px; border-radius: 999px; border: 0; background: {{t.bg}}; color: {{t.fg}}; font: 700 14px 'Montserrat', sans-serif; cursor: pointer">{{t.label}}</button>
+</sc-for>
+</div>
+<div class="m-chips" style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="5">
+<button type="button" aria-pressed="{{c.pressed}}" onClick="{{c.pick}}" style="flex-shrink: 0; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid {{c.border}}; background: {{c.bg}}; color: {{c.fg}}; font: 600 14px 'Montserrat', sans-serif; cursor: pointer; white-space: nowrap">{{c.label}}</button>
+</sc-for>
+</div>
+<p aria-live="polite" style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2; color: #3B0B40">{{nowText}}</p>
+<sc-if value="{{showAlNote}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6B4A70"><strong style="color: #3B0B40">Attenzione:</strong> le indicazioni si basano sugli allergeni dichiarati negli ingredienti di ogni piatto. In cucina lavoriamo anche glutine, latte, uova, frutta a guscio e altri allergeni: possono esserci tracce. Comunica sempre allergie e intolleranze al nostro staff prima di ordinare. Bevande e prodotti senza allergeni indicati non compaiono qui: chiedi a noi.</p>
+<a href="Vegano.dc.html" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; font-size: 15px; color: #91007D">Vegano o senza glutine? Vedi la guida →</a>
+</sc-if>
+<sc-if value="{{showGf}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; border-radius: 16px; background: #FFF7D6; color: #3B0B40">
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 21px">🌾 Senza glutine e celiachia</strong>
+<p style="margin: 0; font-size: 14px; line-height: 1.55">Per chi evita il glutine abbiamo un menu dedicato, da chiedere allo staff. Non abbiamo però prodotti adatti alla celiachia: in cucina lavoriamo farine ogni giorno e non possiamo garantire l’assenza di tracce. Se sei celiaco, preferiamo dirtelo con sincerità.</p>
+<a href="Vegano.dc.html#glutine" style="align-self: flex-start; font-weight: 600; font-size: 14px">Leggi come funziona →</a>
+</div>
+</sc-if>
+<div class="m-res" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px">
+<sc-for list="{{results}}" as="r" hint-placeholder-count="5">
+<a href="#d-{{r.id}}" onClick="{{r.go}}" style="flex: 0 0 168px; display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 16px; background: #F7F2F6; color: #3B0B40; text-decoration: none">
+<sc-if value="{{r.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{r.img}}" alt="" loading="lazy" style="display: block; width: 100%; height: 84px; object-fit: contain"></sc-if>
+<small style="font-size: 12px; color: #6B4A70">{{r.flag}} {{r.country}}</small>
+<b style="font-family: 'Big Shoulders Display', sans-serif; font-size: 17px; line-height: 1.15">{{r.name}}</b>
+<i style="font-style: normal; font-family: 'Space Mono', monospace; font-size: 12px; color: #91007D">{{r.price}}</i>
+</a>
+</sc-for>
+<sc-if value="{{noRes}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 14px; color: #6B4A70">{{noResText}}</p></sc-if>
+</div>
+<p style="margin: 0; font-size: 13px; color: #6B4A70">Oppure scorri il menu qui sotto: ogni piatto è una tappa.</p>
+</div>
+</div>
+</section>
+
+<!-- Rotta di volo: l'aereo viaggia tra le categorie mentre scorri -->
+<div class="m-flight">
+<div class="m-wrap">
+<nav aria-label="Rotta tra le categorie" class="m-track">
+<div aria-hidden="true" style="position: absolute; left: 16px; right: 16px; top: 24px; border-top: 2px dashed #D9C3DB"></div>
+<div aria-hidden="true" ref="{{trailRef}}" style="position: absolute; left: 16px; top: 23px; height: 4px; width: {{trailW}}; border-radius: 2px; background: #91007D; transition: width .12s linear"></div>
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="9">
+<a href="#{{c.id}}" class="m-dot {{c.dotClass}}" style="left: {{c.dotLeft}}" aria-label="{{c.short}}">
+<span style="width: 12px; height: 12px; border-radius: 999px; border: 2px solid {{c.dotBorder}}; background: {{c.dotFill}}; transition: background-color .3s ease, border-color .3s ease"></span>
+<span class="m-dotlabel" style="color: {{c.dotText}}">{{c.short}}</span>
+</a>
+</sc-for>
+<span class="m-plane" aria-hidden="true" ref="{{planeRef}}" style="left: {{planeLeft}}"><span class="m-plane-in"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display: block; transform: rotate(90deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span></span>
+</nav>
+</div>
+<nav class="m-catnav" aria-label="Categorie" style="overflow-x: auto; gap: 6px; padding: 0 16px 10px; white-space: nowrap">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="9">
+<a href="#{{c.id}}" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; background: {{c.chipBg}}; color: {{c.chipFg}}; text-decoration: none; font-size: 13px; font-weight: 600">{{c.short}}</a>
+</sc-for>
+</nav>
+</div>
+
+<!-- CORPO: indice · piatti · carta d'imbarco -->
+<div class="m-wrap" style="padding-top: 32px; padding-bottom: 120px">
+<div class="m-body">
+
+<!-- Indice categorie (desktop) -->
+<nav class="m-side" aria-label="Categorie del menu" style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #6B4A70; margin-bottom: 8px">ROTTE</span>
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="9">
+<a href="#{{c.id}}" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 10px; color: #3B0B40; text-decoration: none; font-size: 15px; font-weight: 500"><span>{{c.short}}</span><span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #6B4A70">{{c.count}}</span></a>
+</sc-for>
+<a href="https://gioco.keik.it" style="margin-top: 20px; display: flex; flex-direction: column; gap: 8px; padding: 16px 16px 16px; border-radius: 18px; background: linear-gradient(160deg, #91007D 0%, #2A0830 75%); color: #FFFFFF; text-decoration: none; box-shadow: 0 14px 30px rgba(42,8,48,0.25)">
+<img class="m-bq-brady" src="/_blob/edc45f5c564648d4837f9724b431c355" alt="Brady, il bradipo aviatore di KEIK, con cuffia, occhialoni e sciarpa viola, che saluta" style="display: block; width: 104px; height: auto; align-self: center">
+<span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #F6E58D">🎮 MENTRE ASPETTI</span>
+<span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 25px; line-height: 1.05">Gioca a Brady’s Quest</span>
+<span style="font-size: 13px; line-height: 1.45; color: #F0DDF0">Aiuta Brady a consegnare il caffè prima che chiuda l’imbarco!</span>
+<span style="margin-top: 4px; display: flex; justify-content: center; align-items: center; min-height: 44px; border-radius: 999px; background: #F6E58D; color: #2A0830; font-weight: 700; font-size: 15px">Gioca ora →</span>
+</a>
+</nav>
+
+<!-- Piatti -->
+<main style="display: flex; flex-direction: column; gap: 56px; min-width: 0">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="3">
+<section id="{{c.id}}" ref="{{c.ref}}" style="display: flex; flex-direction: column; gap: 4px; scroll-margin-top: 120px">
+<p style="margin: 0 0 4px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #91007D">✈ {{c.ritual}}</p>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-bottom: 14px; border-bottom: 2px solid #3B0B40">
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(32px, 3.45vw, 44px); line-height: 1; color: #3B0B40">{{c.name}}</h2>
+<span style="font-size: 14px; color: #6B4A70; text-align: right">{{c.note}}</span>
+</div>
+<sc-if value="{{c.hasIntro}}" hint-placeholder-val="{{ true }}"><p style="margin: 12px 0 4px; font-size: 15px; line-height: 1.5; color: #4A2350">{{c.intro}}</p></sc-if>
+
+<sc-if value="{{c.isStamps}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; gap: 14px; padding: 8px 0 12px">
+<sc-for list="{{c.items}}" as="d" hint-placeholder-count="5">
+<button type="button" id="d-{{d.id}}" onClick="{{d.add}}" aria-label="Aggiungi {{d.name}} · {{d.prices}}" class="m-add" style="width: 128px; height: 128px; border-radius: 999px; border: 2px dashed {{d.stampColor}}; background: {{d.stampBg}}; color: #3B0B40; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer; padding: 10px; transform: rotate({{d.tilt}}); scroll-margin-top: 140px">
+<sc-if value="{{d.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{d.img}}" alt="" loading="lazy" style="width: 54px; height: 54px; object-fit: contain"></sc-if>
+<span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 15px; line-height: 1.1; text-align: center">{{d.name}}</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px">{{d.prices}}</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #91007D">{{d.stampState}}</span>
+</button>
+</sc-for>
+</div>
+<ul style="margin: 0 0 8px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.5; color: #4A2350">
+<sc-for list="{{c.items}}" as="d" hint-placeholder-count="5"><li><strong style="color: #3B0B40">{{d.flag}} {{d.name}}</strong> · {{d.desc}} <span style="display: block; font-family: 'Space Mono', monospace; font-size: 11px; color: #6B4A70">{{d.alLabel}}<sc-if value="{{d.frozen}}" hint-placeholder-val="{{ false }}"> · {{frozenTxt}}</sc-if></span></li></sc-for>
+</ul>
+</sc-if>
+
+<sc-if value="{{c.isList}}" hint-placeholder-val="{{ true }}">
+<sc-for list="{{c.items}}" as="d" hint-placeholder-count="4">
+<article id="d-{{d.id}}" class="m-row {{d.flash}}" style="padding: 18px 0; border-bottom: 1px solid #ECE3EA; scroll-margin-top: 140px">
+<div class="m-dimg" style="position: relative">
+<sc-if value="{{d.hasImg}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="m-zoom" onClick="{{d.zoomIt}}" aria-label="Ingrandisci la foto: {{d.altName}}">
+<img src="{{d.img}}" alt="{{d.altName}}" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; background: #F7F2F6">
+<span class="m-zoom-ic" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"></path></svg></span>
+</button>
+<span aria-hidden="true" style="position: absolute; left: 6px; bottom: 6px; background: {{d.codeBg}}; color: #FFFFFF; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.06em; padding: 3px 6px; border-radius: 5px">{{d.code}}</span>
+</sc-if>
+<sc-if value="{{d.noImg}}" hint-placeholder-val="{{ false }}">
+<div aria-hidden="true" style="aspect-ratio: 1; border-radius: 16px; background: {{d.codeBg}}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-size: 14px; letter-spacing: 0.06em">{{d.code}}</div>
+</sc-if>
+</div>
+<div class="m-dhead" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<sc-if value="{{d.hasCountry}}" hint-placeholder-val="{{ true }}"><span style="font-size: 13px; color: #6B4A70">{{d.flag}} {{d.country}}</span></sc-if>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<h3 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 23px; line-height: 1.15; color: #3B0B40">{{d.name}}</h3>
+<sc-for list="{{d.tags}}" as="t" hint-placeholder-count="1"><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 999px; border: 1px solid {{t.color}}; color: {{t.color}}; background: {{t.bg}}">{{t.label}}</span></sc-for>
+</div>
+</div>
+<div class="m-dbody" style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<sc-if value="{{d.hasTagline}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 600; font-size: 22px; color: #91007D">{{d.tagline}}</p></sc-if>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">{{d.desc}}</p>
+<sc-if value="{{d.hasNote}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 13px; line-height: 1.45; color: #3B0B40">{{d.note}}</p></sc-if>
+<sc-if value="{{d.hasPair}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 13px; color: #91007D">{{d.pair}} →</p></sc-if>
+<sc-if value="{{d.hasFaq}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{d.toggleFaq}}" aria-expanded="{{d.faqExp}}" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px dashed #91007D; background: #FFFFFF; color: #91007D; font: 600 12px 'Montserrat', sans-serif; cursor: pointer">✈ Per i viaggiatori curiosi: {{d.faqQ}}</button>
+<sc-if value="{{d.faqOpen}}" hint-placeholder-val="{{ false }}"><p class="m-in" style="margin: 0; padding: 10px 12px; border-radius: 12px; background: #F7F2F6; font-size: 14px; line-height: 1.5; color: #3B0B40">{{d.faqA}}</p></sc-if>
+</sc-if>
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 11px; line-height: 1.5; color: #6B4A70">{{d.alLabel}}</p>
+<sc-if value="{{d.frozen}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 12px; color: #6B4A70">{{frozenTxt}}</p></sc-if>
+</div>
+<div class="m-dprice" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+<span style="font-family: 'Space Mono', monospace; font-size: 14px; color: #3B0B40; white-space: pre-line; text-align: right">{{d.prices}}</span>
+<sc-if value="{{d.notIn}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="m-add" onClick="{{d.add}}" aria-label="Aggiungi {{d.name}}" style="width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font-size: 22px; line-height: 1; cursor: pointer">+</button>
+</sc-if>
+<sc-if value="{{d.inRoute}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 4px; background: #3B0B40; border-radius: 999px; padding: 2px">
+<button type="button" onClick="{{d.remove}}" aria-label="Rimuovi" style="width: 40px; height: 40px; border-radius: 999px; border: 0; background: transparent; color: #FFFFFF; font-size: 20px; cursor: pointer">−</button>
+<span style="min-width: 18px; text-align: center; color: #FFFFFF; font-family: 'Space Mono', monospace; font-size: 14px">{{d.qty}}</span>
+<button type="button" onClick="{{d.add}}" aria-label="Aggiungi {{d.name}}" style="width: 40px; height: 40px; border-radius: 999px; border: 0; background: transparent; color: #FFFFFF; font-size: 20px; cursor: pointer">+</button>
+</div>
+</sc-if>
+</div>
+</article>
+</sc-for>
+</sc-if>
+
+<sc-for list="{{c.groups}}" as="g" hint-placeholder-count="1">
+<div style="margin-top: 18px; display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border-radius: 18px; background: #F7F2F6">
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 21px; color: #3B0B40">{{g.title}}</strong>
+<sc-for list="{{g.rows}}" as="r" hint-placeholder-count="3">
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px dashed #E2D4E0; font-size: 15px; color: #4A2350"><span>{{r.l}}</span><span style="font-family: 'Space Mono', monospace; font-size: 13px; color: #3B0B40; white-space: nowrap">{{r.p}}</span></div>
+</sc-for>
+</div>
+</sc-for>
+
+<sc-if value="{{c.isPancakes}}" hint-placeholder-val="{{ false }}">
+<a class="m-bqban" href="https://gioco.keik.it" style="margin-top: 18px; display: grid; grid-template-columns: 120px minmax(0, 1fr); align-items: center; gap: 18px; padding: 18px 20px; border-radius: 22px; background: linear-gradient(135deg, #91007D 0%, #2A0830 80%); color: #FFFFFF; text-decoration: none; box-shadow: 0 16px 34px rgba(42,8,48,0.28)">
+<img class="m-bq-brady" src="/_blob/edc45f5c564648d4837f9724b431c355" alt="Brady, il bradipo aviatore di KEIK, con cuffia, occhialoni e sciarpa viola, che saluta" style="display: block; width: 120px; height: auto">
+<span style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #F6E58D">🎮 IL GIOCO CHE ACCOMPAGNA IL TUO VIAGGIO COL GUSTO</span><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 30px; line-height: 1">Gioca a Brady’s Quest</span><span style="font-size: 14px; line-height: 1.45; color: #F0DDF0">Aiuta Brady a consegnare il caffè prima che chiuda l’imbarco!</span><span style="align-self: flex-start; margin-top: 4px; display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #F6E58D; color: #2A0830; font-weight: 700; font-size: 15px">Gioca ora →</span></span>
+</a>
+</sc-if>
+<sc-if value="{{c.isShare}}" hint-placeholder-val="{{ false }}">
+<div style="margin: 18px 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 20px; border-radius: 18px; background: #2A0830; color: #FFFFFF">
+<span style="display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 23px">Viaggio dell’aperitivo?</strong><span style="font-size: 14px; color: #DCC8DD">Ordina uno dei nostri taglieri e con solo 12,90 € in più aggiungi 2 drink.</span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end"><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 30px; color: #F2B8E6">+12,90 €</strong><span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #DCC8DD">SOLO 6,45 € A DRINK</span></span>
+</div>
+</sc-if>
+</section>
+</sc-for>
+
+<!-- Il viaggio non finisce qui -->
+<a href="Eventi.dc.html" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; padding: 24px; border-radius: 22px; background: #91007D; color: #FFFFFF; text-decoration: none">
+<span style="display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 28px">Il viaggio non finisce qui!</strong><span style="font-size: 15px; color: #F7E6F3">Scopri le nostre serate speciali e i prossimi eventi, e parti con noi.</span></span>
+<span style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 20px; border-radius: 999px; background: #FFFFFF; color: #2A0830; font-weight: 700; font-size: 15px">Scopri gli eventi →</span>
+</a>
+
+<!-- In breve (per chi legge di fretta e per le IA) -->
+<section id="in-breve" aria-label="KEIK in breve" style="display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 20px; border: 1.5px solid #E6DAE4; background: #FFFFFF; font-size: 15px; line-height: 1.6; color: #4A2350">
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 25px; color: #3B0B40">Il menu di KEIK in breve</h2>
+<p style="margin: 0">KEIK è un’all day kitchen internazionale nel centro storico di Modena, in Via Canalino 51, aperta dal 2013. La cucina è aperta tutti i giorni dalle 10 alle 19:30, il venerdì e il sabato fino alle 21:30.</p>
+<p style="margin: 0">Nel menu trovi pancakes dolci e salati a qualsiasi ora, benedict, avocado toast, burger, burritos, taglieri da condividere, cupcake e dolci fatti a mano, latte speciali e cocktail. I piatti sono ispirati a 12 paesi, dal Venezuela al Giappone. L’Americano ha il refill gratuito. I prezzi vanno da 1 € per un extra a 32,90 € per un tagliere da condividere.</p>
+<p style="margin: 0">Ci sono opzioni vegane e senza lattosio. Per chi evita il glutine c’è un menu dedicato, ma non è adatto ai celiaci. Si può prenotare online.</p>
+</section>
+
+<!-- Note legali -->
+<section id="allergeni" aria-label="Allergeni e note" style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 20px; background: #F7F2F6; font-size: 14px; line-height: 1.6; color: #4A2350; scroll-margin-top: 120px">
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 25px; color: #3B0B40">Allergeni e note</h2>
+<p style="margin: 0">Sotto ogni piatto trovi gli allergeni presenti. Per qualsiasi dubbio chiedi allo staff.</p>
+<p style="margin: 0">* Contiene un prodotto surgelato all’origine. Medium = porzione più piccola, Regular = porzione intera, Doppio = doppia carne o doppio ingrediente principale.</p>
+<p style="margin: 0">Le indicazioni si basano sugli allergeni dichiarati negli ingredienti di ogni piatto. Nella nostra cucina lavoriamo anche glutine, latte, uova, frutta a guscio e altri allergeni: possono esserci tracce e non possiamo garantire l’assenza di contaminazioni. Comunica sempre allergie e intolleranze al nostro staff prima di ordinare.</p>
+<p style="margin: 0"><strong style="color: #3B0B40">Celiachia:</strong> per chi evita il glutine abbiamo un menu dedicato, ma non abbiamo prodotti adatti ai celiaci perché non possiamo garantire l’assenza di tracce. <a href="Vegano.dc.html#glutine">Leggi di più</a></p>
+</section>
+</main>
+
+<!-- CARTA D'IMBARCO / ITINERARIO (desktop) -->
+<aside class="m-pass" aria-label="Il mio itinerario" style="background: #FFFFFF; border-radius: 22px; box-shadow: 0 24px 60px rgba(42,8,48,0.16); overflow: hidden">
+<div style="background: #2A0830; color: #FFFFFF; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #D99BCF">🎫 IL MIO ITINERARIO · BOARDING PASS</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 15px; letter-spacing: 0.04em; line-height: 1.4">{{chain}}</span>
+</div>
+<span class="m-bob"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform: rotate(60deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"></path></svg></span>
+</div>
+<sc-if value="{{empty}}" hint-placeholder-val="{{ true }}">
+<div style="padding: 24px 20px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 23px; color: #3B0B40">Il tuo passaporto è ancora vuoto.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A2350">Tocca + sui piatti: ogni paese nuovo è un timbro. Non è un ordine: è la tua proposta da mandare a chi viene con te. Al tavolo si ordina con il nostro staff.</p>
+</div>
+</sc-if>
+<sc-if value="{{notEmpty}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 16px 20px 0; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 10px">
+<div style="display: flex; flex-direction: column"><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #91007D">DA</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 25px; color: #3B0B40">MODENA</strong></div>
+<span aria-hidden="true" style="flex-grow: 1; border-top: 2px dashed #E7A9DC; margin-bottom: 12px"></span>
+<div style="display: flex; flex-direction: column; align-items: flex-end"><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #91007D">A</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 25px; color: #3B0B40; text-align: right">{{toLabel}}</strong></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 600; font-size: 29px; line-height: 1.15; color: #91007D">{{phrase}}</p>
+<p style="margin: 0; font-size: 13px; color: #6B4A70">{{phraseSub}}</p>
+</div>
+<div class="m-stamps" style="gap: 6px">
+<sc-for list="{{stamps}}" as="s" hint-placeholder-count="3">
+<span class="m-stamp" title="{{s.name}}" style="--r: {{s.tilt}}; aspect-ratio: 1; border-radius: 999px; border: 2px solid {{s.color}}; color: {{s.color}}; display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 500">{{s.code}}</span>
+</sc-for>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; max-height: 260px; overflow-y: auto">
+<sc-for list="{{route}}" as="r" hint-placeholder-count="2">
+<li class="m-in" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px dashed #E6DAE4; font-size: 14px; color: #3B0B40"><span>{{r.flag}} {{r.qty}} × {{r.name}}</span><button type="button" onClick="{{r.remove}}" aria-label="Rimuovi" style="width: 28px; height: 28px; border-radius: 999px; border: 0; background: #F7F2F6; color: #6B4A70; cursor: pointer">✕</button></li>
+</sc-for>
+</ul>
+<p style="margin: 0; display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 13px; color: #6B4A70">Totale indicativo</span><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 30px; color: #3B0B40">{{total}}</span></p>
+<p style="margin: 0; font-size: 12px; line-height: 1.45; color: #6B4A70">Non è un ordine: è la tua proposta da mandare a chi viene con te. Al tavolo si ordina con il nostro staff.</p>
+</div>
+</sc-if>
+<div style="padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 8px">
+<sc-if value="{{atTable}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{openStaff}}" style="min-height: 52px; border-radius: 14px; border: 0; background: #91007D; color: #FFFFFF; font: 600 16px 'Montserrat', sans-serif; cursor: pointer">Mostra allo staff</button>
+</sc-if>
+<button type="button" onClick="{{share}}" style="min-height: 52px; border-radius: 14px; border: 0; background: {{shareBg}}; color: #FFFFFF; font: 600 15px 'Montserrat', sans-serif; cursor: pointer">Condividi il tuo itinerario KEIK ✈</button>
+<span style="font-size: 12px; color: #6B4A70; text-align: center">con chi viene da noi insieme a te</span>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" onClick="{{saveImage}}" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font: 600 13px 'Montserrat', sans-serif; cursor: pointer">Salva immagine</button>
+<button type="button" onClick="{{clear}}" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #6B4A70; font: 600 13px 'Montserrat', sans-serif; cursor: pointer">Svuota</button>
+</div>
+<sc-if value="{{online}}" hint-placeholder-val="{{ true }}">
+<a href="https://pnssm.pro/a16isyw" style="display: flex; justify-content: center; align-items: center; min-height: 44px; border-radius: 12px; color: #91007D; text-decoration: none; font-weight: 600; font-size: 14px">Prenota un tavolo →</a>
+</sc-if>
+<sc-if value="{{hasMsg}}" hint-placeholder-val="{{ false }}"><p class="m-in" role="status" style="margin: 0; font-size: 13px; color: #91007D; text-align: center">{{msg}}</p></sc-if>
+</div>
+</aside>
+</div>
+</div>
+
+<!-- KK-SITEMAP -->
+<nav aria-label="Mappa del sito" style="background: #1E0623; color: #FFFFFF; font-family: 'Montserrat', system-ui, sans-serif; border-bottom: 1px solid rgba(255,255,255,0.12)"><div class="kk-inner kk-sitemap" style="max-width: 1200px; margin: 0 auto; padding: 56px 40px 40px; box-sizing: border-box"><div style="display: flex; flex-direction: column; gap: 12px"><a href="Main.dc.html" aria-label="KEIK, vai alla home" style="line-height: 0; display: block; margin-bottom: 10px"><img src="/_blob/4ae9236772f217ad454621f7172ec031" alt="Keik – Viaggia col gusto" style="height: 64px; width: auto"></a><span style="font-size: 15px; line-height: 1.55; color: #D9C3DB">All day kitchen nel centro di Modena dal 2013. Via Canalino 51 · tutti i giorni dalle 10.</span></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">I MOMENTI</span><a href="Brunch.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Brunch</a><a href="Pranzo.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pranzo</a><a href="Merenda.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pomeriggio</a><a href="Aperitivo.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aperitivo e Il Turista</a><a href="Vegano.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Vegano e senza glutine</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">SCOPRI KEIK</span><a href="Menu.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Il menu</a><a href="Eventi.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Eventi del mese</a><a href="ChiSiamo.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Chi siamo</a><a href="FAQ.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Domande frequenti</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">PER TE</span><a href="Prenota.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Prenota un tavolo</a><a href="BuoniRegalo.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Buoni regalo</a><a href="Aziende.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aziende e locali</a><a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Passaporto del Gusto</a><a href="LavoraConNoi.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Lavora con noi</a><a href="Contatti.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Contatti e orari</a></div></div></nav>
+<!-- /KK-SITEMAP -->
+<footer style="background: #1E0623; color: #B99BBC; padding: 32px 0 110px; font-size: 13px">
+<div class="m-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
+<span>© 2026 Keik di Debbia Elena Karen Edelweiss SNC · P.IVA 03764210369 · Via Canalino 51, 41121 Modena</span>
+<span style="display: flex; gap: 16px"><a href="https://www.iubenda.com/privacy-policy/680124" target="_blank" rel="noopener" style="color: #B99BBC">Privacy policy</a><a href="https://www.iubenda.com/privacy-policy/680124/cookie-policy" target="_blank" rel="noopener" style="color: #B99BBC">Cookie policy</a><a href="#" class="iubenda-cs-preferences-link" style="color: #B99BBC">Preferenze cookie</a></span>
+</div>
+</footer>
+
+<!-- Barra itinerario (telefono) -->
+<div class="m-bar" style="position: fixed; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 30; padding: 10px 10px 10px 18px; border-radius: 22px; background: #2A0830; color: #FFFFFF; gap: 10px; align-items: center; box-shadow: 0 -10px 30px rgba(42,8,48,0.25)">
+<button type="button" onClick="{{openSheet}}" style="flex-grow: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0; border: 0; background: transparent; color: #FFFFFF; text-align: left; padding: 0; cursor: pointer">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #D99BCF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%">🎫 {{chain}}</span>
+<span style="font-size: 14px"><strong>{{itemsLabel}}</strong> · {{stampCount}} timbri · {{total}}</span>
+</button>
+<button type="button" onClick="{{share}}" aria-label="Condividi il tuo itinerario KEIK" style="width: 46px; height: 46px; flex: 0 0 46px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.5); background: transparent; color: #FFFFFF; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"></path></svg></button>
+<sc-if value="{{atTable}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{openStaff}}" style="min-height: 46px; padding: 0 16px; border-radius: 999px; border: 0; background: #FFFFFF; color: #2A0830; font: 600 14px 'Montserrat', sans-serif; cursor: pointer; white-space: nowrap">Mostra allo staff</button>
+</sc-if>
+<sc-if value="{{online}}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{openSheet}}" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 0; background: #FFFFFF; color: #2A0830; font: 600 14px 'Montserrat', sans-serif; cursor: pointer; white-space: nowrap">Il mio itinerario</button>
+</sc-if>
+</div>
+
+<!-- Foglio itinerario (telefono) -->
+<sc-if value="{{sheetOpen}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Il mio itinerario" style="position: fixed; inset: 0; z-index: 45; background: rgba(42,8,48,0.55); display: flex; align-items: flex-end">
+<div class="m-sheet" style="width: 100%; max-height: 88vh; max-height: 88svh; overflow-y: auto; overscroll-behavior: contain; background: #FFFFFF; border-radius: 24px 24px 0 0; padding: 20px 18px 28px; padding-bottom: calc(28px + env(safe-area-inset-bottom)); box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #91007D">🎫 IL MIO ITINERARIO</span>
+<button type="button" onClick="{{closeSheet}}" aria-label="Chiudi" style="width: 40px; height: 40px; border-radius: 999px; border: 0; background: #F7F2F6; color: #3B0B40; font-size: 18px; cursor: pointer">✕</button>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 10px">
+<div style="display: flex; flex-direction: column"><span style="font-family: 'Space Mono', monospace; font-size: 10px; color: #91007D">DA</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 25px; color: #3B0B40">MODENA</strong></div>
+<span aria-hidden="true" style="flex-grow: 1; border-top: 2px dashed #E7A9DC; margin-bottom: 12px"></span>
+<div style="display: flex; flex-direction: column; align-items: flex-end"><span style="font-family: 'Space Mono', monospace; font-size: 10px; color: #91007D">A</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 25px; color: #3B0B40; text-align: right">{{toLabel}}</strong></div>
+</div>
+<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 600; font-size: 31px; line-height: 1.15; color: #91007D">{{phrase}}</p>
+<p style="margin: 0; font-size: 13px; color: #6B4A70">{{phraseSub}}</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<sc-for list="{{route}}" as="r" hint-placeholder-count="2">
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px dashed #E6DAE4; font-size: 15px; color: #3B0B40"><span>{{r.flag}} {{r.qty}} × {{r.name}}</span><button type="button" onClick="{{r.remove}}" aria-label="Rimuovi" style="width: 32px; height: 32px; border-radius: 999px; border: 0; background: #F7F2F6; color: #6B4A70; cursor: pointer">✕</button></li>
+</sc-for>
+</ul>
+<p style="margin: 0; display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 13px; color: #6B4A70">Totale indicativo</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 28px; color: #3B0B40">{{total}}</strong></p>
+<p style="margin: 0; font-size: 12px; line-height: 1.45; color: #6B4A70">Non è un ordine: è la tua proposta da mandare a chi viene con te. Al tavolo si ordina con il nostro staff.</p>
+<button type="button" onClick="{{share}}" style="min-height: 52px; border-radius: 14px; border: 0; background: #91007D; color: #FFFFFF; font: 600 15px 'Montserrat', sans-serif; cursor: pointer">Condividi il tuo itinerario KEIK ✈</button>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" onClick="{{saveImage}}" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #3B0B40; background: #FFFFFF; color: #3B0B40; font: 600 13px 'Montserrat', sans-serif; cursor: pointer">Salva immagine</button>
+<button type="button" onClick="{{clear}}" style="min-height: 44px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #6B4A70; font: 600 13px 'Montserrat', sans-serif; cursor: pointer">Svuota</button>
+</div>
+<sc-if value="{{hasMsg}}" hint-placeholder-val="{{ false }}"><p role="status" style="margin: 0; font-size: 13px; color: #91007D; text-align: center">{{msg}}</p></sc-if>
+</div>
+</div>
+</sc-if>
+
+<!-- Foto del piatto ingrandita -->
+<sc-if value="{{zoomOpen}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="{{zoomName}}" onClick="{{closeZoom}}" style="position: fixed; inset: 0; z-index: 60; background: rgba(30,6,35,0.95); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; padding: 16px; padding-bottom: calc(16px + env(safe-area-inset-bottom)); box-sizing: border-box; cursor: zoom-out">
+<figure class="m-in" style="margin: 0; width: min(100%, 560px); display: flex; flex-direction: column; gap: 12px; color: #FFFFFF">
+<img src="{{zoomImg}}" alt="{{zoomName}}" style="display: block; width: 100%; max-height: 72svh; object-fit: contain; border-radius: 20px; background: #FFFFFF">
+<figcaption style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 23px">{{zoomName}}</strong><span style="font-size: 14px; color: #E4D3E5">{{zoomCountry}}</span></span><button type="button" onClick="{{closeZoom}}" aria-label="Chiudi" style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.6); background: transparent; color: #FFFFFF; font-size: 22px; cursor: pointer">×</button></figcaption>
+</figure>
+</div>
+</sc-if>
+<!-- Vista "Mostra allo staff" -->
+<sc-if value="{{staffOpen}}" hint-placeholder-val="{{ false }}">
+<div data-notr role="dialog" aria-modal="true" aria-label="Da mostrare allo staff" style="position: fixed; inset: 0; z-index: 50; background: #2A0830; color: #FFFFFF; overflow-y: auto; overscroll-behavior: contain; padding-bottom: env(safe-area-inset-bottom)">
+<div class="m-wrap" style="padding-top: 28px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 20px; max-width: 640px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #D99BCF">DA MOSTRARE ALLO STAFF</span>
+<button type="button" onClick="{{closeStaff}}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.5); background: transparent; color: #FFFFFF; font: 600 14px 'Montserrat', sans-serif; cursor: pointer">Chiudi</button>
+</div>
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 18px; letter-spacing: 0.04em">{{chain}}</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<sc-for list="{{route}}" as="r" hint-placeholder-count="3">
+<li style="display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.16)"><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 39px; min-width: 44px">{{r.qty}}×</span><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.15">{{r.nameIt}}</span></li>
+</sc-for>
+</ul>
+<p style="margin: 0; font-size: 15px; color: #DCC8DD">Ricordati di segnalare allergie o intolleranze a chi prende l’ordine.</p>
+</div>
+</div>
+</sc-if>
+
+<!-- Popup Brady's Quest -->
+<sc-if value="{{bradyOpen}}" hint-placeholder-val="{{ false }}">
+<div class="m-sheet" role="dialog" aria-label="Brady’s Quest" style="position: fixed; left: 12px; right: 12px; bottom: 84px; bottom: calc(84px + env(safe-area-inset-bottom)); z-index: 40; max-width: 420px; margin: 0 auto; background: #FFFFFF; border-radius: 22px; box-shadow: 0 30px 70px rgba(42,8,48,0.35); overflow: hidden">
+<div style="background: #91007D; color: #FFFFFF; padding: 16px 18px; display: flex; justify-content: space-between; align-items: center">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em">🎮 VUOI PROVARE BRADY’S QUEST?</span>
+<button type="button" onClick="{{closeBrady}}" aria-label="Chiudi" style="width: 36px; height: 36px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.18); color: #FFFFFF; font-size: 18px; cursor: pointer">×</button>
+</div>
+<div style="padding: 18px; display: flex; gap: 16px; align-items: center">
+<img src="/_blob/edc45f5c564648d4837f9724b431c355" alt="" style="flex: 0 0 84px; width: 84px; height: 84px; object-fit: contain">
+<span style="font-size: 14px; line-height: 1.45; color: #4A2350">Il gioco che accompagna il tuo Viaggio col Gusto da KEIK. Aiuta Brady a consegnare il caffè prima che chiuda l’imbarco!</span>
+</div>
+<div style="padding: 0 18px 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px">
+<a href="https://gioco.keik.it" style="display: flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 12px; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">Gioca ora 🎮</a>
+<button type="button" onClick="{{closeBrady}}" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #6B4A70; font: 600 14px 'Montserrat', sans-serif; cursor: pointer">No, grazie</button>
+</div>
+</div>
+</sc-if>
+
+<!-- Popup uscita: Brady's Quest -->
+<sc-if value="{{exitOpen}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Brady’s Quest" style="position: fixed; inset: 0; z-index: 70; display: flex; align-items: center; justify-content: center; padding: 16px">
+<div onClick="{{closeExit}}" style="position: absolute; inset: 0; background: rgba(20,4,24,0.62)"></div>
+<div class="m-pop" style="position: relative; width: 100%; max-width: 440px; max-height: calc(100vh - 32px); overflow-y: auto; background: #FFFFFF; border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,0.45)">
+<div style="position: relative">
+<img src="/_blob/deb98e7f7e9ebbf79efb344746d0451b" alt="Schermata di gioco di Brady’s Quest: Brady salta nel terminal dell’aeroporto tra fiori e valigie" style="display: block; width: 100%; height: auto; aspect-ratio: 1200 / 655; object-fit: cover">
+<span style="position: absolute; top: 12px; left: 12px; padding: 6px 10px; border-radius: 999px; background: #2A0830; color: #F6E58D; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.14em">🎮 PRIMA DI PARTIRE</span>
+<button type="button" onClick="{{closeExit}}" aria-label="Chiudi" style="position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; border-radius: 999px; border: 0; background: rgba(42,8,48,0.75); color: #FFFFFF; font-size: 20px; cursor: pointer">×</button>
+<img class="m-bq-brady" src="/_blob/edc45f5c564648d4837f9724b431c355" alt="" style="position: absolute; right: 14px; bottom: -40px; width: 96px; height: auto">
+</div>
+<div style="padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 34px; line-height: 0.95; color: #3B0B40; text-transform: uppercase; padding-right: 96px">Gioca a Brady’s Quest</strong>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Il videogioco di KEIK: aiuta Brady a consegnare il caffè prima che chiuda l’imbarco. Si gioca dal telefono, in orizzontale.</p>
+<a href="https://gioco.keik.it" style="margin-top: 6px; display: flex; justify-content: center; align-items: center; min-height: 54px; border-radius: 999px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 17px">Gioca a Brady’s Quest 🎮</a>
+<button type="button" onClick="{{exitGo}}" style="min-height: 46px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #6B4A70; font: 600 15px 'Montserrat', sans-serif; cursor: pointer">{{exitSecond}}</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"contesto":{"editor":"enum","default":"online","options":["online","tavolo"]},"mostraBrady":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":6400}}'>
+class Component extends DCLogic {
+  // Traduzione: sul sito pubblicato this.t traduce nella lingua del visitatore; nel canvas resta in italiano.
+  tr(s, v) {
+    let out = (typeof this.t === 'function') ? this.t(s) : s;
+    if (v) Object.keys(v).forEach((k) => { out = out.split('{' + k + '}').join(String(v[k])); });
+    return out;
+  }
+  componentDidMount() {
+    try {
+      const saved = JSON.parse(window.localStorage.getItem('keik-itinerario-v2') || '{}');
+      if (saved && typeof saved === 'object' && Object.keys(saved).length) this.setState({ q: saved });
+    } catch (e) {}
+    // Al tavolo il popup di Brady's Quest compare dopo 30 secondi, una volta sola
+    this.bradyTimer = setTimeout(() => {
+      if ((this.props.contesto ?? 'online') === 'tavolo' && !(this.state && this.state.bradySeen)) this.setState({ brady: true, bradySeen: true });
+    }, 30000);
+    this.clock = setInterval(() => this.setState({ now: Date.now() }), 60000);
+    this.onKey = (e) => { if (e.key === 'Escape' && this.state && this.state.zoom) this.setState({ zoom: null }); };
+    document.addEventListener('keydown', this.onKey);
+    // Popup "Gioca a Brady's Quest" quando si lascia la pagina del menu (una volta per sessione)
+    // Una volta per ogni apertura della pagina del menu
+    this.exitDone = false;
+    const showExit = (href) => {
+      const s = this.state || {};
+      if (this.exitDone || s.brady || s.sheet || s.staff || s.zoom) return false;
+      this.exitDone = true;
+      document.documentElement.classList.add('kk-modal');
+      this.setState({ exit: true, exitHref: href || '' });
+      return true;
+    };
+    this.exitArm = setTimeout(() => { this.exitArmed = true; }, 2000);
+    // Computer: il mouse esce dalla pagina verso le schede o la barra dell'indirizzo
+    this.onExitOut = (e) => { if (this.exitArmed && !e.relatedTarget && e.clientY <= 0) showExit(''); };
+    document.addEventListener('mouseout', this.onExitOut);
+    // Qualsiasi link verso un'altra pagina o sezione del sito
+    this.onExitClick = (e) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      const a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a || a.target === '_blank') return;
+      const h = a.getAttribute('href') || '';
+      if (!h || h.charAt(0) === '#' || /^(tel:|mailto:|javascript:)/.test(h)) return;
+      if (a.hostname && a.hostname !== window.location.hostname) return;
+      if (a.pathname === window.location.pathname) return;
+      if (showExit(a.href)) e.preventDefault();
+    };
+    document.addEventListener('click', this.onExitClick, true);
+    // Tasto indietro. Safari e Chrome saltano le tappe aggiunte senza un tocco dell'utente:
+    // ne aggiungiamo una subito (browser che non le saltano) e un'altra al primo tocco (Safari, Chrome).
+    this.exitTop = 0;
+    this.pushExit = () => {
+      if (this.exitDone || !window.history || !window.history.pushState || this.exitTop >= 2) return;
+      this.exitTop += 1;
+      try { window.history.pushState({ kkbq: this.exitTop }, ''); } catch (e) {}
+    };
+    if (!(window.history.state && window.history.state.kkbq)) this.pushExit(); else this.exitTop = window.history.state.kkbq;
+    this.onExitTouch = () => {
+      document.removeEventListener('pointerup', this.onExitTouch, true);
+      document.removeEventListener('touchend', this.onExitTouch, true);
+      document.removeEventListener('keydown', this.onExitTouch, true);
+      this.pushExit();
+    };
+    document.addEventListener('pointerup', this.onExitTouch, true);
+    document.addEventListener('touchend', this.onExitTouch, true);
+    document.addEventListener('keydown', this.onExitTouch, true);
+    this.onExitPop = (e) => {
+      const lvl = (e.state && e.state.kkbq) || 0;
+      if (lvl >= this.exitTop) return;
+      this.exitBackSteps = lvl + 1;
+      if (!showExit('__back__')) window.history.go(-this.exitBackSteps);
+    };
+    window.addEventListener('popstate', this.onExitPop);
+  }
+  componentWillUnmount() {
+    clearTimeout(this.exitArm);
+    document.removeEventListener('mouseout', this.onExitOut);
+    document.removeEventListener('click', this.onExitClick, true);
+    document.removeEventListener('pointerup', this.onExitTouch, true);
+    document.removeEventListener('touchend', this.onExitTouch, true);
+    document.removeEventListener('keydown', this.onExitTouch, true);
+    window.removeEventListener('popstate', this.onExitPop);
+    clearTimeout(this.bradyTimer);
+    clearTimeout(this.msgTimer);
+    clearTimeout(this.flashTimer);
+    clearInterval(this.clock);
+    if (this.onScroll) { document.removeEventListener('scroll', this.onScroll, true); window.removeEventListener('resize', this.onScroll); }
+    if (this.raf) cancelAnimationFrame(this.raf);
+  }
+  saveQ(q) {
+    try { window.localStorage.setItem('keik-itinerario-v2', JSON.stringify(q)); } catch (e) {}
+  }
+  // L'aereo viaggia tra le categorie: la sua posizione segue lo scorrimento della pagina
+  startFlight() {
+    if (this.onScroll) return;
+    this.secs = this.secs || {};
+    const update = () => {
+      this.raf = 0;
+      const ids = (this.visibleIds || []).filter((id) => this.secs[id]);
+      if (!ids.length || !this.planeEl) return;
+      const anchor = window.innerHeight * 0.35;
+      let idx = 0, frac = 0;
+      for (let i = 0; i < ids.length; i++) {
+        const r = this.secs[ids.at(i)].getBoundingClientRect();
+        if (r.top <= anchor) { idx = i; frac = Math.max(0, Math.min(1, (anchor - r.top) / Math.max(1, r.height))); }
+      }
+      const n = ids.length;
+      const p = n > 1 ? Math.min(1, (idx + (idx === n - 1 ? 0 : frac)) / (n - 1)) : 0;
+      this.flightP = p;
+      const pos = 'calc(16px + (100% - 32px) * ' + p.toFixed(4) + ')';
+      this.planeEl.style.left = pos;
+      if (this.trailEl) this.trailEl.style.width = 'calc((100% - 32px) * ' + p.toFixed(4) + ')';
+      const active = ids.at(idx);
+      if (active !== (this.state && this.state.active)) this.setState({ active: active });
+    };
+    this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(update); };
+    document.addEventListener('scroll', this.onScroll, true);
+    window.addEventListener('resize', this.onScroll);
+    this.onScroll();
+  }
+  refsFor() {
+    if (!this._r) {
+      this._r = { sec: {}, plane: (el) => { this.planeEl = el; if (el) this.startFlight(); }, trail: (el) => { this.trailEl = el; } };
+    }
+    return this._r;
+  }
+  secRef(id) {
+    const r = this.refsFor();
+    if (!r.sec[id]) r.sec[id] = (el) => { this.secs = this.secs || {}; if (el) this.secs[id] = el; else delete this.secs[id]; };
+    return r.sec[id];
+  }
+  flash(msg) {
+    this.setState({ msg: msg });
+    clearTimeout(this.msgTimer);
+    this.msgTimer = setTimeout(() => this.setState({ msg: '' }), 4500);
+  }
+  // Carta d'imbarco come immagine (stile del menu Shopify): rotta, piatti, frase a tema, codice a barre
+  drawPass(data) {
+    const W = 1080, P = 64, ROW = 84, TOP = 560;
+    const H = TOP + data.items.length * ROW + 570;
+    const c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    const g = c.getContext('2d');
+    const PLUM = '#3B0B40', MAG = '#91007D', BG = '#F7E6F3';
+    const F1 = '"Big Shoulders Display", "Montserrat", system-ui, sans-serif';
+    const F2 = '"Montserrat", system-ui, sans-serif';
+    const F3 = '"Space Mono", ui-monospace, monospace';
+    const wrap = (text, max) => {
+      const words = String(text).split(' '); const lines = []; let line = '';
+      words.forEach((w) => { const t = line ? line + ' ' + w : w; if (g.measureText(t).width > max && line) { lines.push(line); line = w; } else line = t; });
+      if (line) lines.push(line);
+      return lines;
+    };
+    const fit = (text, max) => { let t = String(text); if (g.measureText(t).width <= max) return t; while (t.length > 3 && g.measureText(t + '…').width > max) t = t.slice(0, -1); return t + '…'; };
+    g.fillStyle = BG; g.fillRect(0, 0, W, H);
+    g.fillStyle = '#FFFFFF'; g.beginPath(); g.roundRect(28, 28, W - 56, H - 56, 44); g.fill();
+    g.save(); g.beginPath(); g.roundRect(28, 28, W - 56, H - 56, 44); g.clip();
+    g.fillStyle = '#2A0830'; g.fillRect(28, 28, W - 56, 150); g.restore();
+    g.textBaseline = 'middle';
+    if (data.logo) { const lh = 84, lw = data.logo.width * (lh / data.logo.height); g.drawImage(data.logo, P + 8, 103 - lh / 2, lw, lh); }
+    else { g.fillStyle = '#FFFFFF'; g.font = '800 54px ' + F1; g.fillText('Keik', P + 10, 100); }
+    g.fillStyle = '#FFFFFF'; g.textAlign = 'right'; g.font = '600 26px ' + F3; g.fillText(this.tr('BOARDING PASS'), W - P, 104); g.textAlign = 'left';
+    g.fillStyle = MAG; g.font = '600 24px ' + F3; g.fillText(this.tr('DA MODENA, CON GUSTO'), P, 236);
+    g.fillStyle = PLUM; g.font = '800 52px ' + F1;
+    wrap(this.tr('Questa è la mia proposta di itinerario di viaggio'), W - 2 * P).forEach((l, i) => g.fillText(l, P, 300 + 62 * i));
+    g.fillStyle = MAG; g.font = '600 22px ' + F3; g.fillText(this.tr('DA'), P, 450);
+    g.textAlign = 'right'; g.fillText(this.tr('A'), W - P, 450); g.textAlign = 'left';
+    g.fillStyle = PLUM; g.font = '800 44px ' + F1; g.fillText('MODENA', P, 496);
+    const modW = g.measureText('MODENA').width;
+    let size = 44; g.font = '800 ' + size + 'px ' + F1;
+    while (size > 26 && g.measureText(data.to).width > 520) { size -= 2; g.font = '800 ' + size + 'px ' + F1; }
+    const toX = W - P - g.measureText(data.to).width;
+    g.fillText(data.to, toX, 496);
+    g.strokeStyle = '#E7A9DC'; g.lineWidth = 5; g.setLineDash([18, 14]); g.lineCap = 'round';
+    if (toX - 30 > P + modW + 30) { g.beginPath(); g.moveTo(P + modW + 30, 496); g.lineTo(toX - 30, 496); g.stroke(); }
+    const perforate = (y) => {
+      g.setLineDash([10, 12]); g.lineWidth = 3; g.strokeStyle = '#EAD9ED'; g.beginPath(); g.moveTo(68, y); g.lineTo(W - 68, y); g.stroke(); g.setLineDash([]);
+      g.fillStyle = BG; g.beginPath(); g.arc(28, y, 26, 0, 7); g.fill(); g.beginPath(); g.arc(W - 28, y, 26, 0, 7); g.fill();
+    };
+    perforate(546);
+    data.items.forEach((it, i) => {
+      const y = TOP + i * ROW + 48;
+      g.fillStyle = PLUM; g.font = '44px ' + F2; g.fillText(it.flag, P, y);
+      g.font = '700 34px ' + F2; g.fillText(fit((it.qty > 1 ? it.qty + ' × ' : '') + it.name, W - 2 * P - 90), P + 90, y);
+      if (i < data.items.length - 1) { g.strokeStyle = '#F1E4F3'; g.lineWidth = 2; g.beginPath(); g.moveTo(P, y + 36); g.lineTo(W - P, y + 36); g.stroke(); }
+    });
+    const y0 = TOP + data.items.length * ROW + 30;
+    perforate(y0);
+    g.fillStyle = MAG; g.font = 'italic 800 58px ' + F1;
+    const lines = wrap(data.phrase, W - 2 * P).slice(0, 3);
+    lines.forEach((l, i) => g.fillText(l, P, y0 + 86 + 68 * i));
+    g.fillStyle = '#6F5274'; g.font = '500 30px ' + F2; g.fillText(fit(data.sub, W - 2 * P), P, y0 + 90 + 68 * lines.length);
+    let x = P; const by = y0 + 360; let seed = 7 * data.items.length + data.to.length;
+    g.fillStyle = PLUM;
+    for (let k = 0; k < 58 && x < 484; k++) { seed = (9301 * seed + 49297) % 233280; const w = 2 + (seed % 4) * 2; g.fillRect(x, by, w, 90); x += w + 4 + (seed % 3) * 2; }
+    g.textAlign = 'right'; g.fillStyle = PLUM; g.font = '800 30px ' + F1; g.fillText(this.tr('E tu dove voli?'), W - P, by + 26);
+    g.font = '500 26px ' + F2; g.fillStyle = '#6F5274'; g.fillText('Via Canalino 51, Modena', W - P, by + 66); g.fillText('keik.it', W - P, by + 102);
+    return c;
+  }
+  loadLogo() {
+    if (this._logo !== undefined) return Promise.resolve(this._logo);
+    return new Promise((res) => {
+      const im = new Image();
+      im.onload = () => { this._logo = im; res(im); };
+      im.onerror = () => { this._logo = null; res(null); };
+      im.src = '/_blob/4ae9236772f217ad454621f7172ec031';
+    });
+  }
+  async makeBlob(data) {
+    try { if (document.fonts && document.fonts.ready) await document.fonts.ready; } catch (e) {}
+    data.logo = await this.loadLogo();
+    const canvas = this.drawPass(data);
+    return await new Promise((res) => { try { canvas.toBlob(res, 'image/png'); } catch (e) { res(null); } });
+  }
+  download(blob) {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = 'keik-itinerario.png';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  }
+  async shareRoute(data, onlySave) {
+    if (!data.items.length) { this.flash(this.tr('Aggiungi almeno un piatto al tuo itinerario.')); return; }
+    if (!onlySave) this.flash(this.tr('Preparo il boarding pass…'));
+    const blob = await this.makeBlob(data);
+    if (onlySave) { if (blob) { this.download(blob); this.flash(this.tr('Immagine salvata.')); } return; }
+    let file = null;
+    try { if (blob) file = new File([blob], 'keik-itinerario.png', { type: 'image/png' }); } catch (e) {}
+    if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+      try { await navigator.share({ files: [file], text: data.text }); this.flash(this.tr('Inviato. Buon viaggio!')); } catch (e) { this.setState({ msg: '' }); }
+      return;
+    }
+    if (blob) this.download(blob);
+    window.open('https://wa.me/?text=' + encodeURIComponent(data.text), '_blank', 'noopener');
+    this.flash(blob ? this.tr('Ho salvato l’immagine: allegala al messaggio su WhatsApp.') : '');
+  }
+  renderVals() {
+    const st = this.state || {};
+    const tr = (s, v) => this.tr(s, v);
+    const ctx = this.props.contesto ?? 'online';
+    const atTable = ctx === 'tavolo';
+    const qtys = st.q || {};
+    const setQ = (id, n) => { const q = Object.assign({}, (this.state && this.state.q) || {}); if (n <= 0) delete q[id]; else q[id] = n; this.saveQ(q); this.setState({ q: q }); };
+    // Paesi: codice → bandiera e nome (come sul menu Shopify)
+    const C = {
+      PHL: ['🇵🇭', 'Filippine'], CAN: ['🇨🇦', 'Canada'], BEL: ['🇧🇪', 'Belgio'], USA: ['🇺🇸', 'USA'], JPN: ['🇯🇵', 'Giappone'],
+      AUS: ['🇦🇺', 'Australia'], MEX: ['🇲🇽', 'Messico'], VEN: ['🇻🇪', 'Venezuela'], MED: ['🫒', 'Mediterraneo'], NOR: ['🇳🇴', 'Norvegia'],
+      KOR: ['🇰🇷', 'Corea'], IND: ['🇮🇳', 'India'], ITA: ['🇮🇹', 'Italia']
+    };
+    // Frasi a tema della carta d'imbarco (riprese dal menu Shopify)
+    const PH = {
+      MEX: ['¡Eres un compadre mexicano!', 'Il tuo viaggio parla messicano'],
+      VEN: ['¡Eres un pana venezolano!', 'Il tuo viaggio profuma di Caribe'],
+      USA: ['You’re on the road, coast to coast!', 'Il tuo viaggio attraversa gli States'],
+      JPN: ['Itadakimasu! Sei di casa in Giappone', 'Il tuo viaggio guarda a Oriente'],
+      KOR: ['Daebak! Hai l’anima coreana', 'Il tuo viaggio fa tappa a Seoul'],
+      PHL: ['Mabuhay! Hai il cuore filippino', 'Il tuo viaggio si tinge di viola ube'],
+      CAN: ['Sweet as maple: sei un vero canadese!', 'Il tuo viaggio sa di sciroppo d’acero'],
+      BEL: ['Sei di casa a Bruxelles!', 'Il tuo viaggio è una dolce sosta belga'],
+      AUS: ['G’day mate! Sei un vero aussie', 'Il tuo viaggio comincia dall’altra parte del mondo'],
+      NOR: ['Skål! Hai lo spirito del Nord', 'Il tuo viaggio segue i fiordi'],
+      MED: ['Hai il Mediterraneo nel cuore', 'Il tuo viaggio segue il sole'],
+      IND: ['Namaste! Viaggi con l’anima in India', 'Il tuo viaggio profuma di spezie'],
+      ITA: ['Giochi in casa: aperitivo all’italiana!', 'Il tuo viaggio parte e torna a Modena']
+    };
+    const D = (id, cat, code, name, desc, prices, base, allergens, extra) => Object.assign({ id, cat, code, name, desc, prices, base, allergens, tags: [], pair: '', note: '', tagline: '', faq: null }, extra || {});
+    const T = {
+      nuovo: { label: 'NOVITÀ', color: '#91007D', bg: '#FFFFFF' }, vegan: { label: 'VEGAN', color: '#2F7D4F', bg: '#FFFFFF' },
+      hot: { label: '🌶 PICCANTE', color: '#B3261E', bg: '#FFFFFF' }, lf: { label: 'LACTOSE FREE', color: '#3B0B40', bg: '#FFFFFF' },
+      top: { label: 'IL PIÙ SCELTO', color: '#FFFFFF', bg: '#91007D' }
+    };
+    const icon = (w) => ({ label: w + ' ★ ICON', color: '#FFFFFF', bg: '#3B0B40' });
+    const all = [
+      D('traveler', 'sha', 'WLD', 'Brunch Traveler*', 'Pancakes, bacon, uova, mini avo toast e salmone, frutta fresca, Sweet Potato Fries.', '32,90 €', 32.9, '1 · 3 · 4 · 7 · 10 · 11', { note: 'Ideale per 2-3 persone' }),
+      D('turista', 'sha', 'WLD', 'Il Turista*', 'Mix di tapas dal mondo: tartine con formaggio alla piastra e pomodorini alla paprika, tostones con pico de gallo, falafel, sweet potatoes, nachos con guacamole e olive di Cerignola.', '20,90 €', 20.9, '1 · 6 · 7 · 9 · 10 · 11', { note: 'Ideale per 2 persone' }),
+      D('ube', 'pan', 'PHL', 'UBE lava pancakes', 'Pancakes lava con crema all’Ube, frutta fresca, mini marshmallow, granella di nocciola e crumble di Oreo.', '11,90 €', 11.9, '1 · 3 · 6 · 7 · 8', { tags: [T.nuovo], pair: 'Assaggialo con un Matcha Latte +4,50 €', faq: ['Cos’è l’ube?', 'Un tubero viola originario delle Filippine, dal sapore dolce, delicato, con note che ricordano vaniglia e cocco.'] }),
+      D('pausa', 'pan', 'MOD', 'La pausa pancakes', 'Pancakes con crema a scelta, crumble di Oreo, granella di nocciola e fragole fresche.', 'Medium 9,90 €\nRegular 11,90 €', 9.9, '1 · 3 · 6 · 7 · 8', { tags: [icon('CHILL')], note: 'Scegli la tua crema: Nutella o Bueno' }),
+      D('brady', 'pan', 'CAN', 'Brady pancakes', 'Pancakes con frutta fresca, granella di nocciola e autentico sciroppo d’acero canadese o Nutella.', 'Medium 8,90 €\nRegular 10,90 €', 8.9, '1 · 3 · 7 · 8'),
+      D('biscoff', 'pan', 'BEL', 'Biscoff belgian pancakes', 'Pancakes con crema Biscoff Lotus, frutta fresca, crumble di Lotus e panna montata.', '11,90 €', 11.9, '1 · 3 · 6 · 7 · 8'),
+      D('nyc', 'pan', 'USA', 'NYC bacon & eggs*', 'Pancakes fatti in casa, bacon croccante, uova (strapazzate o all’occhio di bue).', 'Medium 10,90 €\nRegular 12,90 €', 10.9, '1 · 3 · 6 · 7', { tags: [icon('ALL DAY')], pair: 'Assaggialo con sciroppo d’acero +2,50 €' }),
+      D('alaska', 'pan', 'USA', 'Alaska pancakes', 'Pancakes con salmone affumicato, uova all’occhio di bue, semi tostati e fiore edule.', '15,90 €', 15.9, '1 · 3 · 4 · 7 · 11', { pair: 'Abbinalo a un Sunset & Chill +8,00 €' }),
+      D('osaka', 'pan', 'JPN', 'Osaka pancakes*', 'Soffici pancakes con filetti di pollo croccante glassati con la nostra salsa HoneyKara, formaggio cheddar e semi di sesamo nero.', '12,90 €', 12.9, '1 · 3 · 7 · 11', { tags: [T.hot], faq: ['Com’è la nostra salsa HoneyKara?', 'Una salsa dolce, leggermente piccante e avvolgente ispirata al Giappone, con una lucentezza ambrata che si scioglie in bocca a ogni morso.'] }),
+      D('canberra', 'fus', 'AUS', 'Canberra breaky*', 'Uova strapazzate, bacon croccante, avocado fresco, semi misti tostati, insalata mista e fragole fresche.', '13,90 €', 13.9, '1 · 3 · 11'),
+      D('tijuana', 'fus', 'MEX', 'Tijuana caesar salad*', 'Insalata, pollo grigliato, pico de gallo, halloumi alla piastra, crostini e salsa caesar.', '12,90 €', 12.9, '1 · 3 · 7 · 9 · 11', { note: 'Con pollo croccante +1,50 €', pair: 'Assaggiala con una Passion Soda +5,90 €', faq: ['Cos’è il formaggio Halloumi?', 'Formaggio semiduro di origine cipriota che si scioglie ma non cola: per questo si può grigliare senza perdere la forma.'] }),
+      D('losroques', 'fus', 'VEN', 'Los Roques benedict', 'Letto di tostones croccanti con avocado fresco, formaggio alla piastra, insalata mista, 2 uova in camicia e salsa olandese.', '11,90 €', 11.9, '1 · 3 · 7', { tags: [T.nuovo], note: 'Con tostones venezuelani', faq: ['Cosa sono i tostones?', 'Fette di platano fritto, cugino della banana ma non dolce, tipico del Venezuela: croccanti fuori, morbide dentro.'] }),
+      D('hummus', 'fus', 'MED', 'Hummus & falafel*', 'Hummus fatto in casa, falafel croccanti, avocado, datterini, misticanza e olio alla paprika.', '13,90 €\n+ Falafel 16,90 €', 13.9, '1 · 11', { tags: [icon('VEGAN')], tagline: 'Equilibrio mediterraneo. Zero stress' }),
+      D('baja', 'toa', 'MEX', 'Baja avo toast', 'Toast con avocado pestato, pico de gallo, due uova in camicia e semi tostati.', '9,90 €\n+ Bacon* 12,90 €', 9.9, '1 · 3 · 11'),
+      D('oslo', 'toa', 'NOR', 'Oslo salmon toast', 'Salmone affumicato, avocado pestato, misticanza, omelette, semi misti tostati e spezie affumicate.', '14,90 €\nDoppio salmone 18,90 €', 14.9, '1 · 3 · 4 · 11', { tags: [icon('COMFORT')], pair: 'Abbinalo a uno Spritz +8,00 €' }),
+      D('la', 'toa', 'USA', 'L.A. crispy avo toast*', 'Avocado pestato, bacon croccante, uova all’occhio di bue e spezie affumicate.', '10,90 €\nDoppio uovo 12,40 €', 10.9, '1 · 3 · 11'),
+      D('reggie', 'toa', 'MOD', 'Reggie benedict', 'Due uova in camicia con salsa olandese, salmone affumicato, avocado fresco su un letto di insalata fresca e morbido pane di patate semidolce.', '15,90 €', 15.9, '1 · 3 · 4 · 7', { tags: [T.nuovo], faq: ['Cos’è la salsa olandese?', 'Salsa a base di tuorlo e burro, vellutata e leggermente acidula.'] }),
+      D('kevin', 'bur', 'USA', 'Kevin cheeseburger*', 'Manzo, cheddar, bacon croccante e salsa Keik.', 'Singolo 11,90 €\nDoppio 14,90 €', 11.9, '1 · 3 · 6 · 7 · 9 · 10', { note: 'Aggiungi: patatine +3,00 € · Sweet Potato Fries +5,00 €', pair: 'Abbinalo a una Birra La Mi’ +6,50 €' }),
+      D('carlitos', 'bur', 'VEN', 'Carlitos burger*', 'Manzo, uovo all’occhio di bue, cheddar, guacamole, lattuga, salsa chipotle.', 'Singolo 12,90 €\nDoppio 15,90 €', 12.9, '1 · 3 · 6 · 7', { tags: [icon('TRAVEL'), T.hot], note: 'Aggiungi: patatine +3,00 € · Sweet Potato Fries +5,00 €', pair: 'Assaggialo con bacon +3,00 €' }),
+      D('frida', 'bur', 'MEX', 'Frida burrito*', 'Burrito di carne con lattuga, guacamole, pico de gallo, cheddar e salsa chipotle.', '13,90 €\n+ Bacon 16,90 €', 13.9, '1 · 3 · 6 · 7', { tags: [T.hot], note: 'Aggiungi: patatine +3,00 € · Sweet Potato Fries +5,00 €', faq: ['Cos’è il chipotle?', 'Peperoncino jalapeño essiccato e affumicato: il suo sapore nasce da un’antica tecnica di conservazione messicana.'] }),
+      D('gangnam', 'bur', 'KOR', 'Gangnam burrito*', 'Pollo grigliato, kimchi, salsa tonkatsu, lattuga e pomodori datterini.', '13,90 €\n+ Avocado 17,40 €', 13.9, '1 · 6 · 9', { tagline: 'Con vero kimchi coreano', note: 'Aggiungi: patatine +3,00 € · Sweet Potato Fries +5,00 €', faq: ['Cos’è il kimchi?', 'Cavolo fermentato con peperoncino, aglio e zenzero, tradizione secolare della cucina coreana.'] }),
+      D('sweetfries', 'ext', 'MOD', 'Sweet potato fries*', 'Patate dolci fritte, dal gusto leggermente dolce, con salsa affumicata al bacon.', '5,90 €', 5.9, '1 · 3 · 9 · 10'),
+      D('fries', 'ext', 'MOD', 'Patatine classiche crispy*', 'Super croccanti, con salsa segreta Keik.', '4,00 €', 4, '1 · 3 · 10'),
+      D('falafel', 'ext', 'MED', 'Falafel*', 'Falafel gustosi e croccanti.', '5,90 €', 5.9, '1 · 11'),
+      D('tostones', 'ext', 'VEN', 'Tostones', 'Chips venezuelane di platano artigianali accompagnate da guacamole.', '4,90 €', 4.9, '1'),
+      D('honeykara', 'ext', 'JPN', 'Pollo HoneyKara*', 'Filetti di pollo impanati e glassati nella nostra salsa HoneyKara leggermente piccante.', '6,90 €', 6.9, '1'),
+      D('redvelvet', 'dol', 'MOD', 'Cupcake Red Velvet', 'La nostra regina dal 2013.', '4,90 €', 4.9, '1 · 3 · 7'),
+      D('oreo', 'dol', 'MOD', 'Cupcake Oreo', 'Un classico intramontabile.', '3,90 €', 3.9, '1 · 3 · 6', { tags: [T.lf] }),
+      D('cbiscoff', 'dol', 'MOD', 'Cupcake Biscoff', 'La golosità in formato cupcake, con cuore di crema Biscoff.', '4,90 €', 4.9, '1 · 3 · 6 · 7'),
+      D('chebueno', 'dol', 'MOD', 'Che Bueno', 'Non ha bisogno di presentazione: con cuore di crema Bueno.', '4,90 €', 4.9, '1 · 3 · 6 · 7 · 8'),
+      D('cnutella', 'dol', 'ITA', 'Cupcake Nutella', 'Il gusto della merenda italiana, con cuore di Nutella.', '4,90 €', 4.9, '1 · 3 · 6 · 7 · 8'),
+      D('peanut', 'dol', 'MOD', 'Cupcake Peanut', 'Al burro d’arachidi.', '3,90 €', 3.9, '1 · 3 · 5 · 7 · 8'),
+      D('brownie', 'dol', 'MOD', 'Brownie', 'Uno tira l’altro.', '3,90 €', 3.9, '1 · 3', { tags: [T.lf] }),
+      D('banana', 'dol', 'MOD', 'Banana bread', 'Gustoso e vegano.', '3,90 €', 3.9, '1', { tags: [T.vegan] }),
+      D('pumpkin', 'caf', 'MOD', 'Pumpkin Spice Latte', 'Il latte d’autunno.', '5,00 €', 5, '7', { tags: [T.top] }),
+      D('ubelatte', 'caf', 'PHL', 'UBE Latte', 'Gusto esotico vanigliato.', '4,50 €', 4.5, '7', { tags: [T.nuovo] }),
+      D('matcha', 'caf', 'JPN', 'Matcha Latte', 'Classico o al mango.', 'Classico 4,50 €\nAl mango 5,50 €', 4.5, '7'),
+      D('chai', 'caf', 'IND', 'Chai Latte', 'Tè nero speziato e avvolgente.', '4,50 €', 4.5, '7'),
+      D('caramel', 'caf', 'MOD', 'Caramel Latte', 'Classico o al cioccolato.', '4,50 €', 4.5, '7'),
+      D('americano', 'caf', 'MOD', 'Americano', 'Americano con refill gratuito. Sempre.', '3,00 €', 3, '–', { tags: [icon('COMFORT')], note: 'Assaggialo freddo. Aromatizzabile con vaniglia o nocciola +1,00 €' }),
+      D('soda', 'dri', 'MOD', 'Le nostre soda', 'Wild Berry ai frutti di bosco, Passion al frutto della passione, Mango con polpa di mango 100% e lime fresco, Peach alla pesca e lime.', '5,90 €', 5.9, '–'),
+      D('mocktail', 'dri', 'MOD', 'Mocktail', 'Analcolici, ma con carattere: Sunset & Chill (agrumi e lampone) o Fiore del deserto (passion fruit, yuzu e tonica).', '8,00 €', 8, '–'),
+      D('mimo', 'dri', 'MOD', 'Mango MIMO', 'Mimosa mojito al mango, rum e prosecco.', '12,00 €', 12, '12'),
+      D('spritz', 'dri', 'ITA', 'Spritz', 'Classico, passion fruit, yuzu, lampone o pesca.', '8,00 €', 8, '12'),
+      D('gin', 'dri', 'MOD', 'Gin tonic', 'La nostra selezione di gin, servito come si deve.', '12,00 €', 12, '12'),
+      D('negroni', 'dri', 'ITA', 'Negroni', 'Il classico italiano.', '9,00 €', 9, '12'),
+      D('birre', 'dri', 'MOD', 'Birre La Mi’', 'Birre artigianali al femminile: Tipa (IPA non filtrata), Bionda (chiara, cruda, non filtrata), Rossa (red ale cruda, non filtrata).', '6,50 €', 6.5, '1')
+    ];
+    const catDefs = [
+      { id: 'sha', short: 'Da condividere', name: 'Da condividere', note: 'per 2–3 persone', ritual: 'RITUALE DELLA CONDIVISIONE', intro: 'Perfetti quando si è in due o più.' },
+      { id: 'pan', short: 'Pancakes', name: 'All day pancakes', note: 'tutto il giorno', ritual: 'CUCINA APERTA TUTTO IL GIORNO', intro: 'Comfort vero, dolce o salato. Chiedili con pancakes proteici, senza zuccheri aggiunti.' },
+      { id: 'fus', short: 'Fusion', name: 'Fusion & street food', note: '', ritual: 'UN VIAGGIO DI GUSTO A MODENA', intro: 'Colori, international vibes, sapori da scoprire.' },
+      { id: 'toa', short: 'Toast', name: 'Avocado & toast', note: '', ritual: 'EQUILIBRIO ED ENERGIA', intro: 'Equilibrio ed energia, senza rinunciare al gusto.' },
+      { id: 'bur', short: 'Burger', name: 'Burger & burritos', note: 'patatine +3,00 €', ritual: 'QUANDO HAI BISOGNO DI STACCARE DAVVERO', intro: '' },
+      { id: 'ext', short: 'Sides & Extras', name: 'I nostri sides', note: 'i tuoi timbri', ritual: 'SIDES & EXTRAS', intro: 'Ogni contorno è un timbro nel tuo viaggio.' },
+      { id: 'dri', short: 'Drink', name: 'Soda, mocktail e cocktail', note: 'perfetti con i nostri taglieri', ritual: 'RITUALE DEL SOLE', intro: 'Il tuo momento fresco della giornata. Assaggia le nostre soda artigianali.' },
+      { id: 'caf', short: 'Caffè', name: 'Caffè e latte speciali', note: 'americano con refill gratuito', ritual: 'RITUALE DEL CAFFÈ', intro: 'I nostri latte speciali. Chiedili con latte alternativo.' },
+      { id: 'dol', short: 'Dolci', name: 'Dolci', note: 'fatti a mano', ritual: 'RITUALE DEL DOLCE', intro: 'I nostri dolci sono artigianali e disponibili fino a esaurimento scorte: chiedi allo staff la disponibilità del giorno, e dai un’occhiata alla vetrina per gli speciali del mese.' }
+    ];
+    const GROUPS = {
+      ext: [
+        { title: 'Extras proteici', rows: [['Uova strapazzate', '+3,00 €'], ['Bacon danese*', '+3,00 €'], ['Pollo grigliato*', '+3,50 €'], ['Salmone norvegese', '+4,00 €'], ['Falafel* · vegan', '+3,00 €']] },
+        { title: 'Extras fresh', rows: [['Avocado fresco', '+3,50 €'], ['Fragole fresche', '+2,50 €'], ['Banane fresche', '+2,50 €']] },
+        { title: 'Extras golosi', rows: [['Nutella / Crema Bueno / Pistacchio', '+2,50 €'], ['Sciroppo d’acero canadese', '+2,50 €']] }
+      ],
+      caf: [
+        { title: 'Caffetteria classica', rows: [['Spremuta (fino alle 16:00)', '5,00 €'], ['Latte bianco', '3,50 €'], ['Espresso / Macchiato', '1,50 €'], ['Cappuccino', '2,00 €']] },
+        { title: 'Rendi la tua bevanda ancora più speciale', rows: [['Deca | Latte alternativo', 'da +0,40 €'], ['Panna | Marshmallows', '+1,00 €'], ['Nutella / Crema Bueno / Pistacchio', 'da +0,50 €'], ['Gelato SLURP artigianale', '+3,00 €'], ['Topping caffetteria', 'da +0,50 €']] }
+      ],
+      dri: [
+        { title: 'Bibite', rows: [['Coca-Cola', '4,00 €'], ['Coca-Cola Zero', '4,00 €'], ['Limonata bio', '4,50 €'], ['Aranciata bio', '4,50 €'], ['Tè freddo limone', '4,50 €'], ['Tè freddo pesca', '4,50 €'], ['Acqua microfiltrata 35cl', '1,50 €'], ['Acqua microfiltrata 75cl', '3,00 €']] }
+      ]
+    };
+    const tilts = ['-8deg', '5deg', '-3deg', '7deg', '-6deg', '3deg'];
+    // Foto scontornate dei piatti (prese dal menu attuale su keik.it)
+    const IMG = {
+      alaska: '/_blob/5531886e413b6a2b01cf9aa6fb4535bb', baja: '/_blob/e498457a1b2610c0c88558ac7574d807', banana: '/_blob/bafbd90858218327a80fb29dd2fcab8b',
+      birre: '/_blob/0afc22f9a42818996f7fe2b82cf069a8', biscoff: '/_blob/b48c3877e327120893bcf694065301a1', brady: '/_blob/6e09c26506e7d4b39e303d385c4bc4de',
+      brownie: '/_blob/1a7f8effc8ee93783ce0eb4c15c20cda', canberra: '/_blob/ce68f77c771ce1df418586ca719c120f', carlitos: '/_blob/2b59242278e764972cb5814419a21009',
+      pumpkin: '/_blob/d7e2bc95c99b9a2b4c40eb6351a41362', caramel: '/_blob/aedee9278a31f4bac7dadaedfcb9f6ad', americano: '/_blob/87fb05402ae4e3023a0a11c099410ec7',
+      cbiscoff: '/_blob/cf35745659ce613a0e679df5fe1ee0cf', chai: '/_blob/a8a6da076541fd13399ba2053742dd5e', falafel: '/_blob/fb130c7b5fa8bf3ac9a36808079af0c0',
+      frida: '/_blob/74ef9e5ac177a5144eb40d7bfe6c055a', fries: '/_blob/a120c9bacdaab9dd87ff3bf8990c267a', gangnam: '/_blob/de798c5d6feb91ede10f998b8ef10945',
+      honeykara: '/_blob/610cc65d4ff46161395d4e6ab089e922', hummus: '/_blob/a8ecb35ebb3968ca3160d685b86904e1', kevin: '/_blob/a018e4da20410f427f6029f5301dee48',
+      la: '/_blob/9d09328b1d500c5e647474aba9b01ba3', losroques: '/_blob/ac3f0a7ba12bb1b67e556969edefce66', matcha: '/_blob/1f487479e8f411b993c5f4b3f78d96ef',
+      mimo: '/_blob/b9e90e271ca766d46ae5b9fe72103bc0', mocktail: '/_blob/78f2b661852f066a1d514a2868fbac78', negroni: '/_blob/3cbf56c6a7e8e1a27747baa3edbd3457',
+      nyc: '/_blob/dd5ee3adad759efcc23f5abfbae45380', oreo: '/_blob/6fa5bbb208a5c9d089b3ae2d6f8e25b3', osaka: '/_blob/56567c93ebdfba82c89152277df8eb75',
+      oslo: '/_blob/4d21d77a29a6165cbb42e3ec611e6849', pausa: '/_blob/f566b7dbc462fd97b2cd1fdb9d85dc44', peanut: '/_blob/0df9f73cd45d4e98f7251d8a37bc8955',
+      redvelvet: '/_blob/79ef73a26c4dc0b9272f52aeace1a41c', reggie: '/_blob/c8ddea2ebfa0a9bcfb5035d01a58a930', soda: '/_blob/9c990383cf0c24dfdc95c85acc48c868',
+      spritz: '/_blob/bef0568669abbc6962302c86415dd744', sweetfries: '/_blob/1496fc17336980e10de59509e37bf3c5', tijuana: '/_blob/0862a7b60fa4d971d73b202557c035d3',
+      tostones: '/_blob/0aec7b04b6449163d4470cde51d890b7', traveler: '/_blob/26cef8e9c0978e57162996a6258f71fc', turista: '/_blob/77cdd4ac11e858e1b0c68012b140357d',
+      ube: '/_blob/321bf3c723e0b34ebf438b0e6943728c', ubelatte: '/_blob/cc1aad15a186a0ff6f4f3b7b1b5fe8ae',
+      gin: '/_blob/c92cfcfda3e824991977611df2453a2f', cnutella: '/_blob/a192c7f25aee3f34c2055aee51d26ed4', chebueno: '/_blob/557fb6d059e3bbd20ca73c35e9d298c0'
+    };
+    const byId = {};
+    all.forEach((d) => { byId[d.id] = d; });
+    const codeBg = (code) => ({ MOD: '#91007D', WLD: '#6E2A70' })[code] || '#3B0B40';
+    const clean = (n) => n.replace('*', '');
+    const ALN = { '1': 'glutine', '2': 'crostacei', '3': 'uova', '4': 'pesce', '5': 'arachidi', '6': 'soia', '7': 'latte', '8': 'frutta a guscio', '9': 'sedano', '10': 'senape', '11': 'sesamo', '12': 'solfiti', '13': 'lupini', '14': 'molluschi' };
+    const alNums = (d) => (d.allergens.match(/\d+/g) || []);
+    const alText = (d) => alNums(d).map((n) => tr(ALN[n] || '')).join(' · ');
+    const countryOf = (d) => C[d.code] || null;
+    // ---- Esplora: per momento, per destinazione, allergie
+    const now = new Date((st.now) || Date.now());
+    let hh = now.getHours(), timeTxt = String(hh).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+    try {
+      timeTxt = new Intl.DateTimeFormat('it-IT', { timeZone: 'Europe/Rome', hour: '2-digit', minute: '2-digit', hour12: false }).format(now);
+      hh = parseInt(timeTxt, 10);
+    } catch (e) {}
+    const curMoment = hh >= 10 && hh < 12 ? 'brunch' : hh >= 12 && hh < 15 ? 'pranzo' : hh >= 15 && hh < 18 ? 'merenda' : hh >= 18 && hh < 22 ? 'ape' : 'top';
+    const MOMS = [
+      { k: 'top', l: '★ I più amati', h: 'I più amati dai nostri viaggiatori', ids: ['carlitos', 'oslo', 'nyc', 'pausa', 'hummus'] },
+      { k: 'brunch', l: '🥞 Brunch', h: 'è l’ora del brunch', ids: ['nyc', 'pausa', 'baja', 'canberra', 'traveler', 'matcha'] },
+      { k: 'pranzo', l: '🍔 Pausa pranzo', h: 'è l’ora di staccare davvero', ids: ['carlitos', 'tijuana', 'hummus', 'gangnam', 'oslo', 'frida'] },
+      { k: 'merenda', l: '🧁 Pomeriggio', h: 'è l’ora della merenda', ids: ['redvelvet', 'brownie', 'banana', 'ube', 'pumpkin', 'chai'] },
+      { k: 'ape', l: '🍹 Aperitivo', h: 'è l’ora dell’aperitivo', ids: ['turista', 'spritz', 'mimo', 'mocktail', 'tostones', 'sweetfries'] }
+    ];
+    const DEST = {};
+    const destOrder = [];
+    all.forEach((d) => { if (C[d.code]) { if (!DEST[d.code]) { DEST[d.code] = []; destOrder.push(d.code); } DEST[d.code].push(d.id); } });
+    destOrder.sort((a, b) => DEST[b].length - DEST[a].length);
+    const ALS = [['1', '🌾 Glutine', 'glutine'], ['7', '🥛 Latte e lattosio', 'latte'], ['3', '🥚 Uova', 'uova'], ['8', '🌰 Frutta a guscio', 'frutta a guscio'], ['5', '🥜 Arachidi', 'arachidi'], ['6', '🫘 Soia', 'soia'], ['4', '🐟 Pesce', 'pesce'], ['11', 'Sesamo', 'sesamo'], ['9', 'Sedano', 'sedano'], ['10', 'Senape', 'senape']];
+    const tab = st.tab || 'm';
+    const momK = st.mom || curMoment;
+    const destK = st.dest || destOrder.at(0);
+    const als = st.als || [];
+    const chipStyle = (on) => on ? { pressed: 'true', bg: '#3B0B40', fg: '#FFFFFF', border: '#3B0B40' } : { pressed: 'false', bg: '#FFFFFF', fg: '#3B0B40', border: '#E6DAE4' };
+    const tabs = [['m', 'Per momento'], ['d', 'Per destinazione'], ['a', 'Allergie']].map((t) => {
+      const on = t.at(0) === tab;
+      return { label: t.at(1), sel: on ? 'true' : 'false', bg: on ? '#91007D' : '#F7F2F6', fg: on ? '#FFFFFF' : '#3B0B40', pick: () => this.setState({ tab: t.at(0) }) };
+    });
+    let chips = [], ids = [], nowText = '', showGf = false, showAlNote = false, noResText = '';
+    if (tab === 'm') {
+      chips = MOMS.map((m) => Object.assign({ label: tr(m.l) + (m.k === curMoment && m.k !== 'top' ? ' ' + tr('· adesso') : ''), pick: () => this.setState({ mom: m.k }) }, chipStyle(m.k === momK)));
+      const m = MOMS.find((x) => x.k === momK) || MOMS.at(0);
+      ids = m.ids;
+      const h = tr(m.h);
+      nowText = (m.k === curMoment && m.k !== 'top') ? tr('Sono le {t} a Modena: {h}', { t: timeTxt, h: h }) : (m.k === 'top' ? h : h.charAt(0).toUpperCase() + h.slice(1));
+    } else if (tab === 'd') {
+      chips = destOrder.map((code) => Object.assign({ label: C[code].at(0) + ' ' + tr(C[code].at(1)), pick: () => this.setState({ dest: code }) }, chipStyle(code === destK)));
+      ids = DEST[destK] || [];
+      nowText = tr(ids.length === 1 ? 'Oggi si vola: {d}, {n} tappa' : 'Oggi si vola: {d}, {n} tappe', { d: tr(C[destK].at(1)), n: ids.length });
+    } else {
+      showAlNote = true;
+      chips = ALS.map((a) => Object.assign({ label: tr(a.at(1)), pick: () => { const cur = (this.state && this.state.als) || []; this.setState({ als: cur.indexOf(a.at(0)) >= 0 ? cur.filter((x) => x !== a.at(0)) : cur.concat([a.at(0)]) }); } }, chipStyle(als.indexOf(a.at(0)) >= 0)));
+      if (!als.length) {
+        nowText = tr('Allergie e intolleranze: cosa eviti?');
+        noResText = tr('Tocca uno o più allergeni: ti mostriamo i piatti che non li contengono tra gli ingredienti.');
+      } else if (als.indexOf('1') >= 0) {
+        nowText = tr('Senza glutine? Leggi prima qui');
+        showGf = true;
+      } else {
+        const names = ALS.filter((a) => als.indexOf(a.at(0)) >= 0).map((a) => tr(a.at(2))).join(', ');
+        ids = all.filter((d) => d.allergens !== '–' && !(d.allergens.match(/\d+/g) || []).some((n) => als.indexOf(n) >= 0)).map((d) => d.id);
+        nowText = ids.length ? tr(ids.length === 1 ? '{n} piatto senza {x}' : '{n} piatti senza {x}', { n: ids.length, x: names }) : tr('Nessun piatto senza {x}', { x: names });
+        if (!ids.length) noResText = tr('Chiedi al nostro staff: possiamo valutare insieme cosa prepararti.');
+      }
+    }
+    const results = ids.filter((id) => byId[id]).map((id) => {
+      const d = byId[id];
+      const cc = countryOf(d);
+      return { id: id, name: clean(d.name), price: d.prices.split('\n').at(0), img: IMG[id] || '', hasImg: !!IMG[id], flag: cc ? cc.at(0) : '🌍', country: cc ? tr(cc.at(1)) : 'KEIK', go: () => { this.setState({ flashId: id }); clearTimeout(this.flashTimer); this.flashTimer = setTimeout(() => this.setState({ flashId: '' }), 1600); } };
+    });
+    // ---- Categorie e piatti
+    const zd = st.zoom ? all.find((x) => x.id === st.zoom) : null;
+    const zcc = zd ? countryOf(zd) : null;
+    const cats = catDefs.map((c) => {
+      const items = all.filter((d) => d.cat === c.id).map((d, i) => {
+        const qty = qtys[d.id] || 0;
+        const img = IMG[d.id] || '';
+        const cc = countryOf(d);
+        const faqOpen = !!(st.faq && st.faq[d.id]);
+        return Object.assign({}, d, {
+          img: img, hasImg: !!img, noImg: !img, altName: clean(d.name),
+          alLabel: tr('ALLERGENI') + ' ' + (alNums(d).length ? alText(d) : '–'), frozen: d.name.indexOf('*') >= 0,
+          flag: cc ? cc.at(0) : '', country: cc ? tr(cc.at(1)) : '', hasCountry: !!cc,
+          qty: qty, inRoute: qty > 0, notIn: qty === 0, hasPair: !!d.pair, hasNote: !!d.note, hasTagline: !!d.tagline, codeBg: codeBg(d.code),
+          hasFaq: !!d.faq, faqQ: d.faq ? d.faq.at(0) : '', faqA: d.faq ? d.faq.at(1) : '', faqOpen: faqOpen, faqExp: faqOpen ? 'true' : 'false',
+          zoomIt: () => this.setState({ zoom: d.id }),
+          toggleFaq: () => { const f = Object.assign({}, (this.state && this.state.faq) || {}); f[d.id] = !f[d.id]; this.setState({ faq: f }); },
+          flash: st.flashId === d.id ? 'm-flash' : '',
+          tilt: tilts.at(i % tilts.length),
+          stampColor: qty > 0 ? '#91007D' : '#B79AB8', stampBg: qty > 0 ? '#F7E6F3' : '#FFFFFF',
+          stampState: qty > 0 ? tr('✓ Nel viaggio') + (qty > 1 ? ' ×' + qty : '') : tr('+ Aggiungi'),
+          add: () => setQ(d.id, qty + 1), remove: () => setQ(d.id, qty - 1)
+        });
+      });
+      const groups = (GROUPS[c.id] || []).map((g) => ({ title: g.title, rows: g.rows.map((r) => ({ l: r.at(0), p: r.at(1) })) }));
+      return Object.assign({}, c, { items: items, groups: groups, hasIntro: !!c.intro, count: String(items.length), isStamps: c.id === 'ext', isList: c.id !== 'ext', isPancakes: c.id === 'pan', isShare: c.id === 'sha', ref: this.secRef(c.id) });
+    });
+    this.visibleIds = cats.map((c) => c.id);
+    const activeId = this.visibleIds.indexOf(st.active) >= 0 ? st.active : this.visibleIds.at(0);
+    const activeIdx = Math.max(0, this.visibleIds.indexOf(activeId));
+    cats.forEach((c, i) => {
+      const passed = i <= activeIdx, on = i === activeIdx;
+      c.dotLeft = 'calc(16px + (100% - 32px) * ' + (cats.length > 1 ? (i / (cats.length - 1)).toFixed(4) : '0') + ')';
+      c.dotBorder = passed ? '#91007D' : '#D9C3DB';
+      c.dotFill = on ? '#91007D' : passed ? '#F7E6F3' : '#FFFFFF';
+      c.dotText = on ? '#3B0B40' : '#6B4A70';
+      c.dotClass = on ? 'm-dot-on' : '';
+      c.chipBg = on ? '#3B0B40' : '#F7F2F6';
+      c.chipFg = on ? '#FFFFFF' : '#3B0B40';
+    });
+    if (this.onScroll) setTimeout(this.onScroll, 0);
+    // ---- Itinerario
+    const route = all.filter((d) => qtys[d.id]).map((d) => {
+      const cc = countryOf(d);
+      return { id: d.id, name: clean(d.name), nameIt: clean(d.name), code: d.code, flag: cc ? cc.at(0) : '🌍', qty: qtys[d.id], sub: qtys[d.id] * d.base, remove: () => setQ(d.id, 0) };
+    });
+    const countries = [];
+    route.forEach((r) => { if (C[r.code] && countries.indexOf(r.code) < 0) countries.push(r.code); });
+    const stampColors = ['#91007D', '#3B0B40', '#6E2A70'];
+    const stamps = countries.map((code, i) => ({ code: code, name: tr(C[code].at(1)), tilt: tilts.at(i % tilts.length), color: stampColors.at(i % 3) }));
+    const total = route.reduce((s, r) => s + r.sub, 0);
+    const n = route.reduce((s, r) => s + r.qty, 0);
+    let phrase = '', phraseSub = '';
+    if (route.length) {
+      if (!countries.length) { phrase = tr('Viaggiatore col gusto, pronto a partire!'); phraseSub = tr('Destinazione: quello che ti va oggi'); }
+      else if (countries.length === 1) { phrase = tr(PH[countries.at(0)].at(0)); phraseSub = tr(PH[countries.at(0)].at(1)); }
+      else if (countries.length === 2) { phrase = tr('Viaggi con scalo: {a} e {b}!', { a: tr(C[countries.at(0)].at(1)), b: tr(C[countries.at(1)].at(1)) }); phraseSub = tr('Due destinazioni, un solo tavolo'); }
+      else if (countries.length >= 5) { phrase = tr('Giro del mondo in {n} tappe!', { n: n }); phraseSub = tr('{n} paesi nel tuo itinerario', { n: countries.length }); }
+      else { phrase = tr('Sei un cittadino del mondo!'); phraseSub = tr('{n} paesi nel tuo itinerario', { n: countries.length }); }
+    }
+    const toLabel = countries.length === 1 ? tr(C[countries.at(0)].at(1)).toUpperCase()
+      : countries.length === 2 ? (tr(C[countries.at(0)].at(1)) + ' + ' + tr(C[countries.at(1)].at(1))).toUpperCase()
+      : countries.length ? tr('IL MONDO') : tr('IL GUSTO');
+    const chain = route.length ? ('MODENA → ' + (countries.length ? countries.map((cd) => C[cd].at(0)).join(' ') + ' ' + (countries.length === 1 ? toLabel : '') : toLabel)).trim() : tr('MODENA → ?');
+    const pageUrl = (typeof location !== 'undefined' && /^https?:/.test(location.href) && !/claude\.ai/.test(location.href)) ? location.href.split('#')[0].split('?')[0] : 'https://www.keik.it/menu';
+    const shareText = tr('Questa è la mia proposta di itinerario di viaggio da KEIK ✈') + '\n\n' + route.map((r) => r.flag + ' ' + (r.qty > 1 ? r.qty + ' × ' : '') + r.name).join('\n') + '\n\n' + phrase + '\n' + tr('E tu dove voli? Componi il tuo:') + ' ' + pageUrl;
+    const passData = () => ({ items: route.map((r) => ({ flag: r.flag, name: r.name, qty: r.qty })), to: toLabel, phrase: phrase, sub: phraseSub, text: shareText });
+    if (!atTable && typeof window !== 'undefined') {
+      const offers = (d) => d.prices.split('\n').map((line) => {
+        const m = line.match(/^(.*?)\s*(\d+),(\d{2})\s*€/);
+        if (!m) return null;
+        const o = { '@type': 'Offer', price: m[2] + '.' + m[3], priceCurrency: 'EUR' };
+        if (m[1].trim()) o.name = m[1].replace(/^[+\s]+/, '').trim();
+        return o;
+      }).filter(Boolean);
+      window.__KK_LD__ = {
+        '@context': 'https://schema.org', '@type': 'Menu', '@id': 'https://keik.it/menu.html#menu',
+        name: 'Menu KEIK Modena', url: 'https://keik.it/menu.html', inLanguage: 'it',
+        description: 'Menu completo di KEIK, all day kitchen internazionale in Via Canalino 51 a Modena: prezzi, allergeni e piatti da 12 paesi.',
+        hasMenuSection: catDefs.map((c) => ({
+          '@type': 'MenuSection', name: c.name, description: c.intro || undefined,
+          hasMenuItem: all.filter((d) => d.cat === c.id).map((d) => {
+            const cc = countryOf(d);
+            const al = alNums(d).map((n) => ALN[n]);
+            const bits = [d.desc];
+            if (cc && d.code !== 'MOD' && d.code !== 'WLD') bits.push('Ispirato a: ' + cc.at(1) + '.');
+            if (d.note) bits.push(/[.!?]$/.test(d.note) ? d.note : d.note + '.');
+            bits.push(al.length ? 'Allergeni: ' + al.join(', ') + '.' : 'Nessun allergene dichiarato.');
+            if (d.name.indexOf('*') >= 0) bits.push('Contiene un prodotto surgelato all’origine.');
+            const it = { '@type': 'MenuItem', name: clean(d.name), description: bits.join(' '), offers: offers(d) };
+            if ((d.tags || []).indexOf(T.vegan) >= 0) it.suitableForDiet = 'https://schema.org/VeganDiet';
+            if (IMG[d.id]) it.image = 'https://keik.it/assets/img/' + IMG[d.id].split('/').pop().replace(/\.webp$/, '') + '.webp';
+            return it;
+          })
+        }))
+      };
+    }
+    return {
+      online: !atTable, atTable: atTable,
+      frozenTxt: tr('* Contiene un prodotto surgelato all’origine.'),
+      kitchenHours: '10–19:30 · VEN E SAB 21:30',
+      tabs: tabs, chips: chips, nowText: nowText, results: results, noRes: results.length === 0 && !showGf, noResText: noResText || tr('Nessun piatto qui.'),
+      showGf: showGf, showAlNote: showAlNote,
+      cats: cats,
+      route: route, stamps: stamps, stampCount: String(countries.length),
+      phrase: phrase, phraseSub: phraseSub, toLabel: toLabel,
+      empty: route.length === 0, notEmpty: route.length > 0,
+      chain: chain,
+      total: total.toFixed(2).replace('.', ',') + ' €',
+      itemsLabel: tr(n === 1 ? '{n} tappa' : '{n} tappe', { n: n }),
+      shareBg: route.length ? '#91007D' : '#B79AB8',
+      clear: () => { this.saveQ({}); this.setState({ q: {} }); },
+      sheetOpen: !!st.sheet, openSheet: () => this.setState({ sheet: true }), closeSheet: () => this.setState({ sheet: false }),
+      staffOpen: !!st.staff, openStaff: () => this.setState({ staff: true, sheet: false }), closeStaff: () => this.setState({ staff: false }),
+      bradyOpen: !!st.brady || (!!this.props.mostraBrady && !st.bradyClosed),
+      closeBrady: () => this.setState({ brady: false, bradyClosed: true }),
+      exitOpen: !!st.exit,
+      closeExit: () => { document.documentElement.classList.remove('kk-modal'); this.setState({ exit: false }); },
+      exitSecond: st.exitHref ? tr('Continua senza giocare') : tr('Torna al menu'),
+      exitGo: () => { const h = st.exitHref; document.documentElement.classList.remove('kk-modal'); this.setState({ exit: false }); if (h === '__back__') window.history.go(-(this.exitBackSteps || 1)); else if (h) window.location.href = h; },
+      zoomOpen: !!(zd && IMG[zd.id]), zoomImg: zd ? (IMG[zd.id] || '') : '', zoomName: zd ? clean(zd.name) : '',
+      zoomCountry: zcc ? zcc.at(0) + ' ' + tr(zcc.at(1)) : '',
+      closeZoom: () => this.setState({ zoom: null }),
+      planeRef: this.refsFor().plane,
+      planeLeft: 'calc(16px + (100% - 32px) * ' + (this.flightP || 0).toFixed(4) + ')',
+      trailW: 'calc((100% - 32px) * ' + (this.flightP || 0).toFixed(4) + ')',
+      trailRef: this.refsFor().trail,
+      msg: st.msg || '', hasMsg: !!st.msg,
+      share: () => this.shareRoute(passData(), false),
+      saveImage: () => this.shareRoute(passData(), true)
+    };
+  }
+}
+</script>
+</body>
+</html>

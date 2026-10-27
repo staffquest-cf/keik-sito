@@ -1,0 +1,115 @@
+# =====================================================================
+#  keik.it · impostazioni del server (Apache / FastComet)
+#  Generato dal progetto staffquest-cf/keik-sito (ramo keik-it).
+#  Non modificare qui: le modifiche si fanno nel progetto.
+# =====================================================================
+
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Certificati SSL e verifiche: mai toccare
+RewriteRule ^\.well-known/ - [L]
+
+# --- 1. Vecchi indirizzi Shopify -> pagine nuove (un solo salto, 301) ---
+RewriteRule ^pages/contatti/?$ https://keik.it/contatti.html [R=301,L,NC]
+RewriteRule ^pages/contatto-keik/?$ https://keik.it/contatti.html [R=301,L,NC]
+RewriteRule ^pages/dati-keik/?$ https://keik.it/contatti.html [R=301,L,NC]
+RewriteRule ^pages/buoni-regalo/?$ https://keik.it/buoni-regalo.html [R=301,L,NC]
+RewriteRule ^pages/il-nostro-menu/?$ https://keik.it/menu.html [R=301,L,NC]
+RewriteRule ^pages/menu-all-day-kitchen/?$ https://keik.it/menu.html [R=301,L,NC]
+RewriteRule ^pages/chi-siamo/?$ https://keik.it/chi-siamo.html [R=301,L,NC]
+RewriteRule ^pages/viaggia-col-gusto/?$ https://keik.it/chi-siamo.html [R=301,L,NC]
+RewriteRule ^pages/lavora-con-noi-keik/?$ https://keik.it/lavora-con-noi.html [R=301,L,NC]
+RewriteRule ^pages/lavora-con-noi/?$ https://keik.it/lavora-con-noi.html [R=301,L,NC]
+RewriteRule ^pages/lavora-con-noi-bis/?$ https://keik.it/lavora-con-noi.html [R=301,L,NC]
+RewriteRule ^pages/unisciti-alla-squadra-del-chillax/?$ https://keik.it/lavora-con-noi.html [R=301,L,NC]
+RewriteRule ^pages/brunch-modena-keik/?$ https://keik.it/brunch.html [R=301,L,NC]
+RewriteRule ^pages/brunch-a-modena/?$ https://keik.it/brunch.html [R=301,L,NC]
+RewriteRule ^pages/brunch-e-relax-a-modena/?$ https://keik.it/brunch.html [R=301,L,NC]
+RewriteRule ^pages/colazione-a-modena-keik/?$ https://keik.it/brunch.html [R=301,L,NC]
+RewriteRule ^pages/colazione-a-modena-keik-bakery/?$ https://keik.it/brunch.html [R=301,L,NC]
+RewriteRule ^pages/copy-colazione-a-modena-keik-bakery/?$ https://keik.it/brunch.html [R=301,L,NC]
+RewriteRule ^pages/senza-glutine-vegano-modena-keik/?$ https://keik.it/vegano-senza-glutine.html [R=301,L,NC]
+RewriteRule ^pages/vegano-e-senza-glutine/?$ https://keik.it/vegano-senza-glutine.html [R=301,L,NC]
+RewriteRule ^pages/vegano-e-senza-glutine-a-modena/?$ https://keik.it/vegano-senza-glutine.html [R=301,L,NC]
+RewriteRule ^pages/fornitura-locali-emilia-romagna-kei/?$ https://keik.it/aziende.html [R=301,L,NC]
+RewriteRule ^pages/fornitura-locali-emilia-romagna-keik/?$ https://keik.it/aziende.html [R=301,L,NC]
+RewriteRule ^pages/b2b-pasticceria-artigianale-internazionale-a-modena/?$ https://keik.it/aziende.html [R=301,L,NC]
+RewriteRule ^pages/aperitivo-modena-keik/?$ https://keik.it/aperitivo.html [R=301,L,NC]
+RewriteRule ^pages/aperitivo/?$ https://keik.it/aperitivo.html [R=301,L,NC]
+RewriteRule ^pages/aperitivo-e-cena/?$ https://keik.it/aperitivo.html [R=301,L,NC]
+RewriteRule ^pages/aperitivo-a-modena-keik/?$ https://keik.it/aperitivo.html [R=301,L,NC]
+RewriteRule ^pages/le-faq-di-keik-modena/?$ https://keik.it/faq.html [R=301,L,NC]
+RewriteRule ^pages/le-faq-di-keik/?$ https://keik.it/faq.html [R=301,L,NC]
+RewriteRule ^pages/prenota/?$ https://keik.it/prenota.html [R=301,L,NC]
+RewriteRule ^pages/prenota-menu-in-anteprima/?$ https://keik.it/prenota.html [R=301,L,NC]
+RewriteRule ^pages/prenota-un-tavolo-1/?$ https://keik.it/prenota.html [R=301,L,NC]
+RewriteRule ^pages/prenota-un-tavolo-2/?$ https://keik.it/prenota.html [R=301,L,NC]
+RewriteRule ^pages/copia-di-prenota-un-tavolo-social/?$ https://keik.it/prenota.html [R=301,L,NC]
+RewriteRule ^pages/copia-di-prenota-un-tavolo/?$ https://keik.it/prenota.html [R=301,L,NC]
+RewriteRule ^pages/festeggia-da-keik/?$ https://keik.it/prenota.html [R=301,L,NC]
+RewriteRule ^pages/coupev/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/coup/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/viaggia-con-gusto-a-modena/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/prova-viaggia-con-gusto/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/marzo-a-corea-del-sud/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/vento-del-giappone/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/aprile-un-viaggio-in-giappone-senza-lasciare-modena/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/messico-keik-viaggia-col-gusto/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/martedi-all-you-can-nachos/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/mercoledi-disegna-il-tuo-vaso/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/giovedi-aperitivo-in-lingua/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/venerdi-torneo-throw-throw-burrito/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/jalisco-maxi-nachos-weekend/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/settembre-magie-viaggi-e-13-anni-di-keik/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/eventi-halloween-modena/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/ottobre-eventi-e-viaggi-col-gusto/?$ https://keik.it/eventi.html [R=301,L,NC]
+
+# Privacy e policy Shopify
+RewriteRule ^pages/gdpr-compliance/?$ https://www.iubenda.com/privacy-policy/680124 [R=301,L,NC]
+RewriteRule ^policies/privacy-policy/?$ https://www.iubenda.com/privacy-policy/680124 [R=301,L,NC]
+RewriteRule ^policies/(.*)$ https://keik.it/ [R=301,L,NC]
+
+# Altre pagine, negozio, blog e account Shopify -> home
+RewriteRule ^pages/(.*)$ https://keik.it/ [R=301,L,NC]
+RewriteRule ^(products|collections|blogs|cart|account|checkouts?|search|apps)(/.*)?$ https://keik.it/ [R=301,L,NC]
+
+# --- 2. Sempre https://keik.it (senza www) ---
+RewriteCond %{HTTP_HOST} ^www\.keik\.it$ [NC]
+RewriteRule ^(.*)$ https://keik.it/$1 [R=301,L,NE]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://keik.it/$1 [R=301,L,NE]
+
+# --- 3. Indirizzi corti: /brunch apre /brunch.html ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([a-z0-9-]+)/?$ $1.html [L]
+</IfModule>
+
+# Sicurezza di base
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Strict-Transport-Security "max-age=31536000"
+<FilesMatch "\.html$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+<FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|woff2?|ico)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+<FilesMatch "\.(js|css)$">
+Header set Cache-Control "public, max-age=86400"
+</FilesMatch>
+</IfModule>
+
+# Compressione
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>

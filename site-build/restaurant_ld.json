@@ -1,0 +1,72 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "@id": "https://keik.it/#restaurant",
+ "name": "KEIK",
+ "alternateName": "KEIK All Day Kitchen",
+ "slogan": "Viaggia col gusto",
+ "url": "https://keik.it/",
+ "logo": "https://keik.it/assets/img/cea731796bb98fc55bef3bb8e7c4505e.png",
+ "image": "https://keik.it/assets/img/og/home.jpg",
+ "telephone": "+39 059 8396468",
+ "email": "hello@keik.it",
+ "foundingDate": "2013",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Via Canalino 51",
+  "postalCode": "41121",
+  "addressLocality": "Modena",
+  "addressRegion": "MO",
+  "addressCountry": "IT"
+ },
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Sunday"
+   ],
+   "opens": "10:00",
+   "closes": "20:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Friday",
+    "Saturday"
+   ],
+   "opens": "10:00",
+   "closes": "22:00"
+  }
+ ],
+ "servesCuisine": [
+  "Internazionale",
+  "Brunch",
+  "Americana",
+  "Venezuelana"
+ ],
+ "priceRange": "€€",
+ "acceptsReservations": "https://pnssm.pro/a16isyw",
+ "hasMenu": "https://keik.it/menu.html",
+ "sameAs": [
+  "https://www.instagram.com/keikmodena/",
+  "https://www.facebook.com/keikmodena",
+  "https://www.tripadvisor.it/Restaurant_Review-g187803-d6542466-Reviews-KEIK-Modena_Province_of_Modena_Emilia_Romagna.html",
+  "https://share.google/3D0NyUfWyyXjkdPZm"
+ ],
+ "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 44.6440409,
+  "longitude": 10.9269378
+ },
+ "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJayM80xTvf0cRbOhwX2c9Syo",
+ "award": [
+  "Tripadvisor Travellers’ Choice 2023",
+  "Tripadvisor Travellers’ Choice 2024",
+  "Tripadvisor Travellers’ Choice 2025",
+  "Tripadvisor Travellers’ Choice 2026"
+ ]
+}
