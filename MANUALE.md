@@ -25,6 +25,8 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - L'asterisco `*` sui piatti = "prodotto surgelato all'origine".
 - Senza glutine: sempre la nota "può contenere tracce, non adatto ai celiaci".
 - Nella pagina "Verifiche ancora necessarie" non toccare niente.
+- Capitano Brady (chat per i QR dei poster): vedi `BRADY.md`. I suoi file si cambiano solo in `brady/`, mai direttamente su FastComet. Ogni volta che cambia la pagina Eventi, aggiornare anche `brady/sito/dati/eventi.json` (e, se serve, `brady/solo-keikit/dati/privato/crispy-gusti.json`).
+- Il file `brady-config.php` (chiave API) sta su FastComet **fuori** da `public_html` (`/home/keikbake/`): non va mai su GitHub, non va sovrascritto.
 - Font: Montserrat, Big Shoulders Display, Space Mono, Caveat (ospitati sul sito). Mermaid e Local Brewery non hanno licenza web: non usarli.
 
 ## Cartelle
@@ -34,7 +36,9 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - `imgcache/`: versioni leggere delle foto (`<codice>-480.webp`, `-960.webp`) + `manifest.json` con larghezza e altezza.
 - `og/`: immagini di anteprima per i social.
 - `site-build/build.py`: costruisce il sito. `prerender.js`: scrive l'HTML finale (per Google). `dict_all.json`: traduzioni. `restaurant_ld.json`: dati del ristorante per Google (orari, premi...). `prod_extra/`: file solo per keik.it (`.htaccess` con i rimandi da Shopify, `robots.txt`, `sitemap.xml`, `llms.txt`).
-- `deploy/aggiorna-keik.sh`: lo script che gira su FastComet (cron ogni 5 minuti).
+- `brady/`: il Capitano Brady. `brady/sito/` va in anteprima e su keik.it (pagina `brady.html`, script, foto, `dati/eventi.json`); `brady/solo-keikit/` va solo su keik.it (ponte `api/brady.php`, `dati/privato/` bloccata al web). Istruzioni in `BRADY.md`.
+- `deploy/aggiorna-keik.sh`: lo script che gira su FastComet (cron ogni 5 minuti). Copia il ramo `keik-it` in `public_html` con `rsync --delete`: tutto ciò che non è nel ramo (e non è nella lista KEEP) viene cancellato dal server. Per questo ogni file del sito, Brady compreso, deve stare nel laboratorio.
+: lo script che gira su FastComet (cron ogni 5 minuti).
 - `prepara.sh`, `costruisci.sh`, `pubprod.sh`: comandi di lavoro (sotto).
 
 ## Come si lavora (per Claude)
@@ -58,8 +62,9 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 
 ## Da fare / in sospeso
 
-- Eventi: la pagina passa da ottobre a novembre da sola il 1/11; entro inizio dicembre serve la pagina di dicembre. Dopo novembre togliere la riga Merenda Social Club dalla home.
+- Eventi: la pagina passa da ottobre a novembre da sola il 1/11; entro inizio dicembre serve la pagina di dicembre, e con lei `brady/sito/dati/eventi.json` di dicembre. Dopo novembre togliere la riga Merenda Social Club dalla home.
 - Zone Editor: rimettere su `192.250.229.195` le righe `cpanel`, `webmail`, `ftp`, `whm`, `webdisk`, `cpcalendars`, `cpcontacts` (oggi puntano ancora a Shopify).
 - Fra 2–3 settimane dalla migrazione (27/10/2026): togliere il dominio da Shopify, chiudere il piano, cancellare `public_html-backup-2026-10-27` su FastComet.
+- Brady: aggiungere su iubenda il fornitore Anthropic (assistente informativo sul sito). Su FastComet si possono eliminare le copie `*.prima-di-brady` (eventi.html e i18n). La pull request #1 (ramo `brady-capitano`) è stata riportata nel laboratorio il 3/11/2026: si può chiudere senza unirla.
 - Domande aperte per Elena: prezzo delle sole patatine Crispy; interpretazione del "menu in sei atti".
 - Idee: sezione "Torte e box" nella pagina Pomeriggio; pagine statiche in inglese; FAQ/schema nelle pagine dei momenti.

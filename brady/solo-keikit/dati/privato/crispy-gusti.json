@@ -1,0 +1,29 @@
+{
+  "_nota": "Gusti del Crispy Friday. Brady li dice solo dopo la data 'svelato_dal'. Questa cartella non è leggibile dal web (vedi .htaccess).",
+  "gusti": [
+    {
+      "venerdi": "2026-11-06",
+      "gusto": "Carbonara",
+      "descrizione": "patatine con crema carbonara e guanciale croccante",
+      "svelato_dal": "2026-11-04T10:00:00+01:00"
+    },
+    {
+      "venerdi": "2026-11-13",
+      "gusto": "Modenese",
+      "descrizione": "patatine impanate al formaggio con fili di aceto balsamico",
+      "svelato_dal": "2026-11-11T10:00:00+01:00"
+    },
+    {
+      "venerdi": "2026-11-20",
+      "gusto": "Tostones venezuelani",
+      "descrizione": "tostones con salsa guasacaca",
+      "svelato_dal": "2026-11-18T10:00:00+01:00"
+    },
+    {
+      "venerdi": "2026-11-27",
+      "gusto": "Coreane",
+      "descrizione": "patatine con salsa honey-gochujang, semi tostati e cipollotto",
+      "svelato_dal": "2026-11-25T10:00:00+01:00"
+    }
+  ]
+}
