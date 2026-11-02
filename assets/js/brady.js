@@ -8,6 +8,8 @@
   const API = window.BRADY_API || 'api/brady.php';
   const LANGS = ['it', 'en', 'es', 'fr'];
   const LOC = { it: 'it-IT', en: 'en-GB', es: 'es-ES', fr: 'fr-FR' };
+  // Da quale poster arriva il cliente (?da=bacheca|muro|bancone): finisce nel messaggio WhatsApp
+  const DA = ((location.search.match(/[?&]da=([a-z0-9-]{1,20})/) || [])[1]) || '';
 
   const pad = (n) => String(n).padStart(2, '0');
   const d0 = new Date();
@@ -160,7 +162,7 @@
     if (s.date && !(ev.date && ev.date.length === 1)) t += `, ${fmt(s.date)}`;
     if (s.turno) t += `, turno delle ${s.turno}`;
     t += `, ${p}.`;
-    return `${t}\n(via Capitano Brady)`;
+    return `${t}\n(via Capitano Brady${DA ? ' · ' + DA : ''})`;
   }
   function renderTicket(b) {
     const u = T[lang];
