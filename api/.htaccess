@@ -1,0 +1,5 @@
+# Dalla cartella api si può raggiungere solo il ponte di Brady.
+Options -Indexes
+<FilesMatch "^(?!brady\.php$).+$">
+  Require all denied
+</FilesMatch>
