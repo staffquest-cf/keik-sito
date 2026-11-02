@@ -42,7 +42,8 @@ function carica_config(): array {
 }
 
 $cfg = carica_config();
-$chiave = (string)($cfg['anthropic_api_key'] ?? '');
+$chiave = trim((string)($cfg['anthropic_api_key'] ?? ''));
+if ($chiave === 'INCOLLA-QUI') $chiave = '';
 $modello = (string)($cfg['model'] ?? 'claude-haiku-5-5');
 $max_ip = (int)($cfg['max_messaggi_per_ip_10min'] ?? 20);
 $max_giorno = (int)($cfg['max_messaggi_al_giorno'] ?? 1500);
