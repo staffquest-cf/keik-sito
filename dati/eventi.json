@@ -1,0 +1,114 @@
+{
+  "_nota": "Fonte unica degli eventi per il Capitano Brady. Ogni mese aggiorna solo questo file: date, testi, prezzi e link dei moduli di prenotazione.",
+  "aggiornato": "2026-11-02",
+  "mese": "novembre 2026",
+  "destinazione": "Stati Uniti",
+  "whatsapp": "393534732354",
+  "eventi": [
+    {
+      "id": "crispy",
+      "titolo": "Crispy Friday",
+      "date": [
+        "2026-11-06",
+        "2026-11-13",
+        "2026-11-20",
+        "2026-11-27"
+      ],
+      "quando": "Ogni venerdì di novembre (6, 13, 20, 27), dalle 17:00 alle 22:00",
+      "descrizione": "Ogni venerdì di novembre un gusto speciale di patatine crispy per l'aperitivo: un piccolo giro del mondo, con un paese diverso ogni settimana. Il gusto resta segreto fino al mercoledì prima alle 10.",
+      "dettagli": [
+        "Aperitivo Crispy: patatine del venerdì + un drink 12,90 €",
+        "Con Mango Mimosa o gin tonic 14,90 €",
+        "Il gusto della settimana si svela il mercoledì prima alle 10, sulla pagina Eventi"
+      ],
+      "modulo": "https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW",
+      "whatsapp_testo": "Ciao KEIK! Vorrei prenotare un tavolo per il Crispy Friday"
+    },
+    {
+      "id": "lingua",
+      "titolo": "Aperitivo in lingua",
+      "date": [
+        "2026-11-19"
+      ],
+      "quando": "Giovedì 19 novembre, dalle 19:00 alle 22:00",
+      "descrizione": "Torna l'Aperitivo in lingua, nella Giornata mondiale del saluto (World Hello Day): tavoli in spagnolo e in italiano per conoscere persone nuove e allenare la lingua, con il tagliere e la musica giusta.",
+      "dettagli": [
+        "Tavoli in spagnolo e in italiano",
+        "Tagliere Il Turista + sangria a 14,90 € a persona (con altri drink 16,90 €)",
+        "Karaoke al tavolo in spagnolo, con la playlist e i testi su Spotify",
+        "Apertura straordinaria fino alle 22:00 · prenotazione consigliata"
+      ],
+      "modulo": "https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=58ayJR",
+      "whatsapp_testo": "Ciao KEIK! Vorrei prenotare l'Aperitivo in lingua di giovedì 19 novembre"
+    },
+    {
+      "id": "friendsgiving",
+      "titolo": "Friendsgiving",
+      "date": [
+        "2026-11-26"
+      ],
+      "quando": "Giovedì 26 novembre, 2 turni: 19:00 e 21:00",
+      "turni": [
+        "19:00",
+        "21:00"
+      ],
+      "stato": "posti limitati",
+      "descrizione": "La cena del Ringraziamento a tema Friends, con il menu in sei atti: un piatto per ogni friend. Al tavolo c'è anche il quiz \"Che friend sei?\". Per l'occasione restiamo aperti fino alle 23:00.",
+      "dettagli": [
+        "Benvenuto \"Pivot!\": mocktail alla mela, lime e spezie",
+        "Starter a scelta: Phoebe's Veggie (hummus speziato, falafel e semi tostati, 100% vegan), Joey's Snack Attack (polpette in salsa rossa messicana) o Chandler's Mac & Cheese (mini cocotte gratinata)",
+        "Monica's Thanksgiving Special: tacchino al forno con pannocchie grigliate, patate dolci, cranberry sauce e biscuits",
+        "Rachel's Dessert… rivisitato: banana bread con gelato alla crema e caramello salato",
+        "36,90 € a persona · 20 posti per turno · prenotazione obbligatoria"
+      ],
+      "modulo": "https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=QLRP7p",
+      "whatsapp_testo": "Ciao KEIK! Vorrei prenotare il Friendsgiving di giovedì 26 novembre"
+    },
+    {
+      "id": "giftcard",
+      "titolo": "Gift card del Black Friday",
+      "date": [
+        "2026-11-26",
+        "2026-11-27"
+      ],
+      "quando": "Giovedì 26 e venerdì 27 novembre, solo in cassa",
+      "descrizione": "Regala un gennaio da KEIK: carte regalo a tema natalizio che valgono più di quanto le paghi. Solo per due giorni e solo 60 carte.",
+      "dettagli": [
+        "Paghi 25 €, ricevi 35 € · paghi 50 €, ricevi 75 €",
+        "Solo 60 carte, fino a esaurimento · massimo 2 a persona",
+        "Da usare dal 1 al 31 gennaio 2027, tutti i giorni, consumando da noi",
+        "Non si prenota: si compra in cassa in Via Canalino 51"
+      ],
+      "modulo": null,
+      "whatsapp_testo": "Ciao KEIK! Vorrei informazioni sulle gift card del Black Friday"
+    },
+    {
+      "id": "panino",
+      "titolo": "Il panino del giorno dopo",
+      "date": [
+        "2026-11-27"
+      ],
+      "quando": "Solo venerdì 27 novembre, a pranzo",
+      "stato": "edizione limitata",
+      "descrizione": "Il Moist Maker, il panino di Ross con il tacchino del Ringraziamento: potato bun, tacchino, salsa cranberry e, al centro, la fetta di pane imbevuta di gravy. Edizione limitata, solo per il pranzo del giorno dopo il Ringraziamento.",
+      "dettagli": [
+        "Potato bun, tacchino, salsa cranberry e la fetta di pane al gravy",
+        "11,90 €",
+        "Solo venerdì 27 novembre, a pranzo"
+      ],
+      "modulo": "https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=ULHn9C",
+      "whatsapp_testo": "Ciao KEIK! Vorrei prenotare il pranzo con il panino del giorno dopo"
+    }
+  ],
+  "feste_private": {
+    "id": "festa",
+    "titolo": "Festa privata",
+    "descrizione": "Compleanni, lauree, serate con i colleghi: prepariamo tavolo, taglieri e la torta dal nostro laboratorio.",
+    "dettagli": [
+      "Da 7 persone in su, si organizza tutto su WhatsApp",
+      "Formula Il Turista + drink a 16,90 € a testa",
+      "Torta su ordinazione con almeno 3 giorni di preavviso"
+    ],
+    "whatsapp_testo": "Ciao KEIK! Vorrei organizzare una festa"
+  }
+}
