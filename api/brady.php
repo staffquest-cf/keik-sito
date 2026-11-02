@@ -152,6 +152,30 @@ $corpo = [
     'max_tokens' => 700,
     'system' => [['type' => 'text', 'text' => $sistema, 'cache_control' => ['type' => 'ephemeral']]],
     'messages' => $messaggi,
+    'tools' => [[
+        'name' => 'rispondi',
+        'description' => 'Invia la risposta di Brady al cliente.',
+        'input_schema' => [
+            'type' => 'object',
+            'properties' => [
+                'reply' => ['type' => 'string', 'description' => 'Testo per il cliente'],
+                'lang' => ['type' => 'string', 'enum' => ['it', 'en', 'es', 'fr']],
+                'booking' => [
+                    'type' => ['object', 'null'],
+                    'properties' => [
+                        'event' => ['type' => 'string', 'enum' => IDS_PRENOTABILI],
+                        'date' => ['type' => ['string', 'null'], 'description' => 'AAAA-MM-GG'],
+                        'turno' => ['type' => ['string', 'null'], 'description' => 'HH:MM'],
+                        'persone' => ['type' => ['integer', 'null']],
+                    ],
+                    'required' => ['event'],
+                ],
+                'chips' => ['type' => 'array', 'items' => ['type' => 'string'], 'maxItems' => 3],
+            ],
+            'required' => ['reply', 'lang', 'booking', 'chips'],
+        ],
+    ]],
+    'tool_choice' => ['type' => 'tool', 'name' => 'rispondi'],
 ];
 $ch = curl_init($api_url);
 curl_setopt_array($ch, [
@@ -176,10 +200,14 @@ if ($risposta === false || $codice < 200 || $codice >= 300) {
 }
 $api = json_decode((string)$risposta, true);
 $testo = '';
-foreach (($api['content'] ?? []) as $blocco) if (($blocco['type'] ?? '') === 'text') $testo .= $blocco['text'];
+$json = null;
+foreach (($api['content'] ?? []) as $blocco) {
+    if (($blocco['type'] ?? '') === 'tool_use' && is_array($blocco['input'] ?? null)) $json = $blocco['input'];
+    if (($blocco['type'] ?? '') === 'text') $testo .= $blocco['text'];
+}
 
 /* ---------- Lettura della risposta di Brady ---------- */
-$json = json_decode(trim($testo), true);
+if (!is_array($json)) $json = json_decode(trim($testo), true);
 if (!is_array($json)) {
     $a = strpos($testo, '{'); $b = strrpos($testo, '}');
     if ($a !== false && $b !== false && $b > $a) $json = json_decode(substr($testo, $a, $b - $a + 1), true);
