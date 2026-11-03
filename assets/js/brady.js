@@ -101,7 +101,7 @@
       if (/tavolo|table|mesa|brunch|pranzo|lunch|almuerzo|déjeuner|aperitivo|apéro/.test(t)) return { reply: f.ticket, booking: { event: 'tavolo' } };
       return { reply: f.which, chips: events().filter((e) => e.modulo && !gone(e)).map((e) => f.book + e.titolo).slice(0, 3) };
     }
-    if (ev) return { reply: pick === 'festa' ? `${ev.descrizione}\n${ev.dettagli.join('\n')}` : eventInfo(ev), chips: pick !== 'giftcard' ? [f.book + ev.titolo] : null };
+    if (ev) return { reply: pick === 'festa' ? `${ev.descrizione}\n${ev.dettagli.join('\n')}` : eventInfo(ev), booking: (ev.modulo || pick === 'festa') && !gone(ev) ? { event: pick } : null };
     if (/mese|month|mes\b|mois|eventi|events|eventos|événements|cosa c'|what's on|qué hay|programma/.test(t)) {
       const list = events().filter((e) => !gone(e));
       return { reply: list.map((e) => `${e.titolo} · ${e.quando}`).join('\n') || f.unknown, chips: list.filter((e) => e.modulo).slice(0, 2).map((e) => f.book + e.titolo) };
@@ -169,18 +169,17 @@
     const u = T[lang];
     const ev = b.event === 'tavolo' ? { id: 'tavolo', titolo: u.table, modulo: 'prenota.html' } : byId(b.event);
     if (!ev || (ev.date && !future(ev).length)) return;
+    if (!ev.modulo && b.event !== 'festa') return;   // es. gift card: non si prenota
     const k = ++tid, days = ev.date ? future(ev) : null;
+    // Data, turno e persone non si scelgono sulla carta (si mettono nel modulo Pienissimo):
+    // finiscono nel messaggio WhatsApp solo se il cliente li ha detti in chat
     const s = {
       event: b.event,
-      date: days ? (days.includes(b.date) ? b.date : days[0]) : (b.date && b.date >= TODAY ? b.date : ''),
-      turno: ev.turni ? (ev.turni.includes(b.turno) ? b.turno : ev.turni[0]) : null,
+      date: days ? (days.includes(b.date) ? b.date : '') : (b.date && b.date >= TODAY ? b.date : ''),
+      turno: ev.turni && ev.turni.includes(b.turno) ? b.turno : null,
       // Il numero di persone non si chiede sulla carta (lo chiede il modulo Pienissimo): entra nel messaggio WhatsApp solo se il cliente l'ha detto in chat
       persone: parseInt(b.persone, 10) > 0 ? Math.min(80, parseInt(b.persone, 10)) : null
     };
-    let dateField = '';
-    if (days && days.length > 1) dateField = `<select id="t${k}-date">${days.map((d) => `<option value="${d}"${d === s.date ? ' selected' : ''}>${esc(fmt(d, lang))}</option>`).join('')}</select>`;
-    else if (days) dateField = `<strong>${esc(fmt(s.date, lang))}</strong>`;
-    else dateField = `<input type="date" id="t${k}-date" min="${TODAY}" value="${s.date}">`;
     const card = document.createElement('div');
     card.className = 'b-ticket';
     card.innerHTML = `
@@ -188,26 +187,13 @@
       <div class="b-body">
         <h3>${esc(ev.titolo)}</h3>
         ${ev.quando ? `<p class="b-when">${esc(ev.quando)}</p>` : ''}
-        <div class="b-fields">
-          ${days && days.length === 1 ? '' : `<label class="b-field"><span>${esc(u.data)}</span>${dateField}</label>`}
-          ${ev.turni ? `<div class="b-field"><span>${esc(u.turno)}</span><div class="b-seg">${ev.turni.map((t) => `<button type="button" aria-pressed="${t === s.turno}" data-t="${t}">${t}</button>`).join('')}</div></div>` : ''}
-        </div>
         <div class="b-ctas">
           ${ev.modulo ? `<a class="b-cta" href="${esc(ev.modulo)}" target="_blank" rel="noopener">${esc(u.form)}</a>` : ''}
           <a class="${ev.modulo ? 'b-cta2' : 'b-cta'}" id="t${k}-wa" target="_blank" rel="noopener">${esc(u.wa)}</a>
         </div>
         <p class="b-small">${esc(u.note)} WhatsApp ${WA_SHOW}</p>
       </div>`;
-    const wa = card.querySelector(`#t${k}-wa`);
-    const update = () => { wa.href = `https://wa.me/${WA}?text=${encodeURIComponent(waText(s, ev))}`; };
-    const dEl = card.querySelector(`#t${k}-date`);
-    if (dEl) dEl.addEventListener('change', () => { s.date = dEl.value; update(); });
-    card.querySelectorAll('.b-seg button').forEach((btn) => btn.addEventListener('click', () => {
-      s.turno = btn.dataset.t;
-      card.querySelectorAll('.b-seg button').forEach((x) => x.setAttribute('aria-pressed', String(x === btn)));
-      update();
-    }));
-    update();
+    card.querySelector(`#t${k}-wa`).href = `https://wa.me/${WA}?text=${encodeURIComponent(waText(s, ev))}`;
     log.append(card);
     log.scrollTop = Math.max(0, card.offsetTop - log.offsetTop - 70);
   }
@@ -250,6 +236,11 @@
       if (r && (r.error === 'troppi_messaggi' || r.error === 'limite_giornaliero' || r.error === 'occupato')) res.reply = T[lang].busy + '\n\n' + res.reply;
     }
     addMsg('bot', res.reply);
+    if (!res.booking && /carta d.imbarco|boarding pass|tarjeta de embarque|carte d.embarquement/i.test(res.reply)) {
+      const low = (res.reply + ' ' + text).toLowerCase();
+      const hit = events().filter((e) => e.modulo && !gone(e) && low.includes(e.titolo.toLowerCase()));
+      if (hit.length === 1) res.booking = { event: hit[0].id };
+    }
     if (res.booking) renderTicket(res.booking);
     busy = false; sendBtn.disabled = false;
     if (window.matchMedia && matchMedia('(hover: hover)').matches) input.focus();
