@@ -31,7 +31,7 @@
       hello: () => "Ciao! Sono il Capitano Brady. Chiedimi degli eventi del mese o dimmi cosa vuoi prenotare: ti preparo la carta d'imbarco.",
       thinking: 'Il capitano controlla la rotta…', pass: "Carta d'imbarco", data: 'Data', turno: 'Turno', persone: 'Persone',
       form: 'Prenota il tuo posto', wa: 'Scrivi su WhatsApp', table: 'Prenota un tavolo',
-      note: 'Il posto è confermato quando ricevi la conferma di KEIK.', all: "Cosa c'è questo mese?", party: 'Voglio fare una festa', book: 'Prenota ',
+      note: 'Il posto è confermato quando ricevi la conferma di KEIK.', all: "Cosa c'è questo mese?", party: 'Voglio fare una festa', book: 'Prenota ', tableQ: 'Prenota un tavolo', hoursQ: 'Orari e cena',
       which: 'Volentieri. Per quale evento?', gift: 'La gift card del Black Friday non si prenota: si compra in cassa il 26 e 27 novembre, fino a esaurimento.',
       ticket: "Ecco la carta d'imbarco: il pulsante ti porta al modulo giusto. Se preferisci, c'è anche WhatsApp.",
       unknown: `Questa preferisco chiederla allo staff, così non ti racconto rotte inventate. Scrivi su WhatsApp al ${WA_SHOW}.`,
@@ -41,7 +41,7 @@
       hello: () => "Hi! I'm Captain Brady. Ask me about this month's events or tell me what you'd like to book: I'll prepare your boarding pass.",
       thinking: 'The captain is checking the route…', pass: 'Boarding pass', data: 'Date', turno: 'Seating', persone: 'Guests',
       form: 'Book your seat', wa: 'Message on WhatsApp', table: 'Book a table',
-      note: 'Your seat is confirmed once KEIK confirms it.', all: "What's on this month?", party: 'Private party', book: 'Book ',
+      note: 'Your seat is confirmed once KEIK confirms it.', all: "What's on this month?", party: 'Private party', book: 'Book ', tableQ: 'Book a table', hoursQ: 'Opening hours',
       which: 'Happy to. Which event?', gift: "The Black Friday gift card can't be booked: you buy it at the till on 26 and 27 November, while they last.",
       ticket: "Here's your boarding pass: the button takes you to the right booking form. WhatsApp works too.",
       unknown: `I'd rather ask the staff than make up a route. Message them on WhatsApp at ${WA_SHOW}.`,
@@ -51,7 +51,7 @@
       hello: () => '¡Hola! Soy el Capitán Brady. Pregúntame por los eventos del mes o dime qué quieres reservar: te preparo la tarjeta de embarque.',
       thinking: 'El capitán está revisando la ruta…', pass: 'Tarjeta de embarque', data: 'Fecha', turno: 'Turno', persone: 'Personas',
       form: 'Reserva tu plaza', wa: 'Escribir por WhatsApp', table: 'Reservar mesa',
-      note: 'Tu plaza está confirmada cuando KEIK te la confirma.', all: '¿Qué hay este mes?', party: 'Fiesta privada', book: 'Reservar ',
+      note: 'Tu plaza está confirmada cuando KEIK te la confirma.', all: '¿Qué hay este mes?', party: 'Fiesta privada', book: 'Reservar ', tableQ: 'Reservar una mesa', hoursQ: 'Horarios y cena',
       which: 'Claro. ¿Para qué evento?', gift: 'La gift card del Black Friday no se reserva: se compra en caja el 26 y 27 de noviembre, hasta agotar existencias.',
       ticket: 'Aquí tienes tu tarjeta de embarque: el botón te lleva al formulario correcto. También puedes usar WhatsApp.',
       unknown: `Prefiero preguntárselo al equipo antes que inventar una ruta. Escríbeles por WhatsApp al ${WA_SHOW}.`,
@@ -61,7 +61,7 @@
       hello: () => "Bonjour ! Je suis le Capitaine Brady. Demandez-moi les événements du mois ou ce que vous voulez réserver : je prépare votre carte d'embarquement.",
       thinking: 'Le capitaine vérifie la route…', pass: "Carte d'embarquement", data: 'Date', turno: 'Service', persone: 'Personnes',
       form: 'Réserver ma place', wa: 'Écrire sur WhatsApp', table: 'Réserver une table',
-      note: 'Votre place est confirmée quand KEIK vous la confirme.', all: 'Quoi de neuf ce mois-ci ?', party: 'Fête privée', book: 'Réserver ',
+      note: 'Votre place est confirmée quand KEIK vous la confirme.', all: 'Quoi de neuf ce mois-ci ?', party: 'Fête privée', book: 'Réserver ', tableQ: 'Réserver une table', hoursQ: 'Horaires et dîner',
       which: 'Avec plaisir. Pour quel événement ?', gift: "La gift card du Black Friday ne se réserve pas : elle s'achète en caisse les 26 et 27 novembre, dans la limite des stocks.",
       ticket: "Voici votre carte d'embarquement : le bouton mène au bon formulaire. WhatsApp marche aussi.",
       unknown: `Je préfère demander à l'équipe plutôt qu'inventer une route. Écrivez-leur sur WhatsApp au ${WA_SHOW}.`,
@@ -124,7 +124,18 @@
   } catch (e) { /* storage non disponibile */ }
 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const linkify = (s) => esc(s).replace(/https:\/\/[^\s<]+[^\s<.,;:!?)]/g, (u) => `<a href="${u}" target="_blank" rel="noopener">${u.replace(/^https:\/\//, '')}</a>`);
+  // Link nelle risposte: indirizzi https, pagine di keik.it scritte senza https, numero WhatsApp e telefono.
+  // Tutto si apre in un'altra scheda, così la chat resta aperta.
+  const RX_LINK = /(https?:\/\/[^\s<]+[^\s<.,;:!?)»"']|\b(?:www\.)?keik\.it(?:\/[^\s<]*[^\s<.,;:!?)»"'])?|(?:\+39\s?)?\b3\d{2}\s?\d{3}\s?\d{4}\b|\b05\d\s?\d{6,7}\b)/g;
+  const linkLabel = (u) => /wa\.me\//.test(u) ? WA_SHOW : /maps\.google\.|google\.[a-z.]+\/maps/.test(u) ? 'Google Maps' : u.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\.html(?=$|[?#])/, '').replace(/\/$/, '');
+  const linkify = (s) => esc(s).replace(RX_LINK, (m) => {
+    if (/^05/.test(m)) return `<a href="tel:+39${m.replace(/\D/g, '')}">${m}</a>`;
+    let href = m, text = m;
+    if (/^https?:/.test(m)) text = linkLabel(m);
+    else if (/keik\.it/.test(m)) { href = 'https://' + m.replace(/^www\./, ''); text = linkLabel(href); }
+    else href = 'https://wa.me/39' + m.replace(/\D/g, '').replace(/^39(?=\d{10})/, '');
+    return `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
+  });
   const scrollDown = () => { log.scrollTop = log.scrollHeight; };
 
   function addMsg(role, text) {
@@ -141,7 +152,7 @@
   function setChips(list) {
     if (!chipsEl) return;
     chipsEl.textContent = '';
-    (list || []).slice(0, 4).forEach((c) => {
+    (list || []).slice(0, 5).forEach((c) => {
       if (!c || typeof c !== 'string') return;
       const b = document.createElement('button');
       b.type = 'button'; b.className = 'b-chip'; b.textContent = c.slice(0, 60);
@@ -152,7 +163,7 @@
   function defaultChips() {
     const f = T[lang];
     const next = events().find((e) => e.modulo && !gone(e));
-    return [f.all, next && f.book + next.titolo, f.party].filter(Boolean);
+    return [f.all, next && f.book + next.titolo, f.hoursQ, f.tableQ, f.party].filter(Boolean);
   }
 
   /* ---------- Carta d'imbarco ---------- */
@@ -242,6 +253,9 @@
       if (hit.length === 1) res.booking = { event: hit[0].id };
     }
     if (res.booking) renderTicket(res.booking);
+    // Domande pronte: quelle proposte da Brady, altrimenti quelle di base (senza ripetere quella appena fatta)
+    const ask = text.toLowerCase();
+    setChips((res.chips && res.chips.length ? res.chips : defaultChips()).filter((c) => c && c.toLowerCase() !== ask));
     busy = false; sendBtn.disabled = false;
     if (window.matchMedia && matchMedia('(hover: hover)').matches) input.focus();
   }
@@ -255,6 +269,7 @@
     input.placeholder = T[lang].ph;
     sendBtn.setAttribute('aria-label', T[lang].send);
     addMsg('bot', T[lang].hello(DATA));
+    setChips(defaultChips());
     const q = (location.search.match(/[?&]chiedi=([^&]+)/) || [])[1];
     if (q) { try { send(decodeURIComponent(q.replace(/\+/g, ' '))); } catch (e) { /* ignora */ } }
   }
