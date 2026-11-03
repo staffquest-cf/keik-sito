@@ -67,5 +67,5 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - SSL keik.it (Let's Encrypt con AutoSSL): il certificato attuale scade il 26/11/2026. Il 3/11 è stato tolto dal Zone Editor il record AAAA di keik.it che puntava ancora a Shopify (bloccava il rinnovo e mandava su Shopify chi si collega in IPv6); ora keik.it, www e mail superano il controllo. Sempre il 3/11 cpanel, webmail, ftp, whm, webdisk, cpcalendars, cpcontacts sono stati rimessi su `192.250.229.195` (`app.keik.it` punta ancora a Shopify, lasciato com'è). Verso il 20/11 controllare che il certificato nuovo sia installato (cPanel → SSL/TLS Status).
 - Fra 2–3 settimane dalla migrazione (27/10/2026): togliere il dominio da Shopify, chiudere il piano, cancellare `public_html-backup-2026-10-27` su FastComet.
 - Brady: aggiungere su iubenda il fornitore Anthropic (assistente informativo sul sito).
-- Domande aperte per Elena: prezzo delle sole patatine Crispy; interpretazione del "menu in sei atti".
+- Domande aperte per Elena: prezzo delle sole patatine Crispy.
 - Idee: sezione "Torte e box" nella pagina Pomeriggio; pagine statiche in inglese; FAQ/schema nelle pagine dei momenti.
