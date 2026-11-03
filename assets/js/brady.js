@@ -94,7 +94,7 @@
     if (wantsBook) {
       if (pick === 'giftcard') return { reply: f.gift };
       if (ev) {
-        const m = t.match(/(?:per|for|para|pour|siamo|we are|somos|nous sommes)\s+(\d{1,2})\b|\b(\d{1,2})\s*(?:persone|people|personas|personnes|pax|ospiti|guests)/);
+        const m = t.match(/(?:per|for|para|pour|siamo(?: in)?|we are|somos|nous sommes)\s+(\d{1,2})\b|\b(\d{1,2})\s*(?:persone|people|personas|personnes|pax|ospiti|guests)/);
         const turno = /\b21(:00)?\b|9\s?pm/.test(t) ? '21:00' : (/\b19(:00)?\b|7\s?pm/.test(t) ? '19:00' : null);
         return { reply: f.ticket, booking: { event: pick, persone: m ? Number(m[1] || m[2]) : null, turno } };
       }
@@ -157,12 +157,12 @@
 
   /* ---------- Carta d'imbarco ---------- */
   function waText(s, ev) {
-    const n = s.persone, p = n === 1 ? '1 persona' : `${n} persone`;
     let t = ev.whatsapp_testo || 'Ciao KEIK!';
     if (s.event === 'tavolo') t = 'Ciao KEIK! Vorrei prenotare un tavolo';
     if (s.date && !(ev.date && ev.date.length === 1)) t += `, ${fmt(s.date)}`;
     if (s.turno) t += `, turno delle ${s.turno}`;
-    t += `, ${p}.`;
+    if (s.persone) t += s.persone === 1 ? ', 1 persona' : `, ${s.persone} persone`;
+    t += '.';
     return `${t}\n(via Capitano Brady${DA ? ' · ' + DA : ''})`;
   }
   function renderTicket(b) {
@@ -170,12 +170,12 @@
     const ev = b.event === 'tavolo' ? { id: 'tavolo', titolo: u.table, modulo: 'prenota.html' } : byId(b.event);
     if (!ev || (ev.date && !future(ev).length)) return;
     const k = ++tid, days = ev.date ? future(ev) : null;
-    const min = b.event === 'festa' ? 7 : 1, max = b.event === 'festa' ? 80 : 20;
     const s = {
       event: b.event,
       date: days ? (days.includes(b.date) ? b.date : days[0]) : (b.date && b.date >= TODAY ? b.date : ''),
       turno: ev.turni ? (ev.turni.includes(b.turno) ? b.turno : ev.turni[0]) : null,
-      persone: Math.min(max, Math.max(min, parseInt(b.persone, 10) || (b.event === 'festa' ? 10 : 2)))
+      // Il numero di persone non si chiede sulla carta (lo chiede il modulo Pienissimo): entra nel messaggio WhatsApp solo se il cliente l'ha detto in chat
+      persone: parseInt(b.persone, 10) > 0 ? Math.min(80, parseInt(b.persone, 10)) : null
     };
     let dateField = '';
     if (days && days.length > 1) dateField = `<select id="t${k}-date">${days.map((d) => `<option value="${d}"${d === s.date ? ' selected' : ''}>${esc(fmt(d, lang))}</option>`).join('')}</select>`;
@@ -191,7 +191,6 @@
         <div class="b-fields">
           ${days && days.length === 1 ? '' : `<label class="b-field"><span>${esc(u.data)}</span>${dateField}</label>`}
           ${ev.turni ? `<div class="b-field"><span>${esc(u.turno)}</span><div class="b-seg">${ev.turni.map((t) => `<button type="button" aria-pressed="${t === s.turno}" data-t="${t}">${t}</button>`).join('')}</div></div>` : ''}
-          <div class="b-field"><span>${esc(u.persone)}</span><div class="b-step"><button type="button" aria-label="−" data-d="-1">−</button><output id="t${k}-n">${s.persone}</output><button type="button" aria-label="+" data-d="1">+</button></div></div>
         </div>
         <div class="b-ctas">
           ${ev.modulo ? `<a class="b-cta" href="${esc(ev.modulo)}" target="_blank" rel="noopener">${esc(u.form)}</a>` : ''}
@@ -199,17 +198,14 @@
         </div>
         <p class="b-small">${esc(u.note)} WhatsApp ${WA_SHOW}</p>
       </div>`;
-    const wa = card.querySelector(`#t${k}-wa`), out = card.querySelector(`#t${k}-n`);
-    const update = () => { wa.href = `https://wa.me/${WA}?text=${encodeURIComponent(waText(s, ev))}`; out.textContent = s.persone; };
+    const wa = card.querySelector(`#t${k}-wa`);
+    const update = () => { wa.href = `https://wa.me/${WA}?text=${encodeURIComponent(waText(s, ev))}`; };
     const dEl = card.querySelector(`#t${k}-date`);
     if (dEl) dEl.addEventListener('change', () => { s.date = dEl.value; update(); });
     card.querySelectorAll('.b-seg button').forEach((btn) => btn.addEventListener('click', () => {
       s.turno = btn.dataset.t;
       card.querySelectorAll('.b-seg button').forEach((x) => x.setAttribute('aria-pressed', String(x === btn)));
       update();
-    }));
-    card.querySelectorAll('.b-step button').forEach((btn) => btn.addEventListener('click', () => {
-      s.persone = Math.min(max, Math.max(min, s.persone + Number(btn.dataset.d))); update();
     }));
     update();
     log.append(card);
