@@ -164,9 +164,9 @@ $corpo = [
                     'type' => ['object', 'null'],
                     'properties' => [
                         'event' => ['type' => 'string', 'enum' => IDS_PRENOTABILI],
-                        'date' => ['type' => ['string', 'null'], 'description' => 'AAAA-MM-GG'],
-                        'turno' => ['type' => ['string', 'null'], 'description' => 'HH:MM'],
-                        'persone' => ['type' => ['integer', 'null']],
+                        'date' => ['type' => ['string', 'null'], 'description' => 'AAAA-MM-GG, solo se detta dal cliente'],
+                        'turno' => ['type' => ['string', 'null'], 'description' => 'HH:MM, solo se detto dal cliente'],
+                        'persone' => ['type' => ['integer', 'null'], 'description' => 'Solo se detto dal cliente'],
                     ],
                     'required' => ['event'],
                 ],
