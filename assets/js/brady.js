@@ -80,15 +80,18 @@
   function eventInfo(e) {
     return `${e.titolo}: ${e.quando}.\n${e.descrizione}\n${(e.dettagli || []).join('\n')}`;
   }
-  function localAnswer(text, lang) {
-    const t = text.toLowerCase(), f = T[lang];
-    const pick =
+  function pickEvent(t) {
+    return (
       /friendsgiving|thanksgiving|ringraziamento|acci[oó]n de gracias|friends/.test(t) ? 'friendsgiving' :
       /crispy|patatin|fries|papas|patatas|frites/.test(t) ? 'crispy' :
       /lingua|language|idioma|langue|spagnol|spanish|español|intercambio|exchange|karaoke/.test(t) ? 'lingua' :
       /gift|regal|tarjeta|carte cadeau|black friday/.test(t) ? 'giftcard' :
       /panino|sandwich|bocadillo|moist maker|giorno dopo|day after/.test(t) ? 'panino' :
-      /festa|compleann|party|birthday|cumplea|fiesta|f[eê]te|anniversaire|laurea/.test(t) ? 'festa' : null;
+      /festa|compleann|party|birthday|cumplea|fiesta|f[eê]te|anniversaire|laurea/.test(t) ? 'festa' : null);
+  }
+  function localAnswer(text, lang) {
+    const t = text.toLowerCase(), f = T[lang];
+    const pick = pickEvent(t);
     const wantsBook = /prenot|book|reserv|réserv/.test(t);
     const ev = pick && byId(pick);
     if (wantsBook) {
@@ -247,10 +250,20 @@
       if (r && (r.error === 'troppi_messaggi' || r.error === 'limite_giornaliero' || r.error === 'occupato')) res.reply = T[lang].busy + '\n\n' + res.reply;
     }
     addMsg('bot', res.reply);
-    if (!res.booking && /carta d.imbarco|boarding pass|tarjeta de embarque|carte d.embarquement/i.test(res.reply)) {
-      const low = (res.reply + ' ' + text).toLowerCase();
-      const hit = events().filter((e) => e.modulo && !gone(e) && low.includes(e.titolo.toLowerCase()));
-      if (hit.length === 1) res.booking = { event: hit[0].id };
+    // Rete di sicurezza: se il cliente chiede di un evento prenotabile (o Brady nomina la carta) e la carta manca, la mostriamo
+    if (!res.booking) {
+      const q = text.toLowerCase();
+      const id = /friendsgiving|thanksgiving|ringraziamento|acci[oó]n de gracias/.test(q) ? 'friendsgiving' :
+        /crispy/.test(q) ? 'crispy' :
+        /aperitivo in lingua|language aperitivo|aperitivo de idiomas|intercambio|ap[ée]ro.{0,10}langue/.test(q) ? 'lingua' :
+        /moist maker|panino del giorno dopo|day.after|d[ií]a despu[ée]s|lendemain/.test(q) ? 'panino' : null;
+      const ev = id && byId(id);
+      if (ev && ev.modulo && !gone(ev)) res.booking = { event: id };
+      else if (/carta d.imbarco|boarding pass|tarjeta de embarque|carte d.embarquement/i.test(res.reply)) {
+        const low = (res.reply + ' ' + text).toLowerCase();
+        const hit = events().filter((e) => e.modulo && !gone(e) && low.includes(e.titolo.toLowerCase()));
+        if (hit.length === 1) res.booking = { event: hit[0].id };
+      }
     }
     if (res.booking) renderTicket(res.booking);
     // Domande pronte: quelle proposte da Brady, altrimenti quelle di base (senza ripetere quella appena fatta)
