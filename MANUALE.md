@@ -63,8 +63,9 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 ## Da fare / in sospeso
 
 - Eventi: la pagina passa da ottobre a novembre da sola il 1/11; entro inizio dicembre serve la pagina di dicembre, e con lei `brady/sito/dati/eventi.json` di dicembre. Dopo novembre togliere la riga Merenda Social Club dalla home.
+- SSL keik.it (Let's Encrypt con AutoSSL): il certificato attuale scade il 26/11/2026. Il 3/11 è stato tolto dal Zone Editor il record AAAA di keik.it che puntava ancora a Shopify (bloccava il rinnovo e mandava su Shopify chi si collega in IPv6); ora keik.it, www e mail superano il controllo. Verso il 20/11 controllare che il certificato nuovo sia installato (cPanel → SSL/TLS Status).
 - Zone Editor: rimettere su `192.250.229.195` le righe `cpanel`, `webmail`, `ftp`, `whm`, `webdisk`, `cpcalendars`, `cpcontacts` (oggi puntano ancora a Shopify).
 - Fra 2–3 settimane dalla migrazione (27/10/2026): togliere il dominio da Shopify, chiudere il piano, cancellare `public_html-backup-2026-10-27` su FastComet.
-- Brady: aggiungere su iubenda il fornitore Anthropic (assistente informativo sul sito). Su FastComet si possono eliminare le copie `*.prima-di-brady` (eventi.html e i18n). La pull request #1 (ramo `brady-capitano`) è stata riportata nel laboratorio il 3/11/2026: si può chiudere senza unirla.
+- Brady: aggiungere su iubenda il fornitore Anthropic (assistente informativo sul sito).
 - Domande aperte per Elena: prezzo delle sole patatine Crispy; interpretazione del "menu in sei atti".
 - Idee: sezione "Torte e box" nella pagina Pomeriggio; pagine statiche in inglese; FAQ/schema nelle pagine dei momenti.
