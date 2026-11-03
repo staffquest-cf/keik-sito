@@ -149,7 +149,7 @@ $sistema = strtr($istruzioni, [
 /* ---------- Chiamata all'API ---------- */
 $corpo = [
     'model' => $modello,
-    'max_tokens' => 700,
+    'max_tokens' => 500,
     'system' => [['type' => 'text', 'text' => $sistema, 'cache_control' => ['type' => 'ephemeral']]],
     'messages' => $messaggi,
     'tools' => [[
@@ -172,7 +172,7 @@ $corpo = [
                 ],
                 'chips' => ['type' => 'array', 'items' => ['type' => 'string'], 'maxItems' => 3],
             ],
-            'required' => ['reply', 'lang', 'booking', 'chips'],
+            'required' => ['reply', 'lang', 'booking'],
         ],
     ]],
     'tool_choice' => ['type' => 'tool', 'name' => 'rispondi'],
