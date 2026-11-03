@@ -26,6 +26,7 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - Senza glutine: sempre la nota "può contenere tracce, non adatto ai celiaci".
 - Nella pagina "Verifiche ancora necessarie" non toccare niente.
 - Capitano Brady (chat per i QR dei poster): vedi `BRADY.md`. I suoi file si cambiano solo in `brady/`, mai direttamente su FastComet. Ogni volta che cambia la pagina Eventi, aggiornare anche `brady/sito/dati/eventi.json` (e, se serve, `brady/solo-keikit/dati/privato/crispy-gusti.json`).
+- `brady.html` su keik.it riceve da `pubprod.sh` (con `deploy/brady-head.py`) gli stessi script iubenda + Analytics/Clarity delle altre pagine; il `noindex, nofollow` resta. Il pulsante "Chiedi al Capitano Brady" non va messo nella pagina Eventi.
 - Il file `brady-config.php` (chiave API) sta su FastComet **fuori** da `public_html` (`/home/keikbake/`): non va mai su GitHub, non va sovrascritto.
 - Font: Montserrat, Big Shoulders Display, Space Mono, Caveat (ospitati sul sito). Mermaid e Local Brewery non hanno licenza web: non usarli.
 

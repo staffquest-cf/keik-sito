@@ -28,44 +28,44 @@
   /* ---------- Testi ---------- */
   const T = {
     it: {
-      hello: (d) => `Buongiorno, qui il Capitano Brady dal gate di Via Canalino 51.${d && d.destinazione ? ` Destinazione del mese: ${d.destinazione}.` : ''} Chiedimi date, orari e prezzi degli eventi, oppure dimmi cosa vuoi prenotare e ti preparo la carta d'imbarco.\nI speak English · hablo español · je parle français.`,
+      hello: () => "Ciao! Sono il Capitano Brady. Chiedimi degli eventi del mese o dimmi cosa vuoi prenotare: ti preparo la carta d'imbarco.",
       thinking: 'Il capitano controlla la rotta…', pass: "Carta d'imbarco", data: 'Data', turno: 'Turno', persone: 'Persone',
       form: 'Prenota il tuo posto', wa: 'Scrivi su WhatsApp', table: 'Prenota un tavolo',
       note: 'Il posto è confermato quando ricevi la conferma di KEIK.', all: "Cosa c'è questo mese?", party: 'Voglio fare una festa', book: 'Prenota ',
       which: 'Volentieri. Per quale evento?', gift: 'La gift card del Black Friday non si prenota: si compra in cassa il 26 e 27 novembre, fino a esaurimento.',
       ticket: "Ecco la carta d'imbarco: il pulsante ti porta al modulo giusto. Se preferisci, c'è anche WhatsApp.",
       unknown: `Questa preferisco chiederla allo staff, così non ti racconto rotte inventate. Scrivi su WhatsApp al ${WA_SHOW}.`,
-      busy: 'Tanti passeggeri al gate in questo momento: ti rispondo con le informazioni di base.', gone: 'già partito', send: 'Invia', ph: 'Chiedi date, orari, prezzi… o cosa vuoi prenotare'
+      busy: 'Tanti passeggeri al gate in questo momento: ti rispondo con le informazioni di base.', gone: 'già partito', send: 'Invia', ph: 'Scrivi a Brady…'
     },
     en: {
-      hello: () => "Hello, Captain Brady here, from the gate at Via Canalino 51. Ask me about this month's events, times and prices, or tell me what you'd like to book and I'll prepare your boarding pass.",
+      hello: () => "Hi! I'm Captain Brady. Ask me about this month's events or tell me what you'd like to book: I'll prepare your boarding pass.",
       thinking: 'The captain is checking the route…', pass: 'Boarding pass', data: 'Date', turno: 'Seating', persone: 'Guests',
       form: 'Book your seat', wa: 'Message on WhatsApp', table: 'Book a table',
       note: 'Your seat is confirmed once KEIK confirms it.', all: "What's on this month?", party: 'Private party', book: 'Book ',
       which: 'Happy to. Which event?', gift: "The Black Friday gift card can't be booked: you buy it at the till on 26 and 27 November, while they last.",
       ticket: "Here's your boarding pass: the button takes you to the right booking form. WhatsApp works too.",
       unknown: `I'd rather ask the staff than make up a route. Message them on WhatsApp at ${WA_SHOW}.`,
-      busy: "Busy gate right now: here's the basic information.", gone: 'departed', send: 'Send', ph: 'Ask about dates, times, prices… or a booking'
+      busy: "Busy gate right now: here's the basic information.", gone: 'departed', send: 'Send', ph: 'Message Brady…'
     },
     es: {
-      hello: () => 'Hola, aquí el Capitán Brady, desde la puerta de Via Canalino 51. Pregúntame fechas, horarios y precios de los eventos del mes, o dime qué quieres reservar y te preparo la tarjeta de embarque.',
+      hello: () => '¡Hola! Soy el Capitán Brady. Pregúntame por los eventos del mes o dime qué quieres reservar: te preparo la tarjeta de embarque.',
       thinking: 'El capitán está revisando la ruta…', pass: 'Tarjeta de embarque', data: 'Fecha', turno: 'Turno', persone: 'Personas',
       form: 'Reserva tu plaza', wa: 'Escribir por WhatsApp', table: 'Reservar mesa',
       note: 'Tu plaza está confirmada cuando KEIK te la confirma.', all: '¿Qué hay este mes?', party: 'Fiesta privada', book: 'Reservar ',
       which: 'Claro. ¿Para qué evento?', gift: 'La gift card del Black Friday no se reserva: se compra en caja el 26 y 27 de noviembre, hasta agotar existencias.',
       ticket: 'Aquí tienes tu tarjeta de embarque: el botón te lleva al formulario correcto. También puedes usar WhatsApp.',
       unknown: `Prefiero preguntárselo al equipo antes que inventar una ruta. Escríbeles por WhatsApp al ${WA_SHOW}.`,
-      busy: 'Mucha gente en la puerta ahora mismo: te respondo con la información básica.', gone: 'salido', send: 'Enviar', ph: 'Pregunta fechas, horarios, precios… o una reserva'
+      busy: 'Mucha gente en la puerta ahora mismo: te respondo con la información básica.', gone: 'salido', send: 'Enviar', ph: 'Escribe a Brady…'
     },
     fr: {
-      hello: () => "Bonjour, ici le Capitaine Brady, depuis la porte de Via Canalino 51. Demandez-moi les dates, horaires et prix des événements du mois, ou dites-moi ce que vous voulez réserver et je prépare votre carte d'embarquement.",
+      hello: () => "Bonjour ! Je suis le Capitaine Brady. Demandez-moi les événements du mois ou ce que vous voulez réserver : je prépare votre carte d'embarquement.",
       thinking: 'Le capitaine vérifie la route…', pass: "Carte d'embarquement", data: 'Date', turno: 'Service', persone: 'Personnes',
       form: 'Réserver ma place', wa: 'Écrire sur WhatsApp', table: 'Réserver une table',
       note: 'Votre place est confirmée quand KEIK vous la confirme.', all: 'Quoi de neuf ce mois-ci ?', party: 'Fête privée', book: 'Réserver ',
       which: 'Avec plaisir. Pour quel événement ?', gift: "La gift card du Black Friday ne se réserve pas : elle s'achète en caisse les 26 et 27 novembre, dans la limite des stocks.",
       ticket: "Voici votre carte d'embarquement : le bouton mène au bon formulaire. WhatsApp marche aussi.",
       unknown: `Je préfère demander à l'équipe plutôt qu'inventer une route. Écrivez-leur sur WhatsApp au ${WA_SHOW}.`,
-      busy: "Beaucoup de monde à la porte : voici les informations de base.", gone: 'parti', send: 'Envoyer', ph: 'Dates, horaires, prix… ou une réservation'
+      busy: "Beaucoup de monde à la porte : voici les informations de base.", gone: 'parti', send: 'Envoyer', ph: 'Écrire à Brady…'
     }
   };
 
@@ -131,7 +131,7 @@
     const d = document.createElement('div');
     if (role === 'bot') {
       d.className = 'b-row';
-      d.innerHTML = `<img class="b-face" src="${AVATAR}" alt="" width="36" height="36"><div class="b-msg b-bot">${linkify(text)}</div>`;
+      d.innerHTML = `<img class="b-face" src="${AVATAR}" alt="" width="30" height="30"><div class="b-msg b-bot">${text === null ? '<span class="b-dots" aria-label="' + esc(T[lang].thinking) + '"><i></i><i></i><i></i></span>' : linkify(text)}</div>`;
     } else {
       d.className = 'b-msg b-me';
       d.textContent = text;
@@ -139,6 +139,7 @@
     log.append(d); scrollDown(); return d;
   }
   function setChips(list) {
+    if (!chipsEl) return;
     chipsEl.textContent = '';
     (list || []).slice(0, 4).forEach((c) => {
       if (!c || typeof c !== 'string') return;
@@ -188,7 +189,7 @@
         <h3>${esc(ev.titolo)}</h3>
         ${ev.quando ? `<p class="b-when">${esc(ev.quando)}</p>` : ''}
         <div class="b-fields">
-          <label class="b-field"><span>${esc(u.data)}</span>${dateField}</label>
+          ${days && days.length === 1 ? '' : `<label class="b-field"><span>${esc(u.data)}</span>${dateField}</label>`}
           ${ev.turni ? `<div class="b-field"><span>${esc(u.turno)}</span><div class="b-seg">${ev.turni.map((t) => `<button type="button" aria-pressed="${t === s.turno}" data-t="${t}">${t}</button>`).join('')}</div></div>` : ''}
           <div class="b-field"><span>${esc(u.persone)}</span><div class="b-step"><button type="button" aria-label="−" data-d="-1">−</button><output id="t${k}-n">${s.persone}</output><button type="button" aria-label="+" data-d="1">+</button></div></div>
         </div>
@@ -237,7 +238,7 @@
     addMsg('me', text);
     const dl = detectLang(text);
     if (!(dl === 'it' && lang !== 'it' && text.length < 25)) lang = dl;
-    const wait = addMsg('bot', T[lang].thinking);
+    const wait = addMsg('bot', null);
     wait.classList.add('b-thinking');
     turns.push({ role: 'user', content: text });
     const r = await askBridge(turns.slice(-12));
@@ -254,7 +255,6 @@
     }
     addMsg('bot', res.reply);
     if (res.booking) renderTicket(res.booking);
-    setChips(res.chips && res.chips.length ? res.chips : defaultChips());
     busy = false; sendBtn.disabled = false;
     if (window.matchMedia && matchMedia('(hover: hover)').matches) input.focus();
   }
@@ -266,9 +266,8 @@
       try { DATA = await (await fetch('dati/eventi.json', { cache: 'no-cache' })).json(); } catch (e) { DATA = { eventi: [] }; }
     }
     input.placeholder = T[lang].ph;
-    sendBtn.textContent = T[lang].send;
+    sendBtn.setAttribute('aria-label', T[lang].send);
     addMsg('bot', T[lang].hello(DATA));
-    setChips(defaultChips());
     const q = (location.search.match(/[?&]chiedi=([^&]+)/) || [])[1];
     if (q) { try { send(decodeURIComponent(q.replace(/\+/g, ' '))); } catch (e) { /* ignora */ } }
   }
