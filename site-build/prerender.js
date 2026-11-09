@@ -19,6 +19,8 @@ const RX = /assets\/img\/([0-9a-f]{32})[.-]/;
     fs.writeFileSync('dist/' + f, src);
     // 2) HTML pronto per Google
     const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+    // Avvisi temporanei (es. orari speciali) non devono finire nell'HTML salvato: le pagine controllano questo segnale
+    await p.addInitScript(() => { window.__KK_PRERENDER__ = true; });
     await p.goto('http://localhost:8765/dist/' + f + '?lang=it'); await p.waitForTimeout(800);
     let html = await p.evaluate(() => document.getElementById('dc-root').innerHTML);
     html = html.replace(/ data-dc-[a-z]+="\d+"/g, '');

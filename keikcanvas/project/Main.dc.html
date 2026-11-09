@@ -90,6 +90,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 /* FONT-VIAGGIO */ [style*="Big Shoulders"]{font-weight:800 !important}h1,h2{text-transform:uppercase;letter-spacing:0 !important;line-height:0.95 !important;font-weight:900 !important}
 /* HERO-A */ .k-hmom,.k-hmob,.k-hmob-flex{display:none}@media (max-width:960px){.k-hmom{display:none !important}.k-hmob{display:block !important}.k-hmob-flex{display:flex !important}.k-hdesk{display:none !important}.k-hcol{gap:16px !important}}
 /* HERO-FOTO */ .k-bd-s{display:none}@media (max-width:960px){.k-heroimg{height:480px !important;object-position:center 22% !important}.k-bd-l{display:none}.k-bd-s{display:block}#top .k-hcol > p:first-child{letter-spacing:0.1em !important}}
+.os-row:last-child{border-bottom:0 !important}
 </style>
 </helmet>
 <div style="font-family: 'Montserrat', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0">
@@ -490,10 +491,46 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </footer>
 
+<!-- ORARI SPECIALI 9–15 NOVEMBRE: popup (compare dopo il caricamento, sparisce da solo dopo sabato 14) -->
+<sc-if value="{{osOpen}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Orari speciali questa settimana" style="position: fixed; inset: 0; z-index: 70; display: flex; align-items: center; justify-content: center; padding: 16px">
+<div onClick="{{osClose}}" style="position: absolute; inset: 0; background: rgba(20,4,24,0.62)"></div>
+<div class="k-overlay" style="position: relative; width: 100%; max-width: 420px; max-height: calc(100vh - 32px); overflow-y: auto; background: #FFFFFF; border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,0.45); font-family: 'Montserrat', system-ui, sans-serif">
+<div style="background: #2A0830; color: #FFFFFF; padding: 14px 14px 14px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #F6E58D">AVVISO AI PASSEGGERI · 9–15 NOV</span>
+<button type="button" onClick="{{osClose}}" aria-label="Chiudi" style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.14); color: #FFFFFF; font-size: 22px; line-height: 1; cursor: pointer">×</button>
+</div>
+<div style="padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 14px">
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 34px; line-height: 0.95; color: #3B0B40; text-transform: uppercase">Orari speciali questa settimana</strong>
+<div style="display: flex; flex-direction: column; border: 1.5px dashed #E6DAE4; border-radius: 14px">
+<sc-for list="{{osRows}}" as="r" hint-placeholder-count="3">
+<div class="os-row" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #F1E8EF">
+<span style="font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #91007D">{{r.day}}</span>
+<span style="font-size: 15px; font-weight: 600; color: #3B0B40; text-align: right">{{r.text}}</span>
+</div>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A2350">Gli altri giorni siamo aperti come sempre, dalle 10 alle 20.</p>
+<a href="Prenota.dc.html" style="margin-top: 4px; display: flex; justify-content: center; align-items: center; min-height: 52px; border-radius: 999px; background: #91007D; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 17px">Prenota un tavolo</a>
+<button type="button" onClick="{{osClose}}" style="min-height: 46px; border-radius: 999px; border: 1.5px solid #E6DAE4; background: #FFFFFF; color: #6B4A70; font: 600 15px 'Montserrat', sans-serif; cursor: pointer">Ho capito</button>
+</div>
+</div>
+</div>
+</sc-if>
+
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FAE609","options":["#FAE609","#F2B8E6","#E9C46A","#FFFFFF"]},"showTopbar":{"editor":"boolean","default":true},"startMoment":{"editor":"enum","default":"mattina","options":["mattina","pranzo","merenda","sera"]},"$preview":{"width":1440,"height":7300}}'>
 class Component extends DCLogic {
+  // ORARI SPECIALI 9–15 novembre 2026: ogni riga sparisce a fine giornata, popup e banner spariscono da soli dopo sabato 14
+  osRows() {
+    const now = Date.now();
+    return [
+      { fine: '2026-11-10T00:00:00+01:00', day: 'LUN 9', text: 'Chiudiamo alle 18:00' },
+      { fine: '2026-11-14T00:00:00+01:00', day: 'VEN 13', text: 'Chiudiamo alle 20:00' },
+      { fine: '2026-11-15T00:00:00+01:00', day: 'SAB 14', text: 'Chiudiamo alle 20:00' }
+    ].filter((r) => now < Date.parse(r.fine)).map((r) => ({ day: r.day, text: r.text }));
+  }
   startIdx() {
     const keys = ['mattina', 'pranzo', 'merenda', 'sera'];
     const s = keys.indexOf(this.props.startMoment ?? 'mattina');
@@ -505,6 +542,20 @@ class Component extends DCLogic {
     this.kkMapEv = (e) => this.kkMap(e.detail);
     this.kkMap(window.__kkConsent);
     document.addEventListener('kk-consent', this.kkMapEv);
+    // Orari speciali: il popup compare una volta al giorno (dopo il caricamento, così non finisce nell'HTML per Google)
+    this.osDay = () => { const d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); };
+    this.osCloseFn = () => {
+      try { window.localStorage.setItem('keik-orari-speciali', this.osDay()); } catch (e) {}
+      this.setState({ osOpen: false });
+    };
+    this.osTimer = setTimeout(() => {
+      if (window.__KK_PRERENDER__ || !this.osRows().length) return;
+      let seen = '';
+      try { seen = window.localStorage.getItem('keik-orari-speciali') || ''; } catch (e) {}
+      if (seen !== this.osDay()) this.setState({ osOpen: true });
+    }, 1500);
+    this.osKey = (e) => { if (e.key === 'Escape' && (this.state || {}).osOpen) this.osCloseFn(); };
+    document.addEventListener('keydown', this.osKey);
     this.reduce = typeof window !== 'undefined' && !!window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (this.reduce) return;
     // Il tabellone si "carica" all'apertura, poi l'imbarco passa da un volo all'altro finché il cliente non sceglie
@@ -518,6 +569,8 @@ class Component extends DCLogic {
   }
   componentWillUnmount() {
     document.removeEventListener('kk-consent', this.kkMapEv);
+    document.removeEventListener('keydown', this.osKey);
+    clearTimeout(this.osTimer);
     clearInterval(this.auto);
     clearInterval(this.fl);
     if (this.raf) cancelAnimationFrame(this.raf);
@@ -723,6 +776,7 @@ class Component extends DCLogic {
     const mapOn = !!st.mapOn;
     return {
       mapOn: mapOn, mapOff: !mapOn, showMap: () => this.setState({ mapOn: true }),
+      osRows: this.osRows(), osOpen: !!st.osOpen && this.osRows().length > 0, osClose: () => this.osCloseFn && this.osCloseFn(),
       accent,
       showTopbar: this.props.showTopbar ?? true,
       moments,
