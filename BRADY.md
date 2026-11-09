@@ -2,7 +2,7 @@
 
 Brady risponde alle domande sugli eventi del mese e su KEIK, e quando qualcuno vuole prenotare mostra la carta d'imbarco con il modulo giusto (Pienissimo) e l'alternativa WhatsApp.
 
-Pagina: `https://keik.it/brady.html` (solo per i QR dei poster: **non è collegata dal sito** ed è `noindex`).
+Pagina: `https://keik.it/brady.html` (`noindex`). Si arriva dai QR dei poster (`?da=bancone`, `?da=muro`…) e, dal 9/11/2026, dal pulsante galleggiante "Chiedi a Brady" **solo nella home** (`?da=home`, si apre in un'altra scheda). Scelta di Elena: nelle altre pagine no, chi ci arriva sa già cosa cerca. Non mettere il pulsante "Chiedi al Capitano Brady" nella pagina Eventi.
 Link con domanda già scritta, utile per i QR: `https://keik.it/brady.html?chiedi=Friendsgiving`
 
 ## Come è fatto
