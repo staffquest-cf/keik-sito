@@ -171,6 +171,7 @@ $corpo = [
                     'required' => ['event'],
                 ],
                 'chips' => ['type' => 'array', 'items' => ['type' => 'string'], 'maxItems' => 3],
+                'fine' => ['type' => 'boolean', 'description' => 'true solo per il saluto di chiusura'],
             ],
             'required' => ['reply', 'lang', 'booking'],
         ],
@@ -239,5 +240,6 @@ rispondi(200, [
     'reply' => mb_substr(trim($json['reply']), 0, 1500),
     'lang' => $lang,
     'booking' => $booking,
-    'chips' => $chips,
+    'chips' => ($json['fine'] ?? false) === true ? [] : $chips,
+    'fine' => ($json['fine'] ?? false) === true,
 ]);

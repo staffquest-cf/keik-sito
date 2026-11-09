@@ -76,6 +76,14 @@
     return 'it';
   }
 
+  /* ---------- Saluti di chiusura (risposte di base, se l'AI non risponde) ---------- */
+  const BYE = {
+    it: ['È stato un piacere averti a bordo. Ci vediamo in Via Canalino: il prossimo viaggio è già in cucina.', 'Buon viaggio col gusto! Il mondo ti aspetta a un tavolo di distanza, da KEIK.', 'Grazie per aver volato con il Capitano Brady: ogni assaggio è una nuova destinazione. A presto!'],
+    en: ['It was a pleasure having you on board. See you in Via Canalino: your next journey is already in the kitchen.', 'Bon voyage, and travel with taste! The world is just a table away at KEIK.', 'Thanks for flying with Captain Brady: every bite is a new destination. See you soon!'],
+    es: ['Ha sido un placer tenerte a bordo. Nos vemos en Via Canalino: tu próximo viaje ya está en la cocina.', '¡Buen viaje con sabor! En KEIK el mundo está a una mesa de distancia.', 'Gracias por volar con el Capitán Brady: cada bocado es un nuevo destino. ¡Hasta pronto!'],
+    fr: ['Ce fut un plaisir de vous avoir à bord. À bientôt Via Canalino : votre prochain voyage est déjà en cuisine.', 'Bon voyage et voyagez avec goût ! Chez KEIK, le monde est à une table de vous.', 'Merci d’avoir volé avec le Capitaine Brady : chaque bouchée est une nouvelle destination. À bientôt !']
+  };
+
   /* ---------- Risposte di base (senza ponte) ---------- */
   function eventInfo(e) {
     return `${e.titolo}: ${e.quando}.\n${e.descrizione}\n${(e.dettagli || []).join('\n')}`;
@@ -112,6 +120,11 @@
     if (/orari|hours|horario|horaire|apert|open|abiert|ouvert|chiud|closed/.test(t)) return { reply: 'Aperti 7 giorni su 7: 10–20, venerdì e sabato fino alle 22. Cucina fino alle 19:30, venerdì e sabato fino alle 21:30.' };
     if (/parchegg|parking|aparca|garer|dove|where|d[oó]nde|où|indirizzo|address|direcci|adresse/.test(t)) return { reply: 'Via Canalino 51, Modena, in ZTL. Si parcheggia sui viali entrando da via Saragozza o da via Gallucci, poi pochi minuti a piedi.\nhttps://maps.google.com/?q=Via+Canalino+51+Modena' };
     if (/celiac|cel[ií]ac|coeliac|glutin|gluten/.test(t)) return { reply: 'Abbiamo un menu senza glutine, ma non è adatto ai celiaci: in cucina lavoriamo farine ogni giorno e non possiamo garantire l\'assenza di tracce.' };
+    // Saluto di chiusura: il cliente ringrazia o ha finito
+    if (document.querySelectorAll('.b-me').length > 1 && /^(grazie|ok|okay|perfetto|va bene|a posto|niente|basta|a presto|ciao ciao|arrivederci|thanks|thank you|perfect|bye|gracias|perfecto|vale|adiós|merci|parfait|au revoir)\b/.test(t) && t.length < 60) {
+      const B = BYE[lang] || BYE.it;
+      return { reply: B[Math.floor(Math.random() * B.length)], fine: true };
+    }
     if (/^(ciao|salve|buongiorno|buonasera|hello|hi|hey|hola|bonjour)\b/.test(t)) return { reply: f.hello(null), chips: [f.all, f.party] };
     return { reply: f.unknown };
   }
@@ -268,7 +281,9 @@
     if (res.booking) renderTicket(res.booking);
     // Domande pronte: quelle proposte da Brady, altrimenti quelle di base (senza ripetere quella appena fatta)
     const ask = text.toLowerCase();
-    setChips((res.chips && res.chips.length ? res.chips : defaultChips()).filter((c) => c && c.toLowerCase() !== ask));
+    // Dopo il saluto di chiusura niente domande pronte: la chat resta aperta se il cliente vuole scrivere ancora
+    if (res.fine) setChips([]);
+    else setChips((res.chips && res.chips.length ? res.chips : defaultChips()).filter((c) => c && c.toLowerCase() !== ask));
     busy = false; sendBtn.disabled = false;
     if (window.matchMedia && matchMedia('(hover: hover)').matches) input.focus();
   }
