@@ -146,11 +146,16 @@ $sistema = strtr($istruzioni, [
     '{{IDS}}' => implode('|', IDS_PRENOTABILI),
 ]);
 
+// Lingua in cui sta scrivendo il cliente (la stima la pagina): indicazione esplicita, fuori dalla parte in cache
+$lingue = ['it' => 'italiano', 'en' => 'inglese', 'es' => 'spagnolo', 'fr' => 'francese'];
+$lingua = is_string($req['lang'] ?? null) && isset($lingue[$req['lang']]) ? $req['lang'] : null;
+$nota_lingua = $lingua ? [['type' => 'text', 'text' => "LINGUA: l'ultimo messaggio del cliente sembra in " . $lingue[$lingua] . ". Se è così rispondi in " . $lingue[$lingua] . ", anche nel saluto di chiusura, con lang \"" . $lingua . "\"."]] : [];
+
 /* ---------- Chiamata all'API ---------- */
 $corpo = [
     'model' => $modello,
     'max_tokens' => 500,
-    'system' => [['type' => 'text', 'text' => $sistema, 'cache_control' => ['type' => 'ephemeral']]],
+    'system' => array_merge([['type' => 'text', 'text' => $sistema, 'cache_control' => ['type' => 'ephemeral']]], $nota_lingua),
     'messages' => $messaggi,
     'tools' => [[
         'name' => 'rispondi',

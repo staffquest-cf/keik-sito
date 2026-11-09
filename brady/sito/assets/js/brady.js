@@ -231,7 +231,7 @@
     const ctl = new AbortController();
     const timer = setTimeout(() => ctl.abort(), 45000);
     try {
-      const r = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages }), signal: ctl.signal });
+      const r = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages, lang }), signal: ctl.signal });
       const j = await r.json().catch(() => null);
       return j && j.ok ? j : { ok: false, error: (j && j.error) || 'http' };
     } catch (e) {
