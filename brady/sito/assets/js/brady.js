@@ -273,6 +273,50 @@
     if (window.matchMedia && matchMedia('(hover: hover)').matches) input.focus();
   }
 
+  /* ---------- Informativa breve della chat (si apre dal link "Privacy" in fondo) ---------- */
+  const PRIV = {
+    it: { t: 'Come usiamo i tuoi messaggi', close: 'Chiudi', full: 'Privacy policy completa di KEIK', anth: 'Informativa privacy di Anthropic', p: [
+      "Brady è un assistente automatico: risponde con l'intelligenza artificiale usando le informazioni pubblicate su keik.it. Può sbagliare: per allergie e richieste particolari chiedi sempre allo staff.",
+      "Quello che scrivi viene inviato ad Anthropic, l'azienda che fornisce l'intelligenza artificiale (Claude), solo per preparare la risposta.",
+      'KEIK non salva le conversazioni. Per evitare abusi teniamo solo un’impronta cifrata e anonima della connessione e l’orario dei messaggi, mai i testi.',
+      'Non scrivere dati personali (nome, telefono, informazioni sulla salute). Per prenotare usi il modulo di Pienissimo o WhatsApp, che hanno le loro informative.'] },
+    en: { t: 'How we use your messages', close: 'Close', full: "KEIK's full privacy policy", anth: "Anthropic's privacy policy", p: [
+      'Brady is an automated assistant: it answers with artificial intelligence using the information published on keik.it. It can make mistakes: for allergies and special requests, always ask our staff.',
+      'What you write is sent to Anthropic, the company that provides the artificial intelligence (Claude), only to prepare the answer.',
+      'KEIK does not save conversations. To prevent abuse we only keep an anonymous, encrypted fingerprint of the connection and the time of the messages, never the text.',
+      'Please don’t write personal data (name, phone number, health information). To book you use the Pienissimo form or WhatsApp, which have their own privacy notices.'] },
+    es: { t: 'Cómo usamos tus mensajes', close: 'Cerrar', full: 'Política de privacidad completa de KEIK', anth: 'Política de privacidad de Anthropic', p: [
+      'Brady es un asistente automático: responde con inteligencia artificial usando la información publicada en keik.it. Puede equivocarse: para alergias y peticiones especiales pregunta siempre al personal.',
+      'Lo que escribes se envía a Anthropic, la empresa que ofrece la inteligencia artificial (Claude), solo para preparar la respuesta.',
+      'KEIK no guarda las conversaciones. Para evitar abusos solo guardamos una huella cifrada y anónima de la conexión y la hora de los mensajes, nunca los textos.',
+      'No escribas datos personales (nombre, teléfono, información de salud). Para reservar usas el formulario de Pienissimo o WhatsApp, que tienen sus propias políticas de privacidad.'] },
+    fr: { t: 'Comment nous utilisons vos messages', close: 'Fermer', full: 'Politique de confidentialité complète de KEIK', anth: 'Politique de confidentialité d’Anthropic', p: [
+      'Brady est un assistant automatique : il répond grâce à l’intelligence artificielle en utilisant les informations publiées sur keik.it. Il peut se tromper : pour les allergies et les demandes particulières, demandez toujours à l’équipe.',
+      'Ce que vous écrivez est envoyé à Anthropic, l’entreprise qui fournit l’intelligence artificielle (Claude), uniquement pour préparer la réponse.',
+      'KEIK n’enregistre pas les conversations. Pour éviter les abus, nous gardons seulement une empreinte chiffrée et anonyme de la connexion et l’heure des messages, jamais les textes.',
+      'N’écrivez pas de données personnelles (nom, téléphone, informations de santé). Pour réserver, vous utilisez le formulaire Pienissimo ou WhatsApp, qui ont leurs propres politiques de confidentialité.'] }
+  };
+  const privLink = document.querySelector('.b-foot a');
+  let privEl = null;
+  function closePriv() { if (privEl) { privEl.remove(); privEl = null; if (privLink) privLink.focus(); } }
+  function openPriv() {
+    if (privEl) return;
+    const P = PRIV[lang] || PRIV.it;
+    privEl = document.createElement('div');
+    privEl.className = 'b-priv';
+    privEl.innerHTML = `<div class="b-priv-bg"></div><div class="b-priv-box" role="dialog" aria-modal="true" aria-labelledby="b-priv-t">
+      <div class="b-priv-head"><strong id="b-priv-t">${esc(P.t)}</strong><button type="button" class="b-priv-x" aria-label="${esc(P.close)}">×</button></div>
+      ${P.p.map((x) => `<p>${esc(x)}</p>`).join('')}
+      <p class="b-priv-links"><a href="https://www.iubenda.com/privacy-policy/680124" target="_blank" rel="noopener">${esc(P.full)}</a><a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">${esc(P.anth)}</a></p>
+    </div>`;
+    privEl.querySelector('.b-priv-bg').addEventListener('click', closePriv);
+    privEl.querySelector('.b-priv-x').addEventListener('click', closePriv);
+    document.body.append(privEl);
+    privEl.querySelector('.b-priv-x').focus();
+  }
+  if (privLink) privLink.addEventListener('click', (e) => { e.preventDefault(); openPriv(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePriv(); });
+
   form.addEventListener('submit', (e) => { e.preventDefault(); send(input.value); });
 
   async function start() {
