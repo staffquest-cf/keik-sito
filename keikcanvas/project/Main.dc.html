@@ -548,12 +548,18 @@ class Component extends DCLogic {
       try { window.localStorage.setItem('keik-orari-speciali', this.osDay()); } catch (e) {}
       this.setState({ osOpen: false });
     };
-    this.osTimer = setTimeout(() => {
-      if (window.__KK_PRERENDER__ || !this.osRows().length) return;
+    // Su keik.it aspetta che il cliente abbia risposto al banner dei cookie di iubenda, così i due non si sovrappongono
+    this.osTry = () => {
+      if (this.osDone || window.__KK_PRERENDER__ || !this.osRows().length) return;
+      if (window._iub && !window.__kkConsent) return;
+      this.osDone = true;
       let seen = '';
       try { seen = window.localStorage.getItem('keik-orari-speciali') || ''; } catch (e) {}
       if (seen !== this.osDay()) this.setState({ osOpen: true });
-    }, 1500);
+    };
+    this.osTimer = setTimeout(this.osTry, 1500);
+    this.osConsent = () => { clearTimeout(this.osTimer); this.osTimer = setTimeout(this.osTry, 600); };
+    document.addEventListener('kk-consent', this.osConsent);
     this.osKey = (e) => { if (e.key === 'Escape' && (this.state || {}).osOpen) this.osCloseFn(); };
     document.addEventListener('keydown', this.osKey);
     this.reduce = typeof window !== 'undefined' && !!window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -570,6 +576,7 @@ class Component extends DCLogic {
   componentWillUnmount() {
     document.removeEventListener('kk-consent', this.kkMapEv);
     document.removeEventListener('keydown', this.osKey);
+    document.removeEventListener('kk-consent', this.osConsent);
     clearTimeout(this.osTimer);
     clearInterval(this.auto);
     clearInterval(this.fl);
