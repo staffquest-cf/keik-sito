@@ -8963,5 +8963,20 @@
   "Kitchen until 7:30pm",
   "Cocina hasta las 19:30",
   "Cuisine jusqu’à 19h30"
+ ],
+ "Chiedi a Brady": [
+  "Ask Brady",
+  "Pregúntale a Brady",
+  "Demandez à Brady"
+ ],
+ "Info e prenotazioni": [
+  "Info and bookings",
+  "Información y reservas",
+  "Infos et réservations"
+ ],
+ "Chiedi a Brady: informazioni e prenotazioni, si apre in un’altra scheda": [
+  "Ask Brady: information and bookings, opens in a new tab",
+  "Pregúntale a Brady: información y reservas, se abre en otra pestaña",
+  "Demandez à Brady : informations et réservations, s’ouvre dans un nouvel onglet"
  ]
 }
