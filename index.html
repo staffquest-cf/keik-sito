@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>(function(){var L=['it','en','es','fr'],l=null,q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1];if(q&&L.indexOf(q)>=0){l=q;try{localStorage.setItem('keik-lang',q)}catch(e){}}if(!l){try{l=localStorage.getItem('keik-lang')}catch(e){}if(L.indexOf(l)<0)l=null;}if(!l&&/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent))l='it';if(!l){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'it'],f=null;for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='it'){f='it';break;}if(!f&&L.indexOf(c)>0)f=c;}l=f||'en';}window.__KLANG__=l;document.documentElement.lang=l;if(l!=='it')document.write('<script src="assets/i18n/'+l+'.js?v=cf9fbc61"><\/script>');})();</script>
+<script>(function(){var L=['it','en','es','fr'],l=null,q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1];if(q&&L.indexOf(q)>=0){l=q;try{localStorage.setItem('keik-lang',q)}catch(e){}}if(!l){try{l=localStorage.getItem('keik-lang')}catch(e){}if(L.indexOf(l)<0)l=null;}if(!l&&/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent))l='it';if(!l){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'it'],f=null;for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='it'){f='it';break;}if(!f&&L.indexOf(c)>0)f=c;}l=f||'en';}window.__KLANG__=l;document.documentElement.lang=l;if(l!=='it')document.write('<script src="assets/i18n/'+l+'.js?v=51ae0a02"><\/script>');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>KEIK Modena · Brunch, pranzo e aperitivo dalle 10</title>
 <meta property="og:type" content="website">
@@ -187,6 +187,19 @@ a{color:#91007D}a:hover{color:#3B0B40}
 /* FONT-VIAGGIO */ [style*="Big Shoulders"]{font-weight:800 !important}h1,h2{text-transform:uppercase;letter-spacing:0 !important;line-height:0.95 !important;font-weight:900 !important}
 /* HERO-A */ .k-hmom,.k-hmob,.k-hmob-flex{display:none}@media (max-width:960px){.k-hmom{display:none !important}.k-hmob{display:block !important}.k-hmob-flex{display:flex !important}.k-hdesk{display:none !important}.k-hcol{gap:16px !important}}
 /* HERO-FOTO */ .k-bd-s{display:none}@media (max-width:960px){.k-heroimg{height:480px !important;object-position:center 22% !important}.k-bd-l{display:none}.k-bd-s{display:block}#top .k-hcol > p:first-child{letter-spacing:0.1em !important}}
+/* CHIEDI A BRADY: pulsante galleggiante con bollino */
+.k-brady{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));z-index:35;display:flex;align-items:center;gap:10px;border-radius:999px;background:#2A0830;color:#FFFFFF;text-decoration:none;box-shadow:0 12px 32px rgba(42,8,48,.38);font-family:'Montserrat',system-ui,sans-serif;transition:transform .2s ease,padding .2s ease}
+.k-brady:hover{transform:translateY(-2px)}
+.k-brady:focus-visible{outline:3px solid #FAE609;outline-offset:3px}
+.k-brady-face{position:relative;width:52px;height:52px;flex-shrink:0}
+.k-brady-face img{display:block;width:52px;height:52px;border-radius:50%;background:#F7F1EA}
+.k-brady-dot{position:absolute;top:-1px;right:-1px;width:16px;height:16px;border-radius:50%;background:#FAE609;border:2.5px solid #2A0830;animation:kbdot 2.4s ease-in-out infinite}
+@keyframes kbdot{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.k-brady-txt{display:flex;flex-direction:column;gap:2px;line-height:1.15;white-space:nowrap}
+.k-brady-txt strong{font-size:15px;font-weight:700}
+.k-brady-txt span{font-size:12px;color:#D9C3DB}
+@media (max-width:640px){html.kk-down .k-brady{padding:6px !important}html.kk-down .k-brady-txt{display:none}}
+@media (prefers-reduced-motion: reduce){.k-brady-dot{animation:none}.k-brady{transition:none}}
 .os-row:last-child{border-bottom:0 !important}
 </style>
 </head>
@@ -612,14 +625,14 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <path d="M536 96 v10 M529 120 l7-14 7 14 M527 120 h18 v70 h-18 z M527 138 h18 M527 156 h18 M527 174 h18 M533 126 h6" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
 
 <path d="M82 170 C 210 20, 400 20, 516 158" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="3 7" stroke-linecap="round"></path>
-<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="495.2045875528969" opacity="1.000"></path>
+<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="1000"></path>
 
 <circle cx="82" cy="170" r="4.5" fill="#FAE609"></circle>
-<circle cx="516" cy="158" r="5.00" stroke="#FFFFFF" stroke-width="1.5" opacity="0"></circle>
+<circle cx="516" cy="158" r="5" stroke="#FFFFFF" stroke-width="1.5" opacity="0"></circle>
 <circle cx="516" cy="158" r="4" fill="#FFFFFF"></circle>
 
-<g opacity="0.267" transform="translate(85.78 170.76) rotate(-48.75) scale(0.732)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
-<g transform="translate(85.58 165.86) rotate(-48.75) scale(0.915)" opacity="1.000"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
+<g opacity="0"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
+<g transform="translate(82 170) rotate(-50)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
 
 <text x="34" y="214" fill="#FFFFFF" style="font: 500 12px 'Space Mono', monospace; letter-spacing: 0.08em">CCS · CARACAS</text>
 <text x="566" y="214" fill="#FFFFFF" text-anchor="end" style="font: 500 12px 'Space Mono', monospace; letter-spacing: 0.08em">MOD · MODENA</text>
@@ -743,6 +756,12 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </div>
 </footer>
+
+
+<a class="k-brady" style="padding: 6px 20px 6px 6px" href="brady.html?da=home" target="_blank" rel="noopener" aria-label="Chiedi a Brady: informazioni e prenotazioni, si apre in un’altra scheda">
+<span class="k-brady-face"><img src="assets/img/brady-capitano-96.webp" alt="" width="52" height="52"><span class="k-brady-dot" aria-hidden="true"></span></span>
+<span class="k-brady-txt"><strong>Chiedi a Brady</strong><span>Info e prenotazioni</span></span>
+</a>
 
 
 
@@ -1147,6 +1166,12 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 </div>
 </footer>
+
+<!-- CHIEDI A BRADY: pulsante galleggiante (apre la chat in un'altra scheda, così la home resta aperta) -->
+<a class="k-brady" style="padding: 6px 20px 6px 6px" href="brady.html?da=home" target="_blank" rel="noopener" aria-label="Chiedi a Brady: informazioni e prenotazioni, si apre in un’altra scheda">
+<span class="k-brady-face"><img src="assets/img/brady-capitano-96.webp" alt="" width="52" height="52"><span class="k-brady-dot" aria-hidden="true"></span></span>
+<span class="k-brady-txt"><strong>Chiedi a Brady</strong><span>Info e prenotazioni</span></span>
+</a>
 
 <!-- ORARI SPECIALI 9–15 NOVEMBRE: popup (compare dopo il caricamento, sparisce da solo dopo sabato 14) -->
 <sc-if value="{{osOpen}}" hint-placeholder-val="{{ false }}">
