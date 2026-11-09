@@ -8739,10 +8739,10 @@
   "la vuelta al mundo en patatas.",
   "le tour du monde en frites."
  ],
- "Ogni venerdì di novembre, dalle 17:00 alle 22:00, un gusto speciale di patatine crispy per l’aperitivo: un paese diverso ogni settimana. Il gusto nuovo si svela il mercoledì prima.": [
-  "Every Friday in November, from 5 to 10pm, a special flavour of crispy fries for aperitivo: a different country every week. The new flavour is revealed on the Wednesday before.",
-  "Cada viernes de noviembre, de 17:00 a 22:00, un sabor especial de patatas crujientes para el aperitivo: un país distinto cada semana. El sabor nuevo se desvela el miércoles anterior.",
-  "Chaque vendredi de novembre, de 17h à 22h, une saveur spéciale de frites croustillantes pour l’apéritif : un pays différent chaque semaine. La nouvelle saveur est dévoilée le mercredi précédent."
+ "Ogni venerdì di novembre, dalle 17:00 alle 22:00 (venerdì 13 fino alle 20:00), un gusto speciale di patatine crispy per l’aperitivo: un paese diverso ogni settimana. Il gusto nuovo si svela il mercoledì prima.": [
+  "Every Friday in November, from 5 to 10pm (Friday 13 until 8pm), a special flavour of crispy fries for aperitivo: a different country every week. The new flavour is revealed on the Wednesday before.",
+  "Todos los viernes de noviembre, de 17:00 a 22:00 (el viernes 13 hasta las 20:00), un sabor especial de patatas crujientes para el aperitivo: un país distinto cada semana. El nuevo sabor se revela el miércoles anterior.",
+  "Chaque vendredi de novembre, de 17h à 22h (le vendredi 13 jusqu’à 20h), une saveur spéciale de frites croustillantes pour l’apéritif : un pays différent chaque semaine. La nouvelle saveur est dévoilée le mercredi d’avant."
  ],
  "APERITIVO CRISPY · 12,90 €": [
   "CRISPY APERITIVO · €12.90",
@@ -8933,5 +8933,35 @@
   "Got it",
   "Entendido",
   "J’ai compris"
+ ],
+ "17:00 – 20:00 · patatine modenese": [
+  "5–8pm · Modena-style fries",
+  "17:00 – 20:00 · patatas a la modenesa",
+  "17h – 20h · frites à la modénaise"
+ ],
+ "17:00 – 20:00 · gusto segreto": [
+  "5–8pm · secret flavour",
+  "17:00 – 20:00 · sabor secreto",
+  "17h – 20h · saveur secrète"
+ ],
+ "VENERDÌ 13 NOVEMBRE · 17:00 – 20:00": [
+  "FRIDAY 13 NOVEMBER · 5–8PM",
+  "VIERNES 13 DE NOVIEMBRE · 17:00 – 20:00",
+  "VENDREDI 13 NOVEMBRE · 17H – 20H"
+ ],
+ "Venerdì 13 solo dalle 17:00 alle 20:00 (orario speciale), gli altri venerdì fino alle 22:00": [
+  "Friday 13 only from 5 to 8pm (special opening hours), the other Fridays until 10pm",
+  "El viernes 13 solo de 17:00 a 20:00 (horario especial), los demás viernes hasta las 22:00",
+  "Le vendredi 13 seulement de 17h à 20h (horaires spéciaux), les autres vendredis jusqu’à 22h"
+ ],
+ "Cucina fino alle 17:30": [
+  "Kitchen until 5:30pm",
+  "Cocina hasta las 17:30",
+  "Cuisine jusqu’à 17h30"
+ ],
+ "Cucina fino alle 19:30": [
+  "Kitchen until 7:30pm",
+  "Cocina hasta las 19:30",
+  "Cuisine jusqu’à 19h30"
  ]
 }

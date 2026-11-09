@@ -176,7 +176,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
 <p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #B45309">Il rituale di novembre · ogni venerdì</p>
 <h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(44px, 4.83vw, 67px); line-height: 1; color: #3B0B40">Crispy Friday: <span class="e-serif" style="color: #B45309">il giro del mondo in patatine.</span></h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">Ogni venerdì di novembre, dalle 17:00 alle 22:00, un gusto speciale di patatine crispy per l’aperitivo: un paese diverso ogni settimana. Il gusto nuovo si svela il mercoledì prima.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">Ogni venerdì di novembre, dalle 17:00 alle 22:00 (venerdì 13 fino alle 20:00), un gusto speciale di patatine crispy per l’aperitivo: un paese diverso ogni settimana. Il gusto nuovo si svela il mercoledì prima.</p>
 </div>
 <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; padding: 6px 12px; border-radius: 999px; border: 1px solid #B45309; color: #B45309">APERITIVO CRISPY · 12,90 €</span>
 </div>
@@ -347,15 +347,18 @@ class Component extends DCLogic {
     const endOf = (d) => new Date(d + 'T23:59:59+01:00').getTime();
     const pad = (n) => String(n).padStart(2, '0');
     // Crispy Friday: sul tabellone compare il prossimo venerdì di novembre
-    // [venerdì, gusto, quando si svela (mercoledì prima alle 10)]
-    const fridays = [['06', 'Carbonara', '2026-11-04T10:00:00+01:00', '/_blob/a1035c44dd6a543042795dd062873578', 'Patatine Carbonara di KEIK con crema carbonara e guanciale croccante'], ['13', 'Modenese', '2026-11-11T10:00:00+01:00', '/_blob/0eef150b64fb49af649e4c38f636be6e', 'Patatine Modenese di KEIK impanate al formaggio con fili di aceto balsamico'], ['20', 'Tostones venezuelani', '2026-11-18T10:00:00+01:00', '/_blob/70461c5c0bfc97f61a2e77933a736553', 'Tostones venezuelani di KEIK con salsa guasacaca'], ['27', 'Coreane', '2026-11-25T10:00:00+01:00', '/_blob/ebf816db341a6058bcb74a991b464b3e', 'Patatine coreane di KEIK con salsa honey-gochujang, semi tostati e cipollotto']];
+    // [venerdì, gusto, quando si svela (mercoledì prima alle 10), foto, alt, fine (se diversa dalle 22:00)]
+    const fridays = [['06', 'Carbonara', '2026-11-04T10:00:00+01:00', '/_blob/a1035c44dd6a543042795dd062873578', 'Patatine Carbonara di KEIK con crema carbonara e guanciale croccante'], ['13', 'Modenese', '2026-11-11T10:00:00+01:00', '/_blob/0eef150b64fb49af649e4c38f636be6e', 'Patatine Modenese di KEIK impanate al formaggio con fili di aceto balsamico', '20:00'], ['20', 'Tostones venezuelani', '2026-11-18T10:00:00+01:00', '/_blob/70461c5c0bfc97f61a2e77933a736553', 'Tostones venezuelani di KEIK con salsa guasacaca'], ['27', 'Coreane', '2026-11-25T10:00:00+01:00', '/_blob/ebf816db341a6058bcb74a991b464b3e', 'Patatine coreane di KEIK con salsa honey-gochujang, semi tostati e cipollotto']];
     const nextFri = fridays.find((f) => now <= endOf('2026-11-' + f.at(0))) || fridays.at(3);
     const svela = (() => { try { return /[?&]svela\b/.test(window.location.search); } catch (e) { return false; } })();
     const friShown = svela || now >= new Date(nextFri.at(2)).getTime();
+    // Venerdì 13 novembre: orario speciale, Crispy Friday solo dalle 17 alle 20
+    const fri20 = nextFri.at(5) === '20:00';
+    const friH = fri20 ? '17:00 – 20:00' : '17:00 – 22:00';
     const data = [
-      { date: '2026-11-' + nextFri.at(0), sort: '2026-11-' + nextFri.at(0), dow: 'VEN', day: String(parseInt(nextFri.at(0), 10)), mon: 'NOV', title: 'Crispy Friday', short: friShown ? '17:00 – 22:00 · patatine ' + nextFri.at(1).toLowerCase() : '17:00 – 22:00 · gusto segreto', tag: 'APERITIVO · OGNI VENERDÌ', when: 'OGNI VENERDÌ DI NOVEMBRE · 17:00 – 22:00',
+      { date: '2026-11-' + nextFri.at(0), sort: '2026-11-' + nextFri.at(0), dow: 'VEN', day: String(parseInt(nextFri.at(0), 10)), mon: 'NOV', title: 'Crispy Friday', short: friShown ? friH + ' · patatine ' + nextFri.at(1).toLowerCase() : friH + ' · gusto segreto', tag: 'APERITIVO · OGNI VENERDÌ', when: fri20 ? 'VENERDÌ 13 NOVEMBRE · 17:00 – 20:00' : 'OGNI VENERDÌ DI NOVEMBRE · 17:00 – 22:00',
         text: 'Ogni venerdì di novembre un gusto speciale di patatine crispy per l’aperitivo: un piccolo giro del mondo, con un paese diverso ogni settimana. Il gusto resta segreto fino al mercoledì prima.',
-        facts: ['Dalle 17:00 alle 22:00, ogni venerdì di novembre', 'Aperitivo Crispy: patatine del venerdì + un drink 12,90 €', 'Con Mango Mimosa o gin tonic 14,90 €', 'Il gusto si svela il mercoledì prima: guarda qui sotto'],
+        facts: [fri20 ? 'Venerdì 13 solo dalle 17:00 alle 20:00 (orario speciale), gli altri venerdì fino alle 22:00' : 'Dalle 17:00 alle 22:00, ogni venerdì di novembre', 'Aperitivo Crispy: patatine del venerdì + un drink 12,90 €', 'Con Mango Mimosa o gin tonic 14,90 €', 'Il gusto si svela il mercoledì prima: guarda qui sotto'],
         img: friShown ? nextFri.at(3) : '/_blob/708163ba1079d5606c42f9861669b53e', alt: friShown ? nextFri.at(4) : 'Una coppia brinda all’aperitivo nel dehors di KEIK', pos: friShown ? 'center 50%' : 'center 15%', cta: 'Prenota il tavolo', form: 'https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW', close: '2026-11-27', msg: 'Ciao KEIK! Vorrei prenotare un tavolo per il Crispy Friday' },
       { date: '2026-11-19', dow: 'GIO', day: '19', mon: 'NOV', title: 'Aperitivo in lingua', short: '19:00 – 22:00 · tavoli in spagnolo e italiano', tag: 'APERITIVO · WORLD HELLO DAY', when: 'GIOVEDÌ 19 NOVEMBRE · 19:00 – 22:00',
         text: 'Torna l’Aperitivo in lingua, nella Giornata mondiale del saluto (World Hello Day): tavoli in spagnolo e in italiano per conoscere persone nuove e allenare la lingua, con il tagliere e la musica giusta. Per l’occasione restiamo aperti fino alle 22:00.',

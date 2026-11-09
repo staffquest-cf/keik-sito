@@ -63,6 +63,7 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 
 ## Da fare / in sospeso
 
+- Orari speciali 9–15 novembre 2026: popup in home e banner in Prenota (funzione `osRows` in `Main.dc.html` e `Prenota.dc.html`) spariscono da soli dopo sabato 14; il Crispy di venerdì 13 è 17–20. Dopo il 15/11 si può togliere il codice e la riga "ORARI SPECIALI" da `brady/solo-keikit/dati/privato/brady-keik.txt`. Per un avviso futuro basta cambiare le righe di `osRows` (date, testi) e aggiungere le traduzioni. Il prerender imposta `window.__KK_PRERENDER__`: gli avvisi temporanei non finiscono nell'HTML per Google.
 - Eventi: la pagina passa da ottobre a novembre da sola il 1/11; entro inizio dicembre serve la pagina di dicembre, e con lei `brady/sito/dati/eventi.json` di dicembre. Dopo novembre togliere la riga Merenda Social Club dalla home.
 - SSL keik.it (Let's Encrypt con AutoSSL): il certificato attuale scade il 26/11/2026. Il 3/11 è stato tolto dal Zone Editor il record AAAA di keik.it che puntava ancora a Shopify (bloccava il rinnovo e mandava su Shopify chi si collega in IPv6); ora keik.it, www e mail superano il controllo. Sempre il 3/11 cpanel, webmail, ftp, whm, webdisk, cpcalendars, cpcontacts sono stati rimessi su `192.250.229.195` (`app.keik.it` punta ancora a Shopify, lasciato com'è). Verso il 20/11 controllare che il certificato nuovo sia installato (cPanel → SSL/TLS Status).
 - Fra 2–3 settimane dalla migrazione (27/10/2026): togliere il dominio da Shopify, chiudere il piano, cancellare `public_html-backup-2026-10-27` su FastComet.

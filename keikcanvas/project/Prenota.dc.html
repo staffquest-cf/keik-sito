@@ -70,7 +70,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.16em">AVVISO AI PASSEGGERI</span>
 <strong style="font-size: 16px">Orari speciali questa settimana:</strong>
 <sc-for list="{{osRows}}" as="r" hint-placeholder-count="3">
-<span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; font-size: 14px; font-weight: 600"><span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #91007D">{{r.day}}</span>{{r.text}}</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; font-size: 14px; font-weight: 600"><span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #91007D">{{r.day}}</span>{{r.text}}<span style="font-weight: 500; color: #6B4A70">· {{r.cucina}}</span></span>
 </sc-for>
 <span style="font-size: 14px">Gli altri giorni come sempre, 10–20.</span>
 </div>
@@ -178,10 +178,10 @@ class Component extends DCLogic {
   osRows() {
     const now = Date.now();
     return [
-      { fine: '2026-11-10T00:00:00+01:00', day: 'LUN 9', text: 'Chiudiamo alle 18:00' },
-      { fine: '2026-11-14T00:00:00+01:00', day: 'VEN 13', text: 'Chiudiamo alle 20:00' },
-      { fine: '2026-11-15T00:00:00+01:00', day: 'SAB 14', text: 'Chiudiamo alle 20:00' }
-    ].filter((r) => now < Date.parse(r.fine)).map((r) => ({ day: r.day, text: r.text }));
+      { fine: '2026-11-10T00:00:00+01:00', day: 'LUN 9', text: 'Chiudiamo alle 18:00', cucina: 'Cucina fino alle 17:30' },
+      { fine: '2026-11-14T00:00:00+01:00', day: 'VEN 13', text: 'Chiudiamo alle 20:00', cucina: 'Cucina fino alle 19:30' },
+      { fine: '2026-11-15T00:00:00+01:00', day: 'SAB 14', text: 'Chiudiamo alle 20:00', cucina: 'Cucina fino alle 19:30' }
+    ].filter((r) => now < Date.parse(r.fine)).map((r) => ({ day: r.day, text: r.text, cucina: r.cucina }));
   }
   renderVals() {
     const st = this.state || {};
