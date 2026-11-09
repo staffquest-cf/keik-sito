@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
-<script>(function(){var L=['it','en','es','fr'],l=null,q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1];if(q&&L.indexOf(q)>=0){l=q;try{localStorage.setItem('keik-lang',q)}catch(e){}}if(!l){try{l=localStorage.getItem('keik-lang')}catch(e){}if(L.indexOf(l)<0)l=null;}if(!l&&/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent))l='it';if(!l){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'it'],f=null;for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='it'){f='it';break;}if(!f&&L.indexOf(c)>0)f=c;}l=f||'en';}window.__KLANG__=l;document.documentElement.lang=l;if(l!=='it')document.write('<script src="assets/i18n/'+l+'.js?v=a7cfadf0"><\/script>');})();</script>
+<script>(function(){var L=['it','en','es','fr'],l=null,q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1];if(q&&L.indexOf(q)>=0){l=q;try{localStorage.setItem('keik-lang',q)}catch(e){}}if(!l){try{l=localStorage.getItem('keik-lang')}catch(e){}if(L.indexOf(l)<0)l=null;}if(!l&&/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent))l='it';if(!l){var n=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'it'],f=null;for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='it'){f='it';break;}if(!f&&L.indexOf(c)>0)f=c;}l=f||'en';}window.__KLANG__=l;document.documentElement.lang=l;if(l!=='it')document.write('<script src="assets/i18n/'+l+'.js?v=f6d3afbb"><\/script>');})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Prenota un tavolo · KEIK Modena</title>
 <meta property="og:type" content="website">
@@ -157,6 +157,9 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <main id="contenuto">
 
+
+
+
 <section id="top" style="padding: 48px 0 96px; background: #F7F2F6">
 <div class="n-wrap n-hero">
 <div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
@@ -294,6 +297,20 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <!-- /KK-SITEBAR -->
 <main id="contenuto">
 
+<!-- ORARI SPECIALI 9–15 NOVEMBRE: banner (compare dopo il caricamento, sparisce da solo dopo sabato 14) -->
+<sc-if value="{{osShow}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="background: #F6E58D; color: #2A0830; font-family: 'Montserrat', system-ui, sans-serif; border-bottom: 1px solid #E8D46A">
+<div class="n-wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding-top: 14px; padding-bottom: 14px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.16em">AVVISO AI PASSEGGERI</span>
+<strong style="font-size: 16px">Orari speciali questa settimana:</strong>
+<sc-for list="{{osRows}}" as="r" hint-placeholder-count="3">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; font-size: 14px; font-weight: 600"><span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #91007D">{{r.day}}</span>{{r.text}}</span>
+</sc-for>
+<span style="font-size: 14px">Gli altri giorni come sempre, 10–20.</span>
+</div>
+</div>
+</sc-if>
+
 <section id="top" style="padding: 48px 0 96px; background: #F7F2F6">
 <div class="n-wrap n-hero">
 <div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
@@ -391,6 +408,15 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </script>
 <script type="text/x-dc" id="dc-code">
 class Component extends DCLogic {
+  // ORARI SPECIALI 9–15 novembre 2026: ogni riga sparisce a fine giornata, popup e banner spariscono da soli dopo sabato 14
+  osRows() {
+    const now = Date.now();
+    return [
+      { fine: '2026-11-10T00:00:00+01:00', day: 'LUN 9', text: 'Chiudiamo alle 18:00' },
+      { fine: '2026-11-14T00:00:00+01:00', day: 'VEN 13', text: 'Chiudiamo alle 20:00' },
+      { fine: '2026-11-15T00:00:00+01:00', day: 'SAB 14', text: 'Chiudiamo alle 20:00' }
+    ].filter((r) => now < Date.parse(r.fine)).map((r) => ({ day: r.day, text: r.text }));
+  }
   renderVals() {
     const st = this.state || {};
     const m = typeof st.m === 'number' ? st.m : 0;
@@ -412,10 +438,13 @@ class Component extends DCLogic {
     return {
       kpOpenCls: (this.state && this.state.kpOpen) ? 'is-open' : '', kpClosed: !(this.state && this.state.kpOpen), openForm: () => this.setState({ kpOpen: true }),
       moments, cur, tip: cur.tip, isGroup, isBook: !isGroup, waHref,
-      pnsH: typeof st.pnsH === 'number' ? st.pnsH : 700
+      pnsH: typeof st.pnsH === 'number' ? st.pnsH : 700,
+      osRows: this.osRows(), osShow: !!st.osMounted && this.osRows().length > 0
     };
   }
   componentDidMount() {
+    // Orari speciali: il banner compare dopo il caricamento (non finisce nell'HTML per Google)
+    if (!window.__KK_PRERENDER__) this.setState({ osMounted: true });
     // Script di auto-resize di Pienissimo: l'iframe prende l'altezza del form, così la pagina scorre tutta anche col dito sopra il modulo
     this._pns = (e) => {
       const fr = document.getElementById('pns-form');
