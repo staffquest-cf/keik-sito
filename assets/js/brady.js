@@ -28,7 +28,7 @@
   /* ---------- Testi ---------- */
   const T = {
     it: {
-      hello: () => "Ciao! Sono il Capitano Brady. Chiedimi degli eventi del mese o dimmi cosa vuoi prenotare: ti preparo la carta d'imbarco.",
+      hello: () => "Ciao, sono Brady, la mascotte del KEIK. Chiedimi degli orari, degli eventi del mese o dimmi quando vuoi prenotare: ti preparo la carta d'imbarco.",
       thinking: 'Il capitano controlla la rotta…', pass: "Carta d'imbarco", data: 'Data', turno: 'Turno', persone: 'Persone',
       form: 'Prenota il tuo posto', wa: 'Scrivi su WhatsApp', table: 'Prenota un tavolo',
       note: 'Il posto è confermato quando ricevi la conferma di KEIK.', all: "Cosa c'è questo mese?", party: 'Voglio fare una festa', book: 'Prenota ', tableQ: 'Prenota un tavolo', hoursQ: 'Orari e cena',
@@ -38,7 +38,7 @@
       busy: 'Tanti passeggeri al gate in questo momento: ti rispondo con le informazioni di base.', gone: 'già partito', send: 'Invia', ph: 'Scrivi a Brady…'
     },
     en: {
-      hello: () => "Hi! I'm Captain Brady. Ask me about this month's events or tell me what you'd like to book: I'll prepare your boarding pass.",
+      hello: () => "Hi, I'm Brady, KEIK's mascot. Ask me about our opening hours, this month's events, or tell me when you'd like to book: I'll prepare your boarding pass.",
       thinking: 'The captain is checking the route…', pass: 'Boarding pass', data: 'Date', turno: 'Seating', persone: 'Guests',
       form: 'Book your seat', wa: 'Message on WhatsApp', table: 'Book a table',
       note: 'Your seat is confirmed once KEIK confirms it.', all: "What's on this month?", party: 'Private party', book: 'Book ', tableQ: 'Book a table', hoursQ: 'Opening hours',
@@ -48,7 +48,7 @@
       busy: "Busy gate right now: here's the basic information.", gone: 'departed', send: 'Send', ph: 'Message Brady…'
     },
     es: {
-      hello: () => '¡Hola! Soy el Capitán Brady. Pregúntame por los eventos del mes o dime qué quieres reservar: te preparo la tarjeta de embarque.',
+      hello: () => '¡Hola! Soy Brady, la mascota de KEIK. Pregúntame por los horarios, los eventos del mes o dime cuándo quieres reservar: te preparo la tarjeta de embarque.',
       thinking: 'El capitán está revisando la ruta…', pass: 'Tarjeta de embarque', data: 'Fecha', turno: 'Turno', persone: 'Personas',
       form: 'Reserva tu plaza', wa: 'Escribir por WhatsApp', table: 'Reservar mesa',
       note: 'Tu plaza está confirmada cuando KEIK te la confirma.', all: '¿Qué hay este mes?', party: 'Fiesta privada', book: 'Reservar ', tableQ: 'Reservar una mesa', hoursQ: 'Horarios y cena',
@@ -58,7 +58,7 @@
       busy: 'Mucha gente en la puerta ahora mismo: te respondo con la información básica.', gone: 'salido', send: 'Enviar', ph: 'Escribe a Brady…'
     },
     fr: {
-      hello: () => "Bonjour ! Je suis le Capitaine Brady. Demandez-moi les événements du mois ou ce que vous voulez réserver : je prépare votre carte d'embarquement.",
+      hello: () => "Bonjour, je suis Brady, la mascotte de KEIK. Demandez-moi les horaires, les événements du mois ou dites-moi quand vous voulez réserver : je prépare votre carte d'embarquement.",
       thinking: 'Le capitaine vérifie la route…', pass: "Carte d'embarquement", data: 'Date', turno: 'Service', persone: 'Personnes',
       form: 'Réserver ma place', wa: 'Écrire sur WhatsApp', table: 'Réserver une table',
       note: 'Votre place est confirmée quand KEIK vous la confirme.', all: 'Quoi de neuf ce mois-ci ?', party: 'Fête privée', book: 'Réserver ', tableQ: 'Réserver une table', hoursQ: 'Horaires et dîner',
