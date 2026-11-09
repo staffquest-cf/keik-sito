@@ -76,6 +76,14 @@
     return 'it';
   }
 
+  /* ---------- Saluti di chiusura (risposte di base, se l'AI non risponde) ---------- */
+  const BYE = {
+    it: ['È stato un piacere averti a bordo. Ci vediamo in Via Canalino: il prossimo viaggio è già in cucina.', 'Buon viaggio col gusto! Il mondo ti aspetta a un tavolo di distanza, da KEIK.', 'Grazie per aver volato con il Capitano Brady: ogni assaggio è una nuova destinazione. A presto!'],
+    en: ['It was a pleasure having you on board. See you in Via Canalino: your next journey is already in the kitchen.', 'Bon voyage, and travel with taste! The world is just a table away at KEIK.', 'Thanks for flying with Captain Brady: every bite is a new destination. See you soon!'],
+    es: ['Ha sido un placer tenerte a bordo. Nos vemos en Via Canalino: tu próximo viaje ya está en la cocina.', '¡Buen viaje con sabor! En KEIK el mundo está a una mesa de distancia.', 'Gracias por volar con el Capitán Brady: cada bocado es un nuevo destino. ¡Hasta pronto!'],
+    fr: ['Ce fut un plaisir de vous avoir à bord. À bientôt Via Canalino : votre prochain voyage est déjà en cuisine.', 'Bon voyage et voyagez avec goût ! Chez KEIK, le monde est à une table de vous.', 'Merci d’avoir volé avec le Capitaine Brady : chaque bouchée est une nouvelle destination. À bientôt !']
+  };
+
   /* ---------- Risposte di base (senza ponte) ---------- */
   function eventInfo(e) {
     return `${e.titolo}: ${e.quando}.\n${e.descrizione}\n${(e.dettagli || []).join('\n')}`;
@@ -112,6 +120,11 @@
     if (/orari|hours|horario|horaire|apert|open|abiert|ouvert|chiud|closed/.test(t)) return { reply: 'Aperti 7 giorni su 7: 10–20, venerdì e sabato fino alle 22. Cucina fino alle 19:30, venerdì e sabato fino alle 21:30.' };
     if (/parchegg|parking|aparca|garer|dove|where|d[oó]nde|où|indirizzo|address|direcci|adresse/.test(t)) return { reply: 'Via Canalino 51, Modena, in ZTL. Si parcheggia sui viali entrando da via Saragozza o da via Gallucci, poi pochi minuti a piedi.\nhttps://maps.google.com/?q=Via+Canalino+51+Modena' };
     if (/celiac|cel[ií]ac|coeliac|glutin|gluten/.test(t)) return { reply: 'Abbiamo un menu senza glutine, ma non è adatto ai celiaci: in cucina lavoriamo farine ogni giorno e non possiamo garantire l\'assenza di tracce.' };
+    // Saluto di chiusura: il cliente ringrazia o ha finito
+    if (document.querySelectorAll('.b-me').length > 1 && /^(grazie|ok|okay|perfetto|va bene|a posto|niente|basta|a presto|ciao ciao|arrivederci|thanks|thank you|perfect|bye|gracias|perfecto|vale|adiós|merci|parfait|au revoir)\b/.test(t) && t.length < 60) {
+      const B = BYE[lang] || BYE.it;
+      return { reply: B[Math.floor(Math.random() * B.length)], fine: true };
+    }
     if (/^(ciao|salve|buongiorno|buonasera|hello|hi|hey|hola|bonjour)\b/.test(t)) return { reply: f.hello(null), chips: [f.all, f.party] };
     return { reply: f.unknown };
   }
@@ -268,10 +281,52 @@
     if (res.booking) renderTicket(res.booking);
     // Domande pronte: quelle proposte da Brady, altrimenti quelle di base (senza ripetere quella appena fatta)
     const ask = text.toLowerCase();
-    setChips((res.chips && res.chips.length ? res.chips : defaultChips()).filter((c) => c && c.toLowerCase() !== ask));
+    // Dopo il saluto di chiusura niente domande pronte: la chat resta aperta se il cliente vuole scrivere ancora
+    if (res.fine) setChips([]);
+    else setChips((res.chips && res.chips.length ? res.chips : defaultChips()).filter((c) => c && c.toLowerCase() !== ask));
     busy = false; sendBtn.disabled = false;
     if (window.matchMedia && matchMedia('(hover: hover)').matches) input.focus();
   }
+
+  /* ---------- Informativa breve della chat (si apre dal link "Privacy" in fondo) ---------- */
+  const PRIV = {
+    it: { t: 'Come usiamo i tuoi messaggi', close: 'Chiudi', full: 'Privacy policy completa di KEIK', anth: 'Informativa privacy di Anthropic', p: [
+      "Brady è un assistente automatico: risponde con l'intelligenza artificiale usando le informazioni pubblicate su keik.it. Può sbagliare: per allergie e richieste particolari chiedi sempre allo staff.",
+      "Quello che scrivi viene inviato ad Anthropic, l'azienda che fornisce l'intelligenza artificiale (Claude), solo per preparare la risposta.",
+      'KEIK non salva le conversazioni. Per evitare abusi teniamo solo un’impronta cifrata e anonima della connessione e l’orario dei messaggi, mai i testi.'] },
+    en: { t: 'How we use your messages', close: 'Close', full: "KEIK's full privacy policy", anth: "Anthropic's privacy policy", p: [
+      'Brady is an automated assistant: it answers with artificial intelligence using the information published on keik.it. It can make mistakes: for allergies and special requests, always ask our staff.',
+      'What you write is sent to Anthropic, the company that provides the artificial intelligence (Claude), only to prepare the answer.',
+      'KEIK does not save conversations. To prevent abuse we only keep an anonymous, encrypted fingerprint of the connection and the time of the messages, never the text.'] },
+    es: { t: 'Cómo usamos tus mensajes', close: 'Cerrar', full: 'Política de privacidad completa de KEIK', anth: 'Política de privacidad de Anthropic', p: [
+      'Brady es un asistente automático: responde con inteligencia artificial usando la información publicada en keik.it. Puede equivocarse: para alergias y peticiones especiales pregunta siempre al personal.',
+      'Lo que escribes se envía a Anthropic, la empresa que ofrece la inteligencia artificial (Claude), solo para preparar la respuesta.',
+      'KEIK no guarda las conversaciones. Para evitar abusos solo guardamos una huella cifrada y anónima de la conexión y la hora de los mensajes, nunca los textos.'] },
+    fr: { t: 'Comment nous utilisons vos messages', close: 'Fermer', full: 'Politique de confidentialité complète de KEIK', anth: 'Politique de confidentialité d’Anthropic', p: [
+      'Brady est un assistant automatique : il répond grâce à l’intelligence artificielle en utilisant les informations publiées sur keik.it. Il peut se tromper : pour les allergies et les demandes particulières, demandez toujours à l’équipe.',
+      'Ce que vous écrivez est envoyé à Anthropic, l’entreprise qui fournit l’intelligence artificielle (Claude), uniquement pour préparer la réponse.',
+      'KEIK n’enregistre pas les conversations. Pour éviter les abus, nous gardons seulement une empreinte chiffrée et anonyme de la connexion et l’heure des messages, jamais les textes.'] }
+  };
+  const privLink = document.querySelector('.b-foot a');
+  let privEl = null;
+  function closePriv() { if (privEl) { privEl.remove(); privEl = null; if (privLink) privLink.focus(); } }
+  function openPriv() {
+    if (privEl) return;
+    const P = PRIV[lang] || PRIV.it;
+    privEl = document.createElement('div');
+    privEl.className = 'b-priv';
+    privEl.innerHTML = `<div class="b-priv-bg"></div><div class="b-priv-box" role="dialog" aria-modal="true" aria-labelledby="b-priv-t">
+      <div class="b-priv-head"><strong id="b-priv-t">${esc(P.t)}</strong><button type="button" class="b-priv-x" aria-label="${esc(P.close)}">×</button></div>
+      ${P.p.map((x) => `<p>${esc(x)}</p>`).join('')}
+      <p class="b-priv-links"><a href="https://www.iubenda.com/privacy-policy/680124" target="_blank" rel="noopener">${esc(P.full)}</a><a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">${esc(P.anth)}</a></p>
+    </div>`;
+    privEl.querySelector('.b-priv-bg').addEventListener('click', closePriv);
+    privEl.querySelector('.b-priv-x').addEventListener('click', closePriv);
+    document.body.append(privEl);
+    privEl.querySelector('.b-priv-x').focus();
+  }
+  if (privLink) privLink.addEventListener('click', (e) => { e.preventDefault(); openPriv(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePriv(); });
 
   form.addEventListener('submit', (e) => { e.preventDefault(); send(input.value); });
 
