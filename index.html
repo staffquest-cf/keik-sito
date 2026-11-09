@@ -612,14 +612,14 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <path d="M536 96 v10 M529 120 l7-14 7 14 M527 120 h18 v70 h-18 z M527 138 h18 M527 156 h18 M527 174 h18 M533 126 h6" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
 
 <path d="M82 170 C 210 20, 400 20, 516 158" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="3 7" stroke-linecap="round"></path>
-<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="495.5128783593865" opacity="1.000"></path>
+<path d="M82 170 C 210 20, 400 20, 516 158" stroke="#E9A9DF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="494.8822901172991" opacity="1.000"></path>
 
 <circle cx="82" cy="170" r="4.5" fill="#FAE609"></circle>
 <circle cx="516" cy="158" r="5.00" stroke="#FFFFFF" stroke-width="1.5" opacity="0"></circle>
 <circle cx="516" cy="158" r="4" fill="#FFFFFF"></circle>
 
-<g opacity="0.266" transform="translate(85.57 170.94) rotate(-48.78) scale(0.732)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
-<g transform="translate(85.38 166.10) rotate(-48.78) scale(0.915)" opacity="1.000"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
+<g opacity="0.268" transform="translate(86.01 170.57) rotate(-48.70) scale(0.733)"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#000000" opacity="0.35"></path></g>
+<g transform="translate(85.79 165.62) rotate(-48.70) scale(0.916)" opacity="1.000"><path d="M14 0 L4 -2 L-2 -12 L-6 -12 L-2 -2 L-10 -1.5 L-13 -6 L-15 -6 L-13 0 L-15 6 L-13 6 L-10 1.5 L-2 2 L-6 12 L-2 12 L4 2 Z" fill="#FFFFFF"></path></g>
 
 <text x="34" y="214" fill="#FFFFFF" style="font: 500 12px 'Space Mono', monospace; letter-spacing: 0.08em">CCS · CARACAS</text>
 <text x="566" y="214" fill="#FFFFFF" text-anchor="end" style="font: 500 12px 'Space Mono', monospace; letter-spacing: 0.08em">MOD · MODENA</text>
@@ -1205,12 +1205,18 @@ class Component extends DCLogic {
       try { window.localStorage.setItem('keik-orari-speciali', this.osDay()); } catch (e) {}
       this.setState({ osOpen: false });
     };
-    this.osTimer = setTimeout(() => {
-      if (window.__KK_PRERENDER__ || !this.osRows().length) return;
+    // Su keik.it aspetta che il cliente abbia risposto al banner dei cookie di iubenda, così i due non si sovrappongono
+    this.osTry = () => {
+      if (this.osDone || window.__KK_PRERENDER__ || !this.osRows().length) return;
+      if (window._iub && !window.__kkConsent) return;
+      this.osDone = true;
       let seen = '';
       try { seen = window.localStorage.getItem('keik-orari-speciali') || ''; } catch (e) {}
       if (seen !== this.osDay()) this.setState({ osOpen: true });
-    }, 1500);
+    };
+    this.osTimer = setTimeout(this.osTry, 1500);
+    this.osConsent = () => { clearTimeout(this.osTimer); this.osTimer = setTimeout(this.osTry, 600); };
+    document.addEventListener('kk-consent', this.osConsent);
     this.osKey = (e) => { if (e.key === 'Escape' && (this.state || {}).osOpen) this.osCloseFn(); };
     document.addEventListener('keydown', this.osKey);
     this.reduce = typeof window !== 'undefined' && !!window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1227,6 +1233,7 @@ class Component extends DCLogic {
   componentWillUnmount() {
     document.removeEventListener('kk-consent', this.kkMapEv);
     document.removeEventListener('keydown', this.osKey);
+    document.removeEventListener('kk-consent', this.osConsent);
     clearTimeout(this.osTimer);
     clearInterval(this.auto);
     clearInterval(this.fl);
