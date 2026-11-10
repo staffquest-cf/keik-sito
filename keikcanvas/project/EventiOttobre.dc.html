@@ -400,7 +400,7 @@ class Component extends DCLogic {
     const wdIt = { MER: 'Mer', SAB: 'Sab', DOM: 'Dom', LUN: 'Lun', MAR: 'Mar', GIO: 'Gio', VEN: 'Ven' };
     const monIt = { OTT: 'ottobre', NOV: 'novembre', DIC: 'dicembre' };
     const nextLabel = (wdIt[nextEv.dow] || nextEv.dow) + ' ' + nextEv.day + ' ' + (monIt[nextEv.mon] || nextEv.mon);
-    return { nextLabel, nextSticky: 'Prossimo: ' + nextLabel.toLowerCase(), nextTitle: nextEv.title, kpEvCls: kps.kpEv ? 'is-open' : '', kpEvClosed: !kps.kpEv, openEv: () => this.setState({ kpEv: true }), kpMtCls: kps.kpMt ? 'is-open' : '', kpMtClosed: !kps.kpMt, openMt: () => this.setState({ kpMt: true }), events, cur, matcha, past, mtOpen, mtClosed: !mtOpen, evH: typeof st.evH === 'number' ? st.evH : (typeof window !== 'undefined' && window.innerWidth < 700 ? 503 : 480), mtH: typeof st.mtH === 'number' ? st.mtH : (typeof window !== 'undefined' && window.innerWidth < 700 ? 503 : 480) };
+    return { nextLabel, nextSticky: 'Prossimo: ' + nextLabel.toLowerCase(), nextTitle: nextEv.title, kpEvCls: kps.kpEv ? 'is-open' : '', kpEvClosed: !kps.kpEv, openEv: () => this.setState({ kpEv: true }), kpMtCls: kps.kpMt ? 'is-open' : '', kpMtClosed: !kps.kpMt, openMt: () => this.setState({ kpMt: true }), events, cur, matcha, past, mtOpen, mtClosed: !mtOpen, evH: typeof st.evH === 'number' ? st.evH : 503 /* altezza reale del primo passaggio dei moduli Pienissimo sul telefono */, mtH: typeof st.mtH === 'number' ? st.mtH : 503 /* altezza reale del primo passaggio dei moduli Pienissimo sul telefono */ };
   }
 }
 </script>

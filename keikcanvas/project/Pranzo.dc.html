@@ -323,7 +323,7 @@ class Component extends DCLogic {
     }));
     return {
       kpOpenCls: (this.state && this.state.kpOpen) ? 'is-open' : '', kpClosed: !(this.state && this.state.kpOpen), openForm: () => this.setState({ kpOpen: true }),
-      pnsH: (this.state && typeof this.state.pnsH === 'number') ? this.state.pnsH : (typeof window !== 'undefined' && window.innerWidth < 700 ? 503 : 480),
+      pnsH: (this.state && typeof this.state.pnsH === 'number') ? this.state.pnsH : 503 /* altezza reale del primo passaggio dei moduli Pienissimo sul telefono */,
       board, filters, dishes, days, times, faqs,
       paxLabel: pax + (pax === 1 ? ' persona' : ' persone'),
       bigGroup: pax >= 7,
