@@ -189,7 +189,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div class="kp-body ">
 <div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>GATE · VIA CANALINO 51</span></div>
 
-<iframe id="pns-form" loading="lazy" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=MbjDTW" title="Prenota un tavolo da KEIK" style="width: 100%; height: 700px; border: 0; display: block"></iframe>
+<iframe id="pns-form" loading="lazy" src="about:blank" title="Prenota un tavolo da KEIK" style="width: 100%; height: 503px; border: 0; display: block"></iframe>
 <div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
 <span>Il modulo non si apre? <a href="https://pnssm.pro/a16isyw" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
 <a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
@@ -340,7 +340,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <div class="kp-body {{kpOpenCls}}">
 <div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>GATE · VIA CANALINO 51</span></div>
 <!-- Form prenotazioni Pienissimo (altezza adattata dallo script in componentDidMount) -->
-<iframe id="pns-form" loading="lazy" src="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW" title="Prenota un tavolo da KEIK" style="width: 100%; height: {{pnsH}}px; border: 0; display: block"></iframe>
+<iframe id="pns-form" loading="lazy" src="{{pnsSrc}}" title="Prenota un tavolo da KEIK" style="width: 100%; height: {{pnsH}}px; border: 0; display: block"></iframe>
 <div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
 <span>Il modulo non si apre? <a href="https://pnssm.pro/a16isyw" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
 <a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
@@ -411,6 +411,9 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </script>
 <script type="text/x-dc" id="dc-code">
 class Component extends DCLogic {
+  // Apre la tendina subito (lo spazio del modulo è già riservato) e carica Pienissimo un attimo dopo:
+  // così il telefono disegna l'apertura senza ritardo e la pagina non "salta" (CLS)
+  apri(k, g) { const s = this.state || {}; if (s[k] && s[g]) return; this.setState({ [k]: true }); setTimeout(() => this.setState({ [g]: true }), 300); }
   // ORARI SPECIALI 9–15 novembre 2026: ogni riga sparisce a fine giornata, popup e banner spariscono da soli dopo sabato 14
   osRows() {
     const now = Date.now();
@@ -439,9 +442,9 @@ class Component extends DCLogic {
     const isGroup = m === 4;
     const waHref = 'https://wa.me/393534732354?text=' + encodeURIComponent('Ciao KEIK! Vorrei prenotare per un gruppo.');
     return {
-      kpOpenCls: (this.state && this.state.kpOpen) ? 'is-open' : '', kpClosed: !(this.state && this.state.kpOpen), openForm: () => this.setState({ kpOpen: true }),
+      kpOpenCls: (this.state && this.state.kpOpen) ? 'is-open' : '', kpClosed: !(this.state && this.state.kpOpen), openForm: () => this.apri('kpOpen', 'pnsGo'), pnsSrc: (this.state && this.state.pnsGo) ? 'https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW' : 'about:blank',
       moments, cur, tip: cur.tip, isGroup, isBook: !isGroup, waHref,
-      pnsH: typeof st.pnsH === 'number' ? st.pnsH : 700,
+      pnsH: typeof st.pnsH === 'number' ? st.pnsH : 503 /* altezza reale del primo passaggio dei moduli Pienissimo sul telefono */,
       osRows: this.osRows(), osShow: !!st.osMounted && this.osRows().length > 0
     };
   }
@@ -459,9 +462,9 @@ class Component extends DCLogic {
     };
     window.addEventListener('message', this._pns);
     // I link di prenotazione aprono il modulo a tendina
-    this._kp = (e) => { const t = e.target.closest ? e.target : null; if (!t) return; if (t.closest('a[href="#modulo"]')) this.setState({ kpOpen: true }); };
+    this._kp = (e) => { const t = e.target.closest ? e.target : null; if (!t) return; if (t.closest('a[href="#modulo"]')) this.apri('kpOpen', 'pnsGo'); };
     document.addEventListener('click', this._kp);
-    if ('a[href="#modulo"]'.indexOf('"' + location.hash + '"') >= 0 && location.hash) this.setState({ kpOpen: true });
+    if ('a[href="#modulo"]'.indexOf('"' + location.hash + '"') >= 0 && location.hash) this.apri('kpOpen', 'pnsGo');
   }
   componentWillUnmount() { window.removeEventListener('message', this._pns); }
 }
