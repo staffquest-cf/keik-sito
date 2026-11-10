@@ -222,6 +222,7 @@
       </div>`;
     card.querySelector(`#t${k}-wa`).href = `https://wa.me/${WA}?text=${encodeURIComponent(waText(s, ev))}`;
     log.append(card);
+    if (window.kkTrack) window.kkTrack('brady_carta_imbarco', { evento: b.event, da: DA || 'diretto' });
     log.scrollTop = Math.max(0, card.offsetTop - log.offsetTop - 70);
   }
 
@@ -245,6 +246,7 @@
     busy = true; sendBtn.disabled = true; setChips([]);
     input.value = '';
     addMsg('me', text);
+    if (window.kkTrack) window.kkTrack('brady_messaggio', { da: DA || 'diretto' });
     const dl = detectLang(text);
     if (!(dl === 'it' && lang !== 'it' && text.length < 25)) lang = dl;
     const wait = addMsg('bot', null);
