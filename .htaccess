@@ -69,6 +69,8 @@ RewriteRule ^pages/jalisco-maxi-nachos-weekend/?$ https://keik.it/eventi.html [R
 RewriteRule ^pages/settembre-magie-viaggi-e-13-anni-di-keik/?$ https://keik.it/eventi.html [R=301,L,NC]
 RewriteRule ^pages/eventi-halloween-modena/?$ https://keik.it/eventi.html [R=301,L,NC]
 RewriteRule ^pages/ottobre-eventi-e-viaggi-col-gusto/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/messico(-[a-z0-9-]+)?/?$ https://keik.it/eventi.html [R=301,L,NC]
+RewriteRule ^pages/brunch/?$ https://keik.it/brunch.html [R=301,L,NC]
 
 # Privacy e policy Shopify
 RewriteRule ^pages/gdpr-compliance/?$ https://www.iubenda.com/privacy-policy/680124 [R=301,L,NC]
