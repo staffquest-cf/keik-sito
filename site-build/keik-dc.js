@@ -210,8 +210,12 @@
     if (!tpl || !root) return;
     // Il modello della pagina è in uno <script> (così i motori di ricerca non leggono i segnaposto {{...}} come link)
     if (tpl.tagName === 'SCRIPT') {
-      var te = document.createElement('template');
-      te.innerHTML = tpl.textContent.replace(/<\\\/script/gi, '</script');
+      // Il modello si legge con DOMParser: script esterni (banner cookie, strumenti di statistica) che modificano
+      // innerHTML non possono alterarlo. Se DOMParser non va, si torna al metodo classico.
+      var src = tpl.textContent.replace(/<\\\/script/gi, '</script');
+      var te = null;
+      try { te = new DOMParser().parseFromString('<template>' + src + '</template>', 'text/html').querySelector('template'); } catch (e) { te = null; }
+      if (!te || !te.content || !te.content.firstElementChild) { te = document.createElement('template'); te.innerHTML = src; }
       tpl = te;
     }
     var props = {};
@@ -280,6 +284,30 @@
     window.addEventListener('pagehide', function () { if (typeof inst.componentWillUnmount === 'function') inst.componentWillUnmount(); });
     translateHead();
     inst.__render();
+    // Protezione: se qualcosa inserisce nella pagina pezzi grezzi del modello (<sc-if>, <sc-for> con i {{segnaposto}}),
+    // la pagina si ridisegna da sola e i pezzi grezzi spariscono (al massimo 10 volte, per non entrare in un giro infinito).
+    if (window.MutationObserver) {
+      var repairs = 0, repairQueued = false;
+      var isRaw = function (el) { return el.nodeType === 1 && (/^sc-/.test(el.localName) || (el.querySelector && el.querySelector('sc-if, sc-for'))); };
+      new MutationObserver(function (list) {
+        if (repairQueued || repairs >= 10) return;
+        for (var i = 0; i < list.length; i++) {
+          var added = list[i].addedNodes;
+          for (var k = 0; k < added.length; k++) {
+            if (isRaw(added[k])) {
+              repairQueued = true; repairs++;
+              setTimeout(function () {
+                repairQueued = false;
+                var raw = root.querySelectorAll('sc-if, sc-for');
+                for (var r = 0; r < raw.length; r++) if (raw[r].parentNode) raw[r].parentNode.removeChild(raw[r]);
+                inst.__render();
+              }, 0);
+              return;
+            }
+          }
+        }
+      }).observe(root, { childList: true, subtree: true });
+    }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 })();
