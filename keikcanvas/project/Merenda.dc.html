@@ -404,7 +404,7 @@ class Component extends DCLogic {
     }));
     return {
       kpOpenCls: (this.state && this.state.kpOpen) ? 'is-open' : '', kpClosed: !(this.state && this.state.kpOpen), openForm: () => this.setState({ kpOpen: true }),
-      pnsH: (this.state && typeof this.state.pnsH === 'number') ? this.state.pnsH : 700,
+      pnsH: (this.state && typeof this.state.pnsH === 'number') ? this.state.pnsH : (typeof window !== 'undefined' && window.innerWidth < 700 ? 503 : 480),
       sweetPicks, drinkPicks, sweets, pancakes, salty, days, times, faqs,
       sw: { name: s.name, code: s.code, img: s.img, price: eur(s.price) },
       dr: { name: d.name, code: d.code, img: d.img, price: eur(d.price) },
