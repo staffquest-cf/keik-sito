@@ -319,7 +319,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 class Component extends DCLogic {
   // Apre la tendina subito (lo spazio del modulo è già riservato) e carica Pienissimo un attimo dopo:
   // così il telefono disegna l'apertura senza ritardo e la pagina non "salta" (CLS)
-  apri(k, g) { const s = this.state || {}; if (s[k] && s[g]) return; this.setState({ [k]: true }); setTimeout(() => this.setState({ [g]: true }), 300); }
+  apri(k, g) { const s = this.state || {}; if (s[k] && s[g]) return; if (!s[k] && window.kkTrackModulo) window.kkTrackModulo(k); this.setState({ [k]: true }); setTimeout(() => this.setState({ [g]: true }), 300); }
   componentDidMount() {
     this.clock = setInterval(() => this.setState({ now: Date.now() }), 1000);
     // Script di auto-resize di Pienissimo per i due moduli della pagina (evento scelto e Matcha Tuesday)

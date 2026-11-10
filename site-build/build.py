@@ -54,6 +54,7 @@ for f in os.listdir(BLOBS):
 
 shutil.copy(SCR + '/site-build/node_modules/morphdom/dist/morphdom-umd.min.js', OUT + '/assets/js/morphdom.min.js')
 shutil.copy(SCR + '/site-build/keik-dc.js', OUT + '/assets/js/keik-dc.js')
+shutil.copy(SCR + '/site-build/kk-track.js', OUT + '/assets/js/kk-track.js')
 
 # M1: versioni WebP ridimensionate (480/960/1600) + manifest per srcset
 _man = json.load(open(SCR + '/imgcache/manifest.json'))
@@ -160,6 +161,7 @@ def build(name, slug, override=None):
 <script src="assets/js/morphdom.min.js"></script>
 <script src="assets/js/kimg.js"></script>
 <script src="assets/js/keik-dc.js"></script>
+<script src="assets/js/kk-track.js"></script>
 <script>/* KK-HIDE: su iPhone la barra Prenota si nasconde scorrendo giù (Safari 26 la copre) e riappare scorrendo su */(function(){{var y=0,d=document.documentElement;addEventListener("scroll",function(){{var n=scrollY;if(Math.abs(n-y)<8)return;d.classList.toggle("kk-down",n>y&&n>160);y=n;}},{{passive:true}});}})();</script>
 </body>
 </html>
@@ -202,7 +204,7 @@ for _h in glob.glob(OUT + '/*.html'):
                     '<link rel="preload" href="assets/fonts/space-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>\n' + _inl)
     # Versione dei file JavaScript nell'indirizzo: dopo ogni aggiornamento il browser scarica quelli nuovi (niente copie vecchie in memoria)
     import hashlib as _hl
-    for _js in ('morphdom.min.js', 'kimg.js', 'keik-dc.js'):
+    for _js in ('morphdom.min.js', 'kimg.js', 'keik-dc.js', 'kk-track.js'):
         _v = _hl.md5(open(OUT + '/assets/js/' + _js, 'rb').read()).hexdigest()[:8]
         _t = _t.replace('src="assets/js/' + _js + '"', 'src="assets/js/' + _js + '?v=' + _v + '"')
     _vi = _hl.md5(b''.join(open(OUT + '/assets/i18n/' + _l + '.js', 'rb').read() for _l in ('en', 'es', 'fr'))).hexdigest()[:8]

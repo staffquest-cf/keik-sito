@@ -55,6 +55,7 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 
 - Indirizzo principale: **https://keik.it** (senza www; www e http rimandano qui).
 - Hosting: FastComet, server `s13610.fra1.stableserver.net`, IP `192.250.229.195`, utente cPanel `keikbake`, cartella `public_html`. DNS gestito nel Zone Editor di FastComet (nameserver ns1/ns2.de1.fcomet.com). Dominio registrato su VHosting. Email @keik.it su FastComet (MX: non toccare).
+- Eventi per Google Analytics (`site-build/kk-track.js`, partono solo su keik.it dopo il consenso): `prenota_apri_modulo`, `prenota_click`, `modulo_esterno_click`, `whatsapp_click`, `telefono_click`, `indicazioni_click`, `buono_regalo_click`, `passaporto_click`, `brady_apri`, `brady_messaggio`, `brady_carta_imbarco`. Prova con `?kkdebug` (li scrive nella console). In GA la proprietà raccoglie anche la pagina Google degli annunci (host `business.google.com`): per il solo sito filtrare "Nome host = keik.it".
 - Google Analytics: `G-8TJZ0BY97T` · Microsoft Clarity: `z4auk6y1db` (partono solo su keik.it e solo dopo il consenso ai cookie di misurazione).
 - iubenda: siteId 418012, cookiePolicyId 680124. Google Maps si carica con il consenso "Esperienza" o al clic.
 - Moduli Pienissimo: `https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=<ID>` · generale `MbjDTW` · Aperitivo in lingua `58ayJR` · Friendsgiving `QLRP7p` · panino del giorno dopo `ULHn9C`.
