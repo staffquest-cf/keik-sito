@@ -138,6 +138,13 @@ def build(name, slug, override=None):
                'window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag("js",new Date());gtag("config",GA,{anonymize_ip:true});'
                '(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}'
                'if(ok(window.__kkConsent))go();document.addEventListener("kk-consent",function(e){if(ok(e.detail))go();});})();</script>\n')
+        # Pixel di Meta (stesso pixel che usava Shopify): parte solo su keik.it e solo dopo il consenso ai cookie di marketing (finalità 5 iubenda)
+        OG += ('<script>(function(){var PX="1066522540533719",done=false;'
+               'function ok(p){if(!p)return false;var u=p.purposes||{};return u[5]===true||u["5"]===true;}'
+               'function go(){if(done)return;if(location.hostname.replace(/^www\\./,"")!=="keik.it")return;done=true;'
+               '!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");'
+               'fbq("init",PX);fbq("track","PageView");}'
+               'if(ok(window.__kkConsent))go();document.addEventListener("kk-consent",function(e){if(ok(e.detail))go();});})();</script>\n')
     # B6: menu al tavolo (QR) mai indicizzato, canonical verso menu.html (anche su FastComet)
     if slug == 'eventi-ottobre':
         ROBOTS = '<meta name="robots" content="noindex, follow">\n<link rel="canonical" href="' + SITE + '/eventi.html">\n'

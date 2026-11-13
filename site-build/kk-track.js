@@ -15,17 +15,33 @@
  *   brady_apri            clic sul pulsante "Chiedi a Brady" della home
  *   brady_messaggio       messaggio inviato al Capitano Brady
  *   brady_carta_imbarco   Brady mostra la carta d'imbarco con i pulsanti di prenotazione
+ *
+ * Gli stessi eventi vanno anche al pixel di Meta (solo se window.fbq esiste, cioè su keik.it dopo il consenso
+ * ai cookie di marketing), tradotti negli eventi standard di Meta secondo la tabella META qui sotto.
  */
 (function () {
   'use strict';
   var debug = /[?&]kkdebug\b/.test(location.search);
   var pagina = (location.pathname.replace(/^\/+|\.html$/g, '') || 'home');
 
+  var META = {
+    prenota_apri_modulo: 'Schedule',
+    modulo_esterno_click: 'Schedule',
+    whatsapp_click: 'Contact',
+    telefono_click: 'Contact',
+    indicazioni_click: 'FindLocation',
+    buono_regalo_click: 'InitiateCheckout',
+    brady_carta_imbarco: 'Lead'
+  };
+
   function kkTrack(name, params) {
     var p = Object.assign({ pagina: pagina }, params || {});
-    if (debug) try { console.log('[kk-track]', name, p); } catch (e) {}
+    if (debug) try { console.log('[kk-track]', name, p, META[name] ? '→ Meta ' + META[name] : ''); } catch (e) {}
     if (typeof window.gtag === 'function') {
       try { window.gtag('event', name, p); } catch (e) {}
+    }
+    if (META[name] && typeof window.fbq === 'function') {
+      try { window.fbq('track', META[name], Object.assign({ content_name: name }, p)); } catch (e) {}
     }
   }
   window.kkTrack = kkTrack;
