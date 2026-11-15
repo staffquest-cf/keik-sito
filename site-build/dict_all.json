@@ -8978,5 +8978,40 @@
   "Ask Brady: information and bookings, opens in a new tab",
   "Pregúntale a Brady: información y reservas, se abre en otra pestaña",
   "Demandez à Brady : informations et réservations, s’ouvre dans un nouvel onglet"
+ ],
+ "AVVISO AI PASSEGGERI · 16–22 NOV": [
+  "PASSENGER NOTICE · 16–22 NOV",
+  "AVISO A LOS PASAJEROS · 16–22 NOV",
+  "AVIS AUX PASSAGERS · 16–22 NOV"
+ ],
+ "LUN 16": [
+  "MON 16",
+  "LUN 16",
+  "LUN 16"
+ ],
+ "VEN 20": [
+  "FRI 20",
+  "VIE 20",
+  "VEN 20"
+ ],
+ "SAB 21": [
+  "SAT 21",
+  "SÁB 21",
+  "SAM 21"
+ ],
+ "VENERDÌ 20 NOVEMBRE · 17:00 – 20:00": [
+  "FRIDAY 20 NOVEMBER · 5–8PM",
+  "VIERNES 20 DE NOVIEMBRE · 17:00 – 20:00",
+  "VENDREDI 20 NOVEMBRE · 17H – 20H"
+ ],
+ "Venerdì 20 solo dalle 17:00 alle 20:00 (orario speciale), gli altri venerdì fino alle 22:00": [
+  "Friday 20 only from 5 to 8pm (special opening hours), the other Fridays until 10pm",
+  "El viernes 20 solo de 17:00 a 20:00 (horario especial), los demás viernes hasta las 22:00",
+  "Le vendredi 20 seulement de 17h à 20h (horaires spéciaux), les autres vendredis jusqu’à 22h"
+ ],
+ "17:00 – 20:00 · patatine tostones venezuelani": [
+  "5–8pm · Venezuelan tostones",
+  "17:00 – 20:00 · tostones venezolanos",
+  "17h – 20h · tostones vénézuéliens"
  ]
 }

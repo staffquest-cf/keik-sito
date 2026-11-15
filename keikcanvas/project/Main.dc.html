@@ -510,13 +510,13 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <span class="k-brady-txt"><strong>Chiedi a Brady</strong><span>Info e prenotazioni</span></span>
 </a>
 
-<!-- ORARI SPECIALI 9–15 NOVEMBRE: popup (compare dopo il caricamento, sparisce da solo dopo sabato 14) -->
+<!-- ORARI SPECIALI 16–22 NOVEMBRE: popup (compare dopo il caricamento, sparisce da solo dopo sabato 21) -->
 <sc-if value="{{osOpen}}" hint-placeholder-val="{{ false }}">
 <div role="dialog" aria-modal="true" aria-label="Orari speciali questa settimana" style="position: fixed; inset: 0; z-index: 70; display: flex; align-items: center; justify-content: center; padding: 16px">
 <div onClick="{{osClose}}" style="position: absolute; inset: 0; background: rgba(20,4,24,0.62)"></div>
 <div class="k-overlay" style="position: relative; width: 100%; max-width: 420px; max-height: calc(100vh - 32px); overflow-y: auto; background: #FFFFFF; border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,0.45); font-family: 'Montserrat', system-ui, sans-serif">
 <div style="background: #2A0830; color: #FFFFFF; padding: 14px 14px 14px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
-<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #F6E58D">AVVISO AI PASSEGGERI · 9–15 NOV</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #F6E58D">AVVISO AI PASSEGGERI · 16–22 NOV</span>
 <button type="button" onClick="{{osClose}}" aria-label="Chiudi" style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.14); color: #FFFFFF; font-size: 22px; line-height: 1; cursor: pointer">×</button>
 </div>
 <div style="padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 14px">
@@ -541,13 +541,13 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FAE609","options":["#FAE609","#F2B8E6","#E9C46A","#FFFFFF"]},"showTopbar":{"editor":"boolean","default":true},"startMoment":{"editor":"enum","default":"mattina","options":["mattina","pranzo","merenda","sera"]},"$preview":{"width":1440,"height":7300}}'>
 class Component extends DCLogic {
-  // ORARI SPECIALI 9–15 novembre 2026: ogni riga sparisce a fine giornata, popup e banner spariscono da soli dopo sabato 14
+  // ORARI SPECIALI 16–22 novembre 2026: ogni riga sparisce a fine giornata, popup e banner spariscono da soli dopo sabato 21
   osRows() {
     const now = Date.now();
     return [
-      { fine: '2026-11-10T00:00:00+01:00', day: 'LUN 9', text: 'Chiudiamo alle 18:00', cucina: 'Cucina fino alle 17:30' },
-      { fine: '2026-11-14T00:00:00+01:00', day: 'VEN 13', text: 'Chiudiamo alle 20:00', cucina: 'Cucina fino alle 19:30' },
-      { fine: '2026-11-15T00:00:00+01:00', day: 'SAB 14', text: 'Chiudiamo alle 20:00', cucina: 'Cucina fino alle 19:30' }
+      { fine: '2026-11-17T00:00:00+01:00', day: 'LUN 16', text: 'Chiudiamo alle 18:00', cucina: 'Cucina fino alle 17:30' },
+      { fine: '2026-11-21T00:00:00+01:00', day: 'VEN 20', text: 'Chiudiamo alle 20:00', cucina: 'Cucina fino alle 19:30' },
+      { fine: '2026-11-22T00:00:00+01:00', day: 'SAB 21', text: 'Chiudiamo alle 20:00', cucina: 'Cucina fino alle 19:30' }
     ].filter((r) => now < Date.parse(r.fine)).map((r) => ({ day: r.day, text: r.text, cucina: r.cucina }));
   }
   startIdx() {
