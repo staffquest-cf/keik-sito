@@ -14,7 +14,7 @@ PAGES = {
     'Vegano': 'vegano-senza-glutine', 'ChiSiamo': 'chi-siamo', 'Eventi': 'eventi', 'Menu': 'menu',
     'Aziende': 'aziende', 'BuoniRegalo': 'buoni-regalo', 'LavoraConNoi': 'lavora-con-noi',
     'Contatti': 'contatti', 'Prenota': 'prenota', 'FAQ': 'faq', '404': '404',
-    'EventiOttobre': 'eventi-ottobre',
+    'EventiOttobre': 'eventi-ottobre', 'ByNight': 'bynight',
 }
 # Cambio mese automatico della pagina Eventi: fino a questa data si vede eventi-ottobre.html
 EV_SWITCH = '2026-11-01T00:00:00+01:00'
@@ -100,7 +100,7 @@ def build(name, slug, override=None):
     if slug != '404':
         _md = re.search(r'<meta name="description" content="([^"]*)"', helmet)
         _desc = _md.group(1) if _md else ''
-        _img = slug if slug in ('brunch', 'pranzo', 'merenda', 'aperitivo') else 'home'
+        _img = slug if slug in ('brunch', 'pranzo', 'merenda', 'aperitivo') else ('aperitivo' if slug == 'bynight' else 'home')
         _url = SITE + ('/' if slug == 'index' else '/' + slug + '.html')
         OG = ('<meta property="og:type" content="website">\n<meta property="og:site_name" content="KEIK">\n'
               '<meta property="og:locale" content="it_IT">\n'
