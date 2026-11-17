@@ -94,6 +94,12 @@ body{margin:0;background:#070031}
 .bn-sweet li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid rgba(255,255,255,0.22)}
 .bn-season{border-color:rgba(250,230,9,0.45);box-shadow:0 0 28px rgba(250,230,9,0.14)}
 .bn-badge{position:absolute;z-index:2;top:14px;left:14px;display:flex;align-items:center;justify-content:center;text-align:center;width:96px;height:96px;border-radius:50%;background:var(--yellow);color:var(--night);font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:17px;line-height:0.95;text-transform:uppercase;transform:rotate(-12deg);box-shadow:0 0 0 3px var(--night),0 0 0 5px var(--yellow),0 0 26px rgba(250,230,9,0.65)}
+/* prenotazione */
+.bn-book{margin-top:8px;border-radius:24px;overflow:hidden;background:#FFFFFF;color:#2A0A2E;box-shadow:0 0 0 2px var(--pink),0 0 34px rgba(255,79,184,0.45);min-width:0}
+.bn-book-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 24px;background:linear-gradient(135deg,#120A5C 0%,#070031 100%)}
+.bn-book-open{display:flex;justify-content:center;align-items:center;gap:10px;width:calc(100% - 48px);margin:20px 24px 22px;min-height:56px;border:0;border-radius:14px;background:var(--pink);color:var(--night);font:800 17px 'Montserrat',sans-serif;cursor:pointer;box-shadow:0 0 22px rgba(255,79,184,0.45)}
+.bn-book-open:hover{box-shadow:0 0 34px rgba(255,79,184,0.75)}
+.kp-body:not(.is-open){display:none}.kp-body.is-open{animation:kpdrop .45s cubic-bezier(.2,.8,.2,1) both}@keyframes kpdrop{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion: reduce){.kp-body.is-open{animation:none}}
 /* drink */
 .bn-drink{background:radial-gradient(70% 90% at 0% 50%,rgba(166,3,139,0.55) 0%,transparent 65%),linear-gradient(180deg,#2B0138 0%,#14002A 100%)}
 .bn-drink-img{position:relative;margin:0}
@@ -172,7 +178,7 @@ body{margin:0;background:#070031}
 <a href="#drink" style="color: #FFF8EE; text-decoration: none">Drink</a>
 <a href="#info" style="color: #FFF8EE; text-decoration: none">Info</a>
 </nav>
-<a href="Prenota.dc.html" class="bn-btn bn-btn-pink bn-headbtn" style="min-height: 46px; padding: 0 22px; font-size: 15px">Prenota il tavolo</a>
+<a href="#prenota" class="bn-btn bn-btn-pink bn-headbtn" style="min-height: 46px; padding: 0 22px; font-size: 15px">Prenota il tavolo</a>
 </div>
 </header>
 <!-- KK-SITEBAR -->
@@ -190,7 +196,7 @@ body{margin:0;background:#070031}
 <p class="bn-label" style="display: flex; align-items: center; gap: 12px"><span class="bn-dot" aria-hidden="true"></span>Giovedì · Venerdì · Sabato · dalle 19:00</p>
 <h1 class="bn-display bn-h1">La sera,<br>il viaggio<br><span class="bn-neon bn-flicker">continua.</span></h1>
 <p class="bn-lead">Di giorno KEIK ti porta a fare brunch in giro per il mondo. La sera ti porta a cena: il tagliere World Tour con tre assaggi dal mondo, burger che hanno fatto il giro del pianeta e drink da condividere, nel centro storico di Modena.</p>
-<div style="display: flex; gap: 12px; flex-wrap: wrap"><a href="Prenota.dc.html" class="bn-btn bn-btn-pink" style="min-height: 54px">Prenota il tavolo</a><a href="#cena" class="bn-btn bn-btn-ghost" style="min-height: 54px">Guarda cosa si mangia</a></div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap"><a href="#prenota" class="bn-btn bn-btn-pink" style="min-height: 54px">Prenota il tavolo</a><a href="#cena" class="bn-btn bn-btn-ghost" style="min-height: 54px">Guarda cosa si mangia</a></div>
 <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 8px"><span class="bn-chip">19:00 – 22:00</span><span class="bn-chip">Via Canalino 51, Modena</span><span class="bn-chip">Gruppi da 4: meglio prenotare</span></p>
 </div>
 <figure class="bn-frame">
@@ -391,7 +397,7 @@ body{margin:0;background:#070031}
 <p class="bn-label" style="color: #A6038B">Il giovedì</p>
 <h2 id="bn-gruppi" class="bn-display" style="font-size: clamp(42px, 4.4vw, 60px)">Il giovedì è dei gruppi</h2>
 <p style="margin: 0; font-size: 17px; line-height: 1.65">Porta i tuoi amici a fare il giro del mondo: caraffa di spritz da condividere e giochi da tavolo in sala. Se sei un ambasciatore KEIK, ogni amico che porti ti vale un punto.</p>
-<a href="Prenota.dc.html" class="bn-btn bn-btn-dark" style="align-self: flex-start; margin-top: auto; min-height: 54px">Prenota per il gruppo</a>
+<a href="#prenota" class="bn-btn bn-btn-dark" style="align-self: flex-start; margin-top: auto; min-height: 54px">Prenota per il gruppo</a>
 </div>
 <div class="bn-pass">
 <svg class="bn-stamp" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bnc" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"></path></defs><circle cx="100" cy="100" r="92" fill="none" stroke="#FF4FB8" stroke-width="4"></circle><circle cx="100" cy="100" r="58" fill="none" stroke="#FF4FB8" stroke-width="2" stroke-dasharray="4 5"></circle><text font-family="Space Mono, monospace" font-size="15" font-weight="700" letter-spacing="4" fill="#FF4FB8"><textPath href="#bnc">KEIK BY NIGHT · MODENA · 2026 ·</textPath></text><text x="100" y="96" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-size="30" font-weight="800" fill="#FF4FB8">TIMBRO</text><text x="100" y="122" text-anchor="middle" font-family="Space Mono, monospace" font-size="12" fill="#FF4FB8">✈ +1 SERATA</text></svg>
@@ -415,7 +421,25 @@ body{margin:0;background:#070031}
 <dt>Dove</dt><dd>Via Canalino 51, centro storico di Modena. Si parcheggia sui viali, entrando da via Saragozza o via Gallucci.</dd>
 <dt>Prenotare</dt><dd>Consigliato per i tavoli da 4 in su: nel modulo scegli la fascia oraria che preferisci. Senza prenotazione sei sempre il benvenuto, finché c’è posto.</dd>
 </dl>
-<a href="Prenota.dc.html" class="bn-btn bn-btn-pink" style="align-self: flex-start; min-height: 54px">Prenota il tavolo</a>
+<!-- Carta d'imbarco serale = prenotazione (modulo Pienissimo dentro la pagina) -->
+<div id="prenota" class="bn-book">
+<div class="bn-book-top">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #FAE609">CARTA D’IMBARCO · VOLO SERALE</span><span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 30px; line-height: 1; text-transform: uppercase; color: #FFFFFF">Prenota la tua serata</span></div>
+<span aria-hidden="true" style="font-family: 'Space Mono', monospace; font-size: 12px; color: #FF4FB8; text-align: right; line-height: 1.4">KB 1900<br>GIO · VEN · SAB</span>
+</div>
+<sc-if value="{{kpClosed}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="bn-book-open" onClick="{{openForm}}">Scegli giorno e fascia oraria <span aria-hidden="true">↓</span></button>
+</sc-if>
+<div class="kp-body {{kpOpenCls}}">
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 24px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B4A70; border-bottom: 1.5px dashed #E6DAE4"><span>GATE · VIA CANALINO 51</span><span>DALLE 19:00</span></div>
+<!-- Modulo Pienissimo (altezza adattata dallo script in componentDidMount) -->
+<iframe id="pns-form" loading="lazy" src="{{pnsSrc}}" title="Prenota la tua serata da KEIK" style="width: 100%; height: {{pnsH}}px; border: 0; display: block"></iframe>
+<div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
+<span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=MbjDTW" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
+<a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
+</div>
+</div>
+</div>
 </div>
 <div class="bn-faq" style="display: flex; flex-direction: column; gap: 12px; min-width: 0">
 <h3 class="bn-display" style="font-size: 34px; margin-bottom: 6px">Domande frequenti</h3>
@@ -445,7 +469,7 @@ body{margin:0;background:#070031}
 <div class="bn-wrap" style="display: flex; flex-direction: column; align-items: center; gap: 22px">
 <div class="bn-sign"><p id="bn-fine" class="bn-display bn-neon" style="font-size: clamp(48px, 7vw, 96px)">Ci vediamo stasera?</p></div>
 <p style="margin: 0; font-size: 18px; line-height: 1.6; max-width: 620px; color: #EBD9EF">Tagga chi porti in viaggio con te e condividi la tua serata con @keikmodena: le foto più belle finiscono nelle nostre storie.</p>
-<div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center"><a href="Prenota.dc.html" class="bn-btn bn-btn-pink" style="min-height: 54px">Prenota il tavolo</a><a href="https://www.instagram.com/keikmodena/" target="_blank" rel="noopener" class="bn-btn bn-btn-ghost" style="min-height: 54px">Seguici su Instagram</a></div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center"><a href="#prenota" class="bn-btn bn-btn-pink" style="min-height: 54px">Prenota il tavolo</a><a href="https://www.instagram.com/keikmodena/" target="_blank" rel="noopener" class="bn-btn bn-btn-ghost" style="min-height: 54px">Seguici su Instagram</a></div>
 <p style="margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; font-size: 14px; color: #D9C3DB">Di giorno: <a href="Brunch.dc.html" style="color: #FFFFFF">Brunch</a><a href="Pranzo.dc.html" style="color: #FFFFFF">Pranzo</a><a href="Merenda.dc.html" style="color: #FFFFFF">Pomeriggio</a></p>
 </div>
 </section>
@@ -464,7 +488,7 @@ body{margin:0;background:#070031}
 <!-- Barra fissa su telefono -->
 <div class="bn-sticky" style="position: fixed; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 20; padding: 10px 10px 10px 18px; border-radius: 22px; background: #070031; border: 1px solid rgba(255,79,184,0.5); box-shadow: 0 -10px 30px rgba(0,0,0,0.3), 0 0 24px rgba(255,79,184,0.25); gap: 10px; align-items: center">
 <span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #C9C6EA"><strong style="font-size: 15px; color: #FFFFFF">KEIK by Night · gio, ven e sab</strong>dalle 19:00 · Via Canalino 51</span>
-<a href="Prenota.dc.html" class="bn-btn bn-btn-pink" style="min-height: 50px; padding: 0 22px">Prenota</a>
+<a href="#prenota" class="bn-btn bn-btn-pink" style="min-height: 50px; padding: 0 22px">Prenota</a>
 </div>
 
 </div>
@@ -472,7 +496,33 @@ body{margin:0;background:#070031}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7400}}'>
 class Component extends DCLogic {
-  renderVals() { return {}; }
+  apri(k, g) { const s = this.state || {}; if (s[k] && s[g]) return; if (!s[k] && window.kkTrackModulo) window.kkTrackModulo(k); this.setState({ [k]: true }); setTimeout(() => this.setState({ [g]: true }), 300); }
+  renderVals() {
+    const st = this.state || {};
+    return {
+      kpOpenCls: st.kpOpen ? 'is-open' : '', kpClosed: !st.kpOpen, openForm: () => this.apri('kpOpen', 'pnsGo'),
+      // Modulo Pienissimo della sera: per cambiarlo basta cambiare questo indirizzo (e quello di "Aprilo in una nuova pagina")
+      pnsSrc: st.pnsGo ? 'https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW' : 'about:blank',
+      pnsH: typeof st.pnsH === 'number' ? st.pnsH : 503 /* altezza reale del primo passaggio dei moduli Pienissimo sul telefono */
+    };
+  }
+  componentDidMount() {
+    // Script di auto-resize di Pienissimo: l'iframe prende l'altezza del modulo
+    this._pns = (e) => {
+      const fr = document.getElementById('pns-form');
+      if (!fr || e.source !== fr.contentWindow) return;
+      const data = e.data;
+      if (!data || data.type !== 'pns-iframe-height') return;
+      const h = Math.ceil(Number(data.height) || 0);
+      if (h > 0 && h !== (this.state || {}).pnsH) { fr.style.height = h + 'px'; this.setState({ pnsH: h }); }
+    };
+    window.addEventListener('message', this._pns);
+    // Tutti i pulsanti "Prenota" della pagina portano alla carta d'imbarco e aprono il modulo
+    this._kp = (e) => { const a = e.target.closest && e.target.closest('a[href="#prenota"]'); if (a) this.apri('kpOpen', 'pnsGo'); };
+    document.addEventListener('click', this._kp);
+    if (location.hash === '#prenota') this.apri('kpOpen', 'pnsGo');
+  }
+  componentWillUnmount() { window.removeEventListener('message', this._pns); document.removeEventListener('click', this._kp); }
 }
 </script>
 </body>

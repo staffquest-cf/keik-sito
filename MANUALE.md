@@ -84,3 +84,4 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
   4. foto vere di Seoul After Dark e Zermatt (ora provvisorie: burger di Halloween e Carlitos in mano) e, se arriva, una foto serale migliore per l'apertura;
   5. aggiornare Brady (`brady-keik.txt`, `eventi.json`) con il menu by Night e gli orari (gio–sab 19–22);
   6. controllare il tabellone «Prossime partenze» (date di dicembre) e gli orari in «Info e prenotazioni».
+- Prenotazione serale: carta d'imbarco `#prenota` con il modulo Pienissimo dentro la pagina (in «Info e prenotazioni»); tutti i pulsanti «Prenota» della pagina la aprono. Per ora il modulo è `id=MbjDTW` (lo stesso dei tavoli, link dato da Elena il 17/11/2026). Se si crea un modulo serale dedicato, cambiare l'indirizzo in due punti di `ByNight.dc.html`: `pnsSrc` nel codice e il link «Aprilo in una nuova pagina». Niente turni: si sceglie la fascia oraria nel modulo.
