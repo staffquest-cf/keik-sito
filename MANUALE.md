@@ -72,3 +72,15 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - Brady: aggiungere su iubenda il fornitore Anthropic (assistente informativo sul sito).
 - Domande aperte per Elena: prezzo delle sole patatine Crispy.
 - Idee: sezione "Torte e box" nella pagina Pomeriggio; pagine statiche in inglese; FAQ/schema nelle pagine dei momenti.
+
+## KEIK by Night (pagina `bynight.html`, in preparazione)
+- Il lavoro sta nel ramo `sorgente-bynight` (pagina `keikcanvas/project/ByNight.dc.html`, stile «notte al neon», logo orizzontale in `imgcache/keik-by-night-oriz-*.webp`). Il ramo `sorgente` resta senza By Night finché Elena non decide il lancio: così una pubblicazione normale non la manda online per sbaglio.
+- Nel ramo: voce di menu «KEIK by Night» al posto di «Aperitivo» in tutte le pagine; nella mappa del sito (footer) «KEIK by Night» al posto di «Aperitivo e Il Turista».
+- Fino al lancio la pagina Aperitivo (`aperitivo.html`) resta online e su Google (decisione di Elena, 17/11/2026).
+- Da fare il giorno del lancio:
+  1. unire `sorgente-bynight` in `sorgente` (se nel frattempo `sorgente` è cambiato, riportare le modifiche);
+  2. reindirizzare tutto l'aperitivo su By Night, proposta serale del locale: in `site-build/prod_extra/.htaccess` `RewriteRule ^aperitivo(\.html)?/?$ https://keik.it/bynight.html [R=301,L,NC]`; nella home la foto «Aperitivo» dei momenti e la riga «KK 103» della pagina 404 puntano a `ByNight.dc.html`; nella `sitemap.xml` togliere aperitivo e aggiungere bynight;
+  3. traduzioni EN/ES/FR dei testi della pagina in `site-build/dict_all.json`;
+  4. foto vere di Seoul After Dark e Zermatt (ora provvisorie: burger di Halloween e Carlitos in mano) e, se arriva, una foto serale migliore per l'apertura;
+  5. aggiornare Brady (`brady-keik.txt`, `eventi.json`) con il menu by Night e gli orari (gio–sab 19–22);
+  6. controllare il tabellone «Prossime partenze» (date di dicembre) e gli orari in «Info e prenotazioni».
