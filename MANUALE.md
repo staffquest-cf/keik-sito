@@ -72,3 +72,6 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - Brady: aggiungere su iubenda il fornitore Anthropic (assistente informativo sul sito).
 - Domande aperte per Elena: prezzo delle sole patatine Crispy.
 - Idee: sezione "Torte e box" nella pagina Pomeriggio; pagine statiche in inglese; FAQ/schema nelle pagine dei momenti.
+
+## KEIK by Night (in preparazione)
+- La pagina `bynight.html` e la nuova voce di menu sono nel ramo `sorgente-bynight`, non qui: leggere il MANUALE di quel ramo. Finché Elena non decide il lancio, la pagina Aperitivo resta online e su Google; al lancio si unisce il ramo e si reindirizza `aperitivo.html` su `bynight.html`.
