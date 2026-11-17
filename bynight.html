@@ -214,6 +214,10 @@ body{margin:0;background:#070031}
 .bn-wrap{padding-left:16px !important;padding-right:16px !important}
 .bn-hero-grid,.bn-two{grid-template-columns:minmax(0,1fr) !important;gap:44px !important}
 .bn-frame img{height:440px}
+.bn-hero-l{display:contents !important}
+.bn-hero .bn-hero-grid{gap:24px !important}
+.bn-hero-l>:nth-child(n+3){order:3}
+.bn-frame{order:2;margin:16px 0 20px}
 .bn-tag{right:8px;top:20px}
 .bn-gates,.bn-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .bn-nav{display:none !important}
@@ -270,7 +274,7 @@ body{margin:0;background:#070031}
 <div class="bn-wrap" style="position: relative; display: flex; flex-direction: column; gap: 32px">
 <nav aria-label="Percorso" style="font-size: 13px; color: #C9C6EA"><a href="./" style="color: #C9C6EA">Home</a> › <span aria-current="page" style="color: #FFF8EE">KEIK by Night</span></nav>
 <div class="bn-hero-grid">
-<div style="display: flex; flex-direction: column; gap: 26px; min-width: 0">
+<div class="bn-hero-l" style="display: flex; flex-direction: column; gap: 26px; min-width: 0">
 <p class="bn-label" style="display: flex; align-items: center; gap: 12px"><span class="bn-dot" aria-hidden="true"></span>Giovedì · Venerdì · Sabato · dalle 19:00</p>
 <h1 class="bn-display bn-h1">La sera,<br>il viaggio<br><span class="bn-neon bn-flicker">continua.</span></h1>
 <p class="bn-lead">Di giorno KEIK ti porta a fare brunch in giro per il mondo. La sera ti porta a cena: il tagliere World Tour con tre assaggi dal mondo, burger che hanno fatto il giro del pianeta e drink da condividere, nel centro storico di Modena.</p>
@@ -581,7 +585,7 @@ body{margin:0;background:#070031}
 <div class="bn-wrap" style="position: relative; display: flex; flex-direction: column; gap: 32px">
 <nav aria-label="Percorso" style="font-size: 13px; color: #C9C6EA"><a href="./" style="color: #C9C6EA">Home</a> › <span aria-current="page" style="color: #FFF8EE">KEIK by Night</span></nav>
 <div class="bn-hero-grid">
-<div style="display: flex; flex-direction: column; gap: 26px; min-width: 0">
+<div class="bn-hero-l" style="display: flex; flex-direction: column; gap: 26px; min-width: 0">
 <p class="bn-label" style="display: flex; align-items: center; gap: 12px"><span class="bn-dot" aria-hidden="true"></span>Giovedì · Venerdì · Sabato · dalle 19:00</p>
 <h1 class="bn-display bn-h1">La sera,<br>il viaggio<br><span class="bn-neon bn-flicker">continua.</span></h1>
 <p class="bn-lead">Di giorno KEIK ti porta a fare brunch in giro per il mondo. La sera ti porta a cena: il tagliere World Tour con tre assaggi dal mondo, burger che hanno fatto il giro del pianeta e drink da condividere, nel centro storico di Modena.</p>
