@@ -132,6 +132,12 @@ body{margin:0;background:#070031}
 .bn-sticky{display:flex !important}
 .bn-sec{padding:72px 0}
 }
+@media (max-width:960px){
+.bn-scroll{display:flex !important;overflow-x:auto !important;overflow-y:hidden;scroll-snap-type:x mandatory;gap:12px !important;margin-left:-16px;margin-right:-16px;padding:0 16px 8px;scroll-padding:0 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.bn-scroll::-webkit-scrollbar{display:none}
+.bn-scroll>*{flex:0 0 min(80%,340px);scroll-snap-align:start;min-width:0}
+.bn-scroll .bn-card:hover{transform:none}
+}
 @media (max-width:760px){
 .bn-row{grid-template-columns:minmax(0,1fr) auto;row-gap:8px;font-size:13px}
 .bn-dest,.bn-head{display:none !important}
@@ -296,7 +302,7 @@ body{margin:0;background:#070031}
 <h2 id="bn-cena" class="bn-display bn-h2">Burger, burrito e <span class="bn-neon">piatti dal mondo</span></h2>
 <p class="bn-lead">Ogni piatto ti porta in un paese diverso. Burger con carne da 150 g e burrito arrivano con patatine crispy e salsa Keik. Hai voglia di qualcosa di più leggero? Scegli la Tijuana Caesar o Hummus &amp; Falafel. Siete in tanti? Mettete un cesto al centro del tavolo.</p>
 </div>
-<div class="bn-grid">
+<div class="bn-grid bn-scroll">
 <article class="bn-card bn-season">
 <div class="bn-card-img"><span class="bn-badge" aria-label="Burger della stagione">Burger<br>della stagione</span><img src="/_blob/d156657d4c76877b12be5d563687f8c2" alt="Un burger di KEIK con doppio manzo e cheddar" loading="lazy" decoding="async" style="object-position: center 92%"></div>
 <div class="bn-card-b"><div class="bn-card-top"><span class="bn-flag">Corea</span><span class="bn-price">16,90 €</span></div><h3 class="bn-name">Seoul After Dark</h3><p class="bn-desc">Manzo glassato alla coreana, cheddar, kimchi saltato, maionese al gochujang, cetriolini, cipollotto e sesamo. Accompagnato da patatine crispy e salsa Keik.</p></div>
@@ -341,7 +347,7 @@ body{margin:0;background:#070031}
 <h3 class="bn-display bn-h3">Al centro <span class="bn-neon-y">del tavolo</span></h3>
 <p class="bn-lead">Cesti da dividere con chi è venuto con te, e Il Turista, il nostro tagliere da sei paesi.</p>
 </div>
-<div class="bn-grid">
+<div class="bn-grid bn-scroll">
 <article class="bn-card">
 <div class="bn-card-img"><img src="/_blob/610cc65d4ff46161395d4e6ab089e922" alt="Pollo croccante in cesto" loading="lazy" decoding="async"></div>
 <div class="bn-card-b"><div class="bn-card-top"><span class="bn-flag">Corea · per 2–3</span><span class="bn-price">14,90 €</span></div><h3 class="bn-name">Cesto di pollo croccante</h3><p class="bn-desc">Nove pezzi di pollo croccante con salsa gochujang, cipollotti e semi tostati.</p></div>
