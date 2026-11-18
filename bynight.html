@@ -186,13 +186,6 @@ body{margin:0;background:#070031}
 .bn-sweet li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid rgba(255,255,255,0.22)}
 .bn-season{border-color:rgba(250,230,9,0.45);box-shadow:0 0 28px rgba(250,230,9,0.14)}
 .bn-badge{position:absolute;z-index:2;top:14px;left:14px;display:flex;align-items:center;justify-content:center;text-align:center;width:96px;height:96px;border-radius:50%;background:var(--yellow);color:var(--night);font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:17px;line-height:0.95;text-transform:uppercase;transform:rotate(-12deg);box-shadow:0 0 0 3px var(--night),0 0 0 5px var(--yellow),0 0 26px rgba(250,230,9,0.65)}
-.bn-prices{display:flex;flex-direction:column;margin-top:10px;border-top:2px dashed rgba(7,0,49,0.35);font-size:14px}
-.bn-prices>div{display:grid;grid-template-columns:minmax(0,1fr) 70px 92px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(7,0,49,0.15)}
-.bn-prices>div:last-child{border-bottom:0}
-.bn-prices b{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;text-align:right;white-space:nowrap}
-.bn-prices .bn-pp{color:#A6038B}
-.bn-prices-h{font-family:'Space Mono',monospace;font-size:10px !important;letter-spacing:0.1em;text-transform:uppercase;padding-top:10px !important}
-.bn-prices-h span:not(:first-child){text-align:right}
 /* prenotazione */
 .bn-book{margin-top:8px;border-radius:24px;overflow:hidden;background:#FFFFFF;color:#2A0A2E;box-shadow:0 0 0 2px var(--pink),0 0 34px rgba(255,79,184,0.45);min-width:0}
 .bn-book-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 24px;background:linear-gradient(135deg,#120A5C 0%,#070031 100%)}
@@ -250,9 +243,7 @@ body{margin:0;background:#070031}
 }
 @media (max-width:640px){
 .bn-gates,.bn-grid{grid-template-columns:minmax(0,1fr)}
-.bn-ticket-stub,.bn-ticket::before,.bn-ticket::after{display:none}
-.bn-ticket-main{padding:22px 20px}
-.bn-prices>div{grid-template-columns:minmax(0,1fr) 62px 84px}
+.bn-ticket-stub{width:96px}.bn-ticket::before,.bn-ticket::after{right:87px}
 .bn-final{padding:88px 0 96px}
 .bn-headbtn{display:none !important}
 .bn-logo{height:36px !important}
@@ -375,11 +366,8 @@ body{margin:0;background:#070031}
 <div class="bn-ticket">
 <div class="bn-ticket-main">
 <p style="margin: 0; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap"><span style="font-family: 'Big Shoulders Display', sans-serif; font-size: clamp(48px, 13vw, 64px); font-weight: 900; line-height: 0.9; white-space: nowrap">14,90 €</span><span style="font-size: 16px; font-weight: 700">tagliere + un drink</span></p>
-<div class="bn-prices" role="table" aria-label="Prezzi del tagliere World Tour">
-<div role="row" class="bn-prices-h"><span role="columnheader">Con il drink</span><span role="columnheader">Prezzo</span><span role="columnheader">Con Passaporto</span></div>
-<div role="row"><span role="cell">Un drink a scelta</span><b role="cell">14,90 €</b><b role="cell" class="bn-pp">12,90 €</b></div>
-<div role="row"><span role="cell">Mango MIMO o Gin tonic</span><b role="cell">16,90 €</b><b role="cell" class="bn-pp">14,90 €</b></div>
-</div>
+<p style="margin: 0; font-size: 16px; font-weight: 800; color: #A6038B">12,90 € con il Passaporto del Gusto</p>
+<p style="margin: 0; font-size: 14px; font-weight: 600">Con Mango MIMO o Gin tonic +2 €</p>
 </div>
 <div class="bn-ticket-stub" aria-hidden="true"><span>KB 1900</span><b style="font-size: 18px; letter-spacing: 0.04em">3</b><span>ASSAGGI</span></div>
 </div>
@@ -510,7 +498,7 @@ body{margin:0;background:#070031}
 <svg class="bn-stamp" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bnc" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"></path></defs><circle cx="100" cy="100" r="92" fill="none" stroke="#FF4FB8" stroke-width="4"></circle><circle cx="100" cy="100" r="58" fill="none" stroke="#FF4FB8" stroke-width="2" stroke-dasharray="4 5"></circle><text font-family="Space Mono, monospace" font-size="15" font-weight="700" letter-spacing="4" fill="#FF4FB8"><textPath href="#bnc">KEIK BY NIGHT · MODENA · 2026 ·</textPath></text><text x="100" y="96" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-size="30" font-weight="800" fill="#FF4FB8">TIMBRO</text><text x="100" y="122" text-anchor="middle" font-family="Space Mono, monospace" font-size="12" fill="#FF4FB8">✈ +1 SERATA</text></svg>
 <p class="bn-label">Per chi viaggia spesso</p>
 <h2 class="bn-display" style="font-size: clamp(42px, 4.4vw, 60px); max-width: 80%">Passaporto del Gusto</h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #C9C6EA; max-width: 70%">Con il Passaporto il tagliere World Tour con il drink costa 12,90 € (14,90 € con Mango MIMO o Gin tonic) e ogni euro speso diventa un miglio. Ogni serata by Night vale anche un timbro sul passaporto.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #C9C6EA; max-width: 70%">Con il Passaporto il tagliere World Tour con il drink costa 12,90 € e ogni euro speso diventa un miglio. Ogni serata by Night vale anche un timbro sul passaporto.</p>
 <a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" class="bn-btn bn-btn-pink" style="align-self: flex-start; margin-top: auto; min-height: 50px; position: relative">Iscriviti al Passaporto</a>
 </div>
 </div>
@@ -708,11 +696,8 @@ body{margin:0;background:#070031}
 <div class="bn-ticket">
 <div class="bn-ticket-main">
 <p style="margin: 0; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap"><span style="font-family: 'Big Shoulders Display', sans-serif; font-size: clamp(48px, 13vw, 64px); font-weight: 900; line-height: 0.9; white-space: nowrap">14,90 €</span><span style="font-size: 16px; font-weight: 700">tagliere + un drink</span></p>
-<div class="bn-prices" role="table" aria-label="Prezzi del tagliere World Tour">
-<div role="row" class="bn-prices-h"><span role="columnheader">Con il drink</span><span role="columnheader">Prezzo</span><span role="columnheader">Con Passaporto</span></div>
-<div role="row"><span role="cell">Un drink a scelta</span><b role="cell">14,90 €</b><b role="cell" class="bn-pp">12,90 €</b></div>
-<div role="row"><span role="cell">Mango MIMO o Gin tonic</span><b role="cell">16,90 €</b><b role="cell" class="bn-pp">14,90 €</b></div>
-</div>
+<p style="margin: 0; font-size: 16px; font-weight: 800; color: #A6038B">12,90 € con il Passaporto del Gusto</p>
+<p style="margin: 0; font-size: 14px; font-weight: 600">Con Mango MIMO o Gin tonic +2 €</p>
 </div>
 <div class="bn-ticket-stub" aria-hidden="true"><span>KB 1900</span><b style="font-size: 18px; letter-spacing: 0.04em">3</b><span>ASSAGGI</span></div>
 </div>
@@ -843,7 +828,7 @@ body{margin:0;background:#070031}
 <svg class="bn-stamp" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bnc" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"></path></defs><circle cx="100" cy="100" r="92" fill="none" stroke="#FF4FB8" stroke-width="4"></circle><circle cx="100" cy="100" r="58" fill="none" stroke="#FF4FB8" stroke-width="2" stroke-dasharray="4 5"></circle><text font-family="Space Mono, monospace" font-size="15" font-weight="700" letter-spacing="4" fill="#FF4FB8"><textPath href="#bnc">KEIK BY NIGHT · MODENA · 2026 ·</textPath></text><text x="100" y="96" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-size="30" font-weight="800" fill="#FF4FB8">TIMBRO</text><text x="100" y="122" text-anchor="middle" font-family="Space Mono, monospace" font-size="12" fill="#FF4FB8">✈ +1 SERATA</text></svg>
 <p class="bn-label">Per chi viaggia spesso</p>
 <h2 class="bn-display" style="font-size: clamp(42px, 4.4vw, 60px); max-width: 80%">Passaporto del Gusto</h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #C9C6EA; max-width: 70%">Con il Passaporto il tagliere World Tour con il drink costa 12,90 € (14,90 € con Mango MIMO o Gin tonic) e ogni euro speso diventa un miglio. Ogni serata by Night vale anche un timbro sul passaporto.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #C9C6EA; max-width: 70%">Con il Passaporto il tagliere World Tour con il drink costa 12,90 € e ogni euro speso diventa un miglio. Ogni serata by Night vale anche un timbro sul passaporto.</p>
 <a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" class="bn-btn bn-btn-pink" style="align-self: flex-start; margin-top: auto; min-height: 50px; position: relative">Iscriviti al Passaporto</a>
 </div>
 </div>
