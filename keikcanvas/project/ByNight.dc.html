@@ -48,6 +48,12 @@ body{margin:0;background:#070031}
 .bn-frame img{display:block;width:100%;height:560px;object-fit:cover;border-radius:24px;filter:saturate(1.1) contrast(1.05)}
 .bn-tag{position:absolute;left:-28px;bottom:34px;background:var(--cream);color:var(--night);border-radius:14px;padding:12px 16px;font-family:'Space Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.06em;box-shadow:0 18px 40px rgba(0,0,0,0.45);transform:rotate(-3deg)}
 .bn-tag b{display:block;font-size:15px;letter-spacing:0.04em}
+/* video d'apertura nel riquadro (4 s, poi sfuma nella foto) */
+.bn-intro{position:absolute;inset:0;z-index:2;border-radius:24px;overflow:hidden;background:#101228;transition:opacity .9s ease}
+.bn-intro video{display:block;width:100%;height:100%;object-fit:cover}
+.bn-intro.is-done{opacity:0;pointer-events:none}
+.bn-tag{z-index:3;transition:opacity .6s ease .4s}
+.bn-frame:has(.bn-intro:not(.is-done)) .bn-tag{opacity:0}
 /* tabellone */
 .bn-board{background:#05001A;border-radius:22px;padding:24px 26px 18px;border:1px solid rgba(250,230,9,0.22);box-shadow:0 30px 60px rgba(0,0,0,0.45),0 0 40px rgba(250,230,9,0.08)}
 .bn-board-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
@@ -201,6 +207,7 @@ body{margin:0;background:#070031}
 </div>
 <figure class="bn-frame">
 <img src="/_blob/335ba7f6638144b36d70efb0986ee7b7" alt="Due drink alzati al tavolo di KEIK la sera, sotto la luce calda della lampada" style="object-position: center 30%">
+<div class="bn-intro {{introCls}}" aria-hidden="true"><video src="/_blob/6a2e549540d9ab30353261cb1b8436a2" autoplay muted playsinline preload="auto"></video></div>
 <figcaption class="bn-tag" aria-hidden="true"><b>KB 1900 · MODENA → MONDO</b>GATE VIA CANALINO 51 · IMBARCO 19:00</figcaption>
 </figure>
 </div>
@@ -501,6 +508,7 @@ class Component extends DCLogic {
   renderVals() {
     const st = this.state || {};
     return {
+      introCls: st.introDone ? 'is-done' : '',
       kpOpenCls: st.kpOpen ? 'is-open' : '', kpClosed: !st.kpOpen, openForm: () => this.apri('kpOpen', 'pnsGo'),
       // Modulo Pienissimo della sera: per cambiarlo basta cambiare questo indirizzo (e quello di "Aprilo in una nuova pagina")
       pnsSrc: st.pnsGo ? 'https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW' : 'about:blank',
@@ -508,6 +516,18 @@ class Component extends DCLogic {
     };
   }
   componentDidMount() {
+    // Video d'apertura: parte una volta, alla fine resta 0,6 s sull'ultima immagine e sfuma nella foto. Se il telefono blocca la riproduzione automatica o chiede meno animazioni, si vede subito la foto.
+    const fine = () => { if (!(this.state || {}).introDone) this.setState({ introDone: true }); };
+    const v = document.querySelector('.bn-intro video');
+    if (window.__KK_PRERENDER__) { /* nella copia per Google il video resta visibile */ }
+    else if (!v || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) { fine(); }
+    else {
+      v.muted = true;
+      v.addEventListener('ended', () => setTimeout(fine, 600));
+      v.addEventListener('error', fine);
+      try { const pr = v.play(); if (pr && pr.catch) pr.catch(fine); } catch (e) { fine(); }
+      this._introT = setTimeout(fine, 7000);
+    }
     // Script di auto-resize di Pienissimo: l'iframe prende l'altezza del modulo
     this._pns = (e) => {
       const fr = document.getElementById('pns-form');
