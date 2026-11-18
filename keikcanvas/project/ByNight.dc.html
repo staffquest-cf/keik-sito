@@ -207,7 +207,10 @@ body{margin:0;background:#070031}
 </div>
 <figure class="bn-frame">
 <img src="/_blob/335ba7f6638144b36d70efb0986ee7b7" alt="Due drink alzati al tavolo di KEIK la sera, sotto la luce calda della lampada" style="object-position: center 30%">
+<!-- Video d'apertura: solo fino al 2 dicembre 2026 compreso (videoOn), poi sparisce da solo -->
+<sc-if value="{{videoOn}}" hint-placeholder-val="{{ true }}">
 <div class="bn-intro {{introCls}}" aria-hidden="true"><video src="/_blob/6a2e549540d9ab30353261cb1b8436a2" autoplay muted playsinline preload="auto"></video></div>
+</sc-if>
 <figcaption class="bn-tag" aria-hidden="true"><b>KB 1900 · MODENA → MONDO</b>GATE VIA CANALINO 51 · IMBARCO 19:00</figcaption>
 </figure>
 </div>
@@ -508,6 +511,7 @@ class Component extends DCLogic {
   renderVals() {
     const st = this.state || {};
     return {
+      videoOn: Date.now() < Date.parse('2026-12-03T00:00:00+01:00'), // il video dice «Prima partenza 03.12»: dal 3 dicembre non si mostra più
       introCls: st.introDone ? 'is-done' : '',
       kpOpenCls: st.kpOpen ? 'is-open' : '', kpClosed: !st.kpOpen, openForm: () => this.apri('kpOpen', 'pnsGo'),
       // Modulo Pienissimo della sera: per cambiarlo basta cambiare questo indirizzo (e quello di "Aprilo in una nuova pagina")
