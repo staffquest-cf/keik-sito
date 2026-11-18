@@ -8,7 +8,7 @@
 <body>
 <x-dc>
 <helmet>
-<meta name="description" content="Aperti 7 giorni su 7 dalle 10 alle 20, ven e sab fino alle 22. Centro storico in ZTL: dove parcheggiare, WhatsApp e telefono.">
+<meta name="description" content="Aperti 7 giorni su 7 dalle 10 alle 20, gio, ven e sab fino alle 22. Centro storico in ZTL: dove parcheggiare, WhatsApp e telefono.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500..900&amp;family=Montserrat:wght@400..700&amp;family=Space+Mono:wght@400;700&amp;family=Caveat:wght@500..700&amp;display=swap">
 <style>
@@ -191,7 +191,7 @@ class Component extends DCLogic {
     const wdMap = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
     const wd = wdMap[get('weekday')] || 0;
     const mins = Number(get('hour')) * 60 + Number(get('minute'));
-    const late = (i) => i === 4 || i === 5;
+    const late = (i) => i === 3 || i === 4 || i === 5; // giovedì, venerdì e sabato fino alle 22 (KEIK by Night)
     const closeAt = late(wd) ? 22 * 60 : 20 * 60;
     const kitchenAt = late(wd) ? 21 * 60 + 30 : 19 * 60 + 30;
     const openAt = 10 * 60;

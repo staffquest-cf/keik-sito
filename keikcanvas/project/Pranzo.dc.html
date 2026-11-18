@@ -232,7 +232,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 32px">
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">GATE</span><span style="font-size: 17px; font-weight: 600">Via Canalino 51, Modena</span><a href="https://maps.google.com/?q=Via+Canalino+51+Modena" style="color: #FFFFFF; font-size: 15px">Come arrivare</a></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CUCINA APERTA</span><span style="font-size: 17px; font-weight: 600">Tutti i giorni 10–19:30</span><span style="font-size: 15px; color: #DCC8DD">venerdì e sabato fino alle 21:30</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CUCINA APERTA</span><span style="font-size: 17px; font-weight: 600">Tutti i giorni 10–19:30</span><span style="font-size: 15px; color: #DCC8DD">giovedì, venerdì e sabato fino alle 21:30</span></div>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">PARCHEGGIO</span><span style="font-size: 17px; font-weight: 600">Sui viali</span><span style="font-size: 15px; color: #DCC8DD">entrando da via Saragozza o via Gallucci</span></div>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D99BCF">CONTATTI</span><a href="https://wa.me/393534732354" style="color: #FFFFFF; font-size: 17px; font-weight: 600">WhatsApp 353 4732354</a><a href="tel:+390598396468" style="color: #DCC8DD; font-size: 15px">Telefono 059 8396468</a></div>
 </div>
@@ -314,7 +314,7 @@ class Component extends DCLogic {
     const days = dayLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ day: i }) }, chip(i === day)));
     const times = timeLabels.map((label, i) => Object.assign({ label: label, pick: () => this.setState({ time: i }) }, chip(i === time)));
     const faqData = [
-      { q: 'A che ora si pranza?', a: 'La cucina è aperta tutti i giorni dalle 10 alle 19:30, il venerdì e il sabato fino alle 21:30: il pranzo lo trovi da mezzogiorno in poi, senza fretta di chiusura.' },
+      { q: 'A che ora si pranza?', a: 'La cucina è aperta tutti i giorni dalle 10 alle 19:30, il giovedì, il venerdì e il sabato fino alle 21:30: il pranzo lo trovi da mezzogiorno in poi, senza fretta di chiusura.' },
       { q: 'Serve prenotare?', a: 'Nel weekend e per i gruppi sì. In settimana spesso trovi posto, ma con la prenotazione vai sul sicuro.' },
       { q: 'Avete piatti vegani e senza glutine?', a: 'Hummus e falafel è vegano, e per chi evita il glutine c’è un menu dedicato da chiedere allo staff. Non è adatto ai celiaci: la cucina è condivisa e possono esserci tracce.' },
       { q: 'Si può fare un pranzo di lavoro o di gruppo?', a: 'Certo. Da 7 persone in su scrivici su WhatsApp e organizziamo il tavolo insieme.' },

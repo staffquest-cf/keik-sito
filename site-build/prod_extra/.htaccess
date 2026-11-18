@@ -40,10 +40,10 @@ RewriteRule ^pages/vegano-e-senza-glutine-a-modena/?$ https://keik.it/vegano-sen
 RewriteRule ^pages/fornitura-locali-emilia-romagna-kei/?$ https://keik.it/aziende.html [R=301,L,NC]
 RewriteRule ^pages/fornitura-locali-emilia-romagna-keik/?$ https://keik.it/aziende.html [R=301,L,NC]
 RewriteRule ^pages/b2b-pasticceria-artigianale-internazionale-a-modena/?$ https://keik.it/aziende.html [R=301,L,NC]
-RewriteRule ^pages/aperitivo-modena-keik/?$ https://keik.it/aperitivo.html [R=301,L,NC]
-RewriteRule ^pages/aperitivo/?$ https://keik.it/aperitivo.html [R=301,L,NC]
-RewriteRule ^pages/aperitivo-e-cena/?$ https://keik.it/aperitivo.html [R=301,L,NC]
-RewriteRule ^pages/aperitivo-a-modena-keik/?$ https://keik.it/aperitivo.html [R=301,L,NC]
+RewriteRule ^pages/aperitivo-modena-keik/?$ https://keik.it/bynight.html [R=301,L,NC]
+RewriteRule ^pages/aperitivo/?$ https://keik.it/bynight.html [R=301,L,NC]
+RewriteRule ^pages/aperitivo-e-cena/?$ https://keik.it/bynight.html [R=301,L,NC]
+RewriteRule ^pages/aperitivo-a-modena-keik/?$ https://keik.it/bynight.html [R=301,L,NC]
 RewriteRule ^pages/le-faq-di-keik-modena/?$ https://keik.it/faq.html [R=301,L,NC]
 RewriteRule ^pages/le-faq-di-keik/?$ https://keik.it/faq.html [R=301,L,NC]
 RewriteRule ^pages/prenota/?$ https://keik.it/prenota.html [R=301,L,NC]
@@ -71,6 +71,8 @@ RewriteRule ^pages/eventi-halloween-modena/?$ https://keik.it/eventi.html [R=301
 RewriteRule ^pages/ottobre-eventi-e-viaggi-col-gusto/?$ https://keik.it/eventi.html [R=301,L,NC]
 RewriteRule ^pages/messico(-[a-z0-9-]+)?/?$ https://keik.it/eventi.html [R=301,L,NC]
 RewriteRule ^pages/brunch/?$ https://keik.it/brunch.html [R=301,L,NC]
+# KEIK by Night (lancio): la vecchia pagina Aperitivo porta alla proposta serale del locale
+RewriteRule ^aperitivo(\.html)?/?$ https://keik.it/bynight.html [R=301,L,NC]
 
 # Privacy e policy Shopify
 RewriteRule ^pages/gdpr-compliance/?$ https://www.iubenda.com/privacy-policy/680124 [R=301,L,NC]
