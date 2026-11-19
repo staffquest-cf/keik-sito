@@ -75,3 +75,8 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 
 ## KEIK by Night (in preparazione)
 - La pagina `bynight.html` e la nuova voce di menu sono nel ramo `sorgente-bynight`, non qui: leggere il MANUALE di quel ramo. Finché Elena non decide il lancio, la pagina Aperitivo resta online e su Google; al lancio si unisce il ramo e si reindirizza `aperitivo.html` su `bynight.html`.
+
+## Antivirus del server (Imunify360): mai link brevi `pnssm.pro`
+- Il 5/11 (menu-tavolo.html) e il 17 e 19/11 (menu.html) Imunify360 ha «ripulito» la pagina tagliando un blocco di codice dal primo all'ultimo link `https://pnssm.pro/a16isyw` (motivo: SMW-INJ-CLOUDAV-js.tool.remote). La pagina restava col modello grezzo (`{{exitSecond}}`, popup di Brady's Quest che non si chiude). Il server ricopia i file solo quando cambia il ramo keik-it, quindi la copia rotta restava online.
+- Dal 19/11 il sito usa solo l'indirizzo completo `https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW` (negli attributi href con `&amp;`). Non usare più link brevi pnssm.pro.
+- Se una pagina online sembra rotta: cPanel → Imunify360 → Malware Scanner (elenco «Cleaned») e confrontare la dimensione del file online con quella del ramo keik-it.
