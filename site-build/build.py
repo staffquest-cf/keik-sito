@@ -116,11 +116,22 @@ def build(name, slug, override=None):
     if slug == 'index':
         _r = json.load(open(SCR + '/site-build/restaurant_ld.json', encoding='utf-8'))
         _org = {'@context': 'https://schema.org', '@type': 'Organization', '@id': SITE + '/#organization', 'name': 'KEIK S.N.C.',
+                'legalName': 'Keik di Debbia Elena Karen Edelweiss SNC', 'vatID': 'IT03764210369',
                 'alternateName': 'KEIK', 'url': SITE + '/', 'logo': _r['logo'], 'foundingDate': _r['foundingDate'], 'email': _r['email'],
                 'telephone': _r['telephone'], 'address': _r['address'], 'sameAs': _r['sameAs'],
                 'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': _r['telephone'],
                                  'email': _r['email'], 'availableLanguage': ['Italian', 'English', 'Spanish']}}
         OG += '<script type="application/ld+json">' + json.dumps(_org, ensure_ascii=False) + '</script>\n'
+        _site = {'@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE + '/#website', 'url': SITE + '/', 'name': 'KEIK',
+                 'inLanguage': 'it', 'publisher': {'@id': SITE + '/#organization'}}
+        OG += '<script type="application/ld+json">' + json.dumps(_site, ensure_ascii=False) + '</script>\n'
+    # Scheda "pagina" con la data di aggiornamento (le IA preferiscono contenuti datati): ogni pagina pubblica, data della costruzione
+    if slug not in ('404', 'menu-tavolo', 'eventi-ottobre'):
+        _u = SITE + ('/' if slug == 'index' else '/' + slug + '.html')
+        _wp = {'@context': 'https://schema.org', '@type': 'WebPage', '@id': _u + '#webpage', 'url': _u, 'name': __import__('html').unescape(re.sub(r'<[^>]+>', '', title)).strip(),
+               'inLanguage': 'it', 'isPartOf': {'@id': SITE + '/#website'}, 'about': {'@id': SITE + '/#restaurant'},
+               'dateModified': __import__('datetime').date.today().isoformat()}
+        OG += '<script type="application/ld+json">' + json.dumps(_wp, ensure_ascii=False) + '</script>\n'
     # B4 schema Restaurant
     if slug in ('index', 'contatti', 'menu'):
         OG += '<script type="application/ld+json">' + json.dumps(json.load(open(SCR + '/site-build/restaurant_ld.json', encoding='utf-8')), ensure_ascii=False) + '</script>\n'

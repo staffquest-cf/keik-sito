@@ -71,5 +71,21 @@
  ],
  "parentOrganization": {
   "@id": "https://keik.it/#organization"
+ },
+ "potentialAction": {
+  "@type": "ReserveAction",
+  "target": {
+   "@type": "EntryPoint",
+   "urlTemplate": "https://keik.it/prenota.html",
+   "inLanguage": "it",
+   "actionPlatform": [
+    "https://schema.org/DesktopWebPlatform",
+    "https://schema.org/MobileWebPlatform"
+   ]
+  },
+  "result": {
+   "@type": "FoodEstablishmentReservation",
+   "name": "Prenota un tavolo da KEIK"
+  }
  }
 }
