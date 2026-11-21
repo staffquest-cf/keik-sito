@@ -59,7 +59,7 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - Pixel di Meta (ID 1066522540533719, lo stesso che usava Shopify): in `site-build/build.py`, solo su keik.it e solo dopo il consenso iubenda ai cookie di marketing (finalità 5; il servizio "pixel di Meta" è nella policy iubenda). Anche in brady.html tramite `deploy/brady-head.py`. Gli eventi di `kk-track.js` vanno anche a Meta: prenota_apri_modulo/modulo_esterno_click → Schedule, whatsapp/telefono → Contact, indicazioni → FindLocation, buono_regalo → InitiateCheckout, brady_carta_imbarco → Lead. Il pixel "KEIK PIENISSIMO" è di Pienissimo (dentro il modulo), non è nel nostro codice.
 - Google Analytics: `G-8TJZ0BY97T` · Microsoft Clarity: `z4auk6y1db` (partono solo su keik.it e solo dopo il consenso ai cookie di misurazione).
 - iubenda: siteId 418012, cookiePolicyId 680124. Google Maps si carica con il consenso "Esperienza" o al clic.
-- Moduli Pienissimo: `https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=<ID>` · generale `MbjDTW` · Aperitivo in lingua `58ayJR` · Friendsgiving `QLRP7p` · panino del giorno dopo `ULHn9C`.
+- Moduli Pienissimo: `https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=<ID>` · generale (tutto il sito) `vLZP8Y` · KEIK by Night (solo la pagina bynight) `MbjDTW` · Aperitivo in lingua `58ayJR` · Friendsgiving `QLRP7p` · panino del giorno dopo `ULHn9C`.
 - Buoni regalo: Gift Up. Clienti: Pienissimo. WhatsApp: 353 4732354. Telefono: 059 8396468.
 - Search Console: proprietà Dominio `keik.it` (verificata con TXT), sitemap inviata.
 
@@ -96,5 +96,5 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 
 ## Antivirus del server (Imunify360): mai link brevi `pnssm.pro`
 - Il 5/11 (menu-tavolo.html) e il 17 e 19/11 (menu.html) Imunify360 ha «ripulito» la pagina tagliando un blocco di codice dal primo all'ultimo link `https://pnssm.pro/a16isyw` (motivo: SMW-INJ-CLOUDAV-js.tool.remote). La pagina restava col modello grezzo (`{{exitSecond}}`, popup di Brady's Quest che non si chiude). Il server ricopia i file solo quando cambia il ramo keik-it, quindi la copia rotta restava online.
-- Dal 19/11 il sito usa solo l'indirizzo completo `https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW` (negli attributi href con `&amp;`). Non usare più link brevi pnssm.pro.
+- Dal 19/11 il sito usa solo l'indirizzo completo `https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=vLZP8Y` (dal 21/11; `MbjDTW` è il modulo serale di KEIK by Night e va SOLO nella pagina bynight) (negli attributi href con `&amp;`). Non usare più link brevi pnssm.pro.
 - Se una pagina online sembra rotta: cPanel → Imunify360 → Malware Scanner (elenco «Cleaned») e confrontare la dimensione del file online con quella del ramo keik-it.
