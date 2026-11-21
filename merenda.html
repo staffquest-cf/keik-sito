@@ -16,7 +16,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://keik.it/merenda.html">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://keik.it/merenda.html#webpage", "url": "https://keik.it/merenda.html", "name": "Il pomeriggio a Modena: pancakes, dolci e matcha · KEIK", "inLanguage": "it", "isPartOf": {"@id": "https://keik.it/#website"}, "about": {"@id": "https://keik.it/#restaurant"}, "dateModified": "2026-11-20"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://keik.it/merenda.html#webpage", "url": "https://keik.it/merenda.html", "name": "Il pomeriggio a Modena: pancakes, dolci e matcha · KEIK", "inLanguage": "it", "isPartOf": {"@id": "https://keik.it/#website"}, "about": {"@id": "https://keik.it/#restaurant"}, "dateModified": "2026-11-21"}</script>
 <script type="text/javascript">var _iub = _iub || []; _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"floatingPreferencesButtonDisplay":false,"perPurposeConsent":true,"siteId":418012,"whitelabel":false,"cookiePolicyId":680124,"lang":"it","banner":{"acceptButtonDisplay":true,"closeButtonRejects":true,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true}}; _iub.csLangConfiguration = {"it":{"cookiePolicyId":680124}}; _iub.csConfiguration.callback = {onPreferenceExpressedOrNotNeeded: function (p) { window.__kkConsent = p; document.dispatchEvent(new CustomEvent("kk-consent", {detail: p})); }};</script>
 <script type="text/javascript" src="https://cs.iubenda.com/sync/418012.js"></script>
 <script type="text/javascript" src="https://cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
@@ -480,7 +480,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 
 <iframe id="pns-form" loading="lazy" src="about:blank" title="Prenota un tavolo da KEIK" style="width: 100%; height: 503px; border: 0; display: block"></iframe>
 <div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
-<span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=MbjDTW" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
+<span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=vLZP8Y" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
 <a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
 </div>
 </div>
@@ -768,7 +768,7 @@ a{color:#91007D}a:hover{color:#3B0B40}
 <!-- Form prenotazioni Pienissimo (altezza adattata dallo script in componentDidMount) -->
 <iframe id="pns-form" loading="lazy" src="{{pnsSrc}}" title="Prenota un tavolo da KEIK" style="width: 100%; height: {{pnsH}}px; border: 0; display: block"></iframe>
 <div style="border-top: 1.5px dashed #E6DAE4; padding: 14px 24px 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #6B4A70">
-<span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=MbjDTW" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
+<span>Il modulo non si apre? <a href="https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&amp;id=vLZP8Y" target="_blank" rel="noopener" style="color: #91007D; font-weight: 600">Aprilo in una nuova pagina</a></span>
 <a href="https://wa.me/393534732354" style="color: #91007D; font-weight: 600">Preferisci WhatsApp?</a>
 </div>
 </div>
@@ -915,7 +915,7 @@ class Component extends DCLogic {
       toggle: () => this.setState({ faq: i === faqOpen ? -1 : i })
     }));
     return {
-      kpOpenCls: (this.state && this.state.kpOpen) ? 'is-open' : '', kpClosed: !(this.state && this.state.kpOpen), openForm: () => this.apri('kpOpen', 'pnsGo'), pnsSrc: (this.state && this.state.pnsGo) ? 'https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=MbjDTW' : 'about:blank',
+      kpOpenCls: (this.state && this.state.kpOpen) ? 'is-open' : '', kpClosed: !(this.state && this.state.kpOpen), openForm: () => this.apri('kpOpen', 'pnsGo'), pnsSrc: (this.state && this.state.pnsGo) ? 'https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=vLZP8Y' : 'about:blank',
       pnsH: (this.state && typeof this.state.pnsH === 'number') ? this.state.pnsH : 503 /* altezza reale del primo passaggio dei moduli Pienissimo sul telefono */,
       sweetPicks, drinkPicks, sweets, pancakes, salty, days, times, faqs,
       sw: { name: s.name, code: s.code, img: s.img, price: eur(s.price) },
