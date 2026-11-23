@@ -60,6 +60,7 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - Google Analytics: `G-8TJZ0BY97T` · Microsoft Clarity: `z4auk6y1db` (partono solo su keik.it e solo dopo il consenso ai cookie di misurazione).
 - iubenda: siteId 418012, cookiePolicyId 680124. Google Maps si carica con il consenso "Esperienza" o al clic.
 - Moduli Pienissimo: `https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=<ID>` · generale (tutto il sito) `vLZP8Y` · KEIK by Night (solo la pagina bynight) `MbjDTW` · Aperitivo in lingua `58ayJR` · Friendsgiving `QLRP7p` · panino del giorno dopo `ULHn9C`.
+- Iscrizione al Passaporto del Gusto (fidelity Pienissimo), indirizzo completo: `https://pw2h42fpguiftebdugzkzw6g3ce2zowg.fidelity.pienissimo.pro/?id=1`. Non usare più lo shortlink `pro.pns.sm/y82wkxt` (stesso rischio Imunify dei link brevi). In `kk-track.js` i clic su questo indirizzo contano come `passaporto_click`.
 - Buoni regalo: Gift Up. Clienti: Pienissimo. WhatsApp: 353 4732354. Telefono: 059 8396468.
 - Search Console: proprietà Dominio `keik.it` (verificata con TXT), sitemap inviata.
 
