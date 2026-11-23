@@ -79,8 +79,9 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 
 ## Passaporto del Gusto
 - Dal 23/11/2026 in fondo a ogni pagina (prima della mappa del sito) c'è la fascia di iscrizione "Fai il Passaporto del Gusto" (blocco `<!-- KK-PASSAPORTO -->`, bottone Iscriviti verso Pienissimo). Non c'è in home, che ha la sua sezione `#passaporto`. Ogni pagina nuova deve averla (copiarla da un'altra pagina).
-- Ci si iscrive "al tavolo o online" (non "al bancone"); il premio si chiede al bancone.
-- La pagina dei premi (`passaporto-del-gusto.html`) è pronta nel ramo `sorgente-passaporto` ma NON va online finché Elena non ha configurato i premi su Pienissimo. Quel ramo aggiorna anche home, FAQ e Brady (premi al posto di "sconti e 2x1") e aggiunge alla fascia il bottone "Scopri i premi": al lancio va riallineato con questo ramo (la fascia c'è in tutti e due) e poi unito.
+- Ci si iscrive "al tavolo o online" (non "al bancone"); il premio si chiede al bancone. Il passaporto fisico (timbri degli eventi) si chiede alla cassa.
+- Dal 23/11/2026 la fidelity NON prevede più sconti né 2x1: con le miglia si ricevono solo omaggi. Non scrivere mai "sconti", "2x1" o "tessera" per il Passaporto.
+- La pagina dei premi (`passaporto-del-gusto.html`) è pronta nel ramo `sorgente-passaporto` ma NON va online finché Elena non ha configurato i premi su Pienissimo. Quel ramo aggiorna anche home, FAQ e Brady con l'elenco dei premi (nel ramo sorgente ci sono già i testi senza sconti: al lancio tenere "il passaporto fisico chiedilo alla cassa") e aggiunge alla fascia il bottone "Scopri i premi": al lancio va riallineato con questo ramo (la fascia c'è in tutti e due) e poi unito.
 
 ## Antivirus del server (Imunify360): mai link brevi `pnssm.pro`
 - Il 5/11 (menu-tavolo.html) e il 17 e 19/11 (menu.html) Imunify360 ha «ripulito» la pagina tagliando un blocco di codice dal primo all'ultimo link `https://pnssm.pro/a16isyw` (motivo: SMW-INJ-CLOUDAV-js.tool.remote). La pagina restava col modello grezzo (`{{exitSecond}}`, popup di Brady's Quest che non si chiude). Il server ricopia i file solo quando cambia il ramo keik-it, quindi la copia rotta restava online.
