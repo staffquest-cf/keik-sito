@@ -60,6 +60,7 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - Google Analytics: `G-8TJZ0BY97T` · Microsoft Clarity: `z4auk6y1db` (partono solo su keik.it e solo dopo il consenso ai cookie di misurazione).
 - iubenda: siteId 418012, cookiePolicyId 680124. Google Maps si carica con il consenso "Esperienza" o al clic.
 - Moduli Pienissimo: `https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=<ID>` · generale (tutto il sito) `vLZP8Y` · KEIK by Night (solo la pagina bynight) `MbjDTW` · Aperitivo in lingua `58ayJR` · Friendsgiving `QLRP7p` · panino del giorno dopo `ULHn9C`.
+- Iscrizione al Passaporto del Gusto (fidelity Pienissimo), indirizzo completo: `https://pw2h42fpguiftebdugzkzw6g3ce2zowg.fidelity.pienissimo.pro/?id=1`. Non usare più lo shortlink `pro.pns.sm/y82wkxt` (stesso rischio Imunify dei link brevi). In `kk-track.js` i clic su questo indirizzo contano come `passaporto_click`.
 - Buoni regalo: Gift Up. Clienti: Pienissimo. WhatsApp: 353 4732354. Telefono: 059 8396468.
 - Search Console: proprietà Dominio `keik.it` (verificata con TXT), sitemap inviata.
 
@@ -75,6 +76,11 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 
 ## KEIK by Night (in preparazione)
 - La pagina `bynight.html` e la nuova voce di menu sono nel ramo `sorgente-bynight`, non qui: leggere il MANUALE di quel ramo. Finché Elena non decide il lancio, la pagina Aperitivo resta online e su Google; al lancio si unisce il ramo e si reindirizza `aperitivo.html` su `bynight.html`.
+
+## Passaporto del Gusto
+- Dal 23/11/2026 in fondo a ogni pagina (prima della mappa del sito) c'è la fascia di iscrizione "Fai il Passaporto del Gusto" (blocco `<!-- KK-PASSAPORTO -->`, bottone Iscriviti verso Pienissimo). Non c'è in home, che ha la sua sezione `#passaporto`. Ogni pagina nuova deve averla (copiarla da un'altra pagina).
+- Ci si iscrive "al tavolo o online" (non "al bancone"); il premio si chiede al bancone.
+- La pagina dei premi (`passaporto-del-gusto.html`) è pronta nel ramo `sorgente-passaporto` ma NON va online finché Elena non ha configurato i premi su Pienissimo. Quel ramo aggiorna anche home, FAQ e Brady (premi al posto di "sconti e 2x1") e aggiunge alla fascia il bottone "Scopri i premi": al lancio va riallineato con questo ramo (la fascia c'è in tutti e due) e poi unito.
 
 ## Antivirus del server (Imunify360): mai link brevi `pnssm.pro`
 - Il 5/11 (menu-tavolo.html) e il 17 e 19/11 (menu.html) Imunify360 ha «ripulito» la pagina tagliando un blocco di codice dal primo all'ultimo link `https://pnssm.pro/a16isyw` (motivo: SMW-INJ-CLOUDAV-js.tool.remote). La pagina restava col modello grezzo (`{{exitSecond}}`, popup di Brady's Quest che non si chiude). Il server ricopia i file solo quando cambia il ramo keik-it, quindi la copia rotta restava online.
