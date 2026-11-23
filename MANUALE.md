@@ -77,7 +77,9 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 - La pagina `bynight.html` e la nuova voce di menu sono nel ramo `sorgente-bynight`, non qui: leggere il MANUALE di quel ramo. Finché Elena non decide il lancio, la pagina Aperitivo resta online e su Google; al lancio si unisce il ramo e si reindirizza `aperitivo.html` su `bynight.html`.
 
 ## Passaporto del Gusto (in preparazione)
-- Pagina `Passaporto.dc.html` → `passaporto-del-gusto.html`, nel ramo `sorgente-passaporto`, non qui. Non è collegata da menu e sitemap. Al lancio: unire il ramo, aggiungere la pagina a `prod_extra/sitemap.xml`, mettere il link alla pagina (al posto di `pro.pns.sm/y82wkxt`) nella mappa del sito e nella home, aggiornare la FAQ generale (oggi parla di sconti e 2x1).
+- Tutto è nel ramo `sorgente-passaporto`, non qui: pagina `Passaporto.dc.html` → `passaporto-del-gusto.html` (schede FAQPage, MemberProgram e Breadcrumb; immagine social `og/passaporto-del-gusto.jpg`), fascia "Fai il Passaporto del Gusto" in tutte le pagine (blocco `<!-- KK-PASSAPORTO -->` prima della mappa del sito; non in home, che ha la sua sezione `#passaporto`), link "Passaporto del Gusto" della mappa del sito verso la pagina, testi di home e FAQ senza "sconti e 2x1" né "tessera", `sitemap.xml`, `llms.txt` e `brady-keik.txt` aggiornati. Il lancio = unire il ramo e pubblicare.
+- Ogni pagina nuova deve avere la fascia KK-PASSAPORTO (copiarla da un'altra pagina).
+- Ci si iscrive "al tavolo o online" (non "al bancone"); il premio si chiede al bancone.
 - Foto di felpa, spille e borraccia ritagliate dal carosello Instagram; i cupcake del carosello sono fatti con l'AI, per questo nella pagina c'è la foto reale del Red Velvet finché non arriva quella della box.
 
 ## Antivirus del server (Imunify360): mai link brevi `pnssm.pro`

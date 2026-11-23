@@ -101,7 +101,7 @@ def build(name, slug, override=None):
     if slug != '404':
         _md = re.search(r'<meta name="description" content="([^"]*)"', helmet)
         _desc = _md.group(1) if _md else ''
-        _img = slug if slug in ('brunch', 'pranzo', 'merenda', 'aperitivo') else 'home'
+        _img = slug if slug in ('brunch', 'pranzo', 'merenda', 'aperitivo', 'passaporto-del-gusto') else 'home'
         _url = SITE + ('/' if slug == 'index' else '/' + slug + '.html')
         OG = ('<meta property="og:type" content="website">\n<meta property="og:site_name" content="KEIK">\n'
               '<meta property="og:locale" content="it_IT">\n'
