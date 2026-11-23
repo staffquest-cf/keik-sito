@@ -60,7 +60,7 @@
     if (/^tel:/i.test(href)) return kkTrack('telefono_click', { testo: testo });
     if (/(^|\.)wa\.me$|whatsapp\.com$/i.test(host)) return kkTrack('whatsapp_click', { testo: testo });
     if (/pnssm\.pro$|forms\.pienissimo\.pro$/i.test(host)) return kkTrack('modulo_esterno_click', { testo: testo });
-    if (/pro\.pns\.sm$/i.test(host)) return kkTrack('passaporto_click', { testo: testo });
+    if (/pro\.pns\.sm$|fidelity\.pienissimo\.pro$/i.test(host)) return kkTrack('passaporto_click', { testo: testo });
     if (/yourgift\.cards$|giftup/i.test(host)) return kkTrack('buono_regalo_click', { testo: testo });
     if (/maps\.google\.|google\.[a-z.]+$/i.test(host) && /maps/i.test(a.href)) return kkTrack('indicazioni_click', { testo: testo });
     if (/prenota(\.html)?([?#]|$)|^#(modulo|prenota)/i.test(href) || /^#prenota-/.test(href)) return kkTrack('prenota_click', { testo: testo });
