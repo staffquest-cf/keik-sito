@@ -76,6 +76,10 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 ## KEIK by Night (in preparazione)
 - La pagina `bynight.html` e la nuova voce di menu sono nel ramo `sorgente-bynight`, non qui: leggere il MANUALE di quel ramo. Finché Elena non decide il lancio, la pagina Aperitivo resta online e su Google; al lancio si unisce il ramo e si reindirizza `aperitivo.html` su `bynight.html`.
 
+## Passaporto del Gusto (in preparazione)
+- Pagina `Passaporto.dc.html` → `passaporto-del-gusto.html`, nel ramo `sorgente-passaporto`, non qui. Non è collegata da menu e sitemap. Al lancio: unire il ramo, aggiungere la pagina a `prod_extra/sitemap.xml`, mettere il link alla pagina (al posto di `pro.pns.sm/y82wkxt`) nella mappa del sito e nella home, aggiornare la FAQ generale (oggi parla di sconti e 2x1).
+- Foto di felpa, spille e borraccia ritagliate dal carosello Instagram; i cupcake del carosello sono fatti con l'AI, per questo nella pagina c'è la foto reale del Red Velvet finché non arriva quella della box.
+
 ## Antivirus del server (Imunify360): mai link brevi `pnssm.pro`
 - Il 5/11 (menu-tavolo.html) e il 17 e 19/11 (menu.html) Imunify360 ha «ripulito» la pagina tagliando un blocco di codice dal primo all'ultimo link `https://pnssm.pro/a16isyw` (motivo: SMW-INJ-CLOUDAV-js.tool.remote). La pagina restava col modello grezzo (`{{exitSecond}}`, popup di Brady's Quest che non si chiude). Il server ricopia i file solo quando cambia il ramo keik-it, quindi la copia rotta restava online.
 - Dal 19/11 il sito usa solo l'indirizzo completo `https://forms.pienissimo.pro/?hashform=pw2h42fpguiftebdugzkzw6g3ce2zowg&id=vLZP8Y` (dal 21/11; `MbjDTW` è il modulo serale di KEIK by Night e va SOLO nella pagina bynight) (negli attributi href con `&amp;`). Non usare più link brevi pnssm.pro.

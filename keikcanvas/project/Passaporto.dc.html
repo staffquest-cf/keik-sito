@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Passaporto del Gusto – la fidelity di KEIK Modena | Miglia e premi</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Con il Passaporto del Gusto di KEIK ogni euro diventa un miglio: spille, taglieri, cupcake, borraccia e felpa in premio. Iscriviti e ricevi 5 miglia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500..900&amp;family=Montserrat:wght@400..700&amp;family=Space+Mono:wght@400;700&amp;family=Caveat:wght@500..700&amp;display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quanto costa iscriversi?", "acceptedAnswer": {"@type": "Answer", "text": "Niente: l’iscrizione è gratuita e ti regala subito 5 miglia."}}, {"@type": "Question", "name": "Come accumulo le miglia?", "acceptedAnswer": {"@type": "Answer", "text": "Ogni euro speso da KEIK vale 1 miglio. Mostra il tuo passaporto digitale al momento del pagamento."}}, {"@type": "Question", "name": "Come riscatto un premio?", "acceptedAnswer": {"@type": "Answer", "text": "Quando hai le miglia necessarie, chiedilo al bancone: le miglia vengono scalate dal tuo passaporto."}}, {"@type": "Question", "name": "Le spille si prendono tutte insieme?", "acceptedAnswer": {"@type": "Answer", "text": "No, sono 5 premi separati da 30 miglia l’una, da collezionare una alla volta."}}, {"@type": "Question", "name": "I taglieri sono da pagare?", "acceptedAnswer": {"@type": "Answer", "text": "No, Il Turista e il Brunch Traveler sono in omaggio con le miglia."}}, {"@type": "Question", "name": "E il passaporto fisico?", "acceptedAnswer": {"@type": "Answer", "text": "Serve per i timbri degli eventi tematici di KEIK: chiedilo quando partecipi a una serata."}}]}</script>
+<style>
+html{background:#1E0623}body{margin:0;background:#FFFFFF}
+a{color:#91007D}a:hover{color:#3B0B40}
+.p-wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box}
+.p-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,480px);gap:64px;align-items:center}
+.p-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.p-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.p-faq{display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr)}
+.p-paper{display:grid;grid-template-columns:260px minmax(0,1fr)}
+.p-routehead{display:grid;grid-template-columns:minmax(0,1fr) 340px;align-items:end}
+.p-pass{display:grid;grid-template-columns:minmax(0,1fr) 200px}
+.p-passgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.p-nav{display:flex}
+.p-sticky{display:none}
+.p-chip{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.p-card{transition:transform .25s ease,box-shadow .25s ease}.p-card:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(42,8,48,0.14) !important}
+.p-tag{display:flex;flex-direction:column;gap:4px;padding:14px 20px 14px 34px;background:#F2DB0D;border-radius:6px 14px 14px 6px;box-shadow:0 18px 40px rgba(0,0,0,0.35);clip-path:polygon(16px 0,100% 0,100% 100%,16px 100%,0 50%)}
+.p-tag-hole{position:absolute;left:18px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:#1A0438}
+.p-miles{display:flex;align-items:baseline;gap:6px;padding:8px 14px 8px 26px;background:#F2DB0D;border-radius:4px 10px 10px 4px;clip-path:polygon(12px 0,100% 0,100% 100%,12px 100%,0 50%);box-shadow:0 8px 20px rgba(0,0,0,0.18)}
+.p-miles .p-tag-hole{left:12px}
+.p-stamp{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:132px;height:132px;border-radius:50%;border:3px double #F2B8E6;color:#F2B8E6;text-align:center;background:rgba(26,4,56,0.7)}
+.p-stamp-lg{width:220px;height:220px;border:4px double #91007D;color:#91007D;background:transparent}
+.p-route{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));position:relative}
+.p-route::before{content:"";position:absolute;left:8%;right:8%;top:17px;border-top:3px dashed rgba(255,255,255,0.35)}
+.p-stop{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:0 6px;transition:opacity .25s ease}
+.p-dot{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:3px solid;box-sizing:border-box;color:#1A0438;font-weight:800;font-size:16px;transition:background-color .25s ease}
+input[type=range]{cursor:pointer}
+@media (prefers-reduced-motion: reduce){.p-card,.p-stop,.p-dot{transition:none !important}.p-card:hover{transform:none}}
+@media (max-width:960px){
+.p-wrap{padding-left:16px !important;padding-right:16px !important}
+.p-hero,.p-faq,.p-paper,.p-routehead{grid-template-columns:minmax(0,1fr) !important;gap:28px !important}
+.p-hero>div:last-child{max-width:420px;margin:0 auto 0 18px}
+.p-steps,.p-grid{grid-template-columns:minmax(0,1fr) !important}
+.p-pass{grid-template-columns:minmax(0,1fr) !important}
+.p-passgrid{grid-template-columns:minmax(0,1fr) !important}
+.p-stub{border-left:0 !important;border-top:2px dashed #E2D4E0 !important}
+.p-route{grid-template-columns:minmax(0,1fr) !important;gap:18px}
+.p-route::before{left:16px;right:auto;top:10px;bottom:10px;border-top:0;border-left:3px dashed rgba(255,255,255,0.35)}
+.p-stop{flex-direction:row;align-items:center;text-align:left;gap:16px;padding:0}
+.p-stop strong{min-width:64px}
+.p-stamp{width:96px;height:96px}.p-stamp:not(.p-stamp-lg) span{display:none}.p-stamp strong{font-size:18px !important}.p-stamp-lg span{display:block}
+.p-stamp-lg{width:180px;height:180px}
+.p-deco{display:none}
+.p-nav{display:none !important}
+.p-sticky{display:flex !important}
+}
+@media (min-width:961px) and (max-width:1180px){.p-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+
+/* KK */ .kk-bar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.kk-bar::-webkit-scrollbar{display:none}.kk-bar a{flex-shrink:0;white-space:nowrap}[id]{scroll-margin-top:56px}.kk-bar a[aria-current="page"]::before{content:"";position:absolute;left:50%;top:calc(50% - 16px);width:5px;height:5px;border-radius:50%;background:#F2B8E6;transform:translateX(-50%)}.kk-bar[data-more]{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 56px),transparent)}.kk-bar[data-less]{-webkit-mask-image:linear-gradient(to right,transparent,#000 40px);mask-image:linear-gradient(to right,transparent,#000 40px)}.kk-bar[data-more][data-less]{-webkit-mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 56px),transparent)}.kk-bar a:hover{background:rgba(255,255,255,0.12) !important}.kk-sitemap{display:grid;grid-template-columns:1.2fr repeat(3,minmax(0,1fr));gap:32px}.kk-sitemap a:hover{color:#FFFFFF !important}.kk-lang{display:inline-flex;gap:3px;flex-shrink:0;margin-left:6px}.kk-lang button{font:500 12px "Space Mono",monospace;min-width:36px;min-height:30px;border-radius:6px;border:1px solid rgba(255,255,255,0.28);background:transparent;color:#F1E3F0;cursor:pointer;padding:0 6px}.kk-lang button[aria-pressed="true"],.kk-langm[aria-pressed="true"]{background:#FFFFFF !important;color:#2A0830 !important;border-color:#FFFFFF !important}@media (max-width:960px){.kk-sitemap{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:24px !important}.kk-inner{padding-left:16px !important;padding-right:16px !important}}
+
+/* FONT-VIAGGIO */ [style*="Big Shoulders"]{font-weight:800 !important}h1,h2{text-transform:uppercase;letter-spacing:0 !important;line-height:0.95 !important;font-weight:900 !important}
+</style>
+</helmet>
+<div style="font-family: 'Montserrat', system-ui, sans-serif; color: #2A0A2E; background: #FFFFFF; min-width: 0">
+
+<header style="border-bottom: 1px solid #ECE3EA; background: #FFFFFF">
+<div class="p-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
+<a href="Main.dc.html" aria-label="KEIK – Viaggia col gusto, vai alla home" style="display: flex; align-items: center; line-height: 0"><img src="/_blob/cea731796bb98fc55bef3bb8e7c4505e" alt="Keik – Viaggia col gusto" style="display: block; height: 50px; width: auto"></a>
+<nav class="p-nav" aria-label="Principale" style="gap: 28px; font-weight: 600; font-size: 15px">
+<a href="#come" style="color: #3B0B40; text-decoration: none">Come funziona</a>
+<a href="#premi" style="color: #3B0B40; text-decoration: none">I premi</a>
+<a href="#domande" style="color: #3B0B40; text-decoration: none">Domande</a>
+</nav>
+<a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 0 22px; min-height: 46px; border-radius: 999px">Iscriviti</a>
+</div>
+</header>
+<!-- KK-SITEBAR -->
+<nav aria-label="Pagine del sito" style="position: sticky; top: 0; z-index: 40; background: #2A0830; font-family: 'Montserrat', system-ui, sans-serif"><div class="kk-inner kk-bar" style="max-width: 1200px; margin: 0 auto; padding: 6px 40px; box-sizing: border-box; align-items: center"><a href="Menu.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Menu</a><a href="Brunch.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Brunch</a><a href="Pranzo.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pranzo</a><a href="Merenda.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Pomeriggio</a><a href="Aperitivo.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Aperitivo</a><a href="Eventi.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Eventi</a><a href="Contatti.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Dove siamo</a><a href="ChiSiamo.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; color: #F1E3F0; background: transparent">Chi siamo</a><a href="Prenota.dc.html" style="display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; color: #2A0830; background: #F2B8E6; margin-left: auto">Prenota</a><span class="kk-lang" data-notr role="group" aria-label="Lingua / Language"><button type="button" data-lang="it" lang="it" aria-label="IT · Italiano">IT</button><button type="button" data-lang="en" lang="en" aria-label="EN · English">EN</button><button type="button" data-lang="es" lang="es" aria-label="ES · Español">ES</button><button type="button" data-lang="fr" lang="fr" aria-label="FR · Français">FR</button></span></div></nav>
+<!-- /KK-SITEBAR -->
+<main id="contenuto">
+
+<!-- 1 · HERO -->
+<section id="top" style="position: relative; overflow: hidden; padding: 56px 0 96px; background: #1A0438; color: #FFFFFF">
+<span class="p-deco" aria-hidden="true" style="position: absolute; right: -40px; top: 18px; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 220px; line-height: 0.8; color: rgba(255,255,255,0.04); white-space: nowrap; pointer-events: none">MIGLIA</span>
+<div class="p-wrap p-hero" style="position: relative">
+<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0">
+<nav aria-label="Percorso" style="font-size: 13px; color: #CBB4D2"><a href="Main.dc.html" style="color: #CBB4D2">Home</a> / <span aria-current="page">Passaporto del Gusto</span></nav>
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #F2DB0D">La fidelity di KEIK · Modena</p>
+<h1 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(56px, 7vw, 104px); line-height: 0.95; color: #FFFFFF">Passaporto <span style="color: #F2B8E6">del Gusto</span></h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #E7DAEB; max-width: 26em">Il programma fedeltà di KEIK. Ogni euro è un miglio, ogni visita un timbro.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+<a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #F2DB0D; color: #1A0438; text-decoration: none; font-weight: 700; font-size: 17px; padding: 0 28px; min-height: 58px; border-radius: 999px">Iscriviti e ricevi 5 miglia →</a>
+<span style="font-size: 14px; color: #CBB4D2">Gratis, in un minuto. Anche al bancone.</span>
+</div>
+</div>
+<div style="position: relative; min-width: 0; padding: 0 0 34px 0">
+<sc-if value="{{heroHasImg}}" hint-placeholder-val="{{ true }}"><img src="{{heroImg}}" alt="{{heroAlt}}" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; background: #a54b91; border-radius: 30px; box-shadow: 0 30px 70px rgba(0,0,0,0.45)"></sc-if>
+<div class="p-tag" style="position: absolute; left: -18px; bottom: 0; transform: rotate(-4deg)">
+<span aria-hidden="true" class="p-tag-hole"></span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #6B4A70">BENVENUTO A BORDO</span>
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 34px; line-height: 1; color: #3B0B40">+5 MIGLIA</strong>
+</div>
+<div class="p-stamp" data-notr aria-hidden="true" style="position: absolute; right: -10px; top: -14px; transform: rotate(12deg)">
+<span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.2em">KEIK · MODENA</span>
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 22px; line-height: 1">VIAGGIA<br>COL GUSTO</strong>
+<span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.2em">VIA CANALINO 51</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 2 · COME FUNZIONA -->
+<section id="come" style="padding: 104px 0; background: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Come funziona</p>
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(44px, 4.83vw, 67px); line-height: 1; color: #3B0B40">Tre scali <span style="color: #91007D">e sei già in viaggio.</span></h2>
+</div>
+<ol class="p-steps" style="list-style: none; margin: 0; padding: 0; gap: 16px">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="3">
+<li style="position: relative; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #F7F2F6">
+<span aria-hidden="true" style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 18px; background: #3B0B40; color: #F2DB0D; font-size: 28px">{{s.icon}}</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #91007D">{{s.n}}</span>
+<h3 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 34px; line-height: 1; color: #3B0B40">{{s.t}}</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4A2350">{{s.d}}</p>
+</li>
+</sc-for>
+</ol>
+<div style="display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 15px; line-height: 1.5; color: #4A2350">
+<span><strong style="color: #3B0B40">Al bancone o online:</strong> l’iscrizione è la stessa del link in bio di Instagram.</span>
+</div>
+</div>
+</section>
+
+<!-- 3 · INSIGHT -->
+<section aria-label="Le tue miglia" style="padding: 96px 0; background: #F2B8E6">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: clamp(40px, 5vw, 72px); line-height: 1; text-transform: uppercase; color: #1A0438; max-width: 15em">Hai già viaggiato più di quanto pensi.</p>
+<p style="margin: 0; font-size: 21px; line-height: 1.55; color: #3B0B40; max-width: 34em">Ogni brunch, ogni aperitivo, ogni cupcake “solo per assaggiare”: erano tutte miglia.</p>
+<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 600; font-size: 30px; line-height: 1.2; color: #91007D; transform: rotate(-2deg); transform-origin: left">Da oggi le contiamo.</p>
+</div>
+</section>
+
+<!-- 4 · PREMI -->
+<section id="premi" style="padding: 104px 0; background: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">I premi · dal più vicino al più lontano</p>
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(44px, 4.83vw, 67px); line-height: 1; color: #3B0B40">Scegli dove atterrare.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A2350">Sei destinazioni. La prima spilla arriva già dopo una visita: taglieri e cupcake sono in omaggio, scali solo le miglia.</p>
+</div>
+<div class="p-chips" role="group" aria-label="Filtra i premi" style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="5">
+<button type="button" class="p-chip" aria-pressed="{{c.pressed}}" onClick="{{c.pick}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid {{c.border}}; background: {{c.bg}}; color: {{c.fg}}; font: 600 14px 'Montserrat', sans-serif; cursor: pointer">{{c.label}}</button>
+</sc-for>
+</div>
+<div class="p-grid" style="gap: 18px">
+<sc-for list="{{prizes}}" as="p" hint-placeholder-count="6">
+<article class="p-card" style="display: flex; flex-direction: column; border-radius: 24px; overflow: hidden; background: #FFFFFF; border: 1px solid #ECE3EA; box-shadow: 0 14px 40px rgba(42,8,48,0.08)">
+<div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: {{p.bg}}">
+<sc-if value="{{p.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{p.img}}" alt="{{p.alt}}" loading="lazy" style="position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: {{p.fit}}"></sc-if>
+<sc-if value="{{p.noImg}}" hint-placeholder-val="{{ false }}"><div data-notr style="position: absolute; inset: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 2px dashed rgba(255,255,255,0.45); border-radius: 16px; color: #FFFFFF; text-align: center"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.16em">FOTO IN ARRIVO</span><span style="font-size: 14px; opacity: 0.8">{{p.name}}</span></div></sc-if>
+<div class="p-miles" style="position: absolute; left: 14px; top: 14px">
+<span aria-hidden="true" class="p-tag-hole" style="width: 8px; height: 8px"></span>
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 26px; line-height: 1; color: #1A0438">{{p.miles}}</strong>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #1A0438">MIGLIA</span>
+</div>
+<sc-if value="{{p.gift}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; right: 14px; top: 14px; display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px; border-radius: 999px; background: #3B0B40; color: #FFFFFF; font-size: 12px; font-weight: 700">In omaggio</span></sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 22px 22px 24px; flex-grow: 1">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #91007D">{{p.cat}}</span>
+<h3 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 30px; line-height: 1; color: #3B0B40">{{p.name}}</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A2350">{{p.desc}}</p>
+<sc-if value="{{p.isPins}}" hint-placeholder-val="{{ false }}">
+<ul style="list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{pins}}" as="pin" hint-placeholder-count="5"><li style="display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px; border-radius: 999px; background: #F7F2F6; color: #3B0B40; font-size: 13px; font-weight: 600">{{pin}}</li></sc-for>
+</ul>
+<p style="margin: 4px 0 0; font-family: 'Caveat', cursive; font-weight: 600; font-size: 24px; line-height: 1.1; color: #91007D">Collezionale tutte e 5.</p>
+</sc-if>
+</div>
+</article>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- 5 · ROTTA DELLE MIGLIA -->
+<section id="rotta" style="padding: 104px 0; background: #1A0438; color: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; gap: 36px">
+<div class="p-routehead" style="gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #F2DB0D">La rotta delle miglia</p>
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(44px, 4.83vw, 67px); line-height: 1">Dove ti porta <span style="color: #F2B8E6">il tuo passaporto?</span></h2>
+</div>
+<label style="display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 20px 22px; border-radius: 20px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14)">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #CBB4D2">LE TUE MIGLIA</span>
+<strong data-notr style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 52px; line-height: 1; color: #F2DB0D">{{myMiles}}</strong>
+<input type="range" min="0" max="400" step="5" value="{{myMiles}}" onInput="{{setMiles}}" aria-label="Le tue miglia" style="width: 100%; accent-color: #F2DB0D">
+</label>
+</div>
+<ol class="p-route" style="list-style: none; margin: 0; padding: 0">
+<sc-for list="{{stops}}" as="r" hint-placeholder-count="6">
+<li class="p-stop" style="opacity: {{r.op}}">
+<span aria-hidden="true" class="p-dot" style="background: {{r.dot}}; border-color: {{r.ring}}">{{r.mark}}</span>
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 30px; line-height: 1; color: {{r.col}}">{{r.miles}}</strong>
+<span style="font-size: 14px; line-height: 1.35; color: #E7DAEB">{{r.name}}</span>
+</li>
+</sc-for>
+</ol>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #E7DAEB" aria-live="polite"><sc-if value="{{hasNext}}" hint-placeholder-val="{{ true }}"><span>Prossima tappa:</span> <strong style="color: #FFFFFF">{{nextName}}</strong> · <span>ancora</span> <strong data-notr style="color: #F2DB0D">{{left}}</strong> <span>miglia.</span></sc-if><sc-if value="{{allDone}}" hint-placeholder-val="{{ false }}"><span>Hai raggiunto tutte le tappe: puoi scegliere qualsiasi premio.</span></sc-if></p>
+</div>
+</section>
+
+<!-- PASSAPORTO FISICO (extra) -->
+<section aria-label="Il passaporto di carta" style="padding: 88px 0; background: #F7F2F6">
+<div class="p-wrap p-paper" style="gap: 40px; align-items: center">
+<div class="p-stamp p-stamp-lg" data-notr aria-hidden="true" style="transform: rotate(-8deg); margin: 0 auto">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.2em">KEIK · MODENA</span>
+<strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 30px; line-height: 1">VIAGGIA<br>COL GUSTO</strong>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.2em">EVENTO TIMBRATO</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Extra · il passaporto di carta</p>
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(38px, 4vw, 56px); line-height: 1; color: #3B0B40">Le miglia sono digitali. <span style="color: #91007D">I timbri, di carta.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A2350; max-width: 34em">Il Passaporto del Gusto ha anche una versione fisica: serve per raccogliere i timbri quando partecipi agli eventi tematici di KEIK. Chiedilo alla prossima serata.</p>
+<a href="Eventi.dc.html" style="align-self: flex-start; display: inline-flex; align-items: center; color: #3B0B40; text-decoration: none; font-weight: 700; font-size: 15px; padding: 0 22px; min-height: 48px; border-radius: 999px; border: 1.5px solid #3B0B40">Guarda gli eventi del mese</a>
+</div>
+</div>
+</section>
+
+<!-- 6 · FAQ -->
+<section id="domande" style="padding: 104px 0; background: #FFFFFF">
+<div class="p-wrap p-faq" style="gap: 48px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #91007D">Domande frequenti</p>
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(41px, 4.37vw, 60px); line-height: 1; color: #3B0B40">Prima del decollo.</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A2350">Altri dubbi? Chiedi al bancone o scrivici su <a href="https://wa.me/393534732354">WhatsApp</a>.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{faqs}}" as="f" hint-placeholder-count="6">
+<div style="border-radius: 16px; background: #F7F2F6; overflow: hidden">
+<button type="button" onClick="{{f.toggle}}" aria-expanded="{{f.exp}}" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left; padding: 18px 20px; min-height: 60px; border: 0; background: transparent; color: #3B0B40; font: 600 17px 'Montserrat', sans-serif; cursor: pointer">{{f.q}}<span aria-hidden="true" style="font-size: 22px; color: #91007D">{{f.sign}}</span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 0 20px 20px; font-size: 16px; line-height: 1.6; color: #4A2350">{{f.a}}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- 7 · CTA CARTA D'IMBARCO -->
+<section id="imbarco" style="padding: 104px 0; background: #3B0B40; color: #FFFFFF">
+<div class="p-wrap" style="display: flex; flex-direction: column; align-items: center; gap: 32px; text-align: center">
+<h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: clamp(44px, 4.83vw, 67px); line-height: 1; max-width: 13em">Il tuo passaporto è pronto. <span style="color: #F2B8E6">Mancano solo le prossime miglia.</span></h2>
+<article class="p-pass" style="width: 100%; max-width: 860px; border-radius: 24px; overflow: hidden; background: #FFFFFF; color: #3B0B40; text-align: left; box-shadow: 0 30px 70px rgba(0,0,0,0.35)">
+<div style="display: flex; flex-direction: column; min-width: 0">
+<div style="background: #1A0438; color: #FFFFFF; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px"><img src="/_blob/4ae9236772f217ad454621f7172ec031" alt="Keik" style="height: 30px; width: auto"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.18em; color: #F2DB0D">CARTA D’IMBARCO · PASSAPORTO DEL GUSTO</span></div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; min-width: 0"><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6B4A70">DA</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 38px; line-height: 1; color: #3B0B40">La routine</strong></div>
+<span aria-hidden="true" style="flex-grow: 1; min-width: 24px; border-top: 2px dashed #D9C6D7; height: 0"></span>
+<span aria-hidden="true" style="font-size: 24px; color: #91007D">✈</span>
+<span aria-hidden="true" style="flex-grow: 1; min-width: 24px; border-top: 2px dashed #D9C6D7; height: 0"></span>
+<div style="display: flex; flex-direction: column; align-items: flex-end"><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6B4A70">A</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 38px; line-height: 1; color: #91007D">KEIK</strong></div>
+</div>
+<div class="p-passgrid" style="gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6B4A70">TARIFFA</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 25px; color: #3B0B40">1 € = 1 miglio</strong></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6B4A70">GATE</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 25px; color: #3B0B40">Via Canalino 51</strong></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #6B4A70">IMBARCO</span><strong style="font-family: 'Big Shoulders Display', sans-serif; font-size: 25px; color: #3B0B40">Dalle 10, ogni giorno</strong></div>
+</div>
+</div>
+</div>
+<div class="p-stub" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 14px; padding: 24px 18px; background: #F7F2F6; border-left: 2px dashed #E2D4E0; text-align: center">
+<span class="p-seal" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 112px; height: 112px; border-radius: 50%; background: #F2DB0D; color: #1A0438; transform: rotate(-8deg)"><strong style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 40px; line-height: 0.9">+5</strong><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.1em; line-height: 1.3">MIGLIA DI<br>BENVENUTO</span></span>
+<a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 16px; padding: 0 24px; min-height: 52px; border-radius: 999px">Iscriviti ora</a>
+</div>
+</article>
+<p style="margin: 0; font-size: 14px; color: #E7DAEB">#passaportodelgusto · #viaggiacolgusto · #keikmodena</p>
+</div>
+</section>
+
+</main>
+<!-- KK-SITEMAP -->
+<nav aria-label="Mappa del sito" style="background: #1E0623; color: #FFFFFF; font-family: 'Montserrat', system-ui, sans-serif; border-bottom: 1px solid rgba(255,255,255,0.12)"><div class="kk-inner kk-sitemap" style="max-width: 1200px; margin: 0 auto; padding: 56px 40px 40px; box-sizing: border-box"><div style="display: flex; flex-direction: column; gap: 12px"><a href="Main.dc.html" aria-label="KEIK, vai alla home" style="line-height: 0; display: block; margin-bottom: 10px"><img src="/_blob/4ae9236772f217ad454621f7172ec031" alt="Keik – Viaggia col gusto" style="height: 64px; width: auto"></a><span style="font-size: 15px; line-height: 1.55; color: #D9C3DB">All day kitchen nel centro di Modena dal 2013. Via Canalino 51 · tutti i giorni dalle 10.</span></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">I MOMENTI</span><a href="Brunch.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Brunch</a><a href="Pranzo.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pranzo</a><a href="Merenda.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Pomeriggio</a><a href="Aperitivo.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aperitivo e Il Turista</a><a href="Vegano.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Vegano e senza glutine</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">SCOPRI KEIK</span><a href="Menu.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Il menu</a><a href="Eventi.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Eventi del mese</a><a href="ChiSiamo.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Chi siamo</a><a href="FAQ.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Domande frequenti</a></div><div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #D99BCF">PER TE</span><a href="Prenota.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Prenota un tavolo</a><a href="BuoniRegalo.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Buoni regalo</a><a href="Aziende.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Aziende e locali</a><a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Passaporto del Gusto</a><a href="LavoraConNoi.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Lavora con noi</a><a href="Contatti.dc.html" style="color: #D9C3DB; text-decoration: none; font-size: 15px; line-height: 1.4">Contatti e orari</a></div></div></nav>
+<!-- /KK-SITEMAP -->
+<footer style="background: #1E0623; color: #B99BBC; padding: 40px 0 96px; font-size: 13px">
+<div class="p-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
+<span>© 2026 Keik di Debbia Elena Karen Edelweiss SNC · P.IVA 03764210369 · Via Canalino 51, 41121 Modena</span>
+<span style="display: flex; flex-wrap: wrap; gap: 16px"><a href="https://www.iubenda.com/privacy-policy/680124" target="_blank" rel="noopener" style="color: #B99BBC">Privacy</a><a href="https://www.iubenda.com/privacy-policy/680124/cookie-policy" target="_blank" rel="noopener" style="color: #B99BBC">Cookie</a><a href="#" class="iubenda-cs-preferences-link" style="color: #B99BBC">Preferenze cookie</a><a href="https://maps.google.com/?q=Via+Canalino+51+Modena" style="color: #B99BBC">Come arrivare</a><a href="https://wa.me/393534732354" style="color: #B99BBC">WhatsApp 353 4732354</a></span>
+</div>
+</footer>
+
+<div class="p-sticky" style="position: fixed; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 20; padding: 10px 10px 10px 18px; border-radius: 22px; background: #FFFFFF; border: 1px solid #ECE3EA; box-shadow: 0 -10px 30px rgba(42,8,48,0.12); gap: 10px; align-items: center">
+<span style="flex-grow: 1; display: flex; flex-direction: column; font-size: 13px; color: #6B4A70"><strong style="font-size: 15px; color: #3B0B40">+5 miglia di benvenuto</strong>iscrizione gratuita</span>
+<a href="https://pro.pns.sm/y82wkxt" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; background: #3B0B40; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 0 22px; min-height: 50px; border-radius: 999px">Iscriviti</a>
+</div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    // Foto: felpa, spille e borraccia ritagliate dal carosello Instagram (23/11/2026). Cupcake: foto reale, da sostituire con la box quando c'è.
+    const st = this.state || {};
+    const c = typeof st.c === 'number' ? st.c : 0;
+    const fq = typeof st.fq === 'number' ? st.fq : 0;
+    const my = typeof st.my === 'number' ? st.my : 120;
+    const chip = (on) => on
+      ? { bg: '#3B0B40', fg: '#FFFFFF', border: '#3B0B40', pressed: 'true' }
+      : { bg: '#FFFFFF', fg: '#3B0B40', border: '#E2D4E0', pressed: 'false' };
+    const catDefs = ['Tutti i premi', 'Da collezionare', 'Da gustare al tavolo', 'Da portare via', 'Da indossare'];
+    const prizeDefs = [
+      { miles: 30, name: 'Spilla KEIK', cat: 1, desc: '5 spille da collezionare, una alla volta: ogni spilla vale 30 miglia.', img: '/_blob/9d5d891f14cfcab137ad95e512d9a12c', alt: 'Due delle spille del Passaporto del Gusto: Brunch Mode: On con Brady e la K di KEIK', bg: '#580259', pins: true },
+      { miles: 120, name: 'Tagliere Il Turista', cat: 2, desc: 'Il tagliere dell’aperitivo per chi vuole assaggiare un po’ di tutto: nachos, guacamole, hummus, falafel, halloumi, patate dolci.', img: '/_blob/359f4d959c83c2411afa0664bed325d1', alt: 'Il tagliere Il Turista di KEIK con halloumi su hummus, falafel, patate dolci, nachos e guacamole', bg: '#F7F2F6', gift: true },
+      { miles: 160, name: 'Box 6 cupcake misti', cat: 3, desc: 'Sei cupcake dal laboratorio KEIK, da portare a casa: per esempio Red Velvet, Oreo e Biscoff.', img: '/_blob/f2a9db2908478dc5ef2d29e7168e8702', alt: 'Un cupcake Red Velvet del laboratorio KEIK', bg: '#F7F2F6', gift: true },
+      { miles: 180, name: 'Tagliere Brunch Traveler', cat: 2, desc: 'Il brunch che fa il giro del mondo: pancakes, uova strapazzate, avocado toast al salmone, bacon, patate dolci e frutta fresca.', img: '/_blob/66e7a9377661840fe22c87c6e81cd5fd', alt: 'Il tagliere Brunch Traveler di KEIK visto dall’alto: pancakes, bacon, uova strapazzate, patate dolci, frutta e avocado toast al salmone', bg: '#F7F2F6', gift: true },
+      { miles: 250, name: 'Borraccia KEIK', cat: 3, desc: 'Borraccia viola in acciaio con cannuccia inox, 600 ml.', img: '/_blob/ac11526706a58f116b50ac3522047957', fit: 'contain', alt: 'La borraccia viola in acciaio di KEIK con cannuccia inox', bg: '#F2DB0D' },
+      { miles: 350, name: 'Felpa KEIK', cat: 4, desc: 'Felpa nera con cappuccio e, sulla schiena, l’aereo fatto di parole: Paris, Tokyo, brunch, chill…', img: '/_blob/8b7dfa09fdbf04847f58e17fed0242ea', fit: 'contain', alt: 'La felpa nera KEIK vista di schiena, con l’aereo fatto di parole', bg: '#a54b91' }
+    ];
+    const pins = ['Avocado & Attitude', 'Chill Vibes', 'Brunch Mode: On', 'La K di KEIK', 'Stay Chill! con Brady'];
+    const cats = catDefs.map((l, i) => Object.assign({ label: l, pick: () => this.setState({ c: i }) }, chip(i === c)));
+    const prizes = prizeDefs.filter((p) => c === 0 || p.cat === c).map((p) => ({
+      miles: p.miles, name: p.name, cat: catDefs.at(p.cat), desc: p.desc, alt: p.alt, bg: p.bg,
+      img: p.img, hasImg: !!p.img, noImg: !p.img, fit: p.fit || 'cover', gift: !!p.gift, isPins: !!p.pins
+    }));
+    const steps = [
+      { icon: '✎', n: '01 · ISCRIVITI', t: 'Iscriviti', d: 'Da KEIK o online, in un minuto. Ti regaliamo subito 5 miglia di benvenuto.' },
+      { icon: '✈', n: '02 · ACCUMULA', t: 'Accumula', d: '1 € = 1 miglio, dalla colazione alla cena. Le miglia si caricano scansionando il QR code del passaporto.' },
+      { icon: '★', n: '03 · PARTI', t: 'Parti', d: 'Trasforma le miglia in premi: quando arrivi alla tappa, lo riscatti da KEIK.' }
+    ];
+    const reached = prizeDefs.filter((p) => my >= p.miles);
+    const next = prizeDefs.find((p) => my < p.miles);
+    const stops = prizeDefs.map((p) => {
+      const ok = my >= p.miles;
+      return { miles: p.miles, name: p.name, op: ok ? '1' : '0.55', dot: ok ? '#F2DB0D' : '#1A0438', ring: ok ? '#F2DB0D' : 'rgba(255,255,255,0.5)', col: ok ? '#F2DB0D' : '#FFFFFF', mark: ok ? '✓' : '' };
+    });
+    const faqDefs = [
+      { q: 'Quanto costa iscriversi?', a: 'Niente: l’iscrizione è gratuita e ti regala subito 5 miglia.' },
+      { q: 'Come accumulo le miglia?', a: 'Ogni euro speso da KEIK vale 1 miglio. Mostra il tuo passaporto digitale al momento del pagamento.' },
+      { q: 'Come riscatto un premio?', a: 'Quando hai le miglia necessarie, chiedilo al bancone: le miglia vengono scalate dal tuo passaporto.' },
+      { q: 'Le spille si prendono tutte insieme?', a: 'No, sono 5 premi separati da 30 miglia l’una, da collezionare una alla volta.' },
+      { q: 'I taglieri sono da pagare?', a: 'No, Il Turista e il Brunch Traveler sono in omaggio con le miglia.' },
+      { q: 'E il passaporto fisico?', a: 'Serve per i timbri degli eventi tematici di KEIK: chiedilo quando partecipi a una serata.' }
+    ];
+    const faqs = faqDefs.map((f, i) => ({ q: f.q, a: f.a, open: fq === i, exp: fq === i ? 'true' : 'false', sign: fq === i ? '−' : '+', toggle: () => this.setState({ fq: fq === i ? -1 : i }) }));
+    return {
+      cats, prizes, pins, steps, stops, faqs,
+      heroHasImg: true,
+      heroImg: '/_blob/8b7dfa09fdbf04847f58e17fed0242ea',
+      heroAlt: 'Una ragazza di schiena con la felpa KEIK, premio del Passaporto del Gusto: sulla schiena l’aereo fatto di parole',
+      myMiles: my,
+      hasNext: !!next, allDone: !next, nextName: next ? next.name : '', left: next ? next.miles - my : 0,
+      reachedCount: reached.length,
+      setMiles: (ev) => this.setState({ my: Number(ev.target.value) || 0 })
+    };
+  }
+}
+</script>
+</body>
+</html>

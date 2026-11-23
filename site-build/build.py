@@ -15,6 +15,7 @@ PAGES = {
     'Aziende': 'aziende', 'BuoniRegalo': 'buoni-regalo', 'LavoraConNoi': 'lavora-con-noi',
     'Contatti': 'contatti', 'Prenota': 'prenota', 'FAQ': 'faq', '404': '404',
     'EventiOttobre': 'eventi-ottobre',
+    'Passaporto': 'passaporto-del-gusto',
 }
 # Cambio mese automatico della pagina Eventi: fino a questa data si vede eventi-ottobre.html
 EV_SWITCH = '2026-11-01T00:00:00+01:00'
