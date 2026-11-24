@@ -79,7 +79,7 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 
 ## Passaporto del Gusto
 - Dal 23/11/2026 in fondo a ogni pagina (prima della mappa del sito) c'è la fascia di iscrizione "Fai il Passaporto del Gusto" (blocco `<!-- KK-PASSAPORTO -->`, bottone Iscriviti verso Pienissimo). Non c'è in home, che ha la sua sezione `#passaporto`. Ogni pagina nuova deve averla (copiarla da un'altra pagina).
-- Ci si iscrive "al tavolo o online" (non "al bancone"); il premio si chiede al bancone. Il passaporto fisico (timbri degli eventi) si chiede alla cassa.
+- Ci si iscrive "al tavolo o online" (non "al bancone"); il premio (omaggio) si chiede al tavolo o alla cassa. Le miglia valgono "dal brunch alla cena". Il passaporto fisico (timbri degli eventi) si chiede alla cassa.
 - Dal 23/11/2026 la fidelity NON prevede più sconti né 2x1: con le miglia si ricevono solo omaggi. Non scrivere mai "sconti", "2x1" o "tessera" per il Passaporto.
 - La pagina dei premi (`passaporto-del-gusto.html`) è pronta nel ramo `sorgente-passaporto` ma NON va online finché Elena non ha configurato i premi su Pienissimo. Quel ramo aggiorna anche home, FAQ e Brady con l'elenco dei premi (nel ramo sorgente ci sono già i testi senza sconti: al lancio tenere "il passaporto fisico chiedilo alla cassa") e aggiunge alla fascia il bottone "Scopri i premi": al lancio va riallineato con questo ramo (la fascia c'è in tutti e due) e poi unito.
 
