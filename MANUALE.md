@@ -80,7 +80,7 @@ Repository: `staffquest-cf/keik-sito` (pubblico).
 ## Passaporto del Gusto (in preparazione)
 - Tutto è nel ramo `sorgente-passaporto`, non qui: pagina `Passaporto.dc.html` → `passaporto-del-gusto.html` (schede FAQPage, MemberProgram e Breadcrumb; immagine social `og/passaporto-del-gusto.jpg`), fascia "Fai il Passaporto del Gusto" in tutte le pagine (blocco `<!-- KK-PASSAPORTO -->` prima della mappa del sito; non in home, che ha la sua sezione `#passaporto`), link "Passaporto del Gusto" della mappa del sito verso la pagina, testi di home e FAQ senza "sconti e 2x1" né "tessera", `sitemap.xml`, `llms.txt` e `brady-keik.txt` aggiornati. Il lancio = unire il ramo e pubblicare.
 - Ogni pagina nuova deve avere la fascia KK-PASSAPORTO (copiarla da un'altra pagina).
-- Ci si iscrive "al tavolo o online" (non "al bancone"); il premio si chiede al bancone.
+- Ci si iscrive "al tavolo o online" (non "al bancone"); il premio (omaggio) si chiede al tavolo o alla cassa. Le miglia valgono "dal brunch alla cena".
 - Foto di felpa, spille e borraccia ritagliate dal carosello Instagram; i cupcake del carosello sono fatti con l'AI, per questo nella pagina c'è la foto reale del Red Velvet finché non arriva quella della box.
 
 ## Antivirus del server (Imunify360): mai link brevi `pnssm.pro`

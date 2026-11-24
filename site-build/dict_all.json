@@ -9389,11 +9389,6 @@
   "Acumula",
   "Cumule"
  ],
- "1 € = 1 miglio, dalla colazione alla cena. Le miglia si caricano scansionando il QR code del passaporto.": [
-  "€1 = 1 mile, from breakfast to dinner. Miles are added by scanning your passport’s QR code.",
-  "1 € = 1 milla, del desayuno a la cena. Las millas se cargan escaneando el código QR del pasaporte.",
-  "1 € = 1 mile, du petit-déjeuner au dîner. Les miles sont crédités en scannant le QR code du passeport."
- ],
  "03 · PARTI": [
   "03 · TAKE OFF",
   "03 · DESPEGA",
@@ -9433,11 +9428,6 @@
   "How do I redeem a reward?",
   "¿Cómo canjeo un premio?",
   "Comment j’obtiens une récompense ?"
- ],
- "Quando hai le miglia necessarie, chiedilo al bancone: le miglia vengono scalate dal tuo passaporto.": [
-  "When you have enough miles, ask at the counter: the miles are deducted from your passport.",
-  "Cuando tengas las millas necesarias, pídelo en la barra: las millas se descuentan de tu pasaporte.",
-  "Quand tu as assez de miles, demande-la au comptoir : les miles sont déduits de ton passeport."
  ],
  "Le spille si prendono tutte insieme?": [
   "Do I get all the pins at once?",
@@ -9583,5 +9573,15 @@
   "It’s our loyalty programme: every euro you spend becomes a mile and miles become rewards, like pins, boards, cupcakes, a water bottle and a hoodie. Sign up at the table or online and get 5 welcome miles right away. You’ll find everything on the Passaporto del Gusto page.",
   "Es nuestro programa de fidelidad: cada euro gastado se convierte en una milla y las millas en premios, como pines, tablas, cupcakes, botella y sudadera. Te inscribes en la mesa u online y recibes enseguida 5 millas de bienvenida. Encontrarás todo en la página Passaporto del Gusto.",
   "C’est notre programme de fidélité : chaque euro dépensé devient un mile et les miles deviennent des récompenses, comme des pins, des planches, des cupcakes, une gourde et un sweat. Tu t’inscris à table ou en ligne et tu reçois tout de suite 5 miles de bienvenue. Tout est sur la page Passaporto del Gusto."
+ ],
+ "1 € = 1 miglio, dal brunch alla cena. Le miglia si caricano scansionando il QR code del passaporto.": [
+  "€1 = 1 mile, from brunch to dinner. Miles are added by scanning your passport’s QR code.",
+  "1 € = 1 milla, del brunch a la cena. Las millas se cargan escaneando el código QR del pasaporte.",
+  "1 € = 1 mile, du brunch au dîner. Les miles sont crédités en scannant le QR code du passeport."
+ ],
+ "Quando hai le miglia necessarie, chiedilo al tavolo o alla cassa: le miglia vengono scalate dal tuo passaporto.": [
+  "When you have enough miles, ask at the table or at the till: the miles are deducted from your passport.",
+  "Cuando tengas las millas necesarias, pídelo en la mesa o en caja: las millas se descuentan de tu pasaporte.",
+  "Quand tu as assez de miles, demande-la à table ou en caisse : les miles sont déduits de ton passeport."
  ]
 }
